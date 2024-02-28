@@ -121,7 +121,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , 
         self.present(vc!, animated: false)
     }
     @IBAction func didTapEditProfile(_ sender: Any) {
-        let vc = UIStoryboard(name: "EditMain", bundle: nil).instantiateViewController(withIdentifier: "")as! ProfileInfoViewController
+        
+        let vc = UIStoryboard(name: "EditMain", bundle: nil).instantiateViewController(withIdentifier: "ProfileInfoVC")as! ProfileInfoVC
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
         
