@@ -57,6 +57,7 @@ class ImageTableViewCell: UITableViewCell {
         us_picture.clipsToBounds = true
 //        testView.delegate = self
 //        testView.text = "Add Comments"
+        print("testView.text ")
     }
     func makeClickActive(value : Bool){
         saveImgView.isUserInteractionEnabled = value
