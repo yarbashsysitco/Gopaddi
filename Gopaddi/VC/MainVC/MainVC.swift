@@ -92,6 +92,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         userKey = UserDefaults.standard.string(forKey: "logkey")
         callFeeds()
         print(userKey)
+        print("Hello")
         profilePicSetUp()
         tables.delegate = self
         tables.dataSource = self
