@@ -211,7 +211,7 @@ extension FeedsCommentViewController : UITableViewDelegate, UITableViewDataSourc
                                 DispatchQueue.main.async {
                                     self.postClicked = true
                                     cell.commentTF.textColor = .systemGray
-                                    cell.commentTF.text = "Add Comments..."
+                                    cell.commentTF.text = "Add Commentss."
                                     cell.commentTF.resignFirstResponder()
                                     self.promo = self.feedData!.fe_promotion
                                     self.key = self.feedData!.fe_id
