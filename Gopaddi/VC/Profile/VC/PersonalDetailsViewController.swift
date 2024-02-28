@@ -30,6 +30,7 @@ class PersonalDetailsViewController: UIViewController , UIImagePickerControllerD
     let personal = UserDefaults.standard.string(forKey: "personal")
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hello")
         //        proceedBtn.isEnabled = false
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imagePickBtnClicked))
                 imageView.isUserInteractionEnabled = true
