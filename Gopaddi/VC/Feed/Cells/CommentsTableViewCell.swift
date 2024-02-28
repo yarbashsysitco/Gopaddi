@@ -16,6 +16,7 @@ class CommentsTableViewCell: UITableViewCell {
         view.layer.shadowRadius = 3
 //        view.backgroundColor = .secondarySystemBackground
         view.layer.shadowOffset = CGSize(width: 0.6, height: 0.4)
+
         return view
     }()
     let footerView: UIView = {
@@ -33,28 +34,28 @@ class CommentsTableViewCell: UITableViewCell {
         imageview.backgroundColor = .systemBlue
         return imageview
     }()
-    let Likes: UILabel = {
-        let label = UILabel()
-        label.textColor = .systemGray
-        label.text = "Likes"
-        label.font = UIFont(name: "Poppins-Regular", size: 12)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    let noOfLikes: UILabel = {
-        let label = UILabel()
-        label.textColor = .systemGray
-        label.font = UIFont(name: "Poppins-Regular", size: 12)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    let createdAt: UILabel = {
-        let label = UILabel()
-        label.textColor = .systemGray
-        label.font = UIFont(name: "Poppins-Regular", size: 12)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    let Likes: UILabel = {
+//        let label = UILabel()
+//        label.textColor = .systemGray
+//        label.text = "Likes"
+//        label.font = UIFont(name: "Poppins-Regular", size: 12)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
+//    let noOfLikes: UILabel = {
+//        let label = UILabel()
+//        label.textColor = .systemGray
+//        label.font = UIFont(name: "Poppins-Regular", size: 12)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
+//    let createdAt: UILabel = {
+//        let label = UILabel()
+//        label.textColor = .systemGray
+//        label.font = UIFont(name: "Poppins-Regular", size: 12)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     let caption: UILabel = {
         let label = UILabel()
         label.textColor = .label
@@ -70,21 +71,28 @@ class CommentsTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    let likeButton: UIButton = {
-        let button =  UIButton()
-        button.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        button.isUserInteractionEnabled = true
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+//    let likeButton: UIButton = {
+//        let button =  UIButton()
+//        button.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+//        button.isUserInteractionEnabled = true
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
     let emojiButton: UIButton = {
         let button =  UIButton()
-        button.setImage(UIImage(systemName: "bolt.circle.fill"), for: .normal)
+        button.setImage(UIImage(named: "emoji0"),for: .normal)
         button.isUserInteractionEnabled = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    let emojiCountlabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .systemGray
+        label.text = "0"
+        label.font = UIFont(name: "Poppins-Regular", size: 12)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     private let replyButton: UIButton = {
         let button =  UIButton()
         button.setTitle("Reply", for: .normal)
@@ -94,13 +102,13 @@ class CommentsTableViewCell: UITableViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    let noOfReply: UILabel = {
-        let label = UILabel()
-        label.textColor = .systemGray
-        label.font = UIFont(name: "Poppins-Regular", size: 12)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    let noOfReply: UILabel = {
+//        let label = UILabel()
+//        label.textColor = .systemGray
+//        label.font = UIFont(name: "Poppins-Regular", size: 12)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     var replyComment : (() -> ())?
     var likeBtn : (() -> ())?
     override func awakeFromNib() {
@@ -116,22 +124,23 @@ class CommentsTableViewCell: UITableViewCell {
         contView.addSubview(commentCreatorName)
         contView.addSubview(footerView)
         contView.addSubview(caption)
-        footerView.addSubview(noOfLikes)
-        footerView.addSubview(Likes)
-        footerView.addSubview(createdAt)
-        footerView.addSubview(likeButton)
+//        footerView.addSubview(noOfLikes)
+//        footerView.addSubview(Likes)
+//        footerView.addSubview(createdAt)
+//        footerView.addSubview(likeButton)
         footerView.addSubview(emojiButton)
         footerView.addSubview(replyButton)
-        footerView.addSubview(noOfReply)
+        footerView.addSubview(emojiCountlabel)
+//        footerView.addSubview(noOfReply)
         replyButton.addTarget(self, action: #selector(didTapReply), for: .touchUpInside)
-        likeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
+//        likeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
     }
     @objc func didTapReply(){
         replyComment?()
     }
-    @objc func didTapLike(){
-        likeBtn?()
-    }
+//    @objc func didTapLike(){
+//        likeBtn?()
+//    }
     override func layoutSubviews() {
         super.layoutSubviews()
         NSLayoutConstraint.activate([
@@ -152,34 +161,38 @@ class CommentsTableViewCell: UITableViewCell {
             caption.topAnchor.constraint(equalTo: commentCreatorName.bottomAnchor, constant: 5),
             caption.leadingAnchor.constraint(equalTo: contView.leadingAnchor, constant: 15),
             caption.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -10),
-            caption.bottomAnchor.constraint(equalTo: likeButton.topAnchor, constant: -10),
+            caption.bottomAnchor.constraint(equalTo: footerView.topAnchor, constant: -10),
 
 
             footerView.leadingAnchor.constraint(equalTo: contView.leadingAnchor, constant: 0),
             footerView.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -5),
             footerView.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: 5),
             footerView.heightAnchor.constraint(equalToConstant: 40),
+            
+            replyButton.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 10),
+            replyButton.topAnchor.constraint(equalTo: footerView.topAnchor,constant: 0),
+            replyButton.heightAnchor.constraint(equalToConstant: 20),
+            replyButton.widthAnchor.constraint(equalToConstant: 40),
 
-            createdAt.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 15),
-            createdAt.widthAnchor.constraint(equalToConstant: 150),
-            createdAt.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+//            createdAt.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 15),
+//            createdAt.widthAnchor.constraint(equalToConstant: 150),
+//            createdAt.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
 
-            Likes.leadingAnchor.constraint(equalTo: createdAt.trailingAnchor, constant: 0),
-            Likes.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+//            Likes.leadingAnchor.constraint(equalTo: createdAt.trailingAnchor, constant: 0),
+//            Likes.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
 
-            noOfLikes.leadingAnchor.constraint(equalTo: Likes.trailingAnchor, constant: 2),
-            noOfLikes.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+//            noOfLikes.leadingAnchor.constraint(equalTo: Likes.trailingAnchor, constant: 2),
+//            noOfLikes.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
 
-            replyButton.leadingAnchor.constraint(equalTo: noOfLikes.trailingAnchor, constant: 10),
-            replyButton.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+            
 
-            noOfReply.leadingAnchor.constraint(equalTo: replyButton.trailingAnchor, constant: 2),
-            noOfReply.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+//            noOfReply.leadingAnchor.constraint(equalTo: replyButton.trailingAnchor, constant: 2),
+//            noOfReply.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
 
-            likeButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -50),
-            likeButton.widthAnchor.constraint(equalToConstant: 25),
-            likeButton.heightAnchor.constraint(equalToConstant: 25),
-            likeButton.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+//            likeButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -50),
+//            likeButton.widthAnchor.constraint(equalToConstant: 25),
+//            likeButton.heightAnchor.constraint(equalToConstant: 25),
+//            likeButton.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
             
             ///////////////////
             
@@ -187,11 +200,14 @@ class CommentsTableViewCell: UITableViewCell {
 //            likeButton.widthAnchor.constraint(equalToConstant: 25),
 //            likeButton.heightAnchor.constraint(equalToConstant: 25),
 //            likeButton.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+            emojiCountlabel.trailingAnchor.constraint(equalTo: emojiButton.leadingAnchor,constant: -5),
+            emojiCountlabel.heightAnchor.constraint(equalToConstant: 25),
+            emojiCountlabel.topAnchor.constraint(equalTo: footerView.topAnchor,constant: 0),
 
-            emojiButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -20),
-            emojiButton.widthAnchor.constraint(equalToConstant: 25),
+            emojiButton.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: -15),
+            emojiButton.widthAnchor.constraint(equalToConstant: 40),
             emojiButton.heightAnchor.constraint(equalToConstant: 25),
-            emojiButton.centerYAnchor.constraint(equalTo: footerView.centerYAnchor),
+            emojiButton.topAnchor.constraint(equalTo: footerView.topAnchor,constant: 0),
             
           
 
@@ -204,14 +220,14 @@ class CommentsTableViewCell: UITableViewCell {
 
     func config(commentData : ResponseInfo){
         if commentData.fc_liked == 0{
-            likeButton.tintColor = .systemGray
+//            likeButton.tintColor = .systemGray
         }else{
-            likeButton.tintColor = .systemBlue
+//            likeButton.tintColor = .systemBlue
         }
         if let url = commentData.fc_commentor?[0].us_picture {
             commentCreatorPic.sd_setImage(with: URL(string:  url))
         }
-        noOfReply.text = "(" + String(commentData.fc_replies) + ")"
+//        noOfReply.text = "(" + String(commentData.fc_replies) + ")"
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -220,36 +236,36 @@ class CommentsTableViewCell: UITableViewCell {
             print("Failed to convert the posted time string to a Date object.")
             return
         }
-        let presentTime = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .day, .hour, .minute,.second], from: postedTime, to: presentTime)
-        let years = components.year ?? 0
-        let days = components.day ?? 0
-        let hours = components.hour ?? 0
-        let minutes = components.minute ?? 0
-        let seconds = components.second ?? 0
+//        let presentTime = Date()
+//        let calendar = Calendar.current
+//        let components = calendar.dateComponents([.year, .day, .hour, .minute,.second], from: postedTime, to: presentTime)
+//        let years = components.year ?? 0
+//        let days = components.day ?? 0
+//        let hours = components.hour ?? 0
+//        let minutes = components.minute ?? 0
+//        let seconds = components.second ?? 0
 
-        if years == 0 {
-            if days != 0{
-                createdAt.text = String(days) + " days ago"
-            }else if hours != 0 {
-                createdAt.text = String(hours) + " hours ago"
-            }
-        else if minutes != 0{
-            createdAt.text = String(minutes) + " minutes ago"
-        } else if seconds != 0{
-            createdAt.text = String(minutes) + " Seconds ago"
-        }else{
-            createdAt.text = " Just now"
-        }
-        }else{
-            createdAt.text = String(years) + " years ago"
-        }
+//        if years == 0 {
+//            if days != 0{
+//                createdAt.text = String(days) + " days ago"
+//            }else if hours != 0 {
+//                createdAt.text = String(hours) + " hours ago"
+//            }
+//        else if minutes != 0{
+//            createdAt.text = String(minutes) + " minutes ago"
+//        } else if seconds != 0{
+//            createdAt.text = String(minutes) + " Seconds ago"
+//        }else{
+//            createdAt.text = " Just now"
+//        }
+//        }else{
+//            createdAt.text = String(years) + " years ago"
+//        }
 
 //        createdAt.text = commentData.fc_created_at
         caption.text = commentData.fc_comment
         commentCreatorName.text = commentData.fc_commentor?[0].us_name
-        noOfLikes.text = "(" + String(commentData.fc_likes!) + ")"
+//        noOfLikes.text = "(" + String(commentData.fc_likes!) + ")"
     }
 
 

@@ -66,7 +66,7 @@ class PostRepliesTableViewCell: UITableViewCell{
             headerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 30),
             headerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -5),
             headerView.heightAnchor.constraint(equalToConstant: 48),
-            
+
         commentTF.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
         commentTF.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,constant: 10),
         commentTF.trailingAnchor.constraint(equalTo: postButton.leadingAnchor),

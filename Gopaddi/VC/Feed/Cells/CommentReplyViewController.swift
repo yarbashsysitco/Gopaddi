@@ -199,25 +199,25 @@ extension CommentReplyViewController : UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CommentReplyTableViewCell.identifier, for: indexPath) as! CommentReplyTableViewCell
 //        cell.config(commentData: (feedReplies[indexPath.row]))
-        cell.likeClicked = {
-            print("Like Btn Clicked")
-            self.apiManager.feedsCommentLike(userKey: self.userKey, key: self.feedReplies[indexPath.row].fc_id!, emoji: "", action: "like"){ result in
-                switch result {
-                case .success(let model) :
-                    DispatchQueue.main.async {
-                      if  model.liked == 1{
-                            cell.likeButton.tintColor = .systemBlue
-                      }else{
-                          cell.likeButton.tintColor = .systemGray
-                      }
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-        }
+//        cell.likeClicked = {
+//            print("Like Btn Clicked")
+//            self.apiManager.feedsCommentLike(userKey: self.userKey, key: self.feedReplies[indexPath.row].fc_id!, emoji: "", action: "like"){ result in
+//                switch result {
+//                case .success(let model) :
+//                    DispatchQueue.main.async {
+//                      if  model.liked == 1{
+////                            cell.likeButton.tintColor = .systemBlue
+//                      }else{
+////                          cell.likeButton.tintColor = .systemGray
+////                      }
+//                    }
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                }
+//            }
+//        }
         return cell
-        
+
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 

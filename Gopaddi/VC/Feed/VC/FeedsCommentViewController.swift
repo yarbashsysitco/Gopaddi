@@ -37,11 +37,14 @@ class FeedsCommentViewController: UIViewController, UITextFieldDelegate {
     var postClicked : Bool = false
     
     var post : (() -> ())?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         tableview.estimatedRowHeight = 300
+    
         tableview.register(UINib.init(nibName: "CommentHeadTableViewCell", bundle: .main), forCellReuseIdentifier: "CommentHeadTableViewCell")
         tableview.register(CommentReplyTableViewCell.self, forCellReuseIdentifier: CommentReplyTableViewCell.identifier)
         tableview.register(CommentsTableViewCell.self, forCellReuseIdentifier: CommentsTableViewCell.identifier)
@@ -80,7 +83,6 @@ class FeedsCommentViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         CommentTxt.text = ""
-        print("hello")
         }
     
     
@@ -175,24 +177,24 @@ extension FeedsCommentViewController : UITableViewDelegate, UITableViewDataSourc
                 let cell = tableView.dequeueReusableCell(withIdentifier: CommentReplyTableViewCell.identifier, for: indexPath) as! CommentReplyTableViewCell
                 
                     cell.config(commentData: (commentInfo[indexPath.section - 1].fc_replies_data?[indexPath.row])!)
-                cell.likeClicked = {
-                    print("Like Btn Clicked")
-                    self.apiManager.feedsCommentLike(userKey: self.userKey, key: (self.commentInfo[indexPath.section - 1].fc_replies_data?[indexPath.row].fc_id)!, emoji: "", action: "like"){ result in
-                        switch result {
-                        case .success(let model) :
-                            DispatchQueue.main.async {
-                                if  model.liked == 1{
-                                    cell.likeButton.tintColor = .systemBlue
-                                }else{
-                                    cell.likeButton.tintColor = .systemGray
-                                }
-                                cell.noOfLikes.text = "(" + String(model.likes!) + ")"
-                            }
-                        case .failure(let error):
-                            print(error.localizedDescription)
-                        }
-                    }
-                }
+//                cell.likeClicked = {
+//                    print("Like Btn Clicked")
+//                    self.apiManager.feedsCommentLike(userKey: self.userKey, key: (self.commentInfo[indexPath.section - 1].fc_replies_data?[indexPath.row].fc_id)!, emoji: "", action: "like"){ result in
+//                        switch result {
+//                        case .success(let model) :
+//                            DispatchQueue.main.async {
+//                                if  model.liked == 1{
+//                                    cell.likeButton.tintColor = .systemBlue
+//                                }else{
+//                                    cell.likeButton.tintColor = .systemGray
+//                                }
+//                                cell.noOfLikes.text = "(" + String(model.likes!) + ")"
+//                            }
+//                        case .failure(let error):
+//                            print(error.localizedDescription)
+//                        }
+//                    }
+//                }
 
                 return cell
             }else{

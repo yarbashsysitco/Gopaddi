@@ -121,19 +121,6 @@
 		844FD38D2B8DB07B0014E4B5 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FD2B8DB07B0014E4B5 /* InterestsViewController.swift */; };
 		844FD38E2B8DB07B0014E4B5 /* ProfilePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FE2B8DB07B0014E4B5 /* ProfilePopupVC.swift */; };
 		844FD38F2B8DB07B0014E4B5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FF2B8DB07B0014E4B5 /* SettingsViewController.swift */; };
-		844FD3902B8DB07B0014E4B5 /* CommentHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3022B8DB07B0014E4B5 /* CommentHeadTableViewCell.swift */; };
-		844FD3912B8DB07B0014E4B5 /* CommentReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3032B8DB07B0014E4B5 /* CommentReplyViewController.swift */; };
-		844FD3922B8DB07B0014E4B5 /* CommentReplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3042B8DB07B0014E4B5 /* CommentReplyTableViewCell.swift */; };
-		844FD3932B8DB07B0014E4B5 /* CommentHeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FD3052B8DB07B0014E4B5 /* CommentHeadTableViewCell.xib */; };
-		844FD3942B8DB07B0014E4B5 /* PostRepliesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3062B8DB07B0014E4B5 /* PostRepliesTableViewCell.swift */; };
-		844FD3952B8DB07B0014E4B5 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3072B8DB07B0014E4B5 /* CommentsTableViewCell.swift */; };
-		844FD3962B8DB07B0014E4B5 /* CommentReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FD3082B8DB07B0014E4B5 /* CommentReplyTableViewCell.xib */; };
-		844FD3972B8DB07B0014E4B5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD30A2B8DB07B0014E4B5 /* FeedsCommentViewController.swift */; };
-		844FD3982B8DB07B0014E4B5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD30B2B8DB07B0014E4B5 /* CommentsHeaderFooterView.swift */; };
-		844FD3992B8DB07B0014E4B5 /* FeedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD30C2B8DB07B0014E4B5 /* FeedPopUpViewController.swift */; };
-		844FD39A2B8DB07B0014E4B5 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD30D2B8DB07B0014E4B5 /* FeedsViewController.swift */; };
-		844FD39B2B8DB07B0014E4B5 /* FeedEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD30E2B8DB07B0014E4B5 /* FeedEditViewController.swift */; };
-		844FD39C2B8DB07B0014E4B5 /* FeedsTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD30F2B8DB07B0014E4B5 /* FeedsTabVC.swift */; };
 		844FD39D2B8DB07B0014E4B5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3122B8DB07B0014E4B5 /* MenuTableViewCell.swift */; };
 		844FD39E2B8DB07B0014E4B5 /* MenuTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3132B8DB07B0014E4B5 /* MenuTabVC.swift */; };
 		844FD39F2B8DB07B0014E4B5 /* BookingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3142B8DB07B0014E4B5 /* BookingSelectionViewController.swift */; };
@@ -211,6 +198,19 @@
 		844FD4312B8DB10D0014E4B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FD4302B8DB10C0014E4B5 /* Assets.xcassets */; };
 		844FD4332B8DB12C0014E4B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FD4322B8DB12C0014E4B5 /* Main.storyboard */; };
 		9A00B96124A04A68A80D58A3 /* Pods_Gopaddi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2813A594D8E9C40E5E152545 /* Pods_Gopaddi.framework */; };
+		A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */; };
+		A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */; };
+		A863BAC12B8F376600F6F1D5 /* FeedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */; };
+		A863BAC22B8F376600F6F1D5 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB42B8F376600F6F1D5 /* FeedsViewController.swift */; };
+		A863BAC32B8F376600F6F1D5 /* FeedEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB52B8F376600F6F1D5 /* FeedEditViewController.swift */; };
+		A863BAC42B8F376600F6F1D5 /* FeedsTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB62B8F376600F6F1D5 /* FeedsTabVC.swift */; };
+		A863BAC52B8F376600F6F1D5 /* CommentHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB82B8F376600F6F1D5 /* CommentHeadTableViewCell.swift */; };
+		A863BAC62B8F376600F6F1D5 /* CommentReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB92B8F376600F6F1D5 /* CommentReplyViewController.swift */; };
+		A863BAC72B8F376600F6F1D5 /* CommentReplyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BABA2B8F376600F6F1D5 /* CommentReplyTableViewCell.swift */; };
+		A863BAC82B8F376600F6F1D5 /* CommentHeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863BABB2B8F376600F6F1D5 /* CommentHeadTableViewCell.xib */; };
+		A863BAC92B8F376600F6F1D5 /* PostRepliesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BABC2B8F376600F6F1D5 /* PostRepliesTableViewCell.swift */; };
+		A863BACA2B8F376600F6F1D5 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BABD2B8F376600F6F1D5 /* CommentsTableViewCell.swift */; };
+		A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863BABE2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -331,19 +331,6 @@
 		844FD2FD2B8DB07B0014E4B5 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		844FD2FE2B8DB07B0014E4B5 /* ProfilePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupVC.swift; sourceTree = "<group>"; };
 		844FD2FF2B8DB07B0014E4B5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		844FD3022B8DB07B0014E4B5 /* CommentHeadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentHeadTableViewCell.swift; sourceTree = "<group>"; };
-		844FD3032B8DB07B0014E4B5 /* CommentReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentReplyViewController.swift; sourceTree = "<group>"; };
-		844FD3042B8DB07B0014E4B5 /* CommentReplyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentReplyTableViewCell.swift; sourceTree = "<group>"; };
-		844FD3052B8DB07B0014E4B5 /* CommentHeadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentHeadTableViewCell.xib; sourceTree = "<group>"; };
-		844FD3062B8DB07B0014E4B5 /* PostRepliesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepliesTableViewCell.swift; sourceTree = "<group>"; };
-		844FD3072B8DB07B0014E4B5 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
-		844FD3082B8DB07B0014E4B5 /* CommentReplyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentReplyTableViewCell.xib; sourceTree = "<group>"; };
-		844FD30A2B8DB07B0014E4B5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
-		844FD30B2B8DB07B0014E4B5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
-		844FD30C2B8DB07B0014E4B5 /* FeedPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPopUpViewController.swift; sourceTree = "<group>"; };
-		844FD30D2B8DB07B0014E4B5 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
-		844FD30E2B8DB07B0014E4B5 /* FeedEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEditViewController.swift; sourceTree = "<group>"; };
-		844FD30F2B8DB07B0014E4B5 /* FeedsTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTabVC.swift; sourceTree = "<group>"; };
 		844FD3122B8DB07B0014E4B5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		844FD3132B8DB07B0014E4B5 /* MenuTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabVC.swift; sourceTree = "<group>"; };
 		844FD3142B8DB07B0014E4B5 /* BookingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingSelectionViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +408,19 @@
 		844FD4302B8DB10C0014E4B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844FD4322B8DB12C0014E4B5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		844FD4362B8DB1630014E4B5 /* Gopaddi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gopaddi.entitlements; sourceTree = "<group>"; };
+		A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
+		A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
+		A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPopUpViewController.swift; sourceTree = "<group>"; };
+		A863BAB42B8F376600F6F1D5 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		A863BAB52B8F376600F6F1D5 /* FeedEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEditViewController.swift; sourceTree = "<group>"; };
+		A863BAB62B8F376600F6F1D5 /* FeedsTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTabVC.swift; sourceTree = "<group>"; };
+		A863BAB82B8F376600F6F1D5 /* CommentHeadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentHeadTableViewCell.swift; sourceTree = "<group>"; };
+		A863BAB92B8F376600F6F1D5 /* CommentReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentReplyViewController.swift; sourceTree = "<group>"; };
+		A863BABA2B8F376600F6F1D5 /* CommentReplyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentReplyTableViewCell.swift; sourceTree = "<group>"; };
+		A863BABB2B8F376600F6F1D5 /* CommentHeadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentHeadTableViewCell.xib; sourceTree = "<group>"; };
+		A863BABC2B8F376600F6F1D5 /* PostRepliesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepliesTableViewCell.swift; sourceTree = "<group>"; };
+		A863BABD2B8F376600F6F1D5 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		A863BABE2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentReplyTableViewCell.xib; sourceTree = "<group>"; };
 		F65DC8409462E01038B67235 /* Pods-Gopaddi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gopaddi.release.xcconfig"; path = "Target Support Files/Pods-Gopaddi/Pods-Gopaddi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -819,37 +819,10 @@
 		844FD3002B8DB07B0014E4B5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				844FD3012B8DB07B0014E4B5 /* Cells */,
-				844FD3092B8DB07B0014E4B5 /* VC */,
+				A863BAB72B8F376600F6F1D5 /* Cells */,
+				A863BAB02B8F376600F6F1D5 /* VC */,
 			);
 			path = Feed;
-			sourceTree = "<group>";
-		};
-		844FD3012B8DB07B0014E4B5 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				844FD3022B8DB07B0014E4B5 /* CommentHeadTableViewCell.swift */,
-				844FD3032B8DB07B0014E4B5 /* CommentReplyViewController.swift */,
-				844FD3042B8DB07B0014E4B5 /* CommentReplyTableViewCell.swift */,
-				844FD3052B8DB07B0014E4B5 /* CommentHeadTableViewCell.xib */,
-				844FD3062B8DB07B0014E4B5 /* PostRepliesTableViewCell.swift */,
-				844FD3072B8DB07B0014E4B5 /* CommentsTableViewCell.swift */,
-				844FD3082B8DB07B0014E4B5 /* CommentReplyTableViewCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		844FD3092B8DB07B0014E4B5 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				844FD30A2B8DB07B0014E4B5 /* FeedsCommentViewController.swift */,
-				844FD30B2B8DB07B0014E4B5 /* CommentsHeaderFooterView.swift */,
-				844FD30C2B8DB07B0014E4B5 /* FeedPopUpViewController.swift */,
-				844FD30D2B8DB07B0014E4B5 /* FeedsViewController.swift */,
-				844FD30E2B8DB07B0014E4B5 /* FeedEditViewController.swift */,
-				844FD30F2B8DB07B0014E4B5 /* FeedsTabVC.swift */,
-			);
-			path = VC;
 			sourceTree = "<group>";
 		};
 		844FD3102B8DB07B0014E4B5 /* Menu */ = {
@@ -1026,6 +999,33 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A863BAB02B8F376600F6F1D5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */,
+				A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */,
+				A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */,
+				A863BAB42B8F376600F6F1D5 /* FeedsViewController.swift */,
+				A863BAB52B8F376600F6F1D5 /* FeedEditViewController.swift */,
+				A863BAB62B8F376600F6F1D5 /* FeedsTabVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A863BAB72B8F376600F6F1D5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A863BAB82B8F376600F6F1D5 /* CommentHeadTableViewCell.swift */,
+				A863BAB92B8F376600F6F1D5 /* CommentReplyViewController.swift */,
+				A863BABA2B8F376600F6F1D5 /* CommentReplyTableViewCell.swift */,
+				A863BABB2B8F376600F6F1D5 /* CommentHeadTableViewCell.xib */,
+				A863BABC2B8F376600F6F1D5 /* PostRepliesTableViewCell.swift */,
+				A863BABD2B8F376600F6F1D5 /* CommentsTableViewCell.swift */,
+				A863BABE2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C04F1ADD8F72F047E9683BE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1110,12 +1110,12 @@
 				844FD4332B8DB12C0014E4B5 /* Main.storyboard in Resources */,
 				844FD40E2B8DB0BB0014E4B5 /* Poppins-SemiBold.ttf in Resources */,
 				844FD3832B8DB07B0014E4B5 /* ProfileCell.xib in Resources */,
-				844FD3932B8DB07B0014E4B5 /* CommentHeadTableViewCell.xib in Resources */,
+				A863BAC82B8F376600F6F1D5 /* CommentHeadTableViewCell.xib in Resources */,
 				844FD3A22B8DB07B0014E4B5 /* TextTableViewCell.xib in Resources */,
 				844FD40C2B8DB0BB0014E4B5 /* Poppins-Regular.ttf in Resources */,
 				844FD40B2B8DB0BB0014E4B5 /* FontProximanova-medium.otf in Resources */,
-				844FD3962B8DB07B0014E4B5 /* CommentReplyTableViewCell.xib in Resources */,
 				844FD41F2B8DB0E30014E4B5 /* CollectionViewCell.xib in Resources */,
+				A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,11 +1174,11 @@
 				844FD3E42B8DB0A90014E4B5 /* FeedsCreateModel.swift in Sources */,
 				844FD3F02B8DB0A90014E4B5 /* webviewResponseModel.swift in Sources */,
 				844FD3302B8DB07B0014E4B5 /* ActivityBookListTableViewCell.swift in Sources */,
-				844FD3942B8DB07B0014E4B5 /* PostRepliesTableViewCell.swift in Sources */,
-				844FD3922B8DB07B0014E4B5 /* CommentReplyTableViewCell.swift in Sources */,
+				A863BAC22B8F376600F6F1D5 /* FeedsViewController.swift in Sources */,
 				844FD36C2B8DB07B0014E4B5 /* FlightFlterViewController.swift in Sources */,
 				844FD4002B8DB0A90014E4B5 /* ActivityDestination.swift in Sources */,
 				844FD3EE2B8DB0A90014E4B5 /* Registration.swift in Sources */,
+				A863BACA2B8F376600F6F1D5 /* CommentsTableViewCell.swift in Sources */,
 				844FD3F92B8DB0A90014E4B5 /* PersonalDetModel.swift in Sources */,
 				844FD41E2B8DB0E30014E4B5 /* AppDelegate.swift in Sources */,
 				844FD4282B8DB0F20014E4B5 /* constant.swift in Sources */,
@@ -1217,9 +1217,9 @@
 				844FD3652B8DB07B0014E4B5 /* FlightListTableCell.swift in Sources */,
 				844FD32A2B8DB07B0014E4B5 /* ActivityDetailsHeadTableViewCell.swift in Sources */,
 				844FD3732B8DB07B0014E4B5 /* FlightListVC.swift in Sources */,
-				844FD3902B8DB07B0014E4B5 /* CommentHeadTableViewCell.swift in Sources */,
 				844FD3662B8DB07B0014E4B5 /* FlightAmountTableViewCell.swift in Sources */,
 				844FD3542B8DB07B0014E4B5 /* HotelConfirmPreviewViewController.swift in Sources */,
+				A863BAC62B8F376600F6F1D5 /* CommentReplyViewController.swift in Sources */,
 				844FD3DB2B8DB0A90014E4B5 /* feedDeleteModel.swift in Sources */,
 				844FD3632B8DB07B0014E4B5 /* FlightDetAmountTableViewCell.swift in Sources */,
 				844FD3A52B8DB07B0014E4B5 /* MainVC.swift in Sources */,
@@ -1239,12 +1239,14 @@
 				844FD3FF2B8DB0A90014E4B5 /* ActivityCancel.swift in Sources */,
 				844FD34B2B8DB07B0014E4B5 /* HotelContactTableViewCell.swift in Sources */,
 				844FD3222B8DB07B0014E4B5 /* NationalityViewController.swift in Sources */,
+				A863BAC32B8F376600F6F1D5 /* FeedEditViewController.swift in Sources */,
 				844FD3FE2B8DB0A90014E4B5 /* HotelBookingList.swift in Sources */,
 				844FD3472B8DB07B0014E4B5 /* HotelListTableViewCell.swift in Sources */,
 				844FD3FA2B8DB0A90014E4B5 /* Memberships.swift in Sources */,
 				844FD3492B8DB07B0014E4B5 /* HotelConfirmedInfoTableViewCell.swift in Sources */,
+				A863BAC42B8F376600F6F1D5 /* FeedsTabVC.swift in Sources */,
+				A863BAC92B8F376600F6F1D5 /* PostRepliesTableViewCell.swift in Sources */,
 				844FD3DF2B8DB0A90014E4B5 /* ActivityList.swift in Sources */,
-				844FD39A2B8DB07B0014E4B5 /* FeedsViewController.swift in Sources */,
 				844FD36E2B8DB07B0014E4B5 /* FlightConfirmViewController.swift in Sources */,
 				844FD36F2B8DB07B0014E4B5 /* FlightSortViewController.swift in Sources */,
 				844FD3E12B8DB0A90014E4B5 /* HotelBookingOnline.swift in Sources */,
@@ -1254,6 +1256,7 @@
 				844FD3D92B8DB0A90014E4B5 /* ActivityBookingOnline.swift in Sources */,
 				844FD3362B8DB07B0014E4B5 /* ActivityBookingSelectTableViewCell.swift in Sources */,
 				844FD34C2B8DB07B0014E4B5 /* HotelRoomImageCollectionViewCell.swift in Sources */,
+				A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */,
 				844FD3EC2B8DB0A90014E4B5 /* Subscription.swift in Sources */,
 				844FD3522B8DB07B0014E4B5 /* HotelSortViewController.swift in Sources */,
 				844FD3422B8DB07B0014E4B5 /* PageDirectCollectionViewCell.swift in Sources */,
@@ -1262,9 +1265,7 @@
 				844FD33A2B8DB07B0014E4B5 /* ActivityViewController.swift in Sources */,
 				844FD4232B8DB0EA0014E4B5 /* ApiManager.swift in Sources */,
 				844FD3E22B8DB0A90014E4B5 /* BookingDetails.swift in Sources */,
-				844FD39C2B8DB07B0014E4B5 /* FeedsTabVC.swift in Sources */,
 				844FD3E62B8DB0A90014E4B5 /* ActivityDetails.swift in Sources */,
-				844FD3992B8DB07B0014E4B5 /* FeedPopUpViewController.swift in Sources */,
 				844FD3392B8DB07B0014E4B5 /* ActivityBookedInfoViewController.swift in Sources */,
 				844FD36B2B8DB07B0014E4B5 /* PassengerTableViewCell.swift in Sources */,
 				844FD3512B8DB07B0014E4B5 /* HotelViewController.swift in Sources */,
@@ -1273,6 +1274,7 @@
 				844FD35B2B8DB07B0014E4B5 /* FareRuleTableCell.swift in Sources */,
 				844FD3DE2B8DB0A90014E4B5 /* InterestModel.swift in Sources */,
 				844FD3762B8DB07B0014E4B5 /* PassengerViewController.swift in Sources */,
+				A863BAC52B8F376600F6F1D5 /* CommentHeadTableViewCell.swift in Sources */,
 				844FD35E2B8DB07B0014E4B5 /* BaggagInfoTableCell.swift in Sources */,
 				844FD42F2B8DB0F90014E4B5 /* Validation.swift in Sources */,
 				844FD3642B8DB07B0014E4B5 /* DOBTableViewCell.swift in Sources */,
@@ -1282,6 +1284,7 @@
 				844FD3282B8DB07B0014E4B5 /* MarketplaceTabVC.swift in Sources */,
 				844FD33D2B8DB07B0014E4B5 /* ActivitySortViewController.swift in Sources */,
 				844FD3612B8DB07B0014E4B5 /* FlightConfirmTableViewCell.swift in Sources */,
+				A863BAC72B8F376600F6F1D5 /* CommentReplyTableViewCell.swift in Sources */,
 				844FD3752B8DB07B0014E4B5 /* FlightConfirmVC.swift in Sources */,
 				844FD3D62B8DB0A90014E4B5 /* ForgotPassword.swift in Sources */,
 				844FD3A62B8DB07B0014E4B5 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -1291,7 +1294,6 @@
 				844FD37D2B8DB07B0014E4B5 /* StatusTabVC.swift in Sources */,
 				844FD3722B8DB07B0014E4B5 /* FlightDetailsVC.swift in Sources */,
 				844FD3312B8DB07B0014E4B5 /* ActivityBookHeadTableViewCell.swift in Sources */,
-				844FD3912B8DB07B0014E4B5 /* CommentReplyViewController.swift in Sources */,
 				844FD42A2B8DB0F20014E4B5 /* GlobalConstants.swift in Sources */,
 				844FD3382B8DB07B0014E4B5 /* MemberCountViewController.swift in Sources */,
 				844FD3DC2B8DB0A90014E4B5 /* HotelDetails.swift in Sources */,
@@ -1302,11 +1304,10 @@
 				844FD35F2B8DB07B0014E4B5 /* BaggagInfoTableCell2.swift in Sources */,
 				844FD3D72B8DB0A90014E4B5 /* ActivityBookingDetails.swift in Sources */,
 				844FD3882B8DB07B0014E4B5 /* AboutViewController.swift in Sources */,
+				A863BAC12B8F376600F6F1D5 /* FeedPopUpViewController.swift in Sources */,
 				844FD3682B8DB07B0014E4B5 /* FlightItineraryTableCell.swift in Sources */,
-				844FD3972B8DB07B0014E4B5 /* FeedsCommentViewController.swift in Sources */,
 				844FD3A32B8DB07B0014E4B5 /* ReactionsVC.swift in Sources */,
 				844FD3782B8DB07B0014E4B5 /* WeViewViewController.swift in Sources */,
-				844FD39B2B8DB07B0014E4B5 /* FeedEditViewController.swift in Sources */,
 				844FD32D2B8DB07B0014E4B5 /* ActivityDepartureTableViewCell.swift in Sources */,
 				844FD3EF2B8DB0A90014E4B5 /* ActivityRedirect.swift in Sources */,
 				844FD3F52B8DB0A90014E4B5 /* suggestionModel.swift in Sources */,
@@ -1318,7 +1319,6 @@
 				844FD3262B8DB07B0014E4B5 /* SignUpNViewController.swift in Sources */,
 				844FD3E02B8DB0A90014E4B5 /* CountryModel.swift in Sources */,
 				844FD37B2B8DB07B0014E4B5 /* Reachability.swift in Sources */,
-				844FD3952B8DB07B0014E4B5 /* CommentsTableViewCell.swift in Sources */,
 				844FD37C2B8DB07B0014E4B5 /* WebViewController.swift in Sources */,
 				844FD37A2B8DB07B0014E4B5 /* NetworkErrorViewController.swift in Sources */,
 				844FD3872B8DB07B0014E4B5 /* InterestCollectionViewCell.swift in Sources */,
@@ -1331,6 +1331,7 @@
 				844FD3572B8DB07B0014E4B5 /* HotelFilterViewController.swift in Sources */,
 				844FD34A2B8DB07B0014E4B5 /* HotelDetailsHeadTableViewCell.swift in Sources */,
 				844FD3402B8DB07B0014E4B5 /* ActivityFilterViewController.swift in Sources */,
+				A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */,
 				844FD3FC2B8DB0A90014E4B5 /* ActivityBookingList.swift in Sources */,
 				844FD3452B8DB07B0014E4B5 /* HotelDetailsSecondHeadTableViewCell.swift in Sources */,
 				844FD3A12B8DB07B0014E4B5 /* TextTableViewCell.swift in Sources */,
@@ -1351,7 +1352,6 @@
 				844FD4172B8DB0D60014E4B5 /* WalletTabVC.swift in Sources */,
 				844FD36A2B8DB07B0014E4B5 /* FlightListTableViewCell.swift in Sources */,
 				844FD3372B8DB07B0014E4B5 /* ActivityBookTableViewCell.swift in Sources */,
-				844FD3982B8DB07B0014E4B5 /* CommentsHeaderFooterView.swift in Sources */,
 				844FD39F2B8DB07B0014E4B5 /* BookingSelectionViewController.swift in Sources */,
 				844FD3352B8DB07B0014E4B5 /* ActivityInfoTableViewCell.swift in Sources */,
 				844FD38A2B8DB07B0014E4B5 /* PersonalDetailsViewController.swift in Sources */,
@@ -1508,6 +1508,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1538,6 +1539,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

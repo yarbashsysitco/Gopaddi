@@ -75,6 +75,31 @@ class CommentReplyTableViewCell: UITableViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+//    private let replyButton: UIButton = {
+//        let button =  UIButton()
+//        button.setTitle("Reply", for: .normal)
+//        button.setTitleColor(UIColor.systemGray, for: .normal)
+//        button.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 12)
+//        button.isUserInteractionEnabled = true
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
+//    let emojiButton: UIButton = {
+//        let button =  UIButton()
+//        button.setImage(UIImage(named: "emoji0"),for: .normal)
+//        button.isUserInteractionEnabled = true
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
+//    let emojiCountlabel: UILabel = {
+//        let label = UILabel()
+//        label.textColor = .systemGray
+//        label.text = "0"
+//        label.font = UIFont(name: "Poppins-Regular", size: 12)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
+
             var replyComment : (() -> ())?
             var postReply : (() -> ())?
     var likeClicked : (() -> ())?
@@ -92,8 +117,12 @@ class CommentReplyTableViewCell: UITableViewCell {
         contView.addSubview(caption)
         contView.addSubview(likeButton)
         contView.addSubview(commentCreatorName)
+//        contView.addSubview(replyButton)
+//        contView.addSubview(emojiButton)
+//        contView.addSubview(emojiCountlabel)
         selectionStyle = .none
-        likeButton.addTarget(self, action: #selector(didTapLikeBtn), for: .touchUpInside)
+//        likeButton.addTarget(self, action: #selector(didTapLikeBtn), for: .touchUpInside)
+//        replyButton.addTarget(self, action: #selector(didTapReply), for: .touchUpInside)
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -115,7 +144,22 @@ class CommentReplyTableViewCell: UITableViewCell {
             caption.topAnchor.constraint(equalTo: commentCreatorName.bottomAnchor, constant: 5),
             caption.leadingAnchor.constraint(equalTo: contView.leadingAnchor, constant: 15),
             caption.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -5),
-            caption.bottomAnchor.constraint(equalTo: likeButton.topAnchor, constant: 0),
+            caption.bottomAnchor.constraint(equalTo: createdAt.topAnchor, constant: 0),
+            
+//            replyButton.topAnchor.constraint(equalTo: caption.bottomAnchor,constant: 0),
+//            replyButton.leadingAnchor.constraint(equalTo: contView.leadingAnchor,constant: 15),
+//            replyButton.heightAnchor.constraint(equalToConstant: 20),
+//            replyButton.widthAnchor.constraint(equalToConstant: 40),
+//
+//            emojiCountlabel.trailingAnchor.constraint(equalTo: emojiButton.leadingAnchor,constant: -5),
+//            emojiCountlabel.heightAnchor.constraint(equalToConstant: 25),
+//            emojiCountlabel.topAnchor.constraint(equalTo: caption.topAnchor,constant: 0),
+//
+//            emojiButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -5),
+//            emojiButton.widthAnchor.constraint(equalToConstant: 40),
+//            emojiButton.heightAnchor.constraint(equalToConstant: 25),
+//            emojiButton.topAnchor.constraint(equalTo: caption.topAnchor,constant: 0),
+            
 
             createdAt.leadingAnchor.constraint(equalTo: contView.leadingAnchor, constant: 15),
             createdAt.widthAnchor.constraint(equalToConstant: 150),
@@ -126,7 +170,7 @@ class CommentReplyTableViewCell: UITableViewCell {
 
             noOfLikes.leadingAnchor.constraint(equalTo: Likes.trailingAnchor, constant: 0),
             noOfLikes.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
-           
+
             likeButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -15),
             likeButton.widthAnchor.constraint(equalToConstant: 25),
             likeButton.heightAnchor.constraint(equalToConstant: 25),
@@ -137,17 +181,20 @@ class CommentReplyTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    @objc func didTapReply(){
+        replyComment?()
+    }
    
             @objc func didTapLikeBtn(_ sender: Any) {
                 likeClicked?()
             }
             func config(commentData : FcRepliesDatum){
                     if  commentData.fc_liked == 1{
-                      likeButton.tintColor = .systemBlue
+//                      likeButton.tintColor = .systemBlue
                 }else{
-                    likeButton.tintColor = .systemGray
+//                    likeButton.tintColor = .systemGray
                 }
-                noOfLikes.text = "(" + String(commentData.fc_likes!) + ")"
+//                noOfLikes.text = "(" + String(commentData.fc_likes!) + ")"
                 if let url = commentData.fc_commentor?[0].us_picture {
                     commentCreatorPic.sd_setImage(with: URL(string:  url))
                 }
@@ -160,31 +207,31 @@ class CommentReplyTableViewCell: UITableViewCell {
                     print("Failed to convert the posted time string to a Date object.")
                     return
                 }
-                let presentTime = Date()
-                let calendar = Calendar.current
-                let components = calendar.dateComponents([.year, .day, .hour, .minute,.second], from: postedTime, to: presentTime)
-                let years = components.year ?? 0
-                let days = components.day ?? 0
-                let hours = components.hour ?? 0
-                let minutes = components.minute ?? 0
-                let seconds = components.second ?? 0
+//                let presentTime = Date()
+//                let calendar = Calendar.current
+//                let components = calendar.dateComponents([.year, .day, .hour, .minute,.second], from: postedTime, to: presentTime)
+//                let years = components.year ?? 0
+//                let days = components.day ?? 0
+//                let hours = components.hour ?? 0
+//                let minutes = components.minute ?? 0
+//                let seconds = components.second ?? 0
 
-                if years == 0 {
-                    if days != 0{
-                        createdAt.text = String(days) + " days ago"
-                    }else if hours != 0 {
-                        createdAt.text = String(hours) + " hours ago"
-                    }
-                else if minutes != 0{
-                    createdAt.text = String(minutes) + " minutes ago"
-                } else if seconds != 0{
-                    createdAt.text = String(minutes) + " Seconds ago"
-                }else{
-                    createdAt.text = " Just now"
-                }
-                }else{
-                    createdAt.text = String(years) + " years ago"
-                }
+//                if years == 0 {
+//                    if days != 0{
+//                        createdAt.text = String(days) + " days ago"
+//                    }else if hours != 0 {
+//                        createdAt.text = String(hours) + " hours ago"
+//                    }
+//                else if minutes != 0{
+//                    createdAt.text = String(minutes) + " minutes ago"
+//                } else if seconds != 0{
+//                    createdAt.text = String(minutes) + " Seconds ago"
+//                }else{
+//                    createdAt.text = " Just now"
+//                }
+//                }else{
+//                    createdAt.text = String(years) + " years ago"
+//                }
                 
             }
          
