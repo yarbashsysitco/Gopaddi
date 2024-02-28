@@ -106,6 +106,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         FloatingActionButton()
         tabBarController?.delegate = self
         print("okkHello")
+        print("aaa")
 
     }
     
