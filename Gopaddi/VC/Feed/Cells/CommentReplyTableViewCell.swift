@@ -99,6 +99,22 @@ class CommentReplyTableViewCell: UITableViewCell {
 //        label.translatesAutoresizingMaskIntoConstraints = false
 //        return label
 //    }()
+    
+    let emojiButton: UIButton = {
+        let button =  UIButton()
+        button.setImage(UIImage(named: "emoji0"),for: .normal)
+        button.isUserInteractionEnabled = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    let emojiCountlabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .systemGray
+        label.text = "0"
+        label.font = UIFont(name: "Poppins-Regular", size: 12)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 
             var replyComment : (() -> ())?
             var postReply : (() -> ())?
@@ -111,12 +127,14 @@ class CommentReplyTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(commentCreatorPic)
         contentView.addSubview(contView)
-        contView.addSubview(noOfLikes)
-        contView.addSubview(Likes)
+//        contView.addSubview(noOfLikes)
+//        contView.addSubview(Likes)
         contView.addSubview(createdAt)
         contView.addSubview(caption)
-        contView.addSubview(likeButton)
+//        contView.addSubview(likeButton)
         contView.addSubview(commentCreatorName)
+        contView.addSubview(emojiButton)
+        contView.addSubview(emojiCountlabel)
 //        contView.addSubview(replyButton)
 //        contView.addSubview(emojiButton)
 //        contView.addSubview(emojiCountlabel)
@@ -165,16 +183,16 @@ class CommentReplyTableViewCell: UITableViewCell {
             createdAt.widthAnchor.constraint(equalToConstant: 150),
             createdAt.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
 
-            Likes.leadingAnchor.constraint(equalTo: createdAt.trailingAnchor, constant: 2),
-            Likes.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
+            emojiCountlabel.leadingAnchor.constraint(equalTo: createdAt.trailingAnchor, constant: 2),
+            emojiCountlabel.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
 
-            noOfLikes.leadingAnchor.constraint(equalTo: Likes.trailingAnchor, constant: 0),
-            noOfLikes.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
+//            noOfLikes.leadingAnchor.constraint(equalTo: Likes.trailingAnchor, constant: 0),
+//            noOfLikes.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
 
-            likeButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -15),
-            likeButton.widthAnchor.constraint(equalToConstant: 25),
-            likeButton.heightAnchor.constraint(equalToConstant: 25),
-            likeButton.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
+            emojiButton.trailingAnchor.constraint(equalTo: contView.trailingAnchor, constant: -15),
+            emojiButton.widthAnchor.constraint(equalToConstant: 50),
+            emojiButton.heightAnchor.constraint(equalToConstant: 25),
+            emojiButton.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
 
         ])
     }
