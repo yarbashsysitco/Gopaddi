@@ -58,7 +58,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             do {
                 try self.reachability.startNotifier()
             } catch {
-                print("Unable to start notifier")
+                print("Unable to start not")
             }
         }
     }
