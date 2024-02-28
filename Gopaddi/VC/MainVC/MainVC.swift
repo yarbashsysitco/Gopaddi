@@ -105,6 +105,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         trendBtn.titleLabel?.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         FloatingActionButton()
         tabBarController?.delegate = self
+        print("okkHello")
+
     }
     
       func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
