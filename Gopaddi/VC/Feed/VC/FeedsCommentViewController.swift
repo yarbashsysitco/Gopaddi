@@ -83,6 +83,7 @@ class FeedsCommentViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         CommentTxt.text = ""
+        print("hello")
         }
     
     
