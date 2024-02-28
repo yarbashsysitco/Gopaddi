@@ -8,8 +8,11 @@
 import UIKit
 
 class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    
     var utility = UtilitiesFunctions()
     var imagePicker = UIImagePickerController()
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImgView: UIButton!
     @IBOutlet weak var nameLblPost: UILabel!
@@ -20,26 +23,57 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , 
     @IBOutlet weak var profileNameLbl: UILabel!
     @IBOutlet weak var profileName: UILabel!
 
+    @IBOutlet weak var memberLabel: UILabel!
+    @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var profileHistory: UILabel!
+    @IBOutlet weak var followingCountLabel: UILabel!
+    @IBOutlet weak var followingLbl: UILabel!
+    @IBOutlet weak var followersCountLAabel: UILabel!
+    @IBOutlet weak var followeslbl: UILabel!
+    @IBOutlet weak var editProfile: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var postBtn: UIButton!
     @IBOutlet weak var profileImgView: UIImageView!
     var imageBase64String : String?
+    var feilds = ["Timeline","Diary","My applications","Saved"]
+    var cellcount = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
         profileSetup()
-        textView.delegate = self
-        textView.text = " Type your text Here"
-        postBtn.isHidden = true
-        profileImgView.layer.cornerRadius = profileImgView.frame.width/2
+//        textView.delegate = self
+//        textView.text = " Type your text Here"
+//        postBtn.isHidden = true
+//        profileImgView.layer.cornerRadius = profileImgView.frame.width/2
         profileImgViewPost.layer.cornerRadius = profileImgViewPost.frame.width/2
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        self.collectionView.register(UINib.init(nibName: "ProfileFeildsViewCell", bundle: .main), forCellWithReuseIdentifier: "ProfileFeildsViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
+        navigationController?.navigationBar.isHidden = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImageFeed))
-        addImgView.isUserInteractionEnabled = true
-        addImgView.addGestureRecognizer(tapGesture)
+        profileImgViewPost.isUserInteractionEnabled = true
+        profileImgViewPost.addGestureRecognizer(tapGesture)
+//        addImgView.isUserInteractionEnabled = true
+//        addImgView.addGestureRecognizer(tapGesture)
         self.tableView.register(UINib.init(nibName: "ProfileCell", bundle: .main), forCellReuseIdentifier: "ProfileCell")
+        followeslbl.font = UIFont(name: "Poppins", size: 12)
+        followersCountLAabel.font = UIFont(name: "Poppins", size: 12)
+        followingLbl.font = UIFont(name: "Poppins", size: 12)
+        followingCountLabel.font = UIFont(name: "Poppins", size: 12)
+        profileName.font = UIFont(name: "Poppins-SemiBold", size: 18)
+        profileNameLbl.font = UIFont(name: "Poppins", size: 14)
+        profileHistory.font = UIFont(name: "Poppins", size: 14)
+        location.font = UIFont(name: "Poppins", size: 14)
+        dobLbl.font = UIFont(name: "Poppins", size: 14)
+        memberLabel.font = UIFont(name: "Poppins", size: 14)
     }
+    
+    @IBAction func didTapBackButton(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    
     @objc private func didTapImageFeed(){
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             imagePicker.delegate = self
@@ -61,13 +95,13 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , 
         let occupation = UserDefaults.standard.string(forKey: "occupation") ?? ""
         let userName = UserDefaults.standard.string(forKey: "username") ?? ""
         let picture = UserDefaults.standard.string(forKey: "picture") ?? ""
-        profileImgView.sd_setImage(with: URL(string: picture))
-        profileImgViewPost.sd_setImage(with: URL(string: picture))
-        profileName.text = name
-        nameLblPost.text = name
-        ocuupationLbl.text = occupation
-        userNameLbl.text = userName
-        nameLblPost.text = name
+//        profileImgView.sd_setImage(with: URL(string: picture))
+//        profileImgViewPost.sd_setImage(with: URL(string: picture))
+//        profileName.text = name
+//        nameLblPost.text = name
+//        ocuupationLbl.text = occupation
+//        userNameLbl.text = userName
+//        nameLblPost.text = name
         
         view.stopLoading()
     }
@@ -100,13 +134,46 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , 
         vc?.modalPresentationStyle = .fullScreen
         self.present(vc!, animated: true)
     }
-    @IBAction func backBtnClicked(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
+    
 }
 extension ProfileVC : UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         postBtn.isHidden = false
         textView.text = ""
+    }
+}
+
+extension ProfileVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileFeildsViewCell", for: indexPath)as! ProfileFeildsViewCell
+        cell.FeildLabel.text = feilds[indexPath.row]
+        cell.FeildLabel.font = UIFont(name: "Poppins", size: 14)
+        if cellcount == indexPath.row{
+            cell.bottomView.backgroundColor = UIColor.systemBlue
+        }else{
+            cell.bottomView.backgroundColor = UIColor.white
+        }
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width : CGFloat
+        if indexPath.row == 0{
+            width = 100
+        }else if indexPath.row == 1{
+            width = 80
+        }else if indexPath.row == 2{
+            width = 140
+        }else{
+            width = 80
+        }
+        return CGSize(width: width, height: 50)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        cellcount = indexPath.row
+        collectionView.reloadData()
     }
 }

@@ -114,13 +114,6 @@
 		844FD3862B8DB07B0014E4B5 /* BaggeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2F52B8DB07B0014E4B5 /* BaggeViewController.swift */; };
 		844FD3872B8DB07B0014E4B5 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2F62B8DB07B0014E4B5 /* InterestCollectionViewCell.swift */; };
 		844FD3882B8DB07B0014E4B5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2F72B8DB07B0014E4B5 /* AboutViewController.swift */; };
-		844FD3892B8DB07B0014E4B5 /*  ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2F92B8DB07B0014E4B5 /*  ProfileVC.swift */; };
-		844FD38A2B8DB07B0014E4B5 /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FA2B8DB07B0014E4B5 /* PersonalDetailsViewController.swift */; };
-		844FD38B2B8DB07B0014E4B5 /* ProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FB2B8DB07B0014E4B5 /* ProfileInfoViewController.swift */; };
-		844FD38C2B8DB07B0014E4B5 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FC2B8DB07B0014E4B5 /* PaymentViewController.swift */; };
-		844FD38D2B8DB07B0014E4B5 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FD2B8DB07B0014E4B5 /* InterestsViewController.swift */; };
-		844FD38E2B8DB07B0014E4B5 /* ProfilePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FE2B8DB07B0014E4B5 /* ProfilePopupVC.swift */; };
-		844FD38F2B8DB07B0014E4B5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2FF2B8DB07B0014E4B5 /* SettingsViewController.swift */; };
 		844FD39D2B8DB07B0014E4B5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3122B8DB07B0014E4B5 /* MenuTableViewCell.swift */; };
 		844FD39E2B8DB07B0014E4B5 /* MenuTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3132B8DB07B0014E4B5 /* MenuTabVC.swift */; };
 		844FD39F2B8DB07B0014E4B5 /* BookingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3142B8DB07B0014E4B5 /* BookingSelectionViewController.swift */; };
@@ -211,6 +204,15 @@
 		A863BAC92B8F376600F6F1D5 /* PostRepliesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BABC2B8F376600F6F1D5 /* PostRepliesTableViewCell.swift */; };
 		A863BACA2B8F376600F6F1D5 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BABD2B8F376600F6F1D5 /* CommentsTableViewCell.swift */; };
 		A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863BABE2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib */; };
+		A863BAD62B8F3B7900F6F1D5 /*  ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BACD2B8F3B7900F6F1D5 /*  ProfileVC.swift */; };
+		A863BAD72B8F3B7900F6F1D5 /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BACE2B8F3B7900F6F1D5 /* PersonalDetailsViewController.swift */; };
+		A863BAD82B8F3B7900F6F1D5 /* ProfileFeildsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BACF2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.swift */; };
+		A863BAD92B8F3B7900F6F1D5 /* ProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD02B8F3B7900F6F1D5 /* ProfileInfoViewController.swift */; };
+		A863BADA2B8F3B7900F6F1D5 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD12B8F3B7900F6F1D5 /* PaymentViewController.swift */; };
+		A863BADB2B8F3B7900F6F1D5 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD22B8F3B7900F6F1D5 /* InterestsViewController.swift */; };
+		A863BADC2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863BAD32B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib */; };
+		A863BADD2B8F3B7900F6F1D5 /* ProfilePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD42B8F3B7900F6F1D5 /* ProfilePopupVC.swift */; };
+		A863BADE2B8F3B7900F6F1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -324,13 +326,6 @@
 		844FD2F52B8DB07B0014E4B5 /* BaggeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaggeViewController.swift; sourceTree = "<group>"; };
 		844FD2F62B8DB07B0014E4B5 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		844FD2F72B8DB07B0014E4B5 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		844FD2F92B8DB07B0014E4B5 /*  ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " ProfileVC.swift"; sourceTree = "<group>"; };
-		844FD2FA2B8DB07B0014E4B5 /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
-		844FD2FB2B8DB07B0014E4B5 /* ProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewController.swift; sourceTree = "<group>"; };
-		844FD2FC2B8DB07B0014E4B5 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		844FD2FD2B8DB07B0014E4B5 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
-		844FD2FE2B8DB07B0014E4B5 /* ProfilePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupVC.swift; sourceTree = "<group>"; };
-		844FD2FF2B8DB07B0014E4B5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		844FD3122B8DB07B0014E4B5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		844FD3132B8DB07B0014E4B5 /* MenuTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabVC.swift; sourceTree = "<group>"; };
 		844FD3142B8DB07B0014E4B5 /* BookingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingSelectionViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +416,15 @@
 		A863BABC2B8F376600F6F1D5 /* PostRepliesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepliesTableViewCell.swift; sourceTree = "<group>"; };
 		A863BABD2B8F376600F6F1D5 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		A863BABE2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentReplyTableViewCell.xib; sourceTree = "<group>"; };
+		A863BACD2B8F3B7900F6F1D5 /*  ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " ProfileVC.swift"; sourceTree = "<group>"; };
+		A863BACE2B8F3B7900F6F1D5 /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
+		A863BACF2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFeildsViewCell.swift; sourceTree = "<group>"; };
+		A863BAD02B8F3B7900F6F1D5 /* ProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInfoViewController.swift; sourceTree = "<group>"; };
+		A863BAD12B8F3B7900F6F1D5 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		A863BAD22B8F3B7900F6F1D5 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		A863BAD32B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileFeildsViewCell.xib; sourceTree = "<group>"; };
+		A863BAD42B8F3B7900F6F1D5 /* ProfilePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupVC.swift; sourceTree = "<group>"; };
+		A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F65DC8409462E01038B67235 /* Pods-Gopaddi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gopaddi.release.xcconfig"; path = "Target Support Files/Pods-Gopaddi/Pods-Gopaddi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -775,7 +779,7 @@
 			children = (
 				844FD2EE2B8DB07B0014E4B5 /* Cells */,
 				844FD2F42B8DB07B0014E4B5 /* ProfilePop */,
-				844FD2F82B8DB07B0014E4B5 /* VC */,
+				A863BACC2B8F3B7900F6F1D5 /* VC */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -800,20 +804,6 @@
 				844FD2F72B8DB07B0014E4B5 /* AboutViewController.swift */,
 			);
 			path = ProfilePop;
-			sourceTree = "<group>";
-		};
-		844FD2F82B8DB07B0014E4B5 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				844FD2F92B8DB07B0014E4B5 /*  ProfileVC.swift */,
-				844FD2FA2B8DB07B0014E4B5 /* PersonalDetailsViewController.swift */,
-				844FD2FB2B8DB07B0014E4B5 /* ProfileInfoViewController.swift */,
-				844FD2FC2B8DB07B0014E4B5 /* PaymentViewController.swift */,
-				844FD2FD2B8DB07B0014E4B5 /* InterestsViewController.swift */,
-				844FD2FE2B8DB07B0014E4B5 /* ProfilePopupVC.swift */,
-				844FD2FF2B8DB07B0014E4B5 /* SettingsViewController.swift */,
-			);
-			path = VC;
 			sourceTree = "<group>";
 		};
 		844FD3002B8DB07B0014E4B5 /* Feed */ = {
@@ -1026,6 +1016,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A863BACC2B8F3B7900F6F1D5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				A863BACD2B8F3B7900F6F1D5 /*  ProfileVC.swift */,
+				A863BACE2B8F3B7900F6F1D5 /* PersonalDetailsViewController.swift */,
+				A863BACF2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.swift */,
+				A863BAD32B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib */,
+				A863BAD02B8F3B7900F6F1D5 /* ProfileInfoViewController.swift */,
+				A863BAD12B8F3B7900F6F1D5 /* PaymentViewController.swift */,
+				A863BAD22B8F3B7900F6F1D5 /* InterestsViewController.swift */,
+				A863BAD42B8F3B7900F6F1D5 /* ProfilePopupVC.swift */,
+				A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		C04F1ADD8F72F047E9683BE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,6 +1120,7 @@
 				844FD3A22B8DB07B0014E4B5 /* TextTableViewCell.xib in Resources */,
 				844FD40C2B8DB0BB0014E4B5 /* Poppins-Regular.ttf in Resources */,
 				844FD40B2B8DB0BB0014E4B5 /* FontProximanova-medium.otf in Resources */,
+				A863BADC2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib in Resources */,
 				844FD41F2B8DB0E30014E4B5 /* CollectionViewCell.xib in Resources */,
 				A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */,
 			);
@@ -1177,12 +1184,12 @@
 				A863BAC22B8F376600F6F1D5 /* FeedsViewController.swift in Sources */,
 				844FD36C2B8DB07B0014E4B5 /* FlightFlterViewController.swift in Sources */,
 				844FD4002B8DB0A90014E4B5 /* ActivityDestination.swift in Sources */,
+				A863BAD82B8F3B7900F6F1D5 /* ProfileFeildsViewCell.swift in Sources */,
 				844FD3EE2B8DB0A90014E4B5 /* Registration.swift in Sources */,
 				A863BACA2B8F376600F6F1D5 /* CommentsTableViewCell.swift in Sources */,
 				844FD3F92B8DB0A90014E4B5 /* PersonalDetModel.swift in Sources */,
 				844FD41E2B8DB0E30014E4B5 /* AppDelegate.swift in Sources */,
 				844FD4282B8DB0F20014E4B5 /* constant.swift in Sources */,
-				844FD38F2B8DB07B0014E4B5 /* SettingsViewController.swift in Sources */,
 				844FD3E92B8DB0A90014E4B5 /* PaymentModel.swift in Sources */,
 				844FD3562B8DB07B0014E4B5 /* HotelListViewController.swift in Sources */,
 				844FD3D82B8DB0A90014E4B5 /* CommonResponseModel.swift in Sources */,
@@ -1193,6 +1200,7 @@
 				844FD3582B8DB07B0014E4B5 /* HotelsPopUpViewController.swift in Sources */,
 				844FD3F42B8DB0A90014E4B5 /* feedEditModel.swift in Sources */,
 				844FD3F82B8DB0A90014E4B5 /* HotelList.swift in Sources */,
+				A863BADD2B8F3B7900F6F1D5 /* ProfilePopupVC.swift in Sources */,
 				844FD3482B8DB07B0014E4B5 /* HotelConfirmPreviewHeadTableViewCell.swift in Sources */,
 				844FD3E82B8DB0A90014E4B5 /* OtpModel.swift in Sources */,
 				844FD33E2B8DB07B0014E4B5 /* ActivityBookingDetailsViewController.swift in Sources */,
@@ -1202,13 +1210,14 @@
 				844FD3412B8DB07B0014E4B5 /* ActivityDetailsViewController.swift in Sources */,
 				844FD32F2B8DB07B0014E4B5 /* AcivityCancelTableViewCell.swift in Sources */,
 				844FD3862B8DB07B0014E4B5 /* BaggeViewController.swift in Sources */,
+				A863BADB2B8F3B7900F6F1D5 /* InterestsViewController.swift in Sources */,
 				844FD3272B8DB07B0014E4B5 /* CountryViewController.swift in Sources */,
-				844FD38B2B8DB07B0014E4B5 /* ProfileInfoViewController.swift in Sources */,
 				844FD4032B8DB0B40014E4B5 /* UIExtension.swift in Sources */,
 				844FD3A72B8DB07B0014E4B5 /* OnboardingViewController.swift in Sources */,
 				844FD34D2B8DB07B0014E4B5 /* HotelConfirmHeadTableViewCell.swift in Sources */,
 				844FD3812B8DB07B0014E4B5 /* ProfileCell.swift in Sources */,
 				844FD3F62B8DB0A90014E4B5 /* FeedsModel.swift in Sources */,
+				A863BAD72B8F3B7900F6F1D5 /* PersonalDetailsViewController.swift in Sources */,
 				844FD37F2B8DB07B0014E4B5 /* ForgotViewController.swift in Sources */,
 				844FD3E32B8DB0A90014E4B5 /* CommentReply.swift in Sources */,
 				844FD3E72B8DB0A90014E4B5 /* SignInModel.swift in Sources */,
@@ -1230,7 +1239,6 @@
 				844FD3842B8DB07B0014E4B5 /* SettingsTableViewCell.swift in Sources */,
 				844FD3702B8DB07B0014E4B5 /* FlightListViewController.swift in Sources */,
 				844FD3602B8DB07B0014E4B5 /* ContactInfoTableViewCell.swift in Sources */,
-				844FD38E2B8DB07B0014E4B5 /* ProfilePopupVC.swift in Sources */,
 				844FD3EB2B8DB0A90014E4B5 /* FlightairportsModel.swift in Sources */,
 				844FD3332B8DB07B0014E4B5 /* PackageDescTableViewCell.swift in Sources */,
 				844FD3DD2B8DB0A90014E4B5 /* commentReplyModel.swift in Sources */,
@@ -1251,7 +1259,6 @@
 				844FD36F2B8DB07B0014E4B5 /* FlightSortViewController.swift in Sources */,
 				844FD3E12B8DB0A90014E4B5 /* HotelBookingOnline.swift in Sources */,
 				844FD3672B8DB07B0014E4B5 /* FlightItineraryTableCell2.swift in Sources */,
-				844FD38C2B8DB07B0014E4B5 /* PaymentViewController.swift in Sources */,
 				844FD3292B8DB07B0014E4B5 /* SortTableViewCell.swift in Sources */,
 				844FD3D92B8DB0A90014E4B5 /* ActivityBookingOnline.swift in Sources */,
 				844FD3362B8DB07B0014E4B5 /* ActivityBookingSelectTableViewCell.swift in Sources */,
@@ -1264,6 +1271,7 @@
 				844FD3E52B8DB0A90014E4B5 /* HotelCancel.swift in Sources */,
 				844FD33A2B8DB07B0014E4B5 /* ActivityViewController.swift in Sources */,
 				844FD4232B8DB0EA0014E4B5 /* ApiManager.swift in Sources */,
+				A863BAD62B8F3B7900F6F1D5 /*  ProfileVC.swift in Sources */,
 				844FD3E22B8DB0A90014E4B5 /* BookingDetails.swift in Sources */,
 				844FD3E62B8DB0A90014E4B5 /* ActivityDetails.swift in Sources */,
 				844FD3392B8DB07B0014E4B5 /* ActivityBookedInfoViewController.swift in Sources */,
@@ -1271,6 +1279,7 @@
 				844FD3512B8DB07B0014E4B5 /* HotelViewController.swift in Sources */,
 				844FD3802B8DB07B0014E4B5 /* SignInOptionsViewController.swift in Sources */,
 				844FD3432B8DB07B0014E4B5 /* HotelDetailTableViewCell.swift in Sources */,
+				A863BAD92B8F3B7900F6F1D5 /* ProfileInfoViewController.swift in Sources */,
 				844FD35B2B8DB07B0014E4B5 /* FareRuleTableCell.swift in Sources */,
 				844FD3DE2B8DB0A90014E4B5 /* InterestModel.swift in Sources */,
 				844FD3762B8DB07B0014E4B5 /* PassengerViewController.swift in Sources */,
@@ -1325,6 +1334,7 @@
 				844FD3FD2B8DB0A90014E4B5 /* OnboardingData.swift in Sources */,
 				844FD3F32B8DB0A90014E4B5 /* profileImgChangeModel.swift in Sources */,
 				844FD3DA2B8DB0A90014E4B5 /* DeleteModel.swift in Sources */,
+				A863BADA2B8F3B7900F6F1D5 /* PaymentViewController.swift in Sources */,
 				844FD3202B8DB07B0014E4B5 /* LaunshViewController.swift in Sources */,
 				844FD3822B8DB07B0014E4B5 /* ProfileInfoTableViewCell.swift in Sources */,
 				844FD3252B8DB07B0014E4B5 /* PrefixViewController.swift in Sources */,
@@ -1332,10 +1342,10 @@
 				844FD34A2B8DB07B0014E4B5 /* HotelDetailsHeadTableViewCell.swift in Sources */,
 				844FD3402B8DB07B0014E4B5 /* ActivityFilterViewController.swift in Sources */,
 				A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */,
+				A863BADE2B8F3B7900F6F1D5 /* SettingsViewController.swift in Sources */,
 				844FD3FC2B8DB0A90014E4B5 /* ActivityBookingList.swift in Sources */,
 				844FD3452B8DB07B0014E4B5 /* HotelDetailsSecondHeadTableViewCell.swift in Sources */,
 				844FD3A12B8DB07B0014E4B5 /* TextTableViewCell.swift in Sources */,
-				844FD3892B8DB07B0014E4B5 /*  ProfileVC.swift in Sources */,
 				844FD41D2B8DB0E30014E4B5 /* CollectionViewCell.swift in Sources */,
 				844FD4292B8DB0F20014E4B5 /* UtilityInfo.swift in Sources */,
 				844FD3242B8DB07B0014E4B5 /* TermsViewController.swift in Sources */,
@@ -1345,7 +1355,6 @@
 				844FD3ED2B8DB0A90014E4B5 /* FlightcabinsModel.swift in Sources */,
 				844FD3442B8DB07B0014E4B5 /* HotelTravellerInfoTableViewCell.swift in Sources */,
 				844FD3462B8DB07B0014E4B5 /* FilterStarCollectionViewCell.swift in Sources */,
-				844FD38D2B8DB07B0014E4B5 /* InterestsViewController.swift in Sources */,
 				844FD3212B8DB07B0014E4B5 /* SignUpViewController.swift in Sources */,
 				844FD35D2B8DB07B0014E4B5 /* PassportTableViewCell.swift in Sources */,
 				844FD3852B8DB07B0014E4B5 /* SuggestionCollectionViewCell.swift in Sources */,
@@ -1354,7 +1363,6 @@
 				844FD3372B8DB07B0014E4B5 /* ActivityBookTableViewCell.swift in Sources */,
 				844FD39F2B8DB07B0014E4B5 /* BookingSelectionViewController.swift in Sources */,
 				844FD3352B8DB07B0014E4B5 /* ActivityInfoTableViewCell.swift in Sources */,
-				844FD38A2B8DB07B0014E4B5 /* PersonalDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
