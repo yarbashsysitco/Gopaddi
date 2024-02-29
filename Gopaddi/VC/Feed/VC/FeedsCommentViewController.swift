@@ -61,7 +61,7 @@ class FeedsCommentViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func PostcommentBtn(_ sender: UIButton) {
         post?()
-            if CommentTxt.text != "Add comments..." {
+            if CommentTxt.text != "Add comment..." {
                 guard let comment = CommentTxt.text else { return }
                 if !comment.isEmpty{
                     self.promo = self.feedData!.fe_promotion
