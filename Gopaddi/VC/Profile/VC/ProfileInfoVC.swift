@@ -13,6 +13,8 @@ class ProfileInfoVC: UIViewController {
     @IBOutlet weak var LocationView: UIView!
     @IBOutlet weak var BioView: UIView!
     @IBOutlet weak var NameView: UIView!
+    
+    var Btntitles = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,4 +34,29 @@ class ProfileInfoVC: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func interestButtonsTap(_ sender: UIButton) {
+        guard let Buttons = sender as UIButton? else{return}
+        if let Btntaps = sender.titleLabel?.text{
+            if !sender.isSelected{
+                Btntitles.append(Btntaps)
+                print(Btntitles)
+            }else{
+                if let index = Btntitles.firstIndex(of: Btntaps){
+                    Btntitles.remove(at: index)
+                    print(Btntitles)
+                }
+            }
+
+            }
+            if !Buttons.isSelected{
+                Buttons.isSelected = true
+                Buttons.backgroundColor = UIColor.systemBlue
+                Buttons.layer.cornerRadius = 25
+                
+            }else{
+                Buttons.isSelected = false
+                Buttons.backgroundColor = UIColor.lightGray
+                Buttons.layer.cornerRadius = 25
+            }
+    }
 }
