@@ -28,5 +28,8 @@ class ProfileInfoVC: UIViewController {
         view.layer.borderWidth = width
         view.layer.cornerRadius = radius
     }
-
+    @IBAction func didTapBackButton(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 }
