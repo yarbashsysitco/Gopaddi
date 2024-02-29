@@ -133,13 +133,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
 
         // Set the button color to blue
         actionButton.buttonColor = .systemBlue
-
         // Configure the button
-        actionButton.addItem(title: "Feeds", image: UIImage(named: "circle32")) { item in
+        
+        actionButton.addItem(title: "Feeds", image: UIImage(named: "NotePesvg")) { item in
             self.createFeedBtnClicked()
         }
 
-        actionButton.addItem(title: "Diary", image: UIImage(named: "cr32")) { item in
+        actionButton.addItem(title: "Diary", image: UIImage(named: "Notebooksvg")) { item in
             // Handle item 2 tap
         }
 

@@ -222,4 +222,11 @@ class FeedsViewController: UIViewController ,UIImagePickerControllerDelegate, UI
     @IBAction func cancelBtnClicked(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    @IBAction func PublicBtn(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChooseAudiencePopUpVC") as? ChooseAudiencePopUpVC
+        //vc?.modalPresentationStyle = .fullScreen
+        self.present(vc!, animated: true)
+    }
+    
+    
 }
