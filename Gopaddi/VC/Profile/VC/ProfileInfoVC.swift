@@ -65,6 +65,7 @@ class ProfileInfoVC: UIViewController {
     @IBAction func birthdayBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectCalendarPopUp") as? SelectCalendarPopUp
         //vc?.modalPresentationStyle = .fullScreen
+        print("hello")
         self.present(vc!, animated: true)
     }
 }
