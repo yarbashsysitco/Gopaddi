@@ -67,6 +67,8 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , 
         location.font = UIFont(name: "Poppins", size: 14)
         dobLbl.font = UIFont(name: "Poppins", size: 14)
         memberLabel.font = UIFont(name: "Poppins", size: 14)
+        
+        print("hello")
     }
     
     @IBAction func didTapBackButton(_ sender: UIButton) {

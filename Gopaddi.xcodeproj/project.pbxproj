@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840BA1B32B90A89900F0C3C3 /* SelectCalendarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BA1B22B90A89900F0C3C3 /* SelectCalendarPopUp.swift */; };
 		844FD2722B8DAFEC0014E4B5 /* Fastis in Frameworks */ = {isa = PBXBuildFile; productRef = 844FD2712B8DAFEC0014E4B5 /* Fastis */; };
 		844FD31F2B8DB07B0014E4B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FD2752B8DB07B0014E4B5 /* LaunchScreen.storyboard */; };
 		844FD3202B8DB07B0014E4B5 /* LaunshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2772B8DB07B0014E4B5 /* LaunshViewController.swift */; };
@@ -222,6 +223,7 @@
 /* Begin PBXFileReference section */
 		2813A594D8E9C40E5E152545 /* Pods_Gopaddi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gopaddi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504F9EB7843E06AD72F86FDD /* Pods-Gopaddi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gopaddi.debug.xcconfig"; path = "Target Support Files/Pods-Gopaddi/Pods-Gopaddi.debug.xcconfig"; sourceTree = "<group>"; };
+		840BA1B22B90A89900F0C3C3 /* SelectCalendarPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCalendarPopUp.swift; sourceTree = "<group>"; };
 		844FD2592B8DAB350014E4B5 /* Gopaddi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gopaddi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FD26A2B8DAB360014E4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FD2762B8DB07B0014E4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -812,6 +814,7 @@
 				844FD2F52B8DB07B0014E4B5 /* BaggeViewController.swift */,
 				844FD2F62B8DB07B0014E4B5 /* InterestCollectionViewCell.swift */,
 				844FD2F72B8DB07B0014E4B5 /* AboutViewController.swift */,
+				840BA1B22B90A89900F0C3C3 /* SelectCalendarPopUp.swift */,
 			);
 			path = ProfilePop;
 			sourceTree = "<group>";
@@ -1221,6 +1224,7 @@
 				844FD3792B8DB07B0014E4B5 /* HotelWebViewController.swift in Sources */,
 				844FD33B2B8DB07B0014E4B5 /* ActivityBookingSelectViewController.swift in Sources */,
 				844FD3772B8DB07B0014E4B5 /* FlightPassengerEntryViewController.swift in Sources */,
+				840BA1B32B90A89900F0C3C3 /* SelectCalendarPopUp.swift in Sources */,
 				84A935612B909488004C10BA /* ChooseAudiencePopUpVC.swift in Sources */,
 				844FD3412B8DB07B0014E4B5 /* ActivityDetailsViewController.swift in Sources */,
 				844FD32F2B8DB07B0014E4B5 /* AcivityCancelTableViewCell.swift in Sources */,

@@ -4815,7 +4815,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your sign-in information " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brh-Rg-m37">
-                                        <rect key="frame" x="20" y="89.666666666666671" width="189.33333333333334" height="20"/>
+                                        <rect key="frame" x="20" y="85.333333333333329" width="175.33333333333334" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="yd1-BB-GcX"/>
                                         </constraints>
@@ -4824,7 +4824,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaX-E1-Kcb">
-                                        <rect key="frame" x="20" y="54.999999999999993" width="64.666666666666671" height="26.666666666666664"/>
+                                        <rect key="frame" x="20.000000000000004" y="55.000000000000007" width="58.333333333333343" height="22.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -4968,7 +4968,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-K9-MhZ">
-                                        <rect key="frame" x="157.33333333333334" y="-6" width="28.666666666666657" height="28"/>
+                                        <rect key="frame" x="157" y="-3.6666666666666856" width="29" height="23.333333333333332"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -4996,7 +4996,7 @@
                                 <rect key="frame" x="61.000000000000014" y="730" width="246.33333333333337" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shU-ew-UCz">
-                                        <rect key="frame" x="0.0" y="0.0" width="177.33333333333334" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="94T-UU-F32"/>
                                         </constraints>
@@ -5005,7 +5005,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY2-2C-1Bq">
-                                        <rect key="frame" x="165.33333333333334" y="0.0" width="81" height="21"/>
+                                        <rect key="frame" x="149.66666666666666" y="0.0" width="96.666666666666657" height="21"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                             <fontDescription key="titleFontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
@@ -5889,7 +5889,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt3-jB-xro">
-                                                <rect key="frame" x="145" y="41.000000000000007" width="67.666666666666686" height="24.999999999999993"/>
+                                                <rect key="frame" x="145" y="41.000000000000007" width="59.666666666666657" height="24.999999999999993"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="650-xq-rpa"/>
                                                 </constraints>
@@ -5999,7 +5999,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8D-nO-vuT">
-                                                <rect key="frame" x="247" y="3" width="53" height="35"/>
+                                                <rect key="frame" x="248" y="3" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="mFb-UK-XiW"/>
                                                 </constraints>
@@ -6397,7 +6397,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrg-tb-3xe">
-                                                <rect key="frame" x="145" y="40.999999999999943" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="40.999999999999943" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="CPa-Jb-tkh"/>
                                                 </constraints>
@@ -6507,7 +6507,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUd-Mh-6gg">
-                                                <rect key="frame" x="247" y="10" width="53" height="35"/>
+                                                <rect key="frame" x="248" y="10" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="rNM-de-ZD4"/>
                                                 </constraints>
@@ -6872,7 +6872,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQW-tN-rvh">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="wP4-EL-1xP"/>
                                                 </constraints>
@@ -6982,7 +6982,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc1-Q9-OnY">
-                                                <rect key="frame" x="212.66666666666671" y="8" width="89.333333333333343" height="35"/>
+                                                <rect key="frame" x="219" y="8" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="tSj-Up-7xf"/>
                                                 </constraints>
@@ -6995,7 +6995,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Up-Is-riZ">
-                                                <rect key="frame" x="247" y="8" width="53" height="35"/>
+                                                <rect key="frame" x="248" y="8" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="lU1-uP-y4L"/>
                                                 </constraints>
@@ -7348,7 +7348,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5A-H9-hvJ">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="IN0-qe-GIs"/>
                                                 </constraints>
@@ -7458,7 +7458,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eu-dh-ijR">
-                                                <rect key="frame" x="212.66666666666671" y="8" width="89.333333333333343" height="35"/>
+                                                <rect key="frame" x="219" y="8" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="DX7-95-9xF"/>
                                                 </constraints>
@@ -7563,7 +7563,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvR-tU-ksE">
-                                                <rect key="frame" x="247" y="10" width="53" height="35"/>
+                                                <rect key="frame" x="248" y="10" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="iBy-DN-Lcc"/>
                                                 </constraints>
@@ -10265,7 +10265,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWf-Cq-6m2">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="69T-6S-zQE"/>
                                                 </constraints>
@@ -10761,7 +10761,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmo-jZ-4SW">
-                                                <rect key="frame" x="145" y="41.000000000000007" width="67.666666666666686" height="24.999999999999993"/>
+                                                <rect key="frame" x="145" y="41.000000000000007" width="59.666666666666657" height="24.999999999999993"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="h1G-mo-cxQ"/>
                                                 </constraints>
@@ -11269,7 +11269,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-66-zJs">
-                                                <rect key="frame" x="145" y="40.999999999999943" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="40.999999999999943" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="Lsd-4N-lXf"/>
                                                 </constraints>
@@ -11392,7 +11392,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-Ui-IEP">
-                                                <rect key="frame" x="210.66666666666669" y="10" width="89.333333333333314" height="35"/>
+                                                <rect key="frame" x="217" y="10" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="ewz-dd-dQB"/>
                                                 </constraints>
@@ -11744,7 +11744,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V33-eM-nTR">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="32E-QF-1iR"/>
                                                 </constraints>
@@ -11854,7 +11854,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbN-Rz-GTb">
-                                                <rect key="frame" x="212.66666666666671" y="8" width="89.333333333333343" height="35"/>
+                                                <rect key="frame" x="219" y="8" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="jyL-SG-bOa"/>
                                                 </constraints>
@@ -11867,7 +11867,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFT-A3-BgD">
-                                                <rect key="frame" x="247" y="8" width="53" height="35"/>
+                                                <rect key="frame" x="248" y="8" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Xjf-Yv-TOc"/>
                                                 </constraints>
@@ -12220,7 +12220,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-GI-iEC">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="IY3-Ei-QfB"/>
                                                 </constraints>
@@ -12330,7 +12330,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-gL-JQQ">
-                                                <rect key="frame" x="212.66666666666671" y="8" width="89.333333333333343" height="35"/>
+                                                <rect key="frame" x="219" y="8" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="IR4-iM-Lcj"/>
                                                 </constraints>
@@ -12435,7 +12435,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVG-Nd-Map">
-                                                <rect key="frame" x="247" y="10" width="53" height="35"/>
+                                                <rect key="frame" x="248" y="10" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="WF3-Nr-bIu"/>
                                                 </constraints>
@@ -12785,7 +12785,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag0-zX-4ir">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="LOJ-SN-oNd"/>
                                                 </constraints>
@@ -13293,7 +13293,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR5-su-Yc5">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="Ty2-5p-hEi"/>
                                                 </constraints>
@@ -13416,7 +13416,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-yH-4Uj">
-                                                <rect key="frame" x="255.66666666666671" y="10" width="89.333333333333343" height="35"/>
+                                                <rect key="frame" x="262" y="10" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="VEc-HW-Ip4"/>
                                                 </constraints>
@@ -13768,7 +13768,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXt-6e-5FS">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="GBE-hn-1dG"/>
                                                 </constraints>
@@ -13878,7 +13878,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-FZ-InL">
-                                                <rect key="frame" x="257.66666666666669" y="8" width="89.333333333333314" height="35"/>
+                                                <rect key="frame" x="264" y="8" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="mBX-Ci-1uq"/>
                                                 </constraints>
@@ -13891,7 +13891,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4v-xI-Y10">
-                                                <rect key="frame" x="292" y="8" width="53" height="35"/>
+                                                <rect key="frame" x="293" y="8" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="8oN-5m-nr8"/>
                                                 </constraints>
@@ -14244,7 +14244,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gk-PL-eHM">
-                                                <rect key="frame" x="145" y="41" width="67.666666666666686" height="25"/>
+                                                <rect key="frame" x="145" y="41" width="59.666666666666657" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="fbv-XA-fVn"/>
                                                 </constraints>
@@ -14354,7 +14354,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-7D-kPA">
-                                                <rect key="frame" x="257.66666666666669" y="8" width="89.333333333333314" height="35"/>
+                                                <rect key="frame" x="264" y="8" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="blG-a6-cki"/>
                                                 </constraints>
@@ -14459,7 +14459,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BI-wQ-5tR">
-                                                <rect key="frame" x="292" y="10" width="53" height="35"/>
+                                                <rect key="frame" x="293" y="10" width="52" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="Mkj-2Q-l2n"/>
                                                 </constraints>
@@ -14725,13 +14725,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="393"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms &amp; Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJD-0d-H3D">
-                                                        <rect key="frame" x="55" y="20" width="147" height="25.333333333333329"/>
+                                                        <rect key="frame" x="55" y="20" width="136" height="21"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1G-Dp-ue1">
-                                                        <rect key="frame" x="20" y="72" width="160" height="22.666666666666671"/>
+                                                        <rect key="frame" x="20" y="72" width="160" height="18.666666666666671"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="160" id="u7U-uu-A2b"/>
                                                         </constraints>
@@ -14740,10 +14740,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dX-cM-dG9">
-                                                        <rect key="frame" x="0.0" y="247.66666666666669" width="375" height="80"/>
+                                                        <rect key="frame" x="0.0" y="243.66666666666669" width="375" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children's age in Room 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dr-vj-3ED">
-                                                                <rect key="frame" x="20" y="0.0" width="193" height="25"/>
+                                                                <rect key="frame" x="20" y="0.0" width="180.66666666666666" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="QPW-fM-xZc"/>
                                                                 </constraints>
@@ -14836,7 +14836,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3G2-cL-E0S">
-                                                        <rect key="frame" x="0.0" y="127.66666666666669" width="375" height="110"/>
+                                                        <rect key="frame" x="0.0" y="123.66666666666669" width="375" height="110"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adults in Room 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-xy-Xyu">
                                                                 <rect key="frame" x="30" y="15" width="150" height="30"/>
@@ -14976,7 +14976,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNK-5n-wi0">
-                                                        <rect key="frame" x="0.0" y="327.66666666666663" width="375" height="48"/>
+                                                        <rect key="frame" x="0.0" y="323.66666666666663" width="375" height="48"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Du-xR-drc">
                                                                 <rect key="frame" x="30" y="10" width="80" height="40"/>
@@ -15061,7 +15061,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(4 Adults and 4 children per Room)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BW6-0a-sa7">
-                                                        <rect key="frame" x="20" y="94.666666666666686" width="228" height="20"/>
+                                                        <rect key="frame" x="20" y="90.666666666666686" width="201.66666666666666" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="imf-7s-IWj"/>
                                                         </constraints>
@@ -15158,7 +15158,7 @@
                                                         <rect key="frame" x="0.0" y="120" width="375" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children's age in Room 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHF-dm-yOa">
-                                                                <rect key="frame" x="20" y="0.0" width="197.33333333333334" height="25"/>
+                                                                <rect key="frame" x="20" y="0.0" width="180.66666666666666" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="2Ml-pI-7fA"/>
                                                                 </constraints>
@@ -15522,7 +15522,7 @@
                                                         <rect key="frame" x="0.0" y="120" width="375" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children's age in Room 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZR-tS-7GY">
-                                                                <rect key="frame" x="20" y="0.0" width="197.33333333333334" height="25"/>
+                                                                <rect key="frame" x="20" y="0.0" width="180.66666666666666" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="Vc7-MM-iM8"/>
                                                                 </constraints>
@@ -15859,7 +15859,7 @@
                                                         <rect key="frame" x="0.0" y="125" width="375" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children's age in Room 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-8P-s1k">
-                                                                <rect key="frame" x="20" y="0.0" width="198" height="25"/>
+                                                                <rect key="frame" x="20" y="0.0" width="180.66666666666666" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="0Uh-9X-dkd"/>
                                                                 </constraints>
@@ -16322,7 +16322,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms &amp; Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcb-iT-XkT">
-                                                        <rect key="frame" x="55" y="20" width="147" height="25.333333333333329"/>
+                                                        <rect key="frame" x="55" y="20" width="136" height="21"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -16832,13 +16832,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="393"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms &amp; Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27t-ig-er0">
-                                                        <rect key="frame" x="55" y="20" width="147" height="25.333333333333329"/>
+                                                        <rect key="frame" x="55" y="20" width="136" height="21"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coa-qi-ihy">
-                                                        <rect key="frame" x="20" y="72" width="160" height="22.666666666666671"/>
+                                                        <rect key="frame" x="20" y="72" width="160" height="18.666666666666671"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="160" id="q2j-sV-Q7I"/>
                                                         </constraints>
@@ -16847,7 +16847,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axK-If-Eub">
-                                                        <rect key="frame" x="0.0" y="247.66666666666669" width="375" height="80"/>
+                                                        <rect key="frame" x="0.0" y="243.66666666666669" width="375" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Children's age in Room 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-PV-CJv">
                                                                 <rect key="frame" x="20" y="0.0" width="309" height="25"/>
@@ -16961,7 +16961,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-Eu-sdu">
-                                                        <rect key="frame" x="0.0" y="127.66666666666669" width="375" height="110"/>
+                                                        <rect key="frame" x="0.0" y="123.66666666666669" width="375" height="110"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adults in Room 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn9-Wr-zof">
                                                                 <rect key="frame" x="30" y="15" width="150" height="30"/>
@@ -17115,7 +17115,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUZ-nl-dQ9">
-                                                        <rect key="frame" x="0.0" y="327.66666666666663" width="375" height="48"/>
+                                                        <rect key="frame" x="0.0" y="323.66666666666663" width="375" height="48"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jC-u7-wEf">
                                                                 <rect key="frame" x="30" y="10" width="80" height="40"/>
@@ -17218,7 +17218,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(4 Adults and 4 children per Room)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIy-q5-oGV">
-                                                        <rect key="frame" x="20" y="94.666666666666686" width="228" height="20"/>
+                                                        <rect key="frame" x="20" y="90.666666666666686" width="201.66666666666666" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="KM7-pA-wF9"/>
                                                         </constraints>
@@ -19006,7 +19006,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms &amp; Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIu-d5-u2b">
-                                                        <rect key="frame" x="55" y="20" width="147" height="25.333333333333329"/>
+                                                        <rect key="frame" x="55" y="20" width="136" height="21"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -20329,7 +20329,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your sign-in information " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHN-gZ-Gx8">
-                                        <rect key="frame" x="20" y="89.666666666666671" width="189.33333333333334" height="20"/>
+                                        <rect key="frame" x="20" y="85.333333333333329" width="175.33333333333334" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="jax-kL-XnW"/>
                                         </constraints>
@@ -20338,7 +20338,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipj-fr-FjE">
-                                        <rect key="frame" x="20" y="54.999999999999993" width="64.666666666666671" height="26.666666666666664"/>
+                                        <rect key="frame" x="20.000000000000004" y="55.000000000000007" width="58.333333333333343" height="22.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -20488,7 +20488,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-ch-red">
-                                                        <rect key="frame" x="153.33333333333334" y="-6" width="28.666666666666657" height="28"/>
+                                                        <rect key="frame" x="153" y="-3.6666666666666856" width="29" height="23.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -20516,7 +20516,7 @@
                                                 <rect key="frame" x="60" y="581" width="255" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCT-Rj-bEp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177.33333333333334" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="4Rt-o7-LQT"/>
                                                         </constraints>
@@ -20525,7 +20525,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO2-Fb-1a7">
-                                                        <rect key="frame" x="165.33333333333334" y="0.0" width="89.666666666666657" height="21"/>
+                                                        <rect key="frame" x="149.66666666666666" y="0.0" width="105.33333333333334" height="21"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                                             <fontDescription key="titleFontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
@@ -25479,7 +25479,6 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZYz-Uz-Cr0"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="JDP-z9-dZB" firstAttribute="top" secondItem="ZYz-Uz-Cr0" secondAttribute="top" constant="565" id="pLD-Cm-vjT"/>
                             <constraint firstItem="JDP-z9-dZB" firstAttribute="bottom" secondItem="ZYz-Uz-Cr0" secondAttribute="bottom" id="vRN-Y2-irD"/>
@@ -25868,7 +25867,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1476"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCh-RO-hFs">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCh-RO-hFs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1476"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oi5-Ew-sc0" userLabel="Content view">

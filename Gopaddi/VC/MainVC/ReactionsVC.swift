@@ -30,7 +30,7 @@ class ReactionsVC: UIViewController {
 //        contentView.addGestureRecognizer(tapGesture)
 //        
         // Customize the appearance of the view
-        configView()
+       // configView()
     }
     
 //    func configureView() {
