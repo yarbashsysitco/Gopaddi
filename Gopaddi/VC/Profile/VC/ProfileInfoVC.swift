@@ -58,10 +58,12 @@ class ProfileInfoVC: UIViewController ,SendingData{
                 Buttons.isSelected = true
                 Buttons.layer.backgroundColor  =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
                 Buttons.layer.cornerRadius = 25
-                
+                Buttons.setTitleColor(UIColor.white, for: .selected)
+
             }else{
                 Buttons.isSelected = false
                 Buttons.layer.backgroundColor =  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1)
+                Buttons.titleLabel?.textColor
                 Buttons.layer.cornerRadius = 25
             }
     }

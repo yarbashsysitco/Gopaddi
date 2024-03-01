@@ -140,7 +140,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         }
 
         actionButton.addItem(title: "Diary", image: UIImage(named: "Notebooksvg")) { item in
-            // Handle item 2 tap
+            self.DiaryFeedBtnClicked()
         }
 
         // Add the button to the view
@@ -455,6 +455,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
     func createFeedBtnClicked(){
         let vc = (UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "FeedsViewController") as? FeedsViewController)!
         vc.userKey = userKey!
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    } 
+    func DiaryFeedBtnClicked(){
+        let vc = (UIStoryboard.init(name: "DiaryMain", bundle: Bundle.main).instantiateViewController(withIdentifier: "DiaryViewController") as? DiaryViewController)!
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
