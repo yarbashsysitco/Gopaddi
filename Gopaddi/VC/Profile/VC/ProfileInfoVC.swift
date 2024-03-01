@@ -7,8 +7,13 @@
 
 import UIKit
 
-class ProfileInfoVC: UIViewController {
+class ProfileInfoVC: UIViewController ,SendingData{
+    func SaveData(Title: String, Image: UIImage?) {
+        whouseBtn.setTitle(Title, for: .normal)
+    }
+    
 
+    @IBOutlet weak var whouseBtn: UIButton!
     @IBOutlet weak var BirthView: UIView!
     @IBOutlet weak var LocationView: UIView!
     @IBOutlet weak var BioView: UIView!
@@ -68,4 +73,11 @@ class ProfileInfoVC: UIViewController {
         print("hello")
         self.present(vc!, animated: true)
     }
+    
+    @IBAction func whocanTapButton(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "WhocanSeeProfileViewController") as! WhocanSeeProfileViewController
+        vc.sendDeligate = self
+        self.present(vc, animated: true)
+    }
+    
 }

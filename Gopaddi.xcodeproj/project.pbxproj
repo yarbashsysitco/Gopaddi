@@ -218,6 +218,7 @@
 		A863BADE2B8F3B7900F6F1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */; };
 		A89E99352B8F4FCA0006745C /* GopaddiMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89E99342B8F4FCA0006745C /* GopaddiMain.storyboard */; };
 		A89E99372B8F50680006745C /* EditMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89E99362B8F50680006745C /* EditMain.storyboard */; };
+		A8E587B22B91A89A0096FDEA /* WhocanSeeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E587B12B91A89A0096FDEA /* WhocanSeeProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -435,6 +436,7 @@
 		A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A89E99342B8F4FCA0006745C /* GopaddiMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GopaddiMain.storyboard; sourceTree = "<group>"; };
 		A89E99362B8F50680006745C /* EditMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditMain.storyboard; sourceTree = "<group>"; };
+		A8E587B12B91A89A0096FDEA /* WhocanSeeProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhocanSeeProfileViewController.swift; sourceTree = "<group>"; };
 		F65DC8409462E01038B67235 /* Pods-Gopaddi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gopaddi.release.xcconfig"; path = "Target Support Files/Pods-Gopaddi/Pods-Gopaddi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1043,6 +1045,7 @@
 				A863BAD42B8F3B7900F6F1D5 /* ProfilePopupVC.swift */,
 				A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */,
 				84CAEDDB2B8F5D7A00C94286 /* ProfileInfoVC.swift */,
+				A8E587B12B91A89A0096FDEA /* WhocanSeeProfileViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1268,6 +1271,7 @@
 				844FD3222B8DB07B0014E4B5 /* NationalityViewController.swift in Sources */,
 				A863BAC32B8F376600F6F1D5 /* FeedEditViewController.swift in Sources */,
 				844FD3FE2B8DB0A90014E4B5 /* HotelBookingList.swift in Sources */,
+				A8E587B22B91A89A0096FDEA /* WhocanSeeProfileViewController.swift in Sources */,
 				844FD3472B8DB07B0014E4B5 /* HotelListTableViewCell.swift in Sources */,
 				844FD3FA2B8DB0A90014E4B5 /* Memberships.swift in Sources */,
 				844FD3492B8DB07B0014E4B5 /* HotelConfirmedInfoTableViewCell.swift in Sources */,
