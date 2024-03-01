@@ -29,6 +29,7 @@ class WhocanSeeProfileViewController: UIViewController {
         sendDeligate?.SaveData(Title: Btntitles, Image: Btnimage)
         print(Btntitles)
         self.dismiss(animated: true)
+        print("hello")
     }
     
     
