@@ -62,7 +62,7 @@
                                 <rect key="frame" x="0.0" y="124" width="430" height="776"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZE8-v6-ZhW">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="776"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diary Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROV-Gl-LAF">
                                                 <rect key="frame" x="16" y="16" width="69.333333333333329" height="20"/>
@@ -245,7 +245,7 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Public">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="7"/>
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>
@@ -255,7 +255,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-IU-2OW">
-                                                <rect key="frame" x="136" y="579" width="92.666666666666686" height="16"/>
+                                                <rect key="frame" x="136" y="579" width="90.333333333333314" height="16"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-rc-awj">
                                                         <rect key="frame" x="0.0" y="0.99999999999999822" width="16" height="14.666666666666668"/>
@@ -266,10 +266,12 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRu-l4-key">
-                                                        <rect key="frame" x="16" y="0.0" width="76.666666666666671" height="16"/>
+                                                        <rect key="frame" x="16" y="0.0" width="74.333333333333329" height="16"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Private"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Private">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                        </buttonConfiguration>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -316,7 +318,7 @@
                                             <constraint firstItem="RJ1-6u-8yj" firstAttribute="top" secondItem="84a-tg-l4v" secondAttribute="bottom" constant="30" id="RS0-CL-SD2"/>
                                             <constraint firstItem="84a-tg-l4v" firstAttribute="leading" secondItem="ZE8-v6-ZhW" secondAttribute="leading" id="RjO-Z9-VXF"/>
                                             <constraint firstItem="30f-0p-evq" firstAttribute="top" secondItem="yAU-7M-zIf" secondAttribute="bottom" constant="20" id="SfI-2l-t6Z"/>
-                                            <constraint firstAttribute="height" constant="1000" id="W1j-Af-aoG"/>
+                                            <constraint firstAttribute="height" constant="776" id="W1j-Af-aoG"/>
                                             <constraint firstAttribute="trailing" secondItem="Rs8-HD-Y2r" secondAttribute="trailing" id="WvS-PS-w4J"/>
                                             <constraint firstItem="Lxl-5s-IWm" firstAttribute="leading" secondItem="ZE8-v6-ZhW" secondAttribute="leading" constant="16" id="aTG-lW-Hxi"/>
                                             <constraint firstItem="gWL-hS-wof" firstAttribute="top" secondItem="Rs8-HD-Y2r" secondAttribute="bottom" constant="20" id="bFU-PS-0ZS"/>
@@ -344,7 +346,7 @@
                                     <constraint firstItem="ZE8-v6-ZhW" firstAttribute="top" secondItem="XQg-Fp-gVC" secondAttribute="top" id="4GA-mV-uaL"/>
                                     <constraint firstItem="ZE8-v6-ZhW" firstAttribute="leading" secondItem="XQg-Fp-gVC" secondAttribute="leading" id="BIT-Qa-Q2E"/>
                                     <constraint firstAttribute="trailing" secondItem="ZE8-v6-ZhW" secondAttribute="trailing" id="Hqv-DE-dWV"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZE8-v6-ZhW" secondAttribute="bottom" constant="-67" id="vxt-1G-b62"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZE8-v6-ZhW" secondAttribute="bottom" id="vxt-1G-b62"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="56Q-Bl-Kpy"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Ixu-Ro-Bq7"/>

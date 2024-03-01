@@ -10,10 +10,11 @@ import UIKit
 class SelectCalendarPopUp: UIViewController {
     @IBOutlet weak var cencelBtn: UIButton!
     
+    @IBOutlet weak var picker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
         cencelBtn.layer.cornerRadius = 5
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func cencelBtnss(_ sender: Any) {
