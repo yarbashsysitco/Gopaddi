@@ -58,6 +58,7 @@ class ImageTableViewCell: UITableViewCell {
 //        testView.delegate = self
 //        testView.text = "Add Comments"
         print("testView ")
+        print("test")
     }
     func makeClickActive(value : Bool){
         saveImgView.isUserInteractionEnabled = value

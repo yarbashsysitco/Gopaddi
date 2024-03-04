@@ -8,6 +8,8 @@
 import UIKit
 
 class ReactionCountCell: UICollectionViewCell {
+    @IBOutlet weak var emojiCountLabel: UILabel!
+    @IBOutlet weak var emojiImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

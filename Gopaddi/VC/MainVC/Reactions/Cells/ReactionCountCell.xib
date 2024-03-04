@@ -1,21 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ReactionCountCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReactionCountCell" id="XPc-fP-6pb" customClass="ReactionCountCell" customModule="Gopaddi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="118" height="144"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="118" height="144"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzk-O0-A6P">
+                        <rect key="frame" x="5" y="5" width="108" height="134"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="all" translatesAutoresizingMaskIntoConstraints="NO" id="2Ve-wI-bmz">
+                                <rect key="frame" x="29" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9BT-DJ-OKX"/>
+                                    <constraint firstAttribute="height" constant="50" id="vUj-Hi-kcS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDA-2K-A1C">
+                                <rect key="frame" x="44" y="100" width="20.333333333333329" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="oZ0-mB-pKL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85773056029999994" green="0.9924208269" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mDA-2K-A1C" firstAttribute="top" secondItem="2Ve-wI-bmz" secondAttribute="bottom" constant="30" id="NG5-Ka-hev"/>
+                            <constraint firstItem="2Ve-wI-bmz" firstAttribute="centerX" secondItem="Bzk-O0-A6P" secondAttribute="centerX" id="Rzx-6S-9no"/>
+                            <constraint firstItem="2Ve-wI-bmz" firstAttribute="top" secondItem="Bzk-O0-A6P" secondAttribute="top" constant="20" id="Wef-sZ-ULQ"/>
+                            <constraint firstItem="mDA-2K-A1C" firstAttribute="centerX" secondItem="Bzk-O0-A6P" secondAttribute="centerX" id="vZU-fK-BzQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="syc-kB-cZB"/>
+            <constraints>
+                <constraint firstItem="Bzk-O0-A6P" firstAttribute="leading" secondItem="XPc-fP-6pb" secondAttribute="leading" constant="5" id="CHL-Me-OYy"/>
+                <constraint firstItem="Bzk-O0-A6P" firstAttribute="top" secondItem="XPc-fP-6pb" secondAttribute="top" constant="5" id="Hik-yB-gzI"/>
+                <constraint firstAttribute="trailing" secondItem="Bzk-O0-A6P" secondAttribute="trailing" constant="5" id="Ivw-Xi-Xod"/>
+                <constraint firstAttribute="bottom" secondItem="Bzk-O0-A6P" secondAttribute="bottom" constant="5" id="cMC-gq-6fl"/>
+            </constraints>
+            <size key="customSize" width="118" height="144"/>
+            <connections>
+                <outlet property="emojiCountLabel" destination="mDA-2K-A1C" id="oMA-SB-gh5"/>
+                <outlet property="emojiImage" destination="2Ve-wI-bmz" id="2kJ-HW-K5R"/>
+            </connections>
+            <point key="canvasLocation" x="148.09160305343511" y="21.83098591549296"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="all" width="30" height="30"/>
+    </resources>
 </document>
