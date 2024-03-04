@@ -13,7 +13,7 @@ class ReactionMainViewController: UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var collection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print("hello")
         collection.delegate = self
         collection.dataSource = self
 //        self.collection.register(UINib.init(nibName: "ReactionCountCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "ReactionCountCollectionViewCell")
