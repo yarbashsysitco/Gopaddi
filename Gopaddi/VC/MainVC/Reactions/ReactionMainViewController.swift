@@ -17,7 +17,7 @@ print("hello")
         collection.delegate = self
         collection.dataSource = self
 //        self.collection.register(UINib.init(nibName: "ReactionCountCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "ReactionCountCollectionViewCell")
-        collection.register(UINib.init(nibName: "ReactionCountCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "ReactionCountViewCell")
+        collection.register(UINib.init(nibName: "ReactionCountCell", bundle: .main), forCellWithReuseIdentifier: "ReactionCountCell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,7 +25,7 @@ print("hello")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collection.dequeueReusableCell(withReuseIdentifier: "ReactionCountViewCell", for: indexPath)as! ReactionCountCollectionViewCell
+        let cell = collection.dequeueReusableCell(withReuseIdentifier: "ReactionCountCell", for: indexPath)as! ReactionCountCell
 //        cell.emojiImage.image = UIImage(named: emojies[indexPath.row])
 //        cell.emojiCountLabel.text = "35"
         return cell

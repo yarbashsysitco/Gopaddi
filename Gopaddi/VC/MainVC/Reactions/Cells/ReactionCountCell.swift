@@ -1,19 +1,19 @@
 //
-//  ReactionCoundCollectionViewCell.swift
+//  ReactionCountCell.swift
 //  Gopaddi
 //
-//  Created by jizan k on 04/03/24.
+//  Created by admin on 04/03/24.
 //
 
 import UIKit
 
-class ReactionCountCollectionViewCell: UICollectionViewCell {
-
+class ReactionCountCell: UICollectionViewCell {
     @IBOutlet weak var emojiCountLabel: UILabel!
     @IBOutlet weak var emojiImage: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        // Initialization code
     }
 
 }
