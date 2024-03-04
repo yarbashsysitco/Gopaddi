@@ -26149,10 +26149,11 @@
                                                     <action selector="forgotBtnClicked:" destination="RHJ-ki-GG5" eventType="touchUpInside" id="3OK-hh-fsc"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ype-gY-ruq">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ype-gY-ruq">
                                                 <rect key="frame" x="16" y="241" width="335" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qR-mi-ZBC">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qR-mi-ZBC">
                                                         <rect key="frame" x="10" y="9" width="85" height="1"/>
                                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                         <constraints>
@@ -26160,7 +26161,7 @@
                                                             <constraint firstAttribute="height" constant="1" id="aRB-WC-C6z"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-Ra-dPa">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-Ra-dPa">
                                                         <rect key="frame" x="237" y="9" width="98" height="1"/>
                                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                         <constraints>
@@ -26169,13 +26170,6 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="2qR-mi-ZBC" firstAttribute="top" secondItem="ype-gY-ruq" secondAttribute="top" constant="9" id="57l-58-aVK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="RYf-Ra-dPa" secondAttribute="trailing" id="Dmt-zl-nIg"/>
-                                                    <constraint firstAttribute="height" constant="16" id="NTa-Cg-p5r"/>
-                                                    <constraint firstItem="2qR-mi-ZBC" firstAttribute="leading" secondItem="ype-gY-ruq" secondAttribute="leading" constant="10" id="fcq-K0-FRB"/>
-                                                    <constraint firstItem="RYf-Ra-dPa" firstAttribute="top" secondItem="ype-gY-ruq" secondAttribute="top" constant="9" id="kX9-SC-gx8"/>
-                                                </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-N2-TOI">
                                                 <rect key="frame" x="60" y="641" width="255" height="21"/>
@@ -26326,9 +26320,7 @@
                                             <constraint firstAttribute="trailing" secondItem="VH3-N2-TOI" secondAttribute="trailing" constant="60" id="aCJ-la-gtK"/>
                                             <constraint firstItem="c0s-Rf-NL6" firstAttribute="leading" secondItem="LXN-Ix-K6f" secondAttribute="leading" constant="16" id="fyV-tE-He3"/>
                                             <constraint firstItem="VH3-N2-TOI" firstAttribute="leading" secondItem="LXN-Ix-K6f" secondAttribute="leading" constant="60" id="hJW-x2-Pyu"/>
-                                            <constraint firstItem="ype-gY-ruq" firstAttribute="leading" secondItem="LXN-Ix-K6f" secondAttribute="leading" constant="20" id="hQN-eY-fhS"/>
                                             <constraint firstItem="1B7-dr-A4d" firstAttribute="top" secondItem="LUb-kp-Jsx" secondAttribute="bottom" constant="8" id="khP-I1-c8m"/>
-                                            <constraint firstAttribute="trailing" secondItem="ype-gY-ruq" secondAttribute="trailing" constant="20" id="l1t-8S-trP"/>
                                             <constraint firstItem="c0s-Rf-NL6" firstAttribute="top" secondItem="1B7-dr-A4d" secondAttribute="bottom" constant="30" id="qae-Yd-Fdg"/>
                                             <constraint firstItem="mr0-wA-HZy" firstAttribute="leading" secondItem="LXN-Ix-K6f" secondAttribute="leading" constant="16" id="vC0-S9-ZSX"/>
                                         </constraints>
