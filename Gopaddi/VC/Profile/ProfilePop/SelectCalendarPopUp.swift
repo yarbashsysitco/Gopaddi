@@ -22,6 +22,9 @@ class SelectCalendarPopUp: UIViewController {
         self.dismiss(animated: true)
     }
    
-   
+    @IBAction func CooseDateButton(_ sender: UIButton) {
+        
+    }
+    
 
 }

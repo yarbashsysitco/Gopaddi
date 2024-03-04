@@ -27,7 +27,6 @@ class WhocanSeeProfileViewController: UIViewController {
         let Btntitles = sender.titleLabel?.text ?? ""
         let Btnimage = sender.imageView?.image
         sendDeligate?.SaveData(Title: Btntitles, Image: Btnimage)
-        print(Btntitles)
         self.dismiss(animated: true)
         print("hello")
     }

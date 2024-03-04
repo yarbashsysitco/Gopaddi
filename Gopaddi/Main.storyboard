@@ -331,7 +331,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlz-cU-LLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6567" y="706"/>
+            <point key="canvasLocation" x="6871" y="706"/>
         </scene>
         <!--Feeds TabVC-->
         <scene sceneID="qrY-rN-zfF">
@@ -1767,7 +1767,7 @@
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyX-oP-hOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6565.8139534883721" y="1495.4935622317598"/>
+            <point key="canvasLocation" x="6870" y="1488"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JyA-z7-CFc">
@@ -13415,7 +13415,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-yH-4Uj">
-                                                <rect key="frame" x="262" y="10" width="83.000000000000057" height="35"/>
+                                                <rect key="frame" x="262" y="10" width="83" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="VEc-HW-Ip4"/>
                                                 </constraints>
@@ -25395,14 +25395,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7p-36-Nih">
                                         <rect key="frame" x="25" y="96" width="332" height="56"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo1" translatesAutoresizingMaskIntoConstraints="NO" id="uJx-Hy-iQ3">
+                                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo1" translatesAutoresizingMaskIntoConstraints="NO" id="uJx-Hy-iQ3">
                                                 <rect key="frame" x="20" y="10" width="42" height="36"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="rpz-qy-NBl"/>
                                                     <constraint firstAttribute="width" constant="42" id="swD-3t-Nmr"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo2" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-dF-VHi">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emo2" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-dF-VHi">
                                                 <rect key="frame" x="71" y="10" width="42" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="DBu-xj-LS7"/>
@@ -25489,13 +25490,15 @@
                     <connections>
                         <outlet property="backView" destination="JEV-IB-xjc" id="CKC-cc-nec"/>
                         <outlet property="contentView" destination="JDP-z9-dZB" id="jx2-nn-tF3"/>
+                        <outlet property="reactionImage" destination="uJx-Hy-iQ3" id="kpm-Gy-hZl"/>
                         <outlet property="uiview0" destination="hJc-dL-pjx" id="Qh9-gk-2yu"/>
                         <outlet property="uiviw1" destination="a7p-36-Nih" id="HUi-3n-Sg7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wb-Is-dy6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Mil-Yb-XkQ"/>
             </objects>
-            <point key="canvasLocation" x="5951.8604651162786" y="1453.6480686695279"/>
+            <point key="canvasLocation" x="5895" y="1452"/>
         </scene>
         <!--Feeds View Controller-->
         <scene sceneID="7bn-C7-bs0">

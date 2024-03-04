@@ -10,6 +10,7 @@ import UIKit
 class ProfileInfoVC: UIViewController ,SendingData{
     func SaveData(Title: String, Image: UIImage?) {
         whouseBtn.setTitle(Title, for: .normal)
+        whouseBtn.setImage(Image, for: .normal)
     }
     
 

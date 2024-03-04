@@ -9,6 +9,7 @@ import UIKit
 
 class ReactionsVC: UIViewController {
     
+    @IBOutlet weak var reactionImage: UIImageView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var backView: UIView!
 
@@ -19,8 +20,20 @@ class ReactionsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        // Do any additional setup after loading the view.
+        ReactionTap()
     }
+    func ReactionTap(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TappingImage))
+        reactionImage.isUserInteractionEnabled = true
+        reactionImage.addGestureRecognizer(tapGesture)
+    }
+    @objc func TappingImage(){
+        let vc = UIStoryboard(name: "ReactionMain", bundle: nil).instantiateViewController(withIdentifier: "ReactionMainViewController")as! ReactionMainViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    
     func setupUI() {
         uiview0.layer.cornerRadius = 5
         uiviw1.layer.cornerRadius = 25
@@ -43,6 +56,7 @@ class ReactionsVC: UIViewController {
 //        view.endEditing(true)
 //    }
 //
+   
     func configView(){
         self.view.backgroundColor = .black.withAlphaComponent(0.6)
         self.contentView.alpha = 2
@@ -67,15 +81,7 @@ class ReactionsVC: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
     @IBAction func backbtns(_ sender: Any) {
         self.dismiss(animated: true)
 
