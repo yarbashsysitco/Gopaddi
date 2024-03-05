@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -29,6 +28,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ArrowLeft 1"/>
+                                        <connections>
+                                            <action selector="didTapBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zva-jF-Gve"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN0-J6-wvf">
                                         <rect key="frame" x="56" y="16" width="75" height="38"/>
@@ -50,10 +52,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-6E-Ieo">
                                 <rect key="frame" x="16" y="145" width="361" height="100"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9vC-Qq-wCn">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9vC-Qq-wCn">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="euo-v0-qSL">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="euo-v0-qSL">
                                             <size key="itemSize" width="38" height="96"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -61,7 +63,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="E1W-ei-zSu" customClass="ReactionCountCollectionViewCell" customModule="Gopaddi" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="0.0" width="38" height="96"/>
+                                                <rect key="frame" x="10" y="2" width="38" height="96"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Eyb-aK-pPa">
                                                     <rect key="frame" x="0.0" y="0.0" width="38" height="96"/>
@@ -86,20 +88,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G1a-gh-zSE">
+                                <rect key="frame" x="0.0" y="265" width="393" height="553"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OKX-NV-Jcl" secondAttribute="trailing" id="6EY-MZ-mQS"/>
                             <constraint firstItem="Fq8-6E-Ieo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="CLq-4F-3hm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G1a-gh-zSE" secondAttribute="trailing" id="Gf0-7p-IUo"/>
                             <constraint firstItem="OKX-NV-Jcl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="M5v-eb-iBi"/>
+                            <constraint firstItem="G1a-gh-zSE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="S0y-Q2-R4o"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fq8-6E-Ieo" secondAttribute="trailing" constant="16" id="WPz-8q-zhy"/>
                             <constraint firstItem="OKX-NV-Jcl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gAh-Pv-PrT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="G1a-gh-zSE" secondAttribute="bottom" id="i1f-4n-Jfw"/>
+                            <constraint firstItem="G1a-gh-zSE" firstAttribute="top" secondItem="Fq8-6E-Ieo" secondAttribute="bottom" constant="20" id="ruT-XP-bXy"/>
                             <constraint firstItem="Fq8-6E-Ieo" firstAttribute="top" secondItem="OKX-NV-Jcl" secondAttribute="bottom" constant="16" id="vN9-Ko-eDL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collection" destination="9vC-Qq-wCn" id="eY8-o0-YGy"/>
+                        <outlet property="tableview" destination="G1a-gh-zSE" id="tEj-0B-CI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

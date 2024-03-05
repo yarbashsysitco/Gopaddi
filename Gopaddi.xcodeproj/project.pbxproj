@@ -220,6 +220,8 @@
 		A863BADC2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A863BAD32B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib */; };
 		A863BADD2B8F3B7900F6F1D5 /* ProfilePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD42B8F3B7900F6F1D5 /* ProfilePopupVC.swift */; };
 		A863BADE2B8F3B7900F6F1D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */; };
+		A86427F02B96E81D00C49CF9 /* ViewReactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86427EE2B96E81D00C49CF9 /* ViewReactionCell.swift */; };
+		A86427F12B96E81D00C49CF9 /* ViewReactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A86427EF2B96E81D00C49CF9 /* ViewReactionCell.xib */; };
 		A89052572B959DC6001F00B4 /* ReactionMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89052562B959DC6001F00B4 /* ReactionMain.storyboard */; };
 		A89052592B959DEC001F00B4 /* ReactionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89052582B959DEC001F00B4 /* ReactionMainViewController.swift */; };
 		A89E99372B8F50680006745C /* EditMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89E99362B8F50680006745C /* EditMain.storyboard */; };
@@ -443,6 +445,8 @@
 		A863BAD32B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileFeildsViewCell.xib; sourceTree = "<group>"; };
 		A863BAD42B8F3B7900F6F1D5 /* ProfilePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupVC.swift; sourceTree = "<group>"; };
 		A863BAD52B8F3B7900F6F1D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A86427EE2B96E81D00C49CF9 /* ViewReactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReactionCell.swift; sourceTree = "<group>"; };
+		A86427EF2B96E81D00C49CF9 /* ViewReactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewReactionCell.xib; sourceTree = "<group>"; };
 		A89052562B959DC6001F00B4 /* ReactionMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReactionMain.storyboard; sourceTree = "<group>"; };
 		A89052582B959DEC001F00B4 /* ReactionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionMainViewController.swift; sourceTree = "<group>"; };
 		A89E99362B8F50680006745C /* EditMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditMain.storyboard; sourceTree = "<group>"; };
@@ -1029,6 +1033,7 @@
 			children = (
 				844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */,
 				A89052582B959DEC001F00B4 /* ReactionMainViewController.swift */,
+				A86427ED2B96E7D800C49CF9 /* ViewReaction */,
 				84E3568C2B95EE99007AC79F /* Cells */,
 			);
 			path = Reactions;
@@ -1087,6 +1092,15 @@
 				A8E587B12B91A89A0096FDEA /* WhocanSeeProfileViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		A86427ED2B96E7D800C49CF9 /* ViewReaction */ = {
+			isa = PBXGroup;
+			children = (
+				A86427EE2B96E81D00C49CF9 /* ViewReactionCell.swift */,
+				A86427EF2B96E81D00C49CF9 /* ViewReactionCell.xib */,
+			);
+			path = ViewReaction;
 			sourceTree = "<group>";
 		};
 		C04F1ADD8F72F047E9683BE9 /* Pods */ = {
@@ -1167,6 +1181,7 @@
 				844FD3A42B8DB07B0014E4B5 /* ImageTableViewCell.xib in Resources */,
 				84E356902B95EEEF007AC79F /* ReactionCountCell.xib in Resources */,
 				844FD40D2B8DB0BB0014E4B5 /* Lora-Regular.ttf in Resources */,
+				A86427F12B96E81D00C49CF9 /* ViewReactionCell.xib in Resources */,
 				A89E99372B8F50680006745C /* EditMain.storyboard in Resources */,
 				844FD4132B8DB0C30014E4B5 /* CustomAlertViewController.xib in Resources */,
 				844FD31F2B8DB07B0014E4B5 /* LaunchScreen.storyboard in Resources */,
@@ -1277,6 +1292,7 @@
 				844FD3272B8DB07B0014E4B5 /* CountryViewController.swift in Sources */,
 				844FD4032B8DB0B40014E4B5 /* UIExtension.swift in Sources */,
 				844FD3A72B8DB07B0014E4B5 /* OnboardingViewController.swift in Sources */,
+				A86427F02B96E81D00C49CF9 /* ViewReactionCell.swift in Sources */,
 				844FD34D2B8DB07B0014E4B5 /* HotelConfirmHeadTableViewCell.swift in Sources */,
 				844FD3812B8DB07B0014E4B5 /* ProfileCell.swift in Sources */,
 				844FD3F62B8DB0A90014E4B5 /* FeedsModel.swift in Sources */,
