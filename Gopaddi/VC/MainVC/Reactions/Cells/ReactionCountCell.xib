@@ -58,6 +58,7 @@
             <connections>
                 <outlet property="emojiCountLabel" destination="mDA-2K-A1C" id="oMA-SB-gh5"/>
                 <outlet property="emojiImage" destination="2Ve-wI-bmz" id="2kJ-HW-K5R"/>
+                <outlet property="emojiview" destination="Bzk-O0-A6P" id="iQx-xp-LlK"/>
             </connections>
             <point key="canvasLocation" x="148.09160305343511" y="21.83098591549296"/>
         </collectionViewCell>

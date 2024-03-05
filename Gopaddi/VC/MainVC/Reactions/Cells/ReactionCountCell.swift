@@ -11,6 +11,7 @@ class ReactionCountCell: UICollectionViewCell {
     @IBOutlet weak var emojiCountLabel: UILabel!
     @IBOutlet weak var emojiImage: UIImageView!
 
+    @IBOutlet weak var emojiview: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
