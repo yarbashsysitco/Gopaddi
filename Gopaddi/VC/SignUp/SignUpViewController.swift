@@ -68,6 +68,50 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+//    @IBAction func passTxtTap(_ sender: UITextField) {
+//        let newPassword = passwordTF.text ?? ""
+//        let uppercaseCharacterSet = CharacterSet.uppercaseLetters
+//        let lowercaseCharacterSet = CharacterSet.lowercaseLetters
+//        let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
+//        let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
+//        if newPassword != nil{
+//                   UIView.animate(withDuration: 0.1, delay: 0) {
+//                self.ValidationViewHeight.constant = 130
+//            }
+//            if uppercaseCharacterSet != nil{
+//                passwuppercaseImg.image = UIImage(named: "Greentick")
+//            }else{
+//                passwuppercaseImg.image = UIImage(named: "Cancel")
+//            }
+//            if lowercaseCharacterSet != nil{
+//                passwlowercaseImg.image = UIImage(named: "Greentick")
+//            }else{
+//                passwlowercaseImg.image = UIImage(named: "Cancel")
+//            }
+//            if numbersCharacterSet != nil{
+//                passwnumberImg.image = UIImage(named: "Greentick")
+//            }else{
+//                passwnumberImg.image = UIImage(named: "Cancel")
+//            }
+//            if nonAlphanumericCharacterSet != nil{
+//                passwsymbolsImg.image = UIImage(named: "Greentick")
+//            }else{
+//                passwsymbolsImg.image = UIImage(named: "Cancel")
+//            }
+//            if newPassword.count >= 8{
+//                passwmimimImg.image = UIImage(named: "Greentick")
+//            }else{
+//                passwmimimImg.image = UIImage(named: "Cancel")
+//            }
+//        }else{
+//            UIView.animate(withDuration: 0.1, delay: 0) {
+//                self.ValidationViewHeight.constant = 0
+//            }
+//        }
+//    }
+    
+    
     @objc func dismissKeyboard(){
         view.endEditing(true)
     }
@@ -299,7 +343,7 @@ class SignUpViewController: UIViewController {
         let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
         let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
         if newPassword != nil{
-            UIView.animate(withDuration: 0.1, delay: 0) {
+                   UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 130
             }
             if uppercaseCharacterSet != nil{
