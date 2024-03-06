@@ -25,6 +25,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="jIF-6y-KjG">
+            <objects>
+                <viewController id="DDh-E6-e5D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31x-gF-MQB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="N9I-zo-Ack"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="932"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qan-Tg-yth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6832" y="-966"/>
+        </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="Yww-Ig-dgL">
             <objects>
@@ -26568,7 +26584,12 @@
                         <outlet property="errorName" destination="MHz-zQ-4cI" id="fnF-yV-0TA"/>
                         <outlet property="lastNameTF" destination="IOq-Rw-rJ5" id="s9R-i1-xNN"/>
                         <outlet property="nameTF" destination="Ok2-yg-LqT" id="ocO-S7-sBf"/>
+                        <outlet property="passwlowercaseImg" destination="k1c-yz-j6L" id="FFl-we-xAj"/>
+                        <outlet property="passwmimimImg" destination="soX-kt-JoR" id="LRC-wv-uT2"/>
+                        <outlet property="passwnumberImg" destination="X4m-QM-acy" id="3zp-Ag-j7V"/>
                         <outlet property="passwordTF" destination="Ofk-Kz-vWd" id="sFy-nY-Wub"/>
+                        <outlet property="passwsymbolsImg" destination="rcW-l1-rdq" id="OI8-QC-MFv"/>
+                        <outlet property="passwuppercaseImg" destination="RCk-ry-gFP" id="rCF-jV-jnQ"/>
                         <outlet property="phNoTF" destination="YVf-CV-IiF" id="UnT-oY-g3P"/>
                         <outlet property="signUpButton" destination="PyQ-Yl-g9F" id="FCi-eC-DK0"/>
                         <outlet property="termsCheckBox" destination="nlc-Ix-Z3g" id="1m0-Rz-mu6"/>

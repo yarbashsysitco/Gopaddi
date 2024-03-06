@@ -32,6 +32,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorName: UILabel!
     @IBOutlet weak var errorPrefix: UILabel!
     
+    @IBOutlet weak var passwuppercaseImg: UIImageView!
+    @IBOutlet weak var passwlowercaseImg: UIImageView!
+    @IBOutlet weak var passwnumberImg: UIImageView!
+    @IBOutlet weak var passwsymbolsImg: UIImageView!
+    @IBOutlet weak var passwmimimImg: UIImageView!
+    
     var isBoxChecked : Bool = false
     var isValid : Bool = true
     var isValidNa : Bool = true

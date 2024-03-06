@@ -21,6 +21,8 @@ class ReactionsVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         ReactionTap()
+        
+        print("ok")
     }
     func ReactionTap(){
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TappingImage))

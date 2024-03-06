@@ -197,6 +197,7 @@
 		84E26A8C2B91B28200C9BCF4 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26A8B2B91B28200C9BCF4 /* DiaryViewController.swift */; };
 		84E3568F2B95EEEF007AC79F /* ReactionCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3568D2B95EEEF007AC79F /* ReactionCountCell.swift */; };
 		84E356902B95EEEF007AC79F /* ReactionCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E3568E2B95EEEF007AC79F /* ReactionCountCell.xib */; };
+		84FCA0642B9869F5007E23E6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCA0632B9869F5007E23E6 /* IntroViewController.swift */; };
 		9A00B96124A04A68A80D58A3 /* Pods_Gopaddi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2813A594D8E9C40E5E152545 /* Pods_Gopaddi.framework */; };
 		A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */; };
 		A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */; };
@@ -424,6 +425,7 @@
 		84E26A8B2B91B28200C9BCF4 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		84E3568D2B95EEEF007AC79F /* ReactionCountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCountCell.swift; sourceTree = "<group>"; };
 		84E3568E2B95EEEF007AC79F /* ReactionCountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionCountCell.xib; sourceTree = "<group>"; };
+		84FCA0632B9869F5007E23E6 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
 		A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
 		A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPopUpViewController.swift; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 		844FD2732B8DB07B0014E4B5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				84FCA0622B9869D1007E23E6 /* intro */,
 				844FD2742B8DB07B0014E4B5 /* Launch */,
 				844FD2782B8DB07B0014E4B5 /* SignUp */,
 				844FD2802B8DB07B0014E4B5 /* Marketplace */,
@@ -1051,6 +1054,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		84FCA0622B9869D1007E23E6 /* intro */ = {
+			isa = PBXGroup;
+			children = (
+				84FCA0632B9869F5007E23E6 /* IntroViewController.swift */,
+			);
+			path = intro;
+			sourceTree = "<group>";
+		};
 		A863BAB02B8F376600F6F1D5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1317,6 +1328,7 @@
 				844FD3632B8DB07B0014E4B5 /* FlightDetAmountTableViewCell.swift in Sources */,
 				844FD3A52B8DB07B0014E4B5 /* MainVC.swift in Sources */,
 				844FD3F22B8DB0A90014E4B5 /* FeedCommentLike.swift in Sources */,
+				84FCA0642B9869F5007E23E6 /* IntroViewController.swift in Sources */,
 				844FD3342B8DB07B0014E4B5 /* TravellerInfoTableViewCell.swift in Sources */,
 				844FD4122B8DB0C30014E4B5 /* CustomAlertViewController.swift in Sources */,
 				844FD3322B8DB07B0014E4B5 /* ActivityListTableViewCell.swift in Sources */,
