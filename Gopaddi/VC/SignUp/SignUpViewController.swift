@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var phNoTF: UITextField!
     
+    @IBOutlet weak var dropDownPrefix: UIButton!
     @IBOutlet weak var errorConPassword: UILabel!
     @IBOutlet weak var errorPassword: UILabel!
     @IBOutlet weak var errorPhNo: UILabel!
@@ -42,7 +43,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prefixTF.delegate = self
+       // prefixTF.delegate = self
         signUpButton.isEnabled = false
         setFields()
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -64,11 +65,11 @@ class SignUpViewController: UIViewController {
     func setFields(){
         errorName.isHidden = true
         errorEmail.isHidden = true
-        errorPassword.isHidden = true
+//
         errorLNAme.isHidden = true
         errorConPassword.isHidden = true
-        errorPhNo.isHidden = true
-        errorPrefix.isHidden = true
+       // errorPhNo.isHidden = true
+//        errorPrefix.isHidden = true
     }
     func    validateFields(){
         guard let nameField = self.nameTF.text else { return }
@@ -133,29 +134,29 @@ class SignUpViewController: UIViewController {
             errorEmail.isHidden = true
             isValidE = true
         }
-        if !prefixTF.text!.isEmpty  {
-            prefixTF.layer.borderColor = UIColor.blue.cgColor
-        }
-        
+//        if !prefixTF.text!.isEmpty  {
+//            prefixTF.layer.borderColor = UIColor.blue.cgColor
+//        }
+//        
         if !phNoTF.text!.isEmpty {
             phNoTF.layer.borderColor = UIColor.blue.cgColor
         }
         if passwordField.isEmpty {
-            errorPassword.isHidden = false
-            passwordTF.layer.borderColor = UIColor.red.cgColor
-            errorPassword.text = "* Empty field"
+//            errorPassword.isHidden = false
+//            passwordTF.layer.borderColor = UIColor.red.cgColor
+//            errorPassword.text = "* Empty field"
             isValidPa = false
         }
         else if !passwordField.isValidPassword(){
             errorConPassword.isHidden = false
             passwordTF.layer.borderColor = UIColor.red.cgColor
-            errorPassword.text = "* Invalid Password"
+//            errorPassword.text = "* Invalid Password"
             isValidPa = false
         }
         else{
             passwordTF.layer.borderColor = UIColor.blue.cgColor
             passwordTF.textColor = .systemGray
-            errorPassword.isHidden = true
+//            errorPassword.isHidden = true
             isValidPa = true
         }
         if conPasswordField.isEmpty {
@@ -213,9 +214,9 @@ class SignUpViewController: UIViewController {
         guard let emailField = self.emailTF.text else { return }
         guard let passwordField = self.passwordTF.text else { return }
         guard let phNoField = self.phNoTF.text else { return }
-        guard let referalField = self.referal.text else { return }
+        let referalField = "12345"
         guard let conPasswordField = self.conPassword.text else { return }
-        guard let prefixField = self.prefixTF.text else { return }
+        let prefixField = "+91"
         let phoneNoField = prefixField + phNoField
         let token = "gv4Gp1OeZhF5eBNU7vDjDL-yqZ6vrCfdCzF7HGVMiCs"
         validateFields()
