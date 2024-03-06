@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6F78837C-E504-4C18-8544-923D6521EE2D"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/SignUp/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "passtxt(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 160071c8b82da8cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Gopaddi.Register, Swift.Error&gt;) -&gt; () in Gopaddi.SignUpViewController.signUpButtonClicked(Any) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/Gopaddi%20M1/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "1476">
+               </Location>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 8805f70a4e7387f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.SignUpViewController.passtxt(__C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/Gopaddi%20M1/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "299"
+                  endingLineNumber = "299"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 8805f70a4e7387f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.SignUpViewController.passtxt(__C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/Gopaddi%20M1/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "299"
+                  endingLineNumber = "299"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

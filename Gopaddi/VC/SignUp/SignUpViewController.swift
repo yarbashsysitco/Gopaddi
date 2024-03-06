@@ -296,50 +296,72 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func passtxt(_ sender: UITextField) {
-        let newPassword = passwordTF.text ?? ""
+        let newPassword = sender.text ?? ""
         let uppercaseCharacterSet = CharacterSet.uppercaseLetters
         let lowercaseCharacterSet = CharacterSet.lowercaseLetters
         let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
         let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
-        if newPassword != nil{
+        
+        if !newPassword.isEmpty {
             UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 130
             }
-            if uppercaseCharacterSet != nil{
+            if newPassword.rangeOfCharacter(from: uppercaseCharacterSet) != nil {
                 passwuppercaseImg.image = UIImage(named: "Greentick")
-                
-                if lowercaseCharacterSet != nil{
-                    passwlowercaseImg.image = UIImage(named: "Greentick")
-                    if numbersCharacterSet != nil{
-                        passwnumberImg.image = UIImage(named: "Greentick")
-                        if nonAlphanumericCharacterSet != nil{
-                            passwsymbolsImg.image = UIImage(named: "Greentick")
-                            if newPassword.count >= 8{
-                                passwmimimImg.image = UIImage(named: "Greentick")
-                            } else{
-                                passwmimimImg.image = UIImage(named: "Cancel")
-                            }
-                        }else{
-                            passwsymbolsImg.image = UIImage(named: "Cancel")
-                        }
-                    }else{
-                        passwnumberImg.image = UIImage(named: "Cancel")
-                    }
-                }else{
-                    passwlowercaseImg.image = UIImage(named: "Cancel")
-                }
-            }else{
+            } else {
                 passwuppercaseImg.image = UIImage(named: "Cancel")
             }
-
-        }else{
+            
+            if newPassword.count >= 8 {
+                passwmimimImg.image = UIImage(named: "Greentick")
+            } else {
+                passwmimimImg.image = UIImage(named: "Cancel")
+            }
+            if newPassword.rangeOfCharacter(from: lowercaseCharacterSet) != nil {
+                passwlowercaseImg.image = UIImage(named: "Greentick")
+            } else {
+                passwlowercaseImg.image = UIImage(named: "Cancel")
+            }
+//            
+//            if newPassword.rangeOfCharacter(from: numbersCharacterSet) != nil {
+//                passwnumberImg.image = UIImage(named: "Greentick")
+//            } else {
+//                passwnumberImg.image = UIImage(named: "Cancel")
+//            }
+//              
+            if (newPassword.self.rangeOfCharacter(from: .decimalDigits) != nil) {
+                passwnumberImg.image = UIImage(named: "Greentick")
+            } else {
+                passwnumberImg.image = UIImage(named: "Cancel")
+            }
+//            
+          
+        } else {
             UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 0
             }
         }
     }
+
     
-    
+//    if lowercaseCharacterSet != nil{
+//        passwlowercaseImg.image = UIImage(named: "Greentick")
+//        if numbersCharacterSet != nil{
+//            passwnumberImg.image = UIImage(named: "Greentick")
+//            if nonAlphanumericCharacterSet != nil{
+//                passwsymbolsImg.image = UIImage(named: "Greentick")
+//              
+//            }else{
+//                passwsymbolsImg.image = UIImage(named: "Cancel")
+//            }
+//        }else{
+//            passwnumberImg.image = UIImage(named: "Cancel")
+//        }
+//    }else{
+//        passwlowercaseImg.image = UIImage(named: "Cancel")
+//    }
+//    
+//    
     
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

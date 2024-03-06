@@ -115,6 +115,12 @@ extension String {
         return passwordCheck.evaluate(with: password)
     } 
     
+    func isValidPasswordNumber() -> Bool {
+           // Check if the password contains at least one digit
+           let digitRange = self.rangeOfCharacter(from: .decimalDigits)
+           return digitRange != nil// Check if password length is at least 8 characters
+       }
+    
 }
 extension UIView {
     static let loadingViewTag = 1223322
