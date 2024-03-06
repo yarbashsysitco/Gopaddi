@@ -39,6 +39,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwsymbolsImg: UIImageView!
     @IBOutlet weak var passwmimimImg: UIImageView!
     
+    @IBOutlet weak var hidePasswordicon1: UIImageView!
+    
+    @IBOutlet weak var hideCPasswordicon2: UIImageView!
+    
     var isBoxChecked : Bool = false
     var isValid : Bool = true
     var isValidNa : Bool = true
@@ -77,6 +81,7 @@ class SignUpViewController: UIViewController {
     func setFields(){
         errorName.isHidden = true
         errorEmail.isHidden = true
+        errorPassword.isHidden = true
         //
         errorLNAme.isHidden = true
         errorConPassword.isHidden = true
@@ -294,14 +299,21 @@ class SignUpViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    @IBAction func CpasswDidChanged(_ sender: UITextField) {
+        self.ValidationViewHeight.constant = 0
+        
+    }
+    
+    
+    
     
     @IBAction func passtxt(_ sender: UITextField) {
         let newPassword = sender.text ?? ""
         let uppercaseCharacterSet = CharacterSet.uppercaseLetters
         let lowercaseCharacterSet = CharacterSet.lowercaseLetters
         let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
-        let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
-        
+        let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "(!@#$%^&*()_-+={[}]|:;'<,>.?/)")
+
         if !newPassword.isEmpty {
             UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 130
@@ -322,13 +334,13 @@ class SignUpViewController: UIViewController {
             } else {
                 passwlowercaseImg.image = UIImage(named: "Cancel")
             }
-//            
-//            if newPassword.rangeOfCharacter(from: numbersCharacterSet) != nil {
-//                passwnumberImg.image = UIImage(named: "Greentick")
-//            } else {
-//                passwnumberImg.image = UIImage(named: "Cancel")
-//            }
-//              
+            
+            if newPassword.rangeOfCharacter(from: nonAlphanumericCharacterSet) != nil {
+                passwsymbolsImg.image = UIImage(named: "Greentick")
+            } else {
+                passwsymbolsImg.image = UIImage(named: "Cancel")
+            }
+              
             if (newPassword.self.rangeOfCharacter(from: .decimalDigits) != nil) {
                 passwnumberImg.image = UIImage(named: "Greentick")
             } else {
