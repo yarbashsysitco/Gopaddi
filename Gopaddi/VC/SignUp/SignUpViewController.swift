@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorName: UILabel!
     @IBOutlet weak var errorPrefix: UILabel!
     
+    @IBOutlet weak var ValidationViewHeight: NSLayoutConstraint!
     @IBOutlet weak var passwuppercaseImg: UIImageView!
     @IBOutlet weak var passwlowercaseImg: UIImageView!
     @IBOutlet weak var passwnumberImg: UIImageView!
@@ -49,6 +50,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ValidationViewHeight.constant = 0
        // prefixTF.delegate = self
         signUpButton.isEnabled = false
         setFields()
@@ -205,8 +208,10 @@ class SignUpViewController: UIViewController {
             }
         }
         else {
-            UIView.animate(withDuration: 0.5, delay: 0) {
+            UIView.animate(withDuration: 0.7, delay: 0) {
                 self.checkButton.layer.borderColor = UIColor.systemGray.cgColor
+                self.checkButton.backgroundColor = UIColor(red: 0.2, green: 0.467, blue: 1, alpha: 1)
+                self.checkButton.setImage(UIImage(named: "bg"),for: .normal)
                 self.checkButton.backgroundColor = .systemBackground
                 self.signUpButton.isEnabled = false
                 self.signUpButton.alpha = 0.9
@@ -286,6 +291,48 @@ class SignUpViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        let newPassword = passwordTF.text ?? ""
+        let uppercaseCharacterSet = CharacterSet.uppercaseLetters
+        let lowercaseCharacterSet = CharacterSet.lowercaseLetters
+        let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
+        let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
+        if newPassword != nil{
+            UIView.animate(withDuration: 0.1, delay: 0) {
+                self.ValidationViewHeight.constant = 130
+            }
+            if uppercaseCharacterSet != nil{
+                passwuppercaseImg.image = UIImage(named: "Greentick")
+            }else{
+                passwuppercaseImg.image = UIImage(named: "Cancel")
+            }
+            if lowercaseCharacterSet != nil{
+                passwlowercaseImg.image = UIImage(named: "Greentick")
+            }else{
+                passwlowercaseImg.image = UIImage(named: "Cancel")
+            }
+            if numbersCharacterSet != nil{
+                passwnumberImg.image = UIImage(named: "Greentick")
+            }else{
+                passwnumberImg.image = UIImage(named: "Cancel")
+            }
+            if nonAlphanumericCharacterSet != nil{
+                passwsymbolsImg.image = UIImage(named: "Greentick")
+            }else{
+                passwsymbolsImg.image = UIImage(named: "Cancel")
+            }
+            if newPassword.count >= 8{
+                passwmimimImg.image = UIImage(named: "Greentick")
+            }else{
+                passwmimimImg.image = UIImage(named: "Cancel")
+            }
+        }else{
+            UIView.animate(withDuration: 0.1, delay: 0) {
+                self.ValidationViewHeight.constant = 0
+            }
+        }
+    }
 }
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -320,4 +367,62 @@ extension SignUpViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
     }
-}
+   
+        
+        // MARK: - UITextFieldDelegate
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            // Return true to allow the change, false to block it
+            return true
+        }
+//        // MARK: - Action
+//        @objc func passwordTextFieldDidChange(_ textField: UITextField) {
+//            // Perform your password validation here
+//            let newPassword = passwordTF.text ?? ""
+//            let uppercaseCharacterSet = CharacterSet.uppercaseLetters
+//            let lowercaseCharacterSet = CharacterSet.lowercaseLetters
+//            let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
+//            let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
+//            if newPassword != nil{
+//                UIView.animate(withDuration: 0.1, delay: 0) {
+//                    self.ValidationViewHeight.constant = 130
+//                }
+//                if uppercaseCharacterSet != nil{
+//                    passwuppercaseImg.image = UIImage(named: "Greentick")
+//                }else{
+//                    passwuppercaseImg.image = UIImage(named: "Cancel")
+//                }
+//                if lowercaseCharacterSet != nil{
+//                    passwlowercaseImg.image = UIImage(named: "Greentick")
+//                }else{
+//                    passwlowercaseImg.image = UIImage(named: "Cancel")
+//                }
+//                if numbersCharacterSet != nil{
+//                    passwnumberImg.image = UIImage(named: "Greentick")
+//                }else{
+//                    passwnumberImg.image = UIImage(named: "Cancel")
+//                }
+//                if nonAlphanumericCharacterSet != nil{
+//                    passwsymbolsImg.image = UIImage(named: "Greentick")
+//                }else{
+//                    passwsymbolsImg.image = UIImage(named: "Cancel")
+//                }
+//                if newPassword.count >= 8{
+//                    passwmimimImg.image = UIImage(named: "Greentick")
+//                }else{
+//                    passwmimimImg.image = UIImage(named: "Cancel")
+//                }
+//            }else{
+//                UIView.animate(withDuration: 0.1, delay: 0) {
+//                    self.ValidationViewHeight.constant = 0
+//                }
+//            }
+//
+//
+//            if newPassword.count >= 6 && newPassword.rangeOfCharacter(from: uppercaseCharacterSet) != nil && newPassword.rangeOfCharacter(from: lowercaseCharacterSet) != nil && newPassword.rangeOfCharacter(from: numbersCharacterSet) != nil && newPassword.rangeOfCharacter(from: nonAlphanumericCharacterSet) != nil {
+//                passwordTF.text = "Password strength: Strong"
+//            } else {
+//                passwordTF.text = "Password strength: Weak. Add at least one uppercase letter, one lowercase letter, one number, and one non-alphanumeric character."
+//            }
+//        }
+    }
+
