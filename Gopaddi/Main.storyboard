@@ -26077,7 +26077,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="passTxtTap:" destination="QiF-oJ-LEr" eventType="editingDidBegin" id="cBF-Rh-6GN"/>
+                                                            <action selector="passtxt:" destination="QiF-oJ-LEr" eventType="editingChanged" id="WVD-ww-H8o"/>
                                                         </connections>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openeye" translatesAutoresizingMaskIntoConstraints="NO" id="oFu-PK-8FO">

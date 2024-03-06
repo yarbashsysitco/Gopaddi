@@ -52,7 +52,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         ValidationViewHeight.constant = 0
-       // prefixTF.delegate = self
+        // prefixTF.delegate = self
         signUpButton.isEnabled = false
         setFields()
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -69,47 +69,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-//    @IBAction func passTxtTap(_ sender: UITextField) {
-//        let newPassword = passwordTF.text ?? ""
-//        let uppercaseCharacterSet = CharacterSet.uppercaseLetters
-//        let lowercaseCharacterSet = CharacterSet.lowercaseLetters
-//        let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
-//        let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
-//        if newPassword != nil{
-//                   UIView.animate(withDuration: 0.1, delay: 0) {
-//                self.ValidationViewHeight.constant = 130
-//            }
-//            if uppercaseCharacterSet != nil{
-//                passwuppercaseImg.image = UIImage(named: "Greentick")
-//            }else{
-//                passwuppercaseImg.image = UIImage(named: "Cancel")
-//            }
-//            if lowercaseCharacterSet != nil{
-//                passwlowercaseImg.image = UIImage(named: "Greentick")
-//            }else{
-//                passwlowercaseImg.image = UIImage(named: "Cancel")
-//            }
-//            if numbersCharacterSet != nil{
-//                passwnumberImg.image = UIImage(named: "Greentick")
-//            }else{
-//                passwnumberImg.image = UIImage(named: "Cancel")
-//            }
-//            if nonAlphanumericCharacterSet != nil{
-//                passwsymbolsImg.image = UIImage(named: "Greentick")
-//            }else{
-//                passwsymbolsImg.image = UIImage(named: "Cancel")
-//            }
-//            if newPassword.count >= 8{
-//                passwmimimImg.image = UIImage(named: "Greentick")
-//            }else{
-//                passwmimimImg.image = UIImage(named: "Cancel")
-//            }
-//        }else{
-//            UIView.animate(withDuration: 0.1, delay: 0) {
-//                self.ValidationViewHeight.constant = 0
-//            }
-//        }
-//    }
     
     
     @objc func dismissKeyboard(){
@@ -118,11 +77,11 @@ class SignUpViewController: UIViewController {
     func setFields(){
         errorName.isHidden = true
         errorEmail.isHidden = true
-//
+        //
         errorLNAme.isHidden = true
         errorConPassword.isHidden = true
-       // errorPhNo.isHidden = true
-//        errorPrefix.isHidden = true
+        // errorPhNo.isHidden = true
+        //        errorPrefix.isHidden = true
     }
     func    validateFields(){
         guard let nameField = self.nameTF.text else { return }
@@ -187,29 +146,29 @@ class SignUpViewController: UIViewController {
             errorEmail.isHidden = true
             isValidE = true
         }
-//        if !prefixTF.text!.isEmpty  {
-//            prefixTF.layer.borderColor = UIColor.blue.cgColor
-//        }
-//        
+        //        if !prefixTF.text!.isEmpty  {
+        //            prefixTF.layer.borderColor = UIColor.blue.cgColor
+        //        }
+        //
         if !phNoTF.text!.isEmpty {
             phNoTF.layer.borderColor = UIColor.blue.cgColor
         }
         if passwordField.isEmpty {
-//            errorPassword.isHidden = false
-//            passwordTF.layer.borderColor = UIColor.red.cgColor
-//            errorPassword.text = "* Empty field"
+            //            errorPassword.isHidden = false
+            //            passwordTF.layer.borderColor = UIColor.red.cgColor
+            //            errorPassword.text = "* Empty field"
             isValidPa = false
         }
         else if !passwordField.isValidPassword(){
             errorConPassword.isHidden = false
             passwordTF.layer.borderColor = UIColor.red.cgColor
-//            errorPassword.text = "* Invalid Password"
+            //            errorPassword.text = "* Invalid Password"
             isValidPa = false
         }
         else{
             passwordTF.layer.borderColor = UIColor.blue.cgColor
             passwordTF.textColor = .systemGray
-//            errorPassword.isHidden = true
+            //            errorPassword.isHidden = true
             isValidPa = true
         }
         if conPasswordField.isEmpty {
@@ -336,46 +295,56 @@ class SignUpViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    func textFieldDidChangeSelection(_ textField: UITextField) {
+    @IBAction func passtxt(_ sender: UITextField) {
         let newPassword = passwordTF.text ?? ""
         let uppercaseCharacterSet = CharacterSet.uppercaseLetters
         let lowercaseCharacterSet = CharacterSet.lowercaseLetters
         let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
         let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
         if newPassword != nil{
-                   UIView.animate(withDuration: 0.1, delay: 0) {
+            UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 130
             }
             if uppercaseCharacterSet != nil{
                 passwuppercaseImg.image = UIImage(named: "Greentick")
+                
+                if lowercaseCharacterSet != nil{
+                    passwlowercaseImg.image = UIImage(named: "Greentick")
+                    if numbersCharacterSet != nil{
+                        passwnumberImg.image = UIImage(named: "Greentick")
+                        if nonAlphanumericCharacterSet != nil{
+                            passwsymbolsImg.image = UIImage(named: "Greentick")
+                            if newPassword.count >= 8{
+                                passwmimimImg.image = UIImage(named: "Greentick")
+                            } else{
+                                passwmimimImg.image = UIImage(named: "Cancel")
+                            }
+                        }else{
+                            passwsymbolsImg.image = UIImage(named: "Cancel")
+                        }
+                    }else{
+                        passwnumberImg.image = UIImage(named: "Cancel")
+                    }
+                }else{
+                    passwlowercaseImg.image = UIImage(named: "Cancel")
+                }
             }else{
                 passwuppercaseImg.image = UIImage(named: "Cancel")
             }
-            if lowercaseCharacterSet != nil{
-                passwlowercaseImg.image = UIImage(named: "Greentick")
-            }else{
-                passwlowercaseImg.image = UIImage(named: "Cancel")
-            }
-            if numbersCharacterSet != nil{
-                passwnumberImg.image = UIImage(named: "Greentick")
-            }else{
-                passwnumberImg.image = UIImage(named: "Cancel")
-            }
-            if nonAlphanumericCharacterSet != nil{
-                passwsymbolsImg.image = UIImage(named: "Greentick")
-            }else{
-                passwsymbolsImg.image = UIImage(named: "Cancel")
-            }
-            if newPassword.count >= 8{
-                passwmimimImg.image = UIImage(named: "Greentick")
-            }else{
-                passwmimimImg.image = UIImage(named: "Cancel")
-            }
+
         }else{
             UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 0
             }
         }
+    }
+    
+    
+    
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        
     }
 }
 extension SignUpViewController: UITextFieldDelegate {
