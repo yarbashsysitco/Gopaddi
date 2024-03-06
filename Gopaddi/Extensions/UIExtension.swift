@@ -264,3 +264,10 @@ class TextFieldWithPadding: UITextField {
 //        return rect.inset(by: textPadding)
 //    }
 //}
+extension UITextField {
+    func setPadding(_ points: CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: points, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+}

@@ -36,7 +36,9 @@ class SignInVC: UIViewController{
         super.viewDidLoad()
         setUpErrorF()
         loginPassword.isSecureTextEntry = true
-        
+        loginEmail.setPadding(20)
+        loginPassword.setPadding(20)
+
         UserDefaults.standard.set(true, forKey: "AppOpen")
         loginPassword.delegate = self
         loginPassword.returnKeyType = .done
@@ -45,7 +47,7 @@ class SignInVC: UIViewController{
         imgView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapGesture))
         imgView.addGestureRecognizer(tapGesture)
-        
+        print("ok")
     }
     @objc func didTapGesture(){
         if isClicked {
@@ -62,8 +64,8 @@ class SignInVC: UIViewController{
         imgView.image = imgView.image?.withRenderingMode(.alwaysTemplate)
     }
     @IBAction func signUpBtn(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SignInOptionsViewController") as! SignInOptionsViewController
-//        vc.modalPresentationStyle = .fullScreen
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
      
     }
@@ -346,11 +348,58 @@ class SignInVC: UIViewController{
             isValidPass = true
         }
     }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        // Get the current text in the email and password fields
+//        guard let email = loginEmail.text, let password = loginPassword.text else {
+//            return true // Allow text change if unable to get email or password
+//        }
+//
+//        // Check if both email and password are not empty
+//        if !email.isEmpty && !password.isEmpty {
+//            signInBtn.isEnabled = true
+//            signInBtn.alpha = 1.0
+//            signInBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+//        } else {
+//            signInBtn.isEnabled = false
+//            signInBtn.alpha = 0.5
+//            signInBtn.backgroundColor =  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1)
+//        }
+//
+//        return true // Allow text change
+//    }
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let email = loginEmail.text, let password = loginPassword.text else {
+            // If unable to get email or password, do nothing
+            signInBtn.isEnabled = false
+            signInBtn.alpha = 0.5
+            signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+
+        // Check if both email and password are not empty
+        if !email.isEmpty && !password.isEmpty {
+            signInBtn.isEnabled = true
+            signInBtn.alpha = 1.0
+            signInBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+        } else {
+            signInBtn.isEnabled = false
+            signInBtn.alpha = 0.5
+            signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }
+    }
+
+    
+    
 }
-extension SignInVC : UITextFieldDelegate{
+extension SignInVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        loginEmail.resignFirstResponder()
-        loginPassword.resignFirstResponder()
+        if textField == loginEmail {
+            loginPassword.becomeFirstResponder() // Move to the password field
+        } else if textField == loginPassword {
+            textField.resignFirstResponder() // Hide the keyboard
+            //signIn() // Call your sign-in method here
+        }
         return true
     }
 }

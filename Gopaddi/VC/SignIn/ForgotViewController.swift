@@ -22,6 +22,8 @@ class ForgotViewController: UIViewController {
         super.viewDidLoad()
         // Initial setup for UI elements
         setupUI()
+        
+        print("ok")
     }
     
     func setupUI() {
