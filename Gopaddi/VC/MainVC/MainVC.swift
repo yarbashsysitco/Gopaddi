@@ -362,6 +362,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                 }
             }
             cell.actionBlock = {
+                let vc = UIStoryboard(name: "BookMarkMain", bundle: nil).instantiateViewController(withIdentifier: "BookMarkPopUp")as! BookMarkPopUp
+                self.present(vc, animated: true)
+                
+                
                 print("Saved Clicked")
                 self.promo = self.resultData?[indexPath.row].fe_promotion
                 self.key = self.resultData?[indexPath.row].fe_id

@@ -4,77 +4,97 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingThirdCell" id="gTV-IL-0wX" customClass="OnboardingThirdCell" customModule="Gopaddi" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="351" height="669"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingThirdCell" id="tLH-Ss-btz" customClass="OnboardingThirdCell" customModule="Gopaddi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="527"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="669"/>
+                <rect key="frame" x="0.0" y="0.0" width="317" height="527"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-5d-Wvj">
-                        <rect key="frame" x="0.0" y="0.0" width="351" height="669"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cy-dJ-BgE">
+                        <rect key="frame" x="0.0" y="0.0" width="317" height="527"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gopaddi - Where travel meets social" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-jw-JUN">
-                                <rect key="frame" x="20" y="110" width="311" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSY-h7-Yyo">
-                                <rect key="frame" x="15" y="136" width="321" height="36"/>
-                                <string key="text">LabelShare travel tips, recommendations, and stories. Find travel buddies with similar interests; post stunning travel photos and videos; document your experiences, and inspire others. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-33" translatesAutoresizingMaskIntoConstraints="NO" id="5XR-he-mO7">
-                                <rect key="frame" x="0.0" y="187" width="351" height="350"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZY4-5d-Wvj">
+                                <rect key="frame" x="0.0" y="0.0" width="317" height="527"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding4" translatesAutoresizingMaskIntoConstraints="NO" id="AKn-dN-6ja">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="350"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding5" translatesAutoresizingMaskIntoConstraints="NO" id="OXS-R7-Anh">
-                                        <rect key="frame" x="159" y="0.0" width="192" height="350"/>
-                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gopaddi - Where travel meets social" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-jw-JUN">
+                                        <rect key="frame" x="20" y="110" width="277" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSY-h7-Yyo">
+                                        <rect key="frame" x="15" y="136" width="287" height="36"/>
+                                        <string key="text">LabelShare travel tips, recommendations, and stories. Find travel buddies with similar interests; post stunning travel photos and videos; document your experiences, and inspire others. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" red="0.90588235289999997" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-33" translatesAutoresizingMaskIntoConstraints="NO" id="5XR-he-mO7">
+                                        <rect key="frame" x="0.0" y="187" width="317" height="350"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding4" translatesAutoresizingMaskIntoConstraints="NO" id="AKn-dN-6ja">
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="350"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboarding5" translatesAutoresizingMaskIntoConstraints="NO" id="OXS-R7-Anh">
+                                                <rect key="frame" x="142" y="0.0" width="175" height="350"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="n3B-7U-nQZ"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="n3B-7U-nQZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4sQ-jw-JUN" secondAttribute="trailing" constant="20" id="01l-B9-9O0"/>
+                                    <constraint firstItem="5XR-he-mO7" firstAttribute="leading" secondItem="ZY4-5d-Wvj" secondAttribute="leading" id="6Ul-8P-BL9"/>
+                                    <constraint firstItem="4sQ-jw-JUN" firstAttribute="leading" secondItem="ZY4-5d-Wvj" secondAttribute="leading" constant="20" id="74u-Bb-euf"/>
+                                    <constraint firstItem="fSY-h7-Yyo" firstAttribute="top" secondItem="4sQ-jw-JUN" secondAttribute="bottom" constant="8" id="PMW-Bh-jyE"/>
+                                    <constraint firstItem="fSY-h7-Yyo" firstAttribute="leading" secondItem="ZY4-5d-Wvj" secondAttribute="leading" constant="15" id="SJK-r5-KbY"/>
+                                    <constraint firstAttribute="trailing" secondItem="fSY-h7-Yyo" secondAttribute="trailing" constant="15" id="alR-Zr-yDL"/>
+                                    <constraint firstItem="4sQ-jw-JUN" firstAttribute="top" secondItem="ZY4-5d-Wvj" secondAttribute="top" constant="110" id="eMi-4I-DIp"/>
+                                    <constraint firstAttribute="trailing" secondItem="5XR-he-mO7" secondAttribute="trailing" id="h5C-wx-0br"/>
+                                    <constraint firstItem="5XR-he-mO7" firstAttribute="top" secondItem="fSY-h7-Yyo" secondAttribute="bottom" constant="15" id="nMK-if-Rdi"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4sQ-jw-JUN" secondAttribute="trailing" constant="20" id="01l-B9-9O0"/>
-                            <constraint firstItem="5XR-he-mO7" firstAttribute="leading" secondItem="ZY4-5d-Wvj" secondAttribute="leading" id="6Ul-8P-BL9"/>
-                            <constraint firstItem="4sQ-jw-JUN" firstAttribute="leading" secondItem="ZY4-5d-Wvj" secondAttribute="leading" constant="20" id="74u-Bb-euf"/>
-                            <constraint firstItem="fSY-h7-Yyo" firstAttribute="top" secondItem="4sQ-jw-JUN" secondAttribute="bottom" constant="8" id="PMW-Bh-jyE"/>
-                            <constraint firstItem="fSY-h7-Yyo" firstAttribute="leading" secondItem="ZY4-5d-Wvj" secondAttribute="leading" constant="15" id="SJK-r5-KbY"/>
-                            <constraint firstAttribute="trailing" secondItem="fSY-h7-Yyo" secondAttribute="trailing" constant="15" id="alR-Zr-yDL"/>
-                            <constraint firstItem="4sQ-jw-JUN" firstAttribute="top" secondItem="ZY4-5d-Wvj" secondAttribute="top" constant="110" id="eMi-4I-DIp"/>
-                            <constraint firstAttribute="trailing" secondItem="5XR-he-mO7" secondAttribute="trailing" id="h5C-wx-0br"/>
-                            <constraint firstItem="5XR-he-mO7" firstAttribute="top" secondItem="fSY-h7-Yyo" secondAttribute="bottom" constant="15" id="nMK-if-Rdi"/>
+                            <constraint firstItem="ZY4-5d-Wvj" firstAttribute="leading" secondItem="3Cy-dJ-BgE" secondAttribute="leading" id="7xc-uE-LsG"/>
+                            <constraint firstAttribute="bottom" secondItem="ZY4-5d-Wvj" secondAttribute="bottom" id="Ekj-Xj-Hpc"/>
+                            <constraint firstAttribute="bottom" secondItem="ZY4-5d-Wvj" secondAttribute="bottom" id="Q9a-JV-FJF"/>
+                            <constraint firstAttribute="trailing" secondItem="ZY4-5d-Wvj" secondAttribute="trailing" id="cp1-QU-Smw"/>
+                            <constraint firstItem="ZY4-5d-Wvj" firstAttribute="top" secondItem="3Cy-dJ-BgE" secondAttribute="top" id="jZs-Hh-BL8"/>
+                            <constraint firstItem="ZY4-5d-Wvj" firstAttribute="leading" secondItem="3Cy-dJ-BgE" secondAttribute="leading" id="ren-Dw-dyw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZY4-5d-Wvj" secondAttribute="trailing" id="sHj-BN-8hk"/>
+                            <constraint firstItem="ZY4-5d-Wvj" firstAttribute="top" secondItem="3Cy-dJ-BgE" secondAttribute="top" id="vRi-g5-BOM"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="Wvn-Qc-EED"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ZY4-5d-Wvj" secondAttribute="bottom" id="04S-tf-bCS"/>
-                <constraint firstItem="ZY4-5d-Wvj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KoO-3X-2Og"/>
-                <constraint firstAttribute="trailing" secondItem="ZY4-5d-Wvj" secondAttribute="trailing" id="ivp-B6-84i"/>
-                <constraint firstItem="ZY4-5d-Wvj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vEg-qx-8HW"/>
+                <constraint firstItem="3Cy-dJ-BgE" firstAttribute="top" secondItem="tLH-Ss-btz" secondAttribute="top" id="HeI-f2-W4E"/>
+                <constraint firstAttribute="trailing" secondItem="3Cy-dJ-BgE" secondAttribute="trailing" id="Tcx-Lb-mHY"/>
+                <constraint firstAttribute="bottom" secondItem="3Cy-dJ-BgE" secondAttribute="bottom" id="acu-xb-asP"/>
+                <constraint firstItem="3Cy-dJ-BgE" firstAttribute="leading" secondItem="tLH-Ss-btz" secondAttribute="leading" id="bW2-co-WK1"/>
             </constraints>
-            <size key="customSize" width="351" height="669"/>
-            <point key="canvasLocation" x="185.49618320610685" y="53.169014084507047"/>
+            <size key="customSize" width="317" height="527"/>
+            <point key="canvasLocation" x="779" y="3"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="Onboarding4" width="250" height="458"/>
         <image name="Onboarding5" width="248" height="511"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
