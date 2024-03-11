@@ -209,6 +209,7 @@
 		A848BFF62B9EC7B300E19075 /* OnboardingSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */; };
 		A848BFF92B9EC7D000E19075 /* OnboardingThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */; };
 		A848BFFA2B9EC7D000E19075 /* OnboardingThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */; };
+		A8629C272B9EF7450026F280 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8629C262B9EF7450026F280 /* OnboardingVC.swift */; };
 		A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */; };
 		A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */; };
 		A863BAC12B8F376600F6F1D5 /* FeedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */; };
@@ -448,6 +449,7 @@
 		A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingSecondCell.xib; sourceTree = "<group>"; };
 		A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThirdCell.swift; sourceTree = "<group>"; };
 		A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingThirdCell.xib; sourceTree = "<group>"; };
+		A8629C262B9EF7450026F280 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
 		A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
 		A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPopUpViewController.swift; sourceTree = "<group>"; };
@@ -915,6 +917,7 @@
 			isa = PBXGroup;
 			children = (
 				844FD31E2B8DB07B0014E4B5 /* OnboardingViewController.swift */,
+				A8629C262B9EF7450026F280 /* OnboardingVC.swift */,
 				A848BFEF2B9EC79200E19075 /* OnboardingFirstCell.swift */,
 				A848BFF02B9EC79200E19075 /* OnboardingFirstCell.xib */,
 				A848BFF32B9EC7B300E19075 /* OnboardingSecondCell.swift */,
@@ -1455,6 +1458,7 @@
 				844FD3722B8DB07B0014E4B5 /* FlightDetailsVC.swift in Sources */,
 				844FD3312B8DB07B0014E4B5 /* ActivityBookHeadTableViewCell.swift in Sources */,
 				A847D6FA2B99CD060031EDA3 /* ForgotEmailViewController.swift in Sources */,
+				A8629C272B9EF7450026F280 /* OnboardingVC.swift in Sources */,
 				844FD42A2B8DB0F20014E4B5 /* GlobalConstants.swift in Sources */,
 				844FD3382B8DB07B0014E4B5 /* MemberCountViewController.swift in Sources */,
 				844FD3DC2B8DB0A90014E4B5 /* HotelDetails.swift in Sources */,

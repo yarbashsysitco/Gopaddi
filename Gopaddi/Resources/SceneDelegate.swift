@@ -108,7 +108,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func displayOnboardingVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+        if let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingVC") as? OnboardingVC {
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
         }
