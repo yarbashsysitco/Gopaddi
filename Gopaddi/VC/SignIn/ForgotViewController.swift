@@ -21,7 +21,7 @@ class ForgotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Initial setup for UI elements
-        setupUI()
+        //setupUI()
         
         print("ok")
     }

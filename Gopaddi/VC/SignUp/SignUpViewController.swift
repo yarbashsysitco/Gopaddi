@@ -227,6 +227,15 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func prefixTapButton(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PrefixViewController") as! PrefixViewController
+//        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    
+    
     @IBAction func signUpButtonClicked(_ sender: Any) {
         guard let nameField = self.nameTF.text else { return }
         guard let lastNameField = self.lastNameTF.text else { return }

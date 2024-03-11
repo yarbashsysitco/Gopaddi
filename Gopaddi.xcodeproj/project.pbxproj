@@ -15,7 +15,6 @@
 		844FD3222B8DB07B0014E4B5 /* NationalityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD27A2B8DB07B0014E4B5 /* NationalityViewController.swift */; };
 		844FD3232B8DB07B0014E4B5 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD27B2B8DB07B0014E4B5 /* OtpViewController.swift */; };
 		844FD3242B8DB07B0014E4B5 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD27C2B8DB07B0014E4B5 /* TermsViewController.swift */; };
-		844FD3252B8DB07B0014E4B5 /* PrefixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD27D2B8DB07B0014E4B5 /* PrefixViewController.swift */; };
 		844FD3262B8DB07B0014E4B5 /* SignUpNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD27E2B8DB07B0014E4B5 /* SignUpNViewController.swift */; };
 		844FD3272B8DB07B0014E4B5 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD27F2B8DB07B0014E4B5 /* CountryViewController.swift */; };
 		844FD3282B8DB07B0014E4B5 /* MarketplaceTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2822B8DB07B0014E4B5 /* MarketplaceTabVC.swift */; };
@@ -124,7 +123,6 @@
 		844FD3A32B8DB07B0014E4B5 /* ReactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */; };
 		844FD3A42B8DB07B0014E4B5 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FD31A2B8DB07B0014E4B5 /* ImageTableViewCell.xib */; };
 		844FD3A52B8DB07B0014E4B5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD31B2B8DB07B0014E4B5 /* MainVC.swift */; };
-		844FD3A62B8DB07B0014E4B5 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD31D2B8DB07B0014E4B5 /* OnboardingCollectionViewCell.swift */; };
 		844FD3A72B8DB07B0014E4B5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD31E2B8DB07B0014E4B5 /* OnboardingViewController.swift */; };
 		844FD3D52B8DB0A90014E4B5 /* ActivityBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3A92B8DB0A90014E4B5 /* ActivityBooking.swift */; };
 		844FD3D62B8DB0A90014E4B5 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3AA2B8DB0A90014E4B5 /* ForgotPassword.swift */; };
@@ -199,6 +197,18 @@
 		84E356902B95EEEF007AC79F /* ReactionCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E3568E2B95EEEF007AC79F /* ReactionCountCell.xib */; };
 		84FCA0642B9869F5007E23E6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCA0632B9869F5007E23E6 /* IntroViewController.swift */; };
 		9A00B96124A04A68A80D58A3 /* Pods_Gopaddi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2813A594D8E9C40E5E152545 /* Pods_Gopaddi.framework */; };
+		A81522342B998D2E00125AD7 /* PrefixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81522332B998D2E00125AD7 /* PrefixViewController.swift */; };
+		A847D6F62B99BE510031EDA3 /* ForgotMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */; };
+		A847D6FA2B99CD060031EDA3 /* ForgotEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */; };
+		A847D6FC2B99CD170031EDA3 /* ForgotOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */; };
+		A847D6FE2B99CD410031EDA3 /* SetNewPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FD2B99CD410031EDA3 /* SetNewPassViewController.swift */; };
+		A847D7002B99CD4D0031EDA3 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FF2B99CD4D0031EDA3 /* DoneViewController.swift */; };
+		A848BFF12B9EC79200E19075 /* OnboardingFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848BFEF2B9EC79200E19075 /* OnboardingFirstCell.swift */; };
+		A848BFF22B9EC79200E19075 /* OnboardingFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF02B9EC79200E19075 /* OnboardingFirstCell.xib */; };
+		A848BFF52B9EC7B300E19075 /* OnboardingSecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848BFF32B9EC7B300E19075 /* OnboardingSecondCell.swift */; };
+		A848BFF62B9EC7B300E19075 /* OnboardingSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */; };
+		A848BFF92B9EC7D000E19075 /* OnboardingThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */; };
+		A848BFFA2B9EC7D000E19075 /* OnboardingThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */; };
 		A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */; };
 		A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */; };
 		A863BAC12B8F376600F6F1D5 /* FeedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */; };
@@ -226,6 +236,8 @@
 		A878DB792B98456F001B7FAB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A878DB782B98456F001B7FAB /* SignUpVC.swift */; };
 		A89052572B959DC6001F00B4 /* ReactionMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89052562B959DC6001F00B4 /* ReactionMain.storyboard */; };
 		A89052592B959DEC001F00B4 /* ReactionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89052582B959DEC001F00B4 /* ReactionMainViewController.swift */; };
+		A89E94C62B99964500ECD5FE /* prefixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E94C42B99964500ECD5FE /* prefixTableViewCell.swift */; };
+		A89E94C72B99964500ECD5FE /* prefixTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89E94C52B99964500ECD5FE /* prefixTableViewCell.xib */; };
 		A89E99372B8F50680006745C /* EditMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89E99362B8F50680006745C /* EditMain.storyboard */; };
 		A8E587B22B91A89A0096FDEA /* WhocanSeeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E587B12B91A89A0096FDEA /* WhocanSeeProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -242,7 +254,6 @@
 		844FD27A2B8DB07B0014E4B5 /* NationalityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NationalityViewController.swift; sourceTree = "<group>"; };
 		844FD27B2B8DB07B0014E4B5 /* OtpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
 		844FD27C2B8DB07B0014E4B5 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
-		844FD27D2B8DB07B0014E4B5 /* PrefixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixViewController.swift; sourceTree = "<group>"; };
 		844FD27E2B8DB07B0014E4B5 /* SignUpNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpNViewController.swift; sourceTree = "<group>"; };
 		844FD27F2B8DB07B0014E4B5 /* CountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		844FD2822B8DB07B0014E4B5 /* MarketplaceTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketplaceTabVC.swift; sourceTree = "<group>"; };
@@ -351,7 +362,6 @@
 		844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsVC.swift; sourceTree = "<group>"; };
 		844FD31A2B8DB07B0014E4B5 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		844FD31B2B8DB07B0014E4B5 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		844FD31D2B8DB07B0014E4B5 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		844FD31E2B8DB07B0014E4B5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		844FD3A92B8DB0A90014E4B5 /* ActivityBooking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityBooking.swift; sourceTree = "<group>"; };
 		844FD3AA2B8DB0A90014E4B5 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
@@ -426,6 +436,18 @@
 		84E3568D2B95EEEF007AC79F /* ReactionCountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCountCell.swift; sourceTree = "<group>"; };
 		84E3568E2B95EEEF007AC79F /* ReactionCountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionCountCell.xib; sourceTree = "<group>"; };
 		84FCA0632B9869F5007E23E6 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		A81522332B998D2E00125AD7 /* PrefixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixViewController.swift; sourceTree = "<group>"; };
+		A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotMain.storyboard; sourceTree = "<group>"; };
+		A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotEmailViewController.swift; sourceTree = "<group>"; };
+		A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotOTPViewController.swift; sourceTree = "<group>"; };
+		A847D6FD2B99CD410031EDA3 /* SetNewPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPassViewController.swift; sourceTree = "<group>"; };
+		A847D6FF2B99CD4D0031EDA3 /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		A848BFEF2B9EC79200E19075 /* OnboardingFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirstCell.swift; sourceTree = "<group>"; };
+		A848BFF02B9EC79200E19075 /* OnboardingFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingFirstCell.xib; sourceTree = "<group>"; };
+		A848BFF32B9EC7B300E19075 /* OnboardingSecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondCell.swift; sourceTree = "<group>"; };
+		A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingSecondCell.xib; sourceTree = "<group>"; };
+		A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThirdCell.swift; sourceTree = "<group>"; };
+		A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingThirdCell.xib; sourceTree = "<group>"; };
 		A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
 		A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
 		A863BAB32B8F376600F6F1D5 /* FeedPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPopUpViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +475,8 @@
 		A878DB782B98456F001B7FAB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		A89052562B959DC6001F00B4 /* ReactionMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReactionMain.storyboard; sourceTree = "<group>"; };
 		A89052582B959DEC001F00B4 /* ReactionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionMainViewController.swift; sourceTree = "<group>"; };
+		A89E94C42B99964500ECD5FE /* prefixTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prefixTableViewCell.swift; sourceTree = "<group>"; };
+		A89E94C52B99964500ECD5FE /* prefixTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = prefixTableViewCell.xib; sourceTree = "<group>"; };
 		A89E99362B8F50680006745C /* EditMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditMain.storyboard; sourceTree = "<group>"; };
 		A8E587B12B91A89A0096FDEA /* WhocanSeeProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhocanSeeProfileViewController.swift; sourceTree = "<group>"; };
 		F65DC8409462E01038B67235 /* Pods-Gopaddi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gopaddi.release.xcconfig"; path = "Target Support Files/Pods-Gopaddi/Pods-Gopaddi.release.xcconfig"; sourceTree = "<group>"; };
@@ -505,6 +529,7 @@
 				A89E99362B8F50680006745C /* EditMain.storyboard */,
 				84E26A882B91B13000C9BCF4 /* DiaryMain.storyboard */,
 				A89052562B959DC6001F00B4 /* ReactionMain.storyboard */,
+				A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */,
 				844FD4302B8DB10C0014E4B5 /* Assets.xcassets */,
 				844FD42B2B8DB0F90014E4B5 /* Utilities */,
 				844FD4242B8DB0F20014E4B5 /* Constants */,
@@ -554,10 +579,12 @@
 			children = (
 				844FD2792B8DB07B0014E4B5 /* SignUpViewController.swift */,
 				A878DB782B98456F001B7FAB /* SignUpVC.swift */,
+				A81522332B998D2E00125AD7 /* PrefixViewController.swift */,
+				A89E94C42B99964500ECD5FE /* prefixTableViewCell.swift */,
+				A89E94C52B99964500ECD5FE /* prefixTableViewCell.xib */,
 				844FD27A2B8DB07B0014E4B5 /* NationalityViewController.swift */,
 				844FD27B2B8DB07B0014E4B5 /* OtpViewController.swift */,
 				844FD27C2B8DB07B0014E4B5 /* TermsViewController.swift */,
-				844FD27D2B8DB07B0014E4B5 /* PrefixViewController.swift */,
 				844FD27E2B8DB07B0014E4B5 /* SignUpNViewController.swift */,
 				844FD27F2B8DB07B0014E4B5 /* CountryViewController.swift */,
 			);
@@ -802,6 +829,7 @@
 		844FD2E92B8DB07B0014E4B5 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				A847D6F82B99CC4C0031EDA3 /* Forgot */,
 				844FD2EA2B8DB07B0014E4B5 /* SignInVC.swift */,
 				844FD2EB2B8DB07B0014E4B5 /* ForgotViewController.swift */,
 				844FD2EC2B8DB07B0014E4B5 /* SignInOptionsViewController.swift */,
@@ -886,8 +914,13 @@
 		844FD31C2B8DB07B0014E4B5 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				844FD31D2B8DB07B0014E4B5 /* OnboardingCollectionViewCell.swift */,
 				844FD31E2B8DB07B0014E4B5 /* OnboardingViewController.swift */,
+				A848BFEF2B9EC79200E19075 /* OnboardingFirstCell.swift */,
+				A848BFF02B9EC79200E19075 /* OnboardingFirstCell.xib */,
+				A848BFF32B9EC7B300E19075 /* OnboardingSecondCell.swift */,
+				A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */,
+				A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */,
+				A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1062,6 +1095,17 @@
 			path = intro;
 			sourceTree = "<group>";
 		};
+		A847D6F82B99CC4C0031EDA3 /* Forgot */ = {
+			isa = PBXGroup;
+			children = (
+				A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */,
+				A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */,
+				A847D6FD2B99CD410031EDA3 /* SetNewPassViewController.swift */,
+				A847D6FF2B99CD4D0031EDA3 /* DoneViewController.swift */,
+			);
+			path = Forgot;
+			sourceTree = "<group>";
+		};
 		A863BAB02B8F376600F6F1D5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1203,14 +1247,19 @@
 				844FD40A2B8DB0BB0014E4B5 /* ProximaNovaMedium.ttf in Resources */,
 				84E26A892B91B13000C9BCF4 /* DiaryMain.storyboard in Resources */,
 				A89052572B959DC6001F00B4 /* ReactionMain.storyboard in Resources */,
+				A848BFF22B9EC79200E19075 /* OnboardingFirstCell.xib in Resources */,
 				844FD4332B8DB12C0014E4B5 /* Main.storyboard in Resources */,
 				844FD40E2B8DB0BB0014E4B5 /* Poppins-SemiBold.ttf in Resources */,
 				844FD3832B8DB07B0014E4B5 /* ProfileCell.xib in Resources */,
+				A847D6F62B99BE510031EDA3 /* ForgotMain.storyboard in Resources */,
 				A863BAC82B8F376600F6F1D5 /* CommentHeadTableViewCell.xib in Resources */,
 				844FD3A22B8DB07B0014E4B5 /* TextTableViewCell.xib in Resources */,
 				844FD40C2B8DB0BB0014E4B5 /* Poppins-Regular.ttf in Resources */,
 				844FD40B2B8DB0BB0014E4B5 /* FontProximanova-medium.otf in Resources */,
+				A848BFFA2B9EC7D000E19075 /* OnboardingThirdCell.xib in Resources */,
 				A863BADC2B8F3B7900F6F1D5 /* ProfileFeildsViewCell.xib in Resources */,
+				A848BFF62B9EC7B300E19075 /* OnboardingSecondCell.xib in Resources */,
+				A89E94C72B99964500ECD5FE /* prefixTableViewCell.xib in Resources */,
 				844FD41F2B8DB0E30014E4B5 /* CollectionViewCell.xib in Resources */,
 				A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */,
 			);
@@ -1268,6 +1317,7 @@
 				844FD3232B8DB07B0014E4B5 /* OtpViewController.swift in Sources */,
 				844FD35A2B8DB07B0014E4B5 /* FareRuleTableCell2.swift in Sources */,
 				844FD34F2B8DB07B0014E4B5 /* HotelBookingDetailsViewController.swift in Sources */,
+				A89E94C62B99964500ECD5FE /* prefixTableViewCell.swift in Sources */,
 				844FD3E42B8DB0A90014E4B5 /* FeedsCreateModel.swift in Sources */,
 				844FD3F02B8DB0A90014E4B5 /* webviewResponseModel.swift in Sources */,
 				844FD3302B8DB07B0014E4B5 /* ActivityBookListTableViewCell.swift in Sources */,
@@ -1291,6 +1341,7 @@
 				844FD3F42B8DB0A90014E4B5 /* feedEditModel.swift in Sources */,
 				844FD3F82B8DB0A90014E4B5 /* HotelList.swift in Sources */,
 				A863BADD2B8F3B7900F6F1D5 /* ProfilePopupVC.swift in Sources */,
+				A848BFF92B9EC7D000E19075 /* OnboardingThirdCell.swift in Sources */,
 				844FD3482B8DB07B0014E4B5 /* HotelConfirmPreviewHeadTableViewCell.swift in Sources */,
 				844FD3E82B8DB0A90014E4B5 /* OtpModel.swift in Sources */,
 				844FD33E2B8DB07B0014E4B5 /* ActivityBookingDetailsViewController.swift in Sources */,
@@ -1317,6 +1368,7 @@
 				844FD3532B8DB07B0014E4B5 /* HotelDetailsViewController.swift in Sources */,
 				844FD39E2B8DB07B0014E4B5 /* MenuTabVC.swift in Sources */,
 				844FD3652B8DB07B0014E4B5 /* FlightListTableCell.swift in Sources */,
+				A847D6FC2B99CD170031EDA3 /* ForgotOTPViewController.swift in Sources */,
 				844FD32A2B8DB07B0014E4B5 /* ActivityDetailsHeadTableViewCell.swift in Sources */,
 				A89052592B959DEC001F00B4 /* ReactionMainViewController.swift in Sources */,
 				844FD3732B8DB07B0014E4B5 /* FlightListVC.swift in Sources */,
@@ -1343,6 +1395,7 @@
 				844FD3FF2B8DB0A90014E4B5 /* ActivityCancel.swift in Sources */,
 				844FD34B2B8DB07B0014E4B5 /* HotelContactTableViewCell.swift in Sources */,
 				844FD3222B8DB07B0014E4B5 /* NationalityViewController.swift in Sources */,
+				A81522342B998D2E00125AD7 /* PrefixViewController.swift in Sources */,
 				A863BAC32B8F376600F6F1D5 /* FeedEditViewController.swift in Sources */,
 				844FD3FE2B8DB0A90014E4B5 /* HotelBookingList.swift in Sources */,
 				A8E587B22B91A89A0096FDEA /* WhocanSeeProfileViewController.swift in Sources */,
@@ -1366,6 +1419,7 @@
 				844FD3422B8DB07B0014E4B5 /* PageDirectCollectionViewCell.swift in Sources */,
 				844FD37E2B8DB07B0014E4B5 /* SignInVC.swift in Sources */,
 				844FD3E52B8DB0A90014E4B5 /* HotelCancel.swift in Sources */,
+				A848BFF52B9EC7B300E19075 /* OnboardingSecondCell.swift in Sources */,
 				844FD33A2B8DB07B0014E4B5 /* ActivityViewController.swift in Sources */,
 				844FD4232B8DB0EA0014E4B5 /* ApiManager.swift in Sources */,
 				A863BAD62B8F3B7900F6F1D5 /*  ProfileVC.swift in Sources */,
@@ -1394,13 +1448,13 @@
 				A863BAC72B8F376600F6F1D5 /* CommentReplyTableViewCell.swift in Sources */,
 				844FD3752B8DB07B0014E4B5 /* FlightConfirmVC.swift in Sources */,
 				844FD3D62B8DB0A90014E4B5 /* ForgotPassword.swift in Sources */,
-				844FD3A62B8DB07B0014E4B5 /* OnboardingCollectionViewCell.swift in Sources */,
 				844FD3FB2B8DB0A90014E4B5 /* HotelRedirect.swift in Sources */,
 				844FD3D52B8DB0A90014E4B5 /* ActivityBooking.swift in Sources */,
 				844FD34E2B8DB07B0014E4B5 /* HotelConfiredInfoViewController.swift in Sources */,
 				844FD37D2B8DB07B0014E4B5 /* StatusTabVC.swift in Sources */,
 				844FD3722B8DB07B0014E4B5 /* FlightDetailsVC.swift in Sources */,
 				844FD3312B8DB07B0014E4B5 /* ActivityBookHeadTableViewCell.swift in Sources */,
+				A847D6FA2B99CD060031EDA3 /* ForgotEmailViewController.swift in Sources */,
 				844FD42A2B8DB0F20014E4B5 /* GlobalConstants.swift in Sources */,
 				844FD3382B8DB07B0014E4B5 /* MemberCountViewController.swift in Sources */,
 				844FD3DC2B8DB0A90014E4B5 /* HotelDetails.swift in Sources */,
@@ -1435,8 +1489,9 @@
 				844FD3DA2B8DB0A90014E4B5 /* DeleteModel.swift in Sources */,
 				A863BADA2B8F3B7900F6F1D5 /* PaymentViewController.swift in Sources */,
 				844FD3202B8DB07B0014E4B5 /* LaunshViewController.swift in Sources */,
+				A848BFF12B9EC79200E19075 /* OnboardingFirstCell.swift in Sources */,
 				844FD3822B8DB07B0014E4B5 /* ProfileInfoTableViewCell.swift in Sources */,
-				844FD3252B8DB07B0014E4B5 /* PrefixViewController.swift in Sources */,
+				A847D7002B99CD4D0031EDA3 /* DoneViewController.swift in Sources */,
 				844FD3572B8DB07B0014E4B5 /* HotelFilterViewController.swift in Sources */,
 				844FD34A2B8DB07B0014E4B5 /* HotelDetailsHeadTableViewCell.swift in Sources */,
 				844FD3402B8DB07B0014E4B5 /* ActivityFilterViewController.swift in Sources */,
@@ -1459,6 +1514,7 @@
 				844FD35D2B8DB07B0014E4B5 /* PassportTableViewCell.swift in Sources */,
 				844FD3852B8DB07B0014E4B5 /* SuggestionCollectionViewCell.swift in Sources */,
 				844FD4172B8DB0D60014E4B5 /* WalletTabVC.swift in Sources */,
+				A847D6FE2B99CD410031EDA3 /* SetNewPassViewController.swift in Sources */,
 				844FD36A2B8DB07B0014E4B5 /* FlightListTableViewCell.swift in Sources */,
 				844FD3372B8DB07B0014E4B5 /* ActivityBookTableViewCell.swift in Sources */,
 				844FD39F2B8DB07B0014E4B5 /* BookingSelectionViewController.swift in Sources */,

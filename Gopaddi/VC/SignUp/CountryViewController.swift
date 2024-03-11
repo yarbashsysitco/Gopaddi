@@ -48,10 +48,10 @@ class CountryViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Navigastion")?.withRenderingMode(.alwaysTemplate), style: .done, target: self, action: #selector(didTapBack))
         view.backgroundColor = .systemBackground
         addUI()
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
         tableView.tableHeaderView = searcBar
-        searcBar.delegate = self
+//        searcBar.delegate = self
         tableViewSetup()
         countryInfo()
     }
@@ -90,8 +90,8 @@ class CountryViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.layer.cornerRadius = 10
         tableView.layer.masksToBounds = true
-        tableView.register(PrefixTableViewCell.self,
-                           forCellReuseIdentifier: PrefixTableViewCell.identifier)
+//        tableView.register(PrefixTableViewCell.self,
+//                           forCellReuseIdentifier: PrefixTableViewCell.identifier)
         tableView.tag = 1
         tableView.rowHeight = 80
     }
@@ -127,68 +127,68 @@ class CountryViewController: UIViewController {
         }
     }
 }
-extension CountryViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchedCountries.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if tableView.tag == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PrefixTableViewCell.identifier, for: indexPath) as? PrefixTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.layer.shadowOffset = CGSize(width: 0.6, height:0.6)
-            cell.layer.shadowOpacity = 0.4
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
-            cell.backgroundColor = .clear
-            let prefix  = "+\(searchedCountries[indexPath.item].phonecode)(\(searchedCountries[indexPath.item].title))"
-            cell.keyLabel.text = prefix
-            let nationalityKey = ""
-            cell.titleLabel.text = nationalityKey
-//            let image = searchedCountries[indexPath.item].flag
-//            cell.countryImageView.sd_setImage(with: URL(string: image))
-       
-            return cell
-        } else if tableView.tag == 2 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: NationalityTableViewCell.identifier, for: indexPath) as? NationalityTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.layer.shadowOffset = CGSize(width: 0.6, height:0.6)
-            cell.layer.shadowOpacity = 0.4
-            cell.layer.cornerRadius = 10
-            cell.backgroundColor = .clear
-            cell.layer.masksToBounds = true
-            let nationTitle = searchedCountries[indexPath.row].title
-            cell.titleLabel.text = nationTitle
-//            let image = searchedCountries[indexPath.item].flag
-//            cell.countryImageView.sd_setImage(with: URL(string: image))
-            return cell
-        }
-        return UITableViewCell()
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableViewAnimate(load: false)
-        let prefix = "+"+( searchedCountries[indexPath.row].phonecode)
-        let nationality = "\(searchedCountries[indexPath.item].key)"
-        let nationalityTitle = "\(searchedCountries[indexPath.item].title)"
-        if tableView.tag == 1 {
-            DispatchQueue.main.async {
-                let data = self.completionHandler?(CountryData(key: nationality, title: nationalityTitle, phonecode: prefix))
-                print(data!)
-                self.dismiss(animated: true)
-            }
-        } else if tableView.tag == 2 {
-            DispatchQueue.main.async {
-                let data = self.completionHandler?(CountryData(key: nationality, title: nationalityTitle, phonecode: prefix))
-                print(data!)
-                self.dismiss(animated: true)
-            }
-        }
-    }
+extension CountryViewController {
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return searchedCountries.count
+//    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        if tableView.tag == 1 {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: PrefixTableViewCell.identifier, for: indexPath) as? PrefixTableViewCell else {
+//                return UITableViewCell()
+//            }
+//            cell.layer.shadowOffset = CGSize(width: 0.6, height:0.6)
+//            cell.layer.shadowOpacity = 0.4
+//            cell.layer.cornerRadius = 10
+//            cell.layer.masksToBounds = true
+//            cell.backgroundColor = .clear
+//            let prefix  = "+\(searchedCountries[indexPath.item].phonecode)(\(searchedCountries[indexPath.item].title))"
+//            cell.keyLabel.text = prefix
+//            let nationalityKey = ""
+//            cell.titleLabel.text = nationalityKey
+////            let image = searchedCountries[indexPath.item].flag
+////            cell.countryImageView.sd_setImage(with: URL(string: image))
+//
+//            return cell
+//        } else if tableView.tag == 2 {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: NationalityTableViewCell.identifier, for: indexPath) as? NationalityTableViewCell else {
+//                return UITableViewCell()
+//            }
+//            cell.layer.shadowOffset = CGSize(width: 0.6, height:0.6)
+//            cell.layer.shadowOpacity = 0.4
+//            cell.layer.cornerRadius = 10
+//            cell.backgroundColor = .clear
+//            cell.layer.masksToBounds = true
+//            let nationTitle = searchedCountries[indexPath.row].title
+//            cell.titleLabel.text = nationTitle
+////            let image = searchedCountries[indexPath.item].flag
+////            cell.countryImageView.sd_setImage(with: URL(string: image))
+//            return cell
+//        }
+//        return UITableViewCell()
+//    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableViewAnimate(load: false)
+//        let prefix = "+"+( searchedCountries[indexPath.row].phonecode)
+//        let nationality = "\(searchedCountries[indexPath.item].key)"
+//        let nationalityTitle = "\(searchedCountries[indexPath.item].title)"
+//        if tableView.tag == 1 {
+//            DispatchQueue.main.async {
+//                let data = self.completionHandler?(CountryData(key: nationality, title: nationalityTitle, phonecode: prefix))
+//                print(data!)
+//                self.dismiss(animated: true)
+//            }
+//        } else if tableView.tag == 2 {
+//            DispatchQueue.main.async {
+//                let data = self.completionHandler?(CountryData(key: nationality, title: nationalityTitle, phonecode: prefix))
+//                print(data!)
+//                self.dismiss(animated: true)
+//            }
+//        }
+//    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("Searched Text\(searchText)")
         self.searchedCountries = searchText.isEmpty ? countries : countries.filter({ model in

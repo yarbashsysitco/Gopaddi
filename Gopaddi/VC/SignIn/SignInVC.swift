@@ -293,10 +293,8 @@ class SignInVC: UIViewController{
     }
     
     @IBAction func forgotBtnClicked(_ sender: Any) {
-        
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ForgotViewController") as! ForgotViewController
-//        vc.modalPresentationStyle = .fullScreen
+        let vc = UIStoryboard(name: "ForgotMain", bundle: nil).instantiateViewController(withIdentifier: "ForgotViewController")as! ForgotViewController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
         
     }
