@@ -14,9 +14,9 @@
             filePath = "Gopaddi/VC/SignUp/SignUpViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
-            landmarkName = "passtxt(_:)"
+            startingLineNumber = "305"
+            endingLineNumber = "305"
+            landmarkName = "privacyButtonClicked(_:)"
             landmarkType = "7">
             <Locations>
                <Location

@@ -71,6 +71,13 @@ class SignUpViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        nameTF.setPadding(20)
+        lastNameTF.setPadding(20)
+        emailTF.setPadding(20)
+        passwordTF.setPadding(20)
+        phNoTF.setPadding(20)
+        conPassword.setPadding(20)
+
     }
     
     
@@ -301,7 +308,7 @@ class SignUpViewController: UIViewController {
         UIApplication.shared.open(urlString, options: [:], completionHandler: nil)
     }
     @IBAction func didTapBackBtn(_ sender: Any) {
-        dismiss(animated: false)
+        dismiss(animated: true)
     }
     @IBAction func signInBtnClicked(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC

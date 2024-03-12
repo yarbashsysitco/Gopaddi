@@ -24,6 +24,7 @@ class ForgotViewController: UIViewController {
         //setupUI()
         
         print("ok")
+        
     }
     
     func setupUI() {
