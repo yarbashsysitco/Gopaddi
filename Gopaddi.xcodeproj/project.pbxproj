@@ -121,7 +121,6 @@
 		844FD3A12B8DB07B0014E4B5 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */; };
 		844FD3A22B8DB07B0014E4B5 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */; };
 		844FD3A32B8DB07B0014E4B5 /* ReactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */; };
-		844FD3A42B8DB07B0014E4B5 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FD31A2B8DB07B0014E4B5 /* ImageTableViewCell.xib */; };
 		844FD3A52B8DB07B0014E4B5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD31B2B8DB07B0014E4B5 /* MainVC.swift */; };
 		844FD3A72B8DB07B0014E4B5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD31E2B8DB07B0014E4B5 /* OnboardingViewController.swift */; };
 		844FD3D52B8DB0A90014E4B5 /* ActivityBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3A92B8DB0A90014E4B5 /* ActivityBooking.swift */; };
@@ -209,6 +208,7 @@
 		A848BFF62B9EC7B300E19075 /* OnboardingSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */; };
 		A848BFF92B9EC7D000E19075 /* OnboardingThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */; };
 		A848BFFA2B9EC7D000E19075 /* OnboardingThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */; };
+		A85B47512BA06027007CB6BA /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85B47502BA06027007CB6BA /* ImageTableViewCell.xib */; };
 		A8629C272B9EF7450026F280 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8629C262B9EF7450026F280 /* OnboardingVC.swift */; };
 		A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */; };
 		A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */; };
@@ -364,7 +364,6 @@
 		844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsVC.swift; sourceTree = "<group>"; };
-		844FD31A2B8DB07B0014E4B5 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		844FD31B2B8DB07B0014E4B5 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		844FD31E2B8DB07B0014E4B5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		844FD3A92B8DB0A90014E4B5 /* ActivityBooking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityBooking.swift; sourceTree = "<group>"; };
@@ -452,6 +451,7 @@
 		A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingSecondCell.xib; sourceTree = "<group>"; };
 		A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThirdCell.swift; sourceTree = "<group>"; };
 		A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingThirdCell.xib; sourceTree = "<group>"; };
+		A85B47502BA06027007CB6BA /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageTableViewCell.xib; path = ../../../../../Downloads/ImageTableViewCell.xib; sourceTree = "<group>"; };
 		A8629C262B9EF7450026F280 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
 		A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -914,7 +914,7 @@
 				844FD3162B8DB07B0014E4B5 /* ImageTableViewCell.swift */,
 				844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */,
 				844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */,
-				844FD31A2B8DB07B0014E4B5 /* ImageTableViewCell.xib */,
+				A85B47502BA06027007CB6BA /* ImageTableViewCell.xib */,
 				A8C746BA2B9F29C8002BFFE9 /* BookMark */,
 				84E3568B2B95EE61007AC79F /* Reactions */,
 			);
@@ -1256,7 +1256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844FD3A42B8DB07B0014E4B5 /* ImageTableViewCell.xib in Resources */,
+				A85B47512BA06027007CB6BA /* ImageTableViewCell.xib in Resources */,
 				84E356902B95EEEF007AC79F /* ReactionCountCell.xib in Resources */,
 				844FD40D2B8DB0BB0014E4B5 /* Lora-Regular.ttf in Resources */,
 				A86427F12B96E81D00C49CF9 /* ViewReactionCell.xib in Resources */,
