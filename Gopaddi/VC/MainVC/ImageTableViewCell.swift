@@ -47,6 +47,7 @@ class ImageTableViewCell: UITableViewCell {
     @IBOutlet weak var feedComents2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("hi")
         makeClickActive(value: false)
         addGesture()
         viewdiaryBtn.layer.cornerRadius = 15
