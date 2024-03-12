@@ -198,6 +198,10 @@
 		84FCA0642B9869F5007E23E6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCA0632B9869F5007E23E6 /* IntroViewController.swift */; };
 		9A00B96124A04A68A80D58A3 /* Pods_Gopaddi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2813A594D8E9C40E5E152545 /* Pods_Gopaddi.framework */; };
 		A81522342B998D2E00125AD7 /* PrefixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81522332B998D2E00125AD7 /* PrefixViewController.swift */; };
+		A83D39862BA072CF001BECDD /* NotificationMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83D39852BA072CF001BECDD /* NotificationMain.storyboard */; };
+		A83D398C2BA0784A001BECDD /* NotificationAllTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D398A2BA0784A001BECDD /* NotificationAllTBCell.swift */; };
+		A83D398D2BA0784A001BECDD /* NotificationAllTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83D398B2BA0784A001BECDD /* NotificationAllTBCell.xib */; };
+		A83D398F2BA08635001BECDD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D398E2BA08635001BECDD /* NotificationViewController.swift */; };
 		A847D6F62B99BE510031EDA3 /* ForgotMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */; };
 		A847D6FA2B99CD060031EDA3 /* ForgotEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */; };
 		A847D6FC2B99CD170031EDA3 /* ForgotOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */; };
@@ -441,6 +445,10 @@
 		84E3568E2B95EEEF007AC79F /* ReactionCountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionCountCell.xib; sourceTree = "<group>"; };
 		84FCA0632B9869F5007E23E6 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		A81522332B998D2E00125AD7 /* PrefixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixViewController.swift; sourceTree = "<group>"; };
+		A83D39852BA072CF001BECDD /* NotificationMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationMain.storyboard; sourceTree = "<group>"; };
+		A83D398A2BA0784A001BECDD /* NotificationAllTBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAllTBCell.swift; sourceTree = "<group>"; };
+		A83D398B2BA0784A001BECDD /* NotificationAllTBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationAllTBCell.xib; sourceTree = "<group>"; };
+		A83D398E2BA08635001BECDD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotMain.storyboard; sourceTree = "<group>"; };
 		A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotEmailViewController.swift; sourceTree = "<group>"; };
 		A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotOTPViewController.swift; sourceTree = "<group>"; };
@@ -539,6 +547,7 @@
 				A89052562B959DC6001F00B4 /* ReactionMain.storyboard */,
 				A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */,
 				A8C746BF2B9F29E8002BFFE9 /* BookMarkMain.storyboard */,
+				A83D39852BA072CF001BECDD /* NotificationMain.storyboard */,
 				844FD4302B8DB10C0014E4B5 /* Assets.xcassets */,
 				844FD42B2B8DB0F90014E4B5 /* Utilities */,
 				844FD4242B8DB0F20014E4B5 /* Constants */,
@@ -915,6 +924,7 @@
 				844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */,
 				844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */,
 				84C2E4BF2BA06309004CCDDF /* ImageTableViewCell.xib */,
+				A83D39892BA07775001BECDD /* Notification */,
 				A8C746BA2B9F29C8002BFFE9 /* BookMark */,
 				84E3568B2B95EE61007AC79F /* Reactions */,
 			);
@@ -1106,6 +1116,16 @@
 			path = intro;
 			sourceTree = "<group>";
 		};
+		A83D39892BA07775001BECDD /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				A83D398E2BA08635001BECDD /* NotificationViewController.swift */,
+				A83D398A2BA0784A001BECDD /* NotificationAllTBCell.swift */,
+				A83D398B2BA0784A001BECDD /* NotificationAllTBCell.xib */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		A847D6F82B99CC4C0031EDA3 /* Forgot */ = {
 			isa = PBXGroup;
 			children = (
@@ -1262,6 +1282,7 @@
 				A86427F12B96E81D00C49CF9 /* ViewReactionCell.xib in Resources */,
 				A89E99372B8F50680006745C /* EditMain.storyboard in Resources */,
 				844FD4132B8DB0C30014E4B5 /* CustomAlertViewController.xib in Resources */,
+				A83D398D2BA0784A001BECDD /* NotificationAllTBCell.xib in Resources */,
 				844FD31F2B8DB07B0014E4B5 /* LaunchScreen.storyboard in Resources */,
 				844FD4312B8DB10D0014E4B5 /* Assets.xcassets in Resources */,
 				844FD40A2B8DB0BB0014E4B5 /* ProximaNovaMedium.ttf in Resources */,
@@ -1282,6 +1303,7 @@
 				A848BFF62B9EC7B300E19075 /* OnboardingSecondCell.xib in Resources */,
 				A89E94C72B99964500ECD5FE /* prefixTableViewCell.xib in Resources */,
 				844FD41F2B8DB0E30014E4B5 /* CollectionViewCell.xib in Resources */,
+				A83D39862BA072CF001BECDD /* NotificationMain.storyboard in Resources */,
 				A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1415,6 +1437,7 @@
 				844FD3712B8DB07B0014E4B5 /* FlightViewController.swift in Sources */,
 				844FD32B2B8DB07B0014E4B5 /* ActivityDetailsCollectionViewCell.swift in Sources */,
 				844FD3FF2B8DB0A90014E4B5 /* ActivityCancel.swift in Sources */,
+				A83D398F2BA08635001BECDD /* NotificationViewController.swift in Sources */,
 				844FD34B2B8DB07B0014E4B5 /* HotelContactTableViewCell.swift in Sources */,
 				844FD3222B8DB07B0014E4B5 /* NationalityViewController.swift in Sources */,
 				A81522342B998D2E00125AD7 /* PrefixViewController.swift in Sources */,
@@ -1446,6 +1469,7 @@
 				844FD33A2B8DB07B0014E4B5 /* ActivityViewController.swift in Sources */,
 				844FD4232B8DB0EA0014E4B5 /* ApiManager.swift in Sources */,
 				A863BAD62B8F3B7900F6F1D5 /*  ProfileVC.swift in Sources */,
+				A83D398C2BA0784A001BECDD /* NotificationAllTBCell.swift in Sources */,
 				844FD3E22B8DB0A90014E4B5 /* BookingDetails.swift in Sources */,
 				844FD3E62B8DB0A90014E4B5 /* ActivityDetails.swift in Sources */,
 				844FD3392B8DB07B0014E4B5 /* ActivityBookedInfoViewController.swift in Sources */,

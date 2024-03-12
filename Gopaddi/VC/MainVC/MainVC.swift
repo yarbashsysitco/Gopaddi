@@ -151,7 +151,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -25).isActive = true
         actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60).isActive = true
     }
-
+    
+    @IBAction func notificationButton(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "NotificationMain", bundle: nil).instantiateViewController(withIdentifier: "NotificationViewController")as! NotificationViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
     
     @IBAction func foryouBtn(_ sender: Any) {
      
