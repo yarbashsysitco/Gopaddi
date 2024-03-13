@@ -9,6 +9,7 @@ import UIKit
 
 class OnboardingVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var createBtn: UIButton!
     let utilityF = UtilitiesFunctions()
     @IBOutlet weak var pagecontrol: UIPageControl!
     @IBOutlet weak var collection: UICollectionView!
@@ -24,10 +25,27 @@ class OnboardingVC: UIViewController, UICollectionViewDelegate, UICollectionView
         collection.register(UINib.init(nibName: "OnboardingSecondCell", bundle: nil),forCellWithReuseIdentifier: "OnboardingSecondCell")
         collection.register(UINib.init(nibName: "OnboardingThirdCell", bundle: nil),forCellWithReuseIdentifier: "OnboardingThirdCell")
     }
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let x = targetContentOffset.pointee.x
-        pagecontrol.currentPage = Int(x / view.frame.width)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        let currentPage = Int((scrollView.contentOffset.x + width / 2) / width)
+        pagecontrol.currentPage = currentPage
+        
+        // Change the page control color based on the current page
+        if currentPage == 0 {
+            pagecontrol.currentPageIndicatorTintColor = UIColor.white
+            createBtn.layer.backgroundColor = UIColor.white.cgColor
+            createBtn.tintColor = UIColor.systemBlue
+        } else if currentPage == 1 {
+            pagecontrol.currentPageIndicatorTintColor = UIColor.systemBlue
+            createBtn.layer.backgroundColor = UIColor.systemBlue.cgColor
+            createBtn.tintColor = UIColor.white
+        }else {
+            pagecontrol.currentPageIndicatorTintColor = UIColor.white
+            createBtn.layer.backgroundColor = UIColor.white.cgColor
+            createBtn.tintColor = UIColor.systemBlue
+        }
     }
+
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -40,6 +58,7 @@ class OnboardingVC: UIViewController, UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingFirstCell", for: indexPath)as! OnboardingFirstCell
+            
             return cell
             
         }else if indexPath.section == 1 {
@@ -55,8 +74,7 @@ class OnboardingVC: UIViewController, UICollectionViewDelegate, UICollectionView
         let screenHeight = UIScreen.main.bounds.height
         return CGSize(width: screenWidth, height: screenHeight)
     }
-
-
+   
     
 //    @IBAction func didTapPassButton(_ sender: UIButton) {
 //        if currentpage < pageControl.numberOfPages{
