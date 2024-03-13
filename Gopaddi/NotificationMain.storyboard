@@ -59,8 +59,11 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="NotificationBtnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mea-iH-G2T"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXm-fg-I2s">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXm-fg-I2s">
                                                 <rect key="frame" x="55.666666666666671" y="0.0" width="90.000000000000014" height="34"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,8 +74,11 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="NotificationBtnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C03-Jv-Zwf"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEC-tH-X6c">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEC-tH-X6c">
                                                 <rect key="frame" x="151.66666666666666" y="0.0" width="107.66666666666666" height="34"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,8 +89,11 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="NotificationBtnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="urf-9d-z6g"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7u-0h-bjb">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7u-0h-bjb">
                                                 <rect key="frame" x="265.33333333333331" y="0.0" width="95.666666666666686" height="34"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,6 +104,9 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="NotificationBtnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rGr-1m-2YM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -102,7 +114,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="I2W-Ww-UZK" firstAttribute="leading" secondItem="BVJ-MI-KvF" secondAttribute="leading" constant="16" id="Cbf-XO-ZdD"/>
                                     <constraint firstItem="Zbe-sG-R5J" firstAttribute="top" secondItem="I2W-Ww-UZK" secondAttribute="bottom" constant="20" id="ZBd-B1-Q6R"/>
@@ -136,6 +148,10 @@
                     </view>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
+                        <outlet property="activityBtn" destination="UEC-tH-X6c" id="qpF-hk-1Ld"/>
+                        <outlet property="allBtn" destination="kMw-mW-TRZ" id="VUo-bF-gwS"/>
+                        <outlet property="socialBtn" destination="QXm-fg-I2s" id="eCt-e8-xXm"/>
+                        <outlet property="systemBtn" destination="E7u-0h-bjb" id="SkF-hc-Dbl"/>
                         <outlet property="table" destination="ZGR-sa-X1f" id="dSn-uc-AbE"/>
                     </connections>
                 </viewController>
