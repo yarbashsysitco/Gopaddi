@@ -40,27 +40,34 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     @IBAction func NotificationBtnClick(_ sender: UIButton) {
-           switch sender.tag {
-           case 0:
-               allBtn.backgroundColor = .systemBlue
-               self.btnTag = "0"
-           case 1:
-               allBtn.backgroundColor = .systemGray
-               socialBtn.backgroundColor = .systemBlue
-               self.btnTag = "1"
-           case 2:
-               allBtn.backgroundColor = .systemGray
-               socialBtn.backgroundColor = .systemGray
-               activityBtn.backgroundColor = .systemBlue
-               self.btnTag = "2"
-           default:
-               allBtn.backgroundColor = .systemGray
-               socialBtn.backgroundColor = .systemGray
-               activityBtn.backgroundColor = .systemGray
-               systemBtn.backgroundColor = .systemBlue
-               self.btnTag = "3"
-           }
-           
+        switch sender.tag {
+            case 0:
+                allBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+                socialBtn.backgroundColor = .clear
+                activityBtn.backgroundColor = .clear
+                systemBtn.backgroundColor = .clear
+                self.btnTag = "0"
+            case 1:
+                allBtn.backgroundColor = .clear
+                socialBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+                activityBtn.backgroundColor = .clear
+                systemBtn.backgroundColor = .clear
+                self.btnTag = "1"
+            case 2:
+                allBtn.backgroundColor = .clear
+                socialBtn.backgroundColor = .clear
+                activityBtn.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+                activityBtn.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+                systemBtn.backgroundColor = .clear
+                self.btnTag = "2"
+            default:
+                allBtn.backgroundColor = .clear
+                socialBtn.backgroundColor = .clear
+                activityBtn.backgroundColor = .clear
+                systemBtn.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+                self.btnTag = "3"
+        }
+
         
        }
 
