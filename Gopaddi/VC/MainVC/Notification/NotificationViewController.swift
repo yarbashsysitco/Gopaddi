@@ -22,6 +22,9 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
         table.dataSource = self
         table.register(UINib.init(nibName: "NotificationAllTBCell", bundle: nil), forCellReuseIdentifier: "NotificationAllTBCell")
     }
+    @IBAction func didTapBackBtn(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -46,12 +49,20 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
                 socialBtn.backgroundColor = .clear
                 activityBtn.backgroundColor = .clear
                 systemBtn.backgroundColor = .clear
+            allBtn.tintColor = UIColor.systemBlue
+            socialBtn.tintColor = UIColor.black
+            activityBtn.tintColor = UIColor.black
+            systemBtn.tintColor = UIColor.black
                 self.btnTag = "0"
             case 1:
                 allBtn.backgroundColor = .clear
                 socialBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
                 activityBtn.backgroundColor = .clear
                 systemBtn.backgroundColor = .clear
+            socialBtn.tintColor = UIColor.systemBlue
+            allBtn.tintColor = UIColor.black
+            activityBtn.tintColor = UIColor.black
+            systemBtn.tintColor = UIColor.black
                 self.btnTag = "1"
             case 2:
                 allBtn.backgroundColor = .clear
@@ -59,12 +70,20 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
                 activityBtn.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
                 activityBtn.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
                 systemBtn.backgroundColor = .clear
+            activityBtn.tintColor = UIColor.systemBlue
+            allBtn.tintColor = UIColor.black
+            socialBtn.tintColor = UIColor.black
+            systemBtn.tintColor = UIColor.black
                 self.btnTag = "2"
             default:
                 allBtn.backgroundColor = .clear
                 socialBtn.backgroundColor = .clear
                 activityBtn.backgroundColor = .clear
                 systemBtn.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            allBtn.tintColor = UIColor.black
+            socialBtn.tintColor = UIColor.black
+            activityBtn.tintColor = UIColor.black
+            systemBtn.tintColor = UIColor.systemBlue
                 self.btnTag = "3"
         }
 

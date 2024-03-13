@@ -34,6 +34,10 @@ class OtpViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(chacgeResetButton), userInfo: nil, repeats: true)
         
     }
+    @IBAction func didTapBackBtn(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
     func configView(){
         self.view.backgroundColor = .clear
 //        self.view.backgroundColor   = .black.withAlphaComponent(0.6)

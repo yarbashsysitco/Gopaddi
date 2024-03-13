@@ -394,13 +394,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                 
                 print("PopUp Clicked")
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "FeedPopUpViewController") as? FeedPopUpViewController
+                
                 vc?.userKey = self.userKey!
                 vc?.key = (self.resultData?[indexPath.row].fe_id)!
                 vc?.caption = (self.resultData?[indexPath.row].fe_caption)!
                 vc?.creator = (self.resultData?[indexPath.row].fe_creator[0].us_name)!
                 vc?.imgUrl = (self.resultData?[indexPath.row].fe_file)!
             
-                self.present(vc!, animated: false)
+                self.present(vc!, animated: true)
                 self.callFeeds()
                 tableView.reloadData()
             }

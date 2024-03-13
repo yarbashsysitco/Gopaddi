@@ -27,6 +27,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ArrowLeft"/>
+                                        <connections>
+                                            <action selector="didTapBackBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FTq-62-TYO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmE-vg-eY0">
                                         <rect key="frame" x="66" y="26" width="253" height="20"/>

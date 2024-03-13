@@ -49,6 +49,11 @@ class SignInVC: UIViewController{
         imgView.addGestureRecognizer(tapGesture)
         print("ok")
     }
+    @IBAction func didTapBackBtn(_ sender: Any) {
+       
+    }
+    
+    
     @objc func didTapGesture(){
         if isClicked {
             imgView.image = UIImage(systemName: "eye")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
@@ -71,93 +76,7 @@ class SignInVC: UIViewController{
     }
     @IBAction func signInBtn(_ sender: Any) {
         
-        //        guard let username = loginEmail.text else {return}
-        //        guard let password = loginPassword.text else {return}
-        //        let  token = clientToken
-        //        validate()
-        //        if isValidUser , isValidPass {
-        //            UserDefaults.standard.set(username, forKey: "userName")
-        //            UserDefaults.standard.set(password, forKey: "password")
-        //            UserDefaults.standard.set(token, forKey: "token")
-        //            ApiManager.shared.signIn(username: username, password: password, token: token) { result in
-        //                switch result {
-        //                case.success(let model):
-        //                    DispatchQueue.main.async { [weak self] in
-        //                        self?.registered = true
-        //                        self?.signInModel = model
-        //
-        //                        if model.code == "200" {
-        //                            let alert = UIAlertController(title:"Success!", message: model.message.debugDescription, preferredStyle: .actionSheet)
-        //                            let alertAction = UIAlertAction(title: "Ok", style: .default) { _ in
-        //                                self?.utilFunc.saveLogging(true)
-        //                                UserDefaults.standard.set(model.user?[0].name, forKey: "logname")
-        //                                UserDefaults.standard.set(model.user?[0].email, forKey: "logemail")
-        //                                UserDefaults.standard.set(model.user?[0].userid, forKey: "userid")
-        //                                UserDefaults.standard.set(model.user?[0].membership, forKey: "membership")
-        //                                UserDefaults.standard.set(model.user?[0].category, forKey: "category")
-        //                                UserDefaults.standard.set(model.user?[0].verified, forKey: "verified")
-        //                                UserDefaults.standard.set(model.user?[0].picture, forKey: "picture")
-        //                                UserDefaults.standard.set(model.user?[0].joined_at, forKey: "joined_at")
-        //                                UserDefaults.standard.set(model.user?[0].phone, forKey: "logphone")
-        //                                UserDefaults.standard.set(model.user?[0].key, forKey: "logkey")
-        //                                UserDefaults.standard.set(model.user?[0].gender, forKey: "gender")
-        //                                UserDefaults.standard.set(model.user?[0].occupation, forKey: "occupation")
-        //                                self?.callSubscription()
-        //                                let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "SignInOptionsViewController") as? SignInOptionsViewController
-        //                                vc?.user = (model.user?[0].key)!
-        //                                vc?.modalPresentationStyle = .fullScreen
-        //                                self?.present(vc!, animated: true)
-        //
-        //                                //                                let verified = UserDefaults.standard.string(forKey: "verified")
-        //                                //                                let isInterest = UserDefaults.standard.string(forKey: "isInterest")
-        //                                //                                let isUserName = UserDefaults.standard.string(forKey: "isUserName")
-        //                                //
-        //                                //                                if verified == "0" {
-        //                                //                                    if (isUserName != nil) {
-        //                                //                                        if (isInterest != nil){
-        //                                //                                            let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController
-        //                                //                                            vc?.modalPresentationStyle = .fullScreen
-        //                                //                                                self?.present(vc!, animated: true)
-        //                                //                                        }else{
-        //                                //                                            let vc = self?.storyboard?.instantiateViewController(identifier: "InterestsViewController")as? InterestsViewController
-        //                                //                                            self?.present(vc!, animated: true)
-        //                                //                                        }
-        //                                //
-        //                                //                                    }else{
-        //                                //                                        let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as? PersonalDetailsViewController
-        //                                //                                            vc?.user = (model.user?[0].key)!
-        //                                //                                            self?.present(vc!, animated: true)
-        //                                //                                    }
-        //                                //
-        //                                //                                }else {
-        //                                //                                    let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController
-        //                                //                                    vc?.modalPresentationStyle = .fullScreen
-        //                                //                                        self?.present(vc!, animated: true)
-        //                                //                                }
-        //                            }
-        //                            alert.addAction(alertAction)
-        //                            self?.present(alert, animated: true)
-        //                            self?.signInBtn.backgroundColor = .systemGreen
-        //
-        //                        } else {
-        //                            let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
-        //                            let action = UIAlertAction(title: "Ok", style: .cancel)
-        //                            alert.addAction(action)
-        //                            self?.present(alert, animated: false)
-        //                        }
-        //                    }
-        //                case.failure(let error):
-        //                    // self.signInButton.stopLoading()
-        //                    DispatchQueue.main.async {
-        //                        let alert = UIAlertController(title: "Error!", message: "Invalid Password", preferredStyle: .alert)
-        //                        let action = UIAlertAction(title: "Ok", style: .cancel)
-        //                        alert.addAction(action)
-        //                        self.present(alert, animated: false)
-        //                    }
-        //                }
-        //            }
-        //        }
-        //
+        
                 
                 guard let username = loginEmail.text else {return}
                 guard let password = loginPassword.text else {return}
@@ -180,13 +99,13 @@ class SignInVC: UIViewController{
                                     //                                self?.keyid = key
                                     self?.callSubscription()
                                     //                            } else {
-                                    //                                print("okkk")
-                                    //                            }
-                                    let alert = UIAlertController(title:"Success!", message: model.message.debugDescription, preferredStyle: .actionSheet)
-
-                                    let alertAction = UIAlertAction(title: "Ok", style: .default) { [self] _ in
-
-                                        //                                self?.callSubscription()
+//                                    //                                print("okkk")
+//                                    //                            }
+//                                    let alert = UIAlertController(title:"Success!", message: model.message.debugDescription, preferredStyle: .actionSheet)
+//
+//                                    let alertAction = UIAlertAction(title: "Ok", style: .default) { [self] _ in
+//
+//                                        //                                self?.callSubscription()
                                         self?.utilFunc.saveLogging(true)
                                         UserDefaults.standard.set(model.user?[0].name, forKey: "logname")
                                         UserDefaults.standard.set(model.user?[0].email, forKey: "logemail")
@@ -226,10 +145,10 @@ class SignInVC: UIViewController{
                                         }
 
 
-                                    }
-                                    alert.addAction(alertAction)
-                                    self?.present(alert, animated: true)
-                                    self?.signInBtn.backgroundColor = .systemGreen
+//                                    }
+//                                    alert.addAction(alertAction)
+//                                    self?.present(alert, animated: true)
+//                                    self?.signInBtn.backgroundColor = .systemGreen
 
                                 } else {
                                     let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)

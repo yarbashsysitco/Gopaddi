@@ -9,8 +9,7 @@ import UIKit
 
 class FeedPopUpViewController: UIViewController {
     
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet var backView: UIView!
+    
     var key = String()
     var userKey = String()
     var caption = String()
@@ -20,22 +19,10 @@ class FeedPopUpViewController: UIViewController {
     let apiManager = ApiManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        configView()
+        
     }
-    func configView(){
-        self.view.backgroundColor = .clear
-        self.contentView.alpha = 2
-        self.contentView.layer.cornerRadius = 10
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch: UITouch? = touches.first
-        if touch?.view == backView {
-            dismiss(animated: false, completion: nil)
-        }
-    }
-    func appear(sender : UIViewController){
-        sender.present(self, animated: false)
-    }
+    
+    
 //    func hide(){
 //        UIView.animate(withDuration: 0, delay: 0.0, options: .curveEaseOut){
 //            self.backView.alpha = 0
