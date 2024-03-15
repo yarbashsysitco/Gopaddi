@@ -14,9 +14,9 @@
             filePath = "Gopaddi/VC/SignUp/SignUpViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
-            landmarkName = "privacyButtonClicked(_:)"
+            startingLineNumber = "350"
+            endingLineNumber = "350"
+            landmarkName = "termsButtonClicked(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -64,7 +64,38 @@
                   endingLineNumber = "299"
                   offsetFromSymbolStart = "444">
                </Location>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 84f9736193f4b888"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.SignUpViewController.termsButtonClicked(Any) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/Gopaddi/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "309"
+                  endingLineNumber = "309"
+                  offsetFromSymbolStart = "376">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2508AF7D-1FF6-4C6D-BDCB-A97307A40DDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/MainVC/MainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

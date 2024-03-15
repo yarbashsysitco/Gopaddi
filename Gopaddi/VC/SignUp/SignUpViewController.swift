@@ -42,7 +42,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var hidePasswordicon1: UIImageView!
     
     @IBOutlet weak var hideCPasswordicon2: UIImageView!
-    
+    var isClicked1 : Bool = true
+    var isClicked2 : Bool = true
+
     var isBoxChecked : Bool = false
     var isValid : Bool = true
     var isValidNa : Bool = true
@@ -54,7 +56,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         ValidationViewHeight.constant = 0
         // prefixTF.delegate = self
         signUpButton.isEnabled = false
@@ -71,13 +73,52 @@ class SignUpViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        phNoTF.delegate = self
+        phNoTF.keyboardType = .numberPad
         nameTF.setPadding(20)
         lastNameTF.setPadding(20)
         emailTF.setPadding(20)
         passwordTF.setPadding(20)
         phNoTF.setPadding(20)
         conPassword.setPadding(20)
-
+        hidePasswordicon1.image = hidePasswordicon1.image?.withRenderingMode(.alwaysTemplate)
+        hidePasswordicon1.tintColor = .systemGray2
+        hidePasswordicon1.isUserInteractionEnabled = true 
+        hideCPasswordicon2.image = hideCPasswordicon2.image?.withRenderingMode(.alwaysTemplate)
+        hideCPasswordicon2.tintColor = .systemGray2
+        hideCPasswordicon2.isUserInteractionEnabled = true
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(didTapGesture1))
+        hidePasswordicon1.addGestureRecognizer(tapGesture1)
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(didTapGesture2))
+        hideCPasswordicon2.addGestureRecognizer(tapGesture2)
+    }
+    
+    
+    @objc func didTapGesture1(){
+        if isClicked1 {
+            hidePasswordicon1.image = UIImage(systemName: "eye")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            passwordTF.isSecureTextEntry = false
+            isClicked1 = false
+        }else{
+            hidePasswordicon1.image = UIImage(systemName: "eye.slash")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            passwordTF.isSecureTextEntry = true
+            isClicked1 = true
+        }
+        hidePasswordicon1.image = hidePasswordicon1.image?.withRenderingMode(.alwaysTemplate)
+    }
+    
+    @objc func didTapGesture2(){
+        if isClicked2 {
+            hideCPasswordicon2.image = UIImage(systemName: "eye")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            
+            conPassword.isSecureTextEntry = false
+            isClicked2 = false
+        }else{
+            hideCPasswordicon2.image = UIImage(systemName: "eye.slash")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            conPassword.isSecureTextEntry = true
+            isClicked2 = true
+        }
+        hideCPasswordicon2.image = hideCPasswordicon2.image?.withRenderingMode(.alwaysTemplate)
     }
     
     
@@ -371,31 +412,7 @@ class SignUpViewController: UIViewController {
             }
         }
     }
-
-    
-//    if lowercaseCharacterSet != nil{
-//        passwlowercaseImg.image = UIImage(named: "Greentick")
-//        if numbersCharacterSet != nil{
-//            passwnumberImg.image = UIImage(named: "Greentick")
-//            if nonAlphanumericCharacterSet != nil{
-//                passwsymbolsImg.image = UIImage(named: "Greentick")
-//              
-//            }else{
-//                passwsymbolsImg.image = UIImage(named: "Cancel")
-//            }
-//        }else{
-//            passwnumberImg.image = UIImage(named: "Cancel")
-//        }
-//    }else{
-//        passwlowercaseImg.image = UIImage(named: "Cancel")
-//    }
-//    
-//    
-    
-    
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        
-        
     }
 }
 extension SignUpViewController: UITextFieldDelegate {
@@ -431,62 +448,8 @@ extension SignUpViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
     }
-   
-        
-        // MARK: - UITextFieldDelegate
-        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            // Return true to allow the change, false to block it
+   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             return true
         }
-//        // MARK: - Action
-//        @objc func passwordTextFieldDidChange(_ textField: UITextField) {
-//            // Perform your password validation here
-//            let newPassword = passwordTF.text ?? ""
-//            let uppercaseCharacterSet = CharacterSet.uppercaseLetters
-//            let lowercaseCharacterSet = CharacterSet.lowercaseLetters
-//            let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
-//            let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "~`!@#$%^&*()-_+={}[]|\\;:\"<>,./?")
-//            if newPassword != nil{
-//                UIView.animate(withDuration: 0.1, delay: 0) {
-//                    self.ValidationViewHeight.constant = 130
-//                }
-//                if uppercaseCharacterSet != nil{
-//                    passwuppercaseImg.image = UIImage(named: "Greentick")
-//                }else{
-//                    passwuppercaseImg.image = UIImage(named: "Cancel")
-//                }
-//                if lowercaseCharacterSet != nil{
-//                    passwlowercaseImg.image = UIImage(named: "Greentick")
-//                }else{
-//                    passwlowercaseImg.image = UIImage(named: "Cancel")
-//                }
-//                if numbersCharacterSet != nil{
-//                    passwnumberImg.image = UIImage(named: "Greentick")
-//                }else{
-//                    passwnumberImg.image = UIImage(named: "Cancel")
-//                }
-//                if nonAlphanumericCharacterSet != nil{
-//                    passwsymbolsImg.image = UIImage(named: "Greentick")
-//                }else{
-//                    passwsymbolsImg.image = UIImage(named: "Cancel")
-//                }
-//                if newPassword.count >= 8{
-//                    passwmimimImg.image = UIImage(named: "Greentick")
-//                }else{
-//                    passwmimimImg.image = UIImage(named: "Cancel")
-//                }
-//            }else{
-//                UIView.animate(withDuration: 0.1, delay: 0) {
-//                    self.ValidationViewHeight.constant = 0
-//                }
-//            }
-//
-//
-//            if newPassword.count >= 6 && newPassword.rangeOfCharacter(from: uppercaseCharacterSet) != nil && newPassword.rangeOfCharacter(from: lowercaseCharacterSet) != nil && newPassword.rangeOfCharacter(from: numbersCharacterSet) != nil && newPassword.rangeOfCharacter(from: nonAlphanumericCharacterSet) != nil {
-//                passwordTF.text = "Password strength: Strong"
-//            } else {
-//                passwordTF.text = "Password strength: Weak. Add at least one uppercase letter, one lowercase letter, one number, and one non-alphanumeric character."
-//            }
-//        }
     }
 

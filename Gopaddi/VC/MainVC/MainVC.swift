@@ -314,7 +314,53 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             cell.feedViews.text = resultData?[indexPath.row].fe_views
             cell.feedComments.text = resultData?[indexPath.row].fe_comments
             cell.feedComents2.text = resultData?[indexPath.row].fe_comments
-            cell.feedCreatedDate.text = resultData?[indexPath.row].fe_created_at
+            
+            if let createdAtString = resultData?[indexPath.row].fe_created_at {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                if let createdAt = dateFormatter.date(from: createdAtString) {
+                    let currentDate = Date()
+                    let calendar = Calendar.current
+                    let differenceComponents = calendar.dateComponents([.year, .month, .weekOfMonth, .day], from: createdAt, to: currentDate)
+                    
+                    var timeAgoString = ""
+
+                    if let years = differenceComponents.year, years > 0 {
+                        timeAgoString = "\(years) year\(years > 1 ? "s" : "") "
+                    }
+                    if let months = differenceComponents.month, months > 0 {
+                        timeAgoString += "\(months) month\(months > 1 ? "s" : "") "
+                        // Exclude years if months are present
+                        timeAgoString = timeAgoString.replacingOccurrences(of: #" (\d+) year"#, with: "", options: .regularExpression)
+                    }
+                    else if let weeks = differenceComponents.weekOfMonth, weeks > 0 {
+                        timeAgoString += "\(weeks) week\(weeks > 1 ? "s" : "") "
+                        // Exclude days if weeks are present
+                        timeAgoString = timeAgoString.replacingOccurrences(of: #" (\d+) day"#, with: "", options: .regularExpression)
+                    }
+                    else if let days = differenceComponents.day, days > 0 {
+                        timeAgoString += "\(days) day\(days > 1 ? "s" : "") "
+                    }
+
+                    if timeAgoString.isEmpty {
+                              timeAgoString = "Today"
+                    } else {
+                              timeAgoString += "ago"
+                          }
+                    cell.feedCreatedDate.text = timeAgoString
+                } else {
+                    // Handle error if unable to convert string to date
+                    cell.feedCreatedDate.text = "Unknown"
+                }
+            } else {
+                // Handle error if createdAtString is nil
+                cell.feedCreatedDate.text = "Unknown"
+            }
+
+//            cell.feedCreatedDate.text = resultData?[indexPath.row].fe_created_at
+//            
+//            print( resultData?[indexPath.row].fe_created_at)
+            
             cell.feedCaption.text = resultData?[indexPath.row].fe_caption
             if resultData?[indexPath.row].fe_saved == "1"{
                 cell.saveImgView.tintColor = .systemYellow

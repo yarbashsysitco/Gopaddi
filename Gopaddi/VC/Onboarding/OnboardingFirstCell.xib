@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,8 +39,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXn-wF-EvR">
-                                        <rect key="frame" x="16" y="353" width="361" height="67"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXn-wF-EvR">
+                                        <rect key="frame" x="16" y="353" width="361" height="83.666666666666686"/>
                                         <string key="text">Welcome to Gopaddi, your one-stop shop for unforgettable travel experiences!  Dive into curated getaways, explore hidden gems, and unlock exclusive deals. Let's turn your travel dreams into memories that last a lifetime. Explore with us! </string>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,14 +65,14 @@
                                 <constraints>
                                     <constraint firstItem="xSo-ap-2Ag" firstAttribute="top" secondItem="QfF-hG-ob6" secondAttribute="bottom" constant="50" id="0dP-1p-WKI"/>
                                     <constraint firstAttribute="bottom" secondItem="N1x-Td-eak" secondAttribute="bottom" id="7HX-ae-56p"/>
-                                    <constraint firstItem="bXn-wF-EvR" firstAttribute="leading" secondItem="x2h-NB-8mj" secondAttribute="leading" constant="16" id="J7Z-co-Zgz"/>
+                                    <constraint firstItem="bXn-wF-EvR" firstAttribute="top" secondItem="xSo-ap-2Ag" secondAttribute="bottom" constant="8" symbolic="YES" id="DBf-IZ-ujn"/>
                                     <constraint firstItem="xSo-ap-2Ag" firstAttribute="centerX" secondItem="x2h-NB-8mj" secondAttribute="centerX" id="Jk1-fd-sO8"/>
                                     <constraint firstItem="QfF-hG-ob6" firstAttribute="top" secondItem="x2h-NB-8mj" secondAttribute="top" constant="60" id="JnJ-hC-cfA"/>
                                     <constraint firstItem="N1x-Td-eak" firstAttribute="leading" secondItem="x2h-NB-8mj" secondAttribute="leading" id="VV3-AC-emj"/>
                                     <constraint firstAttribute="trailing" secondItem="QfF-hG-ob6" secondAttribute="trailing" id="Zd5-sz-XFZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bXn-wF-EvR" secondAttribute="trailing" constant="16" id="bEY-ZO-HLp"/>
                                     <constraint firstItem="QfF-hG-ob6" firstAttribute="leading" secondItem="x2h-NB-8mj" secondAttribute="leading" constant="50" id="bPo-zM-kpd"/>
-                                    <constraint firstAttribute="trailing" secondItem="bXn-wF-EvR" secondAttribute="trailing" constant="16" id="eZl-17-ltg"/>
-                                    <constraint firstItem="bXn-wF-EvR" firstAttribute="top" secondItem="xSo-ap-2Ag" secondAttribute="bottom" constant="8" id="uUd-wP-dtp"/>
+                                    <constraint firstItem="bXn-wF-EvR" firstAttribute="leading" secondItem="x2h-NB-8mj" secondAttribute="leading" constant="16" id="jtr-rh-Ok1"/>
                                     <constraint firstAttribute="trailing" secondItem="N1x-Td-eak" secondAttribute="trailing" id="uWi-XH-h5s"/>
                                 </constraints>
                             </view>
@@ -94,7 +95,7 @@
                 <constraint firstAttribute="trailing" secondItem="IdE-Rb-xSy" secondAttribute="trailing" id="YDg-4m-aDK"/>
             </constraints>
             <size key="customSize" width="301" height="561"/>
-            <point key="canvasLocation" x="370.2290076335878" y="37.676056338028168"/>
+            <point key="canvasLocation" x="370.2290076335878" y="37.323943661971832"/>
         </collectionViewCell>
     </objects>
     <resources>
