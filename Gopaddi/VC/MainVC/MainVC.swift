@@ -13,6 +13,9 @@ import JJFloatingActionButton
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITabBarControllerDelegate{
     
+    @IBOutlet weak var hambLeading: NSLayoutConstraint!
+    @IBOutlet weak var hamburgersView: UIView!
+    @IBOutlet weak var hambBackVIew: UIView!
     @IBOutlet weak var profileImgView: UIImageView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mainProfileImageBtn: UIButton!
@@ -105,10 +108,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         trendBtn.titleLabel?.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         FloatingActionButton()
         tabBarController?.delegate = self
-       
+        self.hambBackVIew.isHidden = true
+        self.view.clipsToBounds = true
+        hambTap()
         print("ts")
+        
 
     }
+    
+
     
       func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
           if let index = tabBarController.viewControllers?.firstIndex(of: viewController) {
@@ -215,9 +223,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         profileImgView.addGestureRecognizer(tapGesture)
     }
     @objc func didTapImage(){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? ProfileVC
-        vc!.modalPresentationStyle = .fullScreen
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SideMenuViewController") as? SideMenuViewController
+       
         self.present(vc!, animated: true)
+//        self.hambBackVIew.isHidden = false
+//        UIView.animate(withDuration: 0.5) {
+//            self.hambLeading.constant = 0
+//            self.view.layoutIfNeeded()
+//
+//        }
     }
     func profilePicSetUp(){
         picture = UserDefaults.standard.string(forKey: "picture")
@@ -642,3 +656,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
     override var prefersStatusBarHidden: Bool { return true }
 }
 
+extension MainVC{
+    
+    func hambTap(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hampTapGesture))
+        hamburgersView.isUserInteractionEnabled = true
+        hamburgersView.addGestureRecognizer(tap)
+    }
+    @objc func hampTapGesture(){
+        UIView.animate(withDuration: 0.5) {
+            self.hambLeading.constant = -350
+            self.view.layoutIfNeeded()
+        }
+    }
+}

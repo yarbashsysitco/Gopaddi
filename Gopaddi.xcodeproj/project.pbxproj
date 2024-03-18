@@ -213,6 +213,7 @@
 		A848BFF62B9EC7B300E19075 /* OnboardingSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */; };
 		A848BFF92B9EC7D000E19075 /* OnboardingThirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */; };
 		A848BFFA2B9EC7D000E19075 /* OnboardingThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */; };
+		A858C0EB2BA46C5100C8A391 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A858C0EA2BA46C5100C8A391 /* SideMenuViewController.swift */; };
 		A8629C272B9EF7450026F280 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8629C262B9EF7450026F280 /* OnboardingVC.swift */; };
 		A863BABF2B8F376600F6F1D5 /* FeedsCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */; };
 		A863BAC02B8F376600F6F1D5 /* CommentsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */; };
@@ -460,6 +461,7 @@
 		A848BFF42B9EC7B300E19075 /* OnboardingSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingSecondCell.xib; sourceTree = "<group>"; };
 		A848BFF72B9EC7D000E19075 /* OnboardingThirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThirdCell.swift; sourceTree = "<group>"; };
 		A848BFF82B9EC7D000E19075 /* OnboardingThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingThirdCell.xib; sourceTree = "<group>"; };
+		A858C0EA2BA46C5100C8A391 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		A8629C262B9EF7450026F280 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		A863BAB12B8F376600F6F1D5 /* FeedsCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsCommentViewController.swift; sourceTree = "<group>"; };
 		A863BAB22B8F376600F6F1D5 /* CommentsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -920,6 +922,7 @@
 			isa = PBXGroup;
 			children = (
 				844FD31B2B8DB07B0014E4B5 /* MainVC.swift */,
+				A858C0EA2BA46C5100C8A391 /* SideMenuViewController.swift */,
 				844FD3162B8DB07B0014E4B5 /* ImageTableViewCell.swift */,
 				844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */,
 				844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */,
@@ -1520,6 +1523,7 @@
 				844FD32D2B8DB07B0014E4B5 /* ActivityDepartureTableViewCell.swift in Sources */,
 				844FD3EF2B8DB0A90014E4B5 /* ActivityRedirect.swift in Sources */,
 				844FD3F52B8DB0A90014E4B5 /* suggestionModel.swift in Sources */,
+				A858C0EB2BA46C5100C8A391 /* SideMenuViewController.swift in Sources */,
 				844FD3F12B8DB0A90014E4B5 /* HotelDestiny.swift in Sources */,
 				844FD3742B8DB07B0014E4B5 /* FlightDetailsViewController.swift in Sources */,
 				A878DB792B98456F001B7FAB /* SignUpVC.swift in Sources */,
@@ -1721,7 +1725,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1753,7 +1757,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

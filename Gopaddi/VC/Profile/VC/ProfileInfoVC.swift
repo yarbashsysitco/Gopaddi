@@ -53,22 +53,24 @@ class ProfileInfoVC: UIViewController ,SendingData{
                     print(Btntitles)
                 }
             }
-
-            }
-            if !Buttons.isSelected{
-                Buttons.isSelected = true
-                Buttons.layer.backgroundColor  =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
-                Buttons.layer.cornerRadius = 25
-                Buttons.setTitleColor(UIColor.white, for: .selected)
-
-            }else{
-                Buttons.isSelected = false
-                Buttons.layer.backgroundColor =  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1)
-                Buttons.titleLabel?.textColor
-                Buttons.layer.cornerRadius = 25
-            }
+            
+        }
+        if !Buttons.isSelected{
+            Buttons.isSelected = true
+            Buttons.layer.backgroundColor  =    #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+            Buttons.layer.cornerRadius = 25
+            Buttons.tintColor = UIColor.white
+            
+            
+        }else{
+            Buttons.isSelected = false
+            Buttons.layer.backgroundColor =   #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1)
+            Buttons.titleLabel?.textColor
+            Buttons.layer.cornerRadius = 25
+            Buttons.tintColor = UIColor.black
+        }
+        
     }
-    
     
     @IBAction func birthdayBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectCalendarPopUp") as? SelectCalendarPopUp
