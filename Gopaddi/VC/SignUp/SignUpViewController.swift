@@ -4,9 +4,9 @@
 //
 //  Created by jizan k on 12/06/23.
 //
-
+ 
 import UIKit
-
+ 
 class SignUpViewController: UIViewController {
     let apiManager = ApiManager()
     var regModel : Register?
@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var hideCPasswordicon2: UIImageView!
     var isClicked1 : Bool = true
     var isClicked2 : Bool = true
-
+ 
     var isBoxChecked : Bool = false
     var isValid : Bool = true
     var isValidNa : Bool = true
@@ -83,7 +83,7 @@ class SignUpViewController: UIViewController {
         conPassword.setPadding(20)
         hidePasswordicon1.image = hidePasswordicon1.image?.withRenderingMode(.alwaysTemplate)
         hidePasswordicon1.tintColor = .systemGray2
-        hidePasswordicon1.isUserInteractionEnabled = true 
+        hidePasswordicon1.isUserInteractionEnabled = true
         hideCPasswordicon2.image = hideCPasswordicon2.image?.withRenderingMode(.alwaysTemplate)
         hideCPasswordicon2.tintColor = .systemGray2
         hideCPasswordicon2.isUserInteractionEnabled = true
@@ -285,59 +285,42 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
-        guard let nameField = self.nameTF.text else { return }
+        guard let FirstnameField = self.nameTF.text else { return }
         guard let lastNameField = self.lastNameTF.text else { return }
         guard let emailField = self.emailTF.text else { return }
         guard let passwordField = self.passwordTF.text else { return }
         guard let phNoField = self.phNoTF.text else { return }
-        let referalField = "12345"
         guard let conPasswordField = self.conPassword.text else { return }
         let prefixField = "+91"
         let phoneNoField = prefixField + phNoField
-        let token = "gv4Gp1OeZhF5eBNU7vDjDL-yqZ6vrCfdCzF7HGVMiCs"
-        validateFields()
-        if isValidNa, isValidE , isValidPa , isValidCPa , isValidLNa == true{
-            isValid = true
-        }
-        if isValid {
-            apiManager.userRegistration(membership : "gopal", plan : "gold", fname: nameField, lname: lastNameField, email: emailField, phone: phoneNoField, password: passwordField, passconf: conPasswordField, referral: referalField, token: token) { result in
-                switch result {
-                case.success(let model):
-                    self.regModel = model
-                    DispatchQueue.main.async {[weak self] in
-                        if model.code == "200" {
-                            let alert = UIAlertController(title: model.code, message:model.message ?? "Success!" , preferredStyle: .alert)
-                            // let alertButoon = UIAlertAction(title: "Ok", style: .default) { _ in
-                                let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
-                                vc.signUpEmail = emailField
-                            vc.modalPresentationStyle = .fullScreen
-                                self?.present(vc, animated: true)
-                            //}
-//                            alert.addAction(alertButoon)
-//                            self?.present(alert, animated: false)
-                            
+        
+        apiManager.usRegistration(fname: FirstnameField, lname: lastNameField, email: emailField, phone: phNoField, password: passwordField, passconf: conPasswordField, referral: "123") { result in
+            switch result {
+            case.success(let model):
+                self.regModel = model
+                DispatchQueue.main.async {[weak self] in
+                    if model.code == "202" {
+                        let alert = UIAlertController(title: model.code, message:model.message ?? "Success!" , preferredStyle: .alert)
+                            let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
+                            vc.signUpEmail = emailField
+                        vc.modalPresentationStyle = .fullScreen
+                            self?.present(vc, animated: true)
                         } else if model.code == "303" {
-                            let alert = UIAlertController(title: model.code, message:model.message ?? "Error !" , preferredStyle: .alert)
-                            let alertButoon = UIAlertAction(title: "Ok", style: .default)
-                            alert.addAction(alertButoon)
-                            self?.present(alert, animated: false)
-                        }
-                        else {
-                            let alertcontrollert = UIAlertController(title: "Error" , message: self?.regModel?.message ?? "Something went wrong!", preferredStyle: .alert)
-                            let alertButoon = UIAlertAction(title: "Ok", style: .default)
-                            alertcontrollert.addAction(alertButoon)
-                            self?.present(alertcontrollert, animated: true)
-                        }
+                            let alert = UIAlertController(title: model.code, message:model.errors?[0].email ?? "Error !" , preferredStyle: .alert)
+                        let alertButoon = UIAlertAction(title: "Ok", style: .default)
+                        alert.addAction(alertButoon)
+                        self?.present(alert, animated: false)
                     }
-                case.failure(let error):
-                    print(error.localizedDescription)
+                    else {
+                        let alertcontrollert = UIAlertController(title: "Error" , message: self?.regModel?.message ?? "Something went wrong!", preferredStyle: .alert)
+                        let alertButoon = UIAlertAction(title: "Ok", style: .default)
+                        alertcontrollert.addAction(alertButoon)
+                        self?.present(alertcontrollert, animated: true)
+                    }
                 }
+            case.failure(let error):
+                print(error.localizedDescription)
             }
-        }else{
-            let alertcontrollert = UIAlertController(title: "Error !" , message:  "Please Provide Required Information", preferredStyle: .actionSheet)
-            let alertButoon = UIAlertAction(title: "Ok", style: .default)
-            alertcontrollert.addAction(alertButoon)
-            self.present(alertcontrollert, animated: true)
         }
     }
     @IBOutlet weak var backBtnClicked: UIView!
@@ -371,7 +354,7 @@ class SignUpViewController: UIViewController {
         let lowercaseCharacterSet = CharacterSet.lowercaseLetters
         let numbersCharacterSet = CharacterSet(charactersIn: "0123456789")
         let nonAlphanumericCharacterSet = CharacterSet(charactersIn: "(!@#$%^&*()_-+={[}]|:;'<,>.?/)")
-
+ 
         if !newPassword.isEmpty {
             UIView.animate(withDuration: 0.1, delay: 0) {
                 self.ValidationViewHeight.constant = 130
@@ -404,7 +387,7 @@ class SignUpViewController: UIViewController {
             } else {
                 passwnumberImg.image = UIImage(named: "Cancel")
             }
-//            
+//
           
         } else {
             UIView.animate(withDuration: 0.1, delay: 0) {
@@ -452,4 +435,5 @@ extension SignUpViewController: UITextFieldDelegate {
             return true
         }
     }
+ 
 

@@ -16,51 +16,48 @@ enum NetworkingError: String, Error {
 class ApiManager{
     static let shared = ApiManager()
     //callRegister
-    func userRegistration(membership: String, plan: String, fname: String, lname: String, email: String, phone: String, password: String, passconf: String, referral: String, token: String, completion: @escaping (Result<Register, Error>) -> ()) {
-        guard let url = URL(string: register_url) else { return }
-        
-        let body: [String: Any] = [
-            "membership": membership,
-            "plan": plan,
-            "fname": fname,
-            "lname": lname,
-            "email": email,
-            "phone": phone,
-            "password": password,
-            "passconf": passconf,
-            "referral": referral,
-            "token": token
-        ]
-        
-        guard let finalBody = try? JSONSerialization.data(withJSONObject: body) else {
-            let error = NSError(domain: "YourDomain", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to serialize JSON"])
-            completion(.failure(error))
-            return
+    func usRegistration(fname: String,lname: String ,email: String ,phone: String ,password: String , passconf: String,referral: String , completion: @escaping(Swift.Result<Register, Error>)-> ()) {
+            guard let url =  URL(string: register_url)
+            else {
+                return     }
+            let body: [String: Any] =
+            [
+                "fname" : fname,
+                "lname": lname,
+                "email": email,
+                "phone" : phone,
+                "password" : password,
+                "passconf"  : passconf,
+                "referral"  : referral
+            ]
+            let finalBody = try? JSONSerialization.data(withJSONObject: body)
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.httpBody = finalBody
+            request.allHTTPHeaderFields = ["Token":"gopaddi@v1"]
+            URLSession.shared.dataTask(with: request){
+                (data , response, error)  in            guard let data = data, error == nil else {
+                    print(error?.localizedDescription ?? "No data")
+                    completion(.failure(error?.localizedDescription as! Error))
+                    return
+                }
+                guard let response = response else {
+                    return
+                }
+                print(response)
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [String: Any] {
+                    do {
+                        let postBody = try JSONDecoder().decode(Register.self, from: data)
+                        completion(.success(postBody))
+                    }catch let error{
+                        print(error.localizedDescription)
+                    }
+                    print(responseJSON)
+                }
+            }.resume()
         }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = finalBody
-        request.allHTTPHeaderFields = ["Token": "gopaddi@v1"]
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, let response = response as? HTTPURLResponse, error == nil else {
-                print(error?.localizedDescription ?? "No data")
-                completion(.failure(error ?? NSError(domain: "YourDomain", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])))
-                return
-            }
-            
-            print(response)
-            
-            do {
-                let postBody = try JSONDecoder().decode(Register.self, from: data)
-                completion(.success(postBody))
-            } catch {
-                print(error.localizedDescription)
-                completion(.failure(error))
-            }
-        }.resume()
-    }
+    
     func fetchCountryData(completion: @escaping (Result<[CountryResult], Error>) -> Void) {
         guard let url = URL(string: country_url) else { return }
         var urlRequest = URLRequest(url: url)

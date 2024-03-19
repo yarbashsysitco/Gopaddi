@@ -4,21 +4,31 @@
 //
 //  Created by jizan k on 04/01/23.
 //
-
+ 
 import Foundation
 //https://bird.decordtech.com/golive/api/user/signup
 let termsNCondition = "https://birdviewtravels.com/home/terms"
 let dev_base_url = "https://bird.decordtech.com/godemo/api/"
 let live_base_url = "https://bird.decordtech.com/golive/api/"
+ 
+ 
+let newlive_base_url = "https://vgtechdemo.com/tokyodevbckend/index.php/"
+ 
+ 
 let header = "Token"
 let clientToken = "gv4Gp1OeZhF5eBNU7vDjDL-yqZ6vrCfdCzF7HGVMiCshJhjhjhjJjhdxbfyrgGDGHDGHGHGDHGHABMMJJDBJDBGjjshjhghshfghgbcnbxnbx"
 let googleClientId = ""
 let headerSecond = "gopaddi@v1"
-
 //let baseURL = dev_base_url
 let baseURL = live_base_url
-
-let register_url = "\(baseURL)user/signup"
+ 
+ 
+let newBaseURL = newlive_base_url
+ 
+let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
+ 
+ 
+ 
 let country_url = "\(baseURL)countries"
 let forgotPassword_url = "\(baseURL)user/forgot_password"
 let userSubscription_url = "\(baseURL)subscription/purchase"
@@ -43,7 +53,7 @@ let profileImageChange_url = "\(baseURL)user/picture"
 let profileUpdate_url = "\(baseURL)user/profile"
 let userIDSugestion_url = "\(baseURL)user/userids"
 let feedCommentLike_url = "\(baseURL)feeds/comment_actions"
-
+ 
 let activity_Dest_url = "\(baseURL)activity/destinations"
 let activity_list_url = "\(baseURL)activity/activityList"
 let activity_Det_url = "\(baseURL)activity/activityDetails"
@@ -57,13 +67,13 @@ let activity_bookingDet = "\(baseURL)activity/bookingDetail"
 let activity_redirect_url = "\(baseURL)activity/activityPayment"
  
 let hotel_Dest_url = "\(baseURL)hotels/destinations"
-
-
+ 
+ 
 //let hotel_list_url = "\(baseURL)hotels/search"
 let hotel_list_url = "https://bird.decordtech.com/b2cdemo/api/hotels/search"
-
-
-
+ 
+ 
+ 
 let hotel_Det_url = "\(baseURL)hotels/detail"
 let hotel_booking_list = "\(baseURL)hotels/bookings"
 let hotel_redirect_url = "\(baseURL)hotels/booking/success"
@@ -71,10 +81,10 @@ let hotel_filter_url = "\(baseURL)hotels/hotelFilter"
 let hotel_booking_online = "\(baseURL)hotels/checkout"
 let hotel_cancel = "\(baseURL)hotels/cancelHotelBooking"
 let hotel_bookingList_url = "\(baseURL)hotels/bookings"
-
-
-
+ 
+ 
+ 
 let flightairports_url = "\(baseURL)flight/airports"
 let flightsearch_url = "\(baseURL)flight/search"
 let flightcabins_url = "\(baseURL)flight/cabins"
-
+ 
