@@ -44,7 +44,18 @@ class FeedsViewController: UIViewController ,UIImagePickerControllerDelegate, UI
     
     func textViewDidChange(_ textView: UITextView) {
         let text = textView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+//        let currentText = textView.text ?? ""
+//        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: text)
+//        let words = updatedText.components(separatedBy: .whitespacesAndNewlines)
+//
+//        if words.count > 10{
+//            print("error uploading text")
+//            return false
+//        }
         postBtn.isEnabled = !text.isEmpty
+        
+//        return true
     }
 //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 //        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {

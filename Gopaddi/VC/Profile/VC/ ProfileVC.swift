@@ -72,7 +72,10 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource , 
     }
     
     @IBAction func didTapBackButton(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil) 
+        }
     }
     
     
