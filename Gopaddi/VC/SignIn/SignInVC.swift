@@ -47,7 +47,7 @@ class SignInVC: UIViewController{
         imgView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapGesture))
         imgView.addGestureRecognizer(tapGesture)
-        print("ok")
+       
     }
     @IBAction func didTapBackBtn(_ sender: Any) {
        
