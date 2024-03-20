@@ -304,7 +304,7 @@ class SignUpViewController: UIViewController {
                             let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
                             vc.signUpEmail = emailField
                         vc.modalPresentationStyle = .fullScreen
-                            self?.present(vc, animated: true)
+                        self?.navigationController?.pushViewController(vc, animated: true)
                         } else if model.code == "303" {
                             let alert = UIAlertController(title: model.code, message:model.errors?[0].email ?? "Error !" , preferredStyle: .alert)
                         let alertButoon = UIAlertAction(title: "Ok", style: .default)

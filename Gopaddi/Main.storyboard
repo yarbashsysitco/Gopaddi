@@ -1412,10 +1412,10 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-iB-ept">
-                                <rect key="frame" x="0.0" y="159" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="159" width="375" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="712" id="b5d-Ow-EcY"/>
+                                    <constraint firstAttribute="height" constant="690" id="b5d-Ow-EcY"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="zSe-0M-bsj" id="h4Y-kc-pKU"/>
