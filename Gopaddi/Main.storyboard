@@ -1426,14 +1426,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWM-wt-2Nn">
-                                        <rect key="frame" x="57" y="76" width="215" height="36"/>
+                                        <rect key="frame" x="64" y="76" width="208" height="36"/>
                                         <subviews>
                                             <searchBar userInteractionEnabled="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Search " translatesAutoresizingMaskIntoConstraints="NO" id="YyO-SH-TAv">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="208" height="36"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <color key="barTintColor" systemColor="labelColor"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerR">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </searchBar>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
@@ -1474,7 +1479,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-0v-Dql">
-                                        <rect key="frame" x="11" y="78" width="36" height="32.666666666666671"/>
+                                        <rect key="frame" x="16" y="78" width="36" height="32.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="VrH-zs-J3L"/>
@@ -1494,12 +1499,12 @@
                                     <constraint firstItem="lWM-wt-2Nn" firstAttribute="top" secondItem="ZML-f4-611" secondAttribute="top" constant="76" id="0ol-AB-fyR"/>
                                     <constraint firstItem="8rZ-F7-lkt" firstAttribute="centerY" secondItem="ZML-f4-611" secondAttribute="centerY" constant="2.1666666666665151" id="7kU-lh-6np"/>
                                     <constraint firstItem="8rZ-F7-lkt" firstAttribute="centerX" secondItem="ZML-f4-611" secondAttribute="centerX" id="Nfn-Mj-omz"/>
-                                    <constraint firstItem="lWM-wt-2Nn" firstAttribute="leading" secondItem="Tiw-0v-Dql" secondAttribute="trailing" constant="10" id="TBF-5z-79d"/>
+                                    <constraint firstItem="lWM-wt-2Nn" firstAttribute="leading" secondItem="Tiw-0v-Dql" secondAttribute="trailing" constant="12" id="TBF-5z-79d"/>
                                     <constraint firstItem="qV9-w3-zPo" firstAttribute="top" secondItem="ZML-f4-611" secondAttribute="top" constant="76" id="Wt5-tb-RD4"/>
                                     <constraint firstItem="qV9-w3-zPo" firstAttribute="leading" secondItem="K07-la-qsa" secondAttribute="trailing" constant="1" id="Wtb-oK-wVY"/>
                                     <constraint firstAttribute="trailing" secondItem="qV9-w3-zPo" secondAttribute="trailing" constant="13" id="Y3K-kb-bET"/>
                                     <constraint firstItem="K07-la-qsa" firstAttribute="leading" secondItem="lWM-wt-2Nn" secondAttribute="trailing" constant="7" id="cKd-5M-Zq7"/>
-                                    <constraint firstItem="Tiw-0v-Dql" firstAttribute="leading" secondItem="ZML-f4-611" secondAttribute="leading" constant="11" id="cX4-4v-5eB"/>
+                                    <constraint firstItem="Tiw-0v-Dql" firstAttribute="leading" secondItem="ZML-f4-611" secondAttribute="leading" constant="16" id="cX4-4v-5eB"/>
                                     <constraint firstItem="Tiw-0v-Dql" firstAttribute="top" secondItem="ZML-f4-611" secondAttribute="top" constant="76" id="cqB-L3-ZxX"/>
                                     <constraint firstItem="K07-la-qsa" firstAttribute="top" secondItem="ZML-f4-611" secondAttribute="top" constant="76" id="t8F-LF-gUn"/>
                                     <constraint firstAttribute="height" constant="112" id="ueM-x7-zW4"/>
