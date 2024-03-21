@@ -67,10 +67,11 @@ class OtpViewController: UIViewController {
               case fourthOtpTF:
                   fourthOtpTF.resignFirstResponder()
                    let keyText = signUpEmail
+                  let memberText = "gopal"
                  let otpText = "\(self.firstOtpTF.text ?? "")\(self.secondOtpTF.text ?? "")\(self.thirdOtpTF.text ?? "")\(self.fourthOtpTF.text ?? "")"
                   UserDefaults.standard.set(keyText, forKey: "otpemail")
                   UserDefaults.standard.set(otpText, forKey: "otpkey")
-                  ApiManager.shared.callOtpTest(otp: otpText, key: keyText) { result in
+                  ApiManager.shared.callOtpTest(otp: otpText, email: keyText, membership: memberText) { result in
                        switch result {
                        case.success(let model):
                            self.otpModel = model

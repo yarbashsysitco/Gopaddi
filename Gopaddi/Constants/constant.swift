@@ -27,15 +27,15 @@ let newBaseURL = newlive_base_url
  
 let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
 //let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
+let signIn_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userLogin"
+let verifyOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userVerification"
  
- 
- 
+
+
 let country_url = "\(baseURL)countries"
 let forgotPassword_url = "\(baseURL)user/forgot_password"
 let userSubscription_url = "\(baseURL)subscription/purchase"
-let verifyOtp_url = "\(baseURL)user/verification"
 let resendOtp_url = "\(baseURL)user/resend_otp"
-let signIn_url = "\(baseURL)user/signin"
 let personalDet_url = "\(baseURL)subscription/personal"
 let membership_url = "\(baseURL)memberships"
 let deleteAccount_url = "\(baseURL)user/delete_account"

@@ -78,15 +78,15 @@ class SignInVC: UIViewController{
         
         
                 
-                guard let username = loginEmail.text else {return}
+                guard let userEmail = loginEmail.text else {return}
                 guard let password = loginPassword.text else {return}
-                let  token = clientToken
+                let  token = "testoken"
                 validate()
                 if isValidUser , isValidPass {
-                    UserDefaults.standard.set(username, forKey: "userName")
+                    UserDefaults.standard.set(userEmail, forKey: "useremail")
                     UserDefaults.standard.set(password, forKey: "password")
                     UserDefaults.standard.set(token, forKey: "token")
-                    ApiManager.shared.signIn(username: username, password: password, token: token) { result in
+                    ApiManager.shared.signIn(useremail: userEmail, password: password, token: token) { result in
                         switch result {
                         case.success(let model):
                             DispatchQueue.main.async { [weak self] in
@@ -95,7 +95,7 @@ class SignInVC: UIViewController{
 
                                 if model.code == "200" {
                                     //                            self?.keyid = (model.user?[0].key)!
-                                    self?.keyid = (model.user?[0].key)!
+//                                    self?.keyid = (model.user?[0].key)!
                                     //                                self?.keyid = key
                                     self?.callSubscription()
                                     //                            } else {
@@ -107,16 +107,15 @@ class SignInVC: UIViewController{
 //
 //                                        //                                self?.callSubscription()
                                         self?.utilFunc.saveLogging(true)
-                                        UserDefaults.standard.set(model.user?[0].name, forKey: "logname")
-                                        UserDefaults.standard.set(model.user?[0].email, forKey: "logemail")
-                                        UserDefaults.standard.set(model.user?[0].userid, forKey: "userid")
+                                    UserDefaults.standard.set(model.user?[0].firstName, forKey: "firstname")
+                                    UserDefaults.standard.set(model.user?[0].lastName, forKey: "lastname")
+                                     UserDefaults.standard.set(model.user?[0].email, forKey: "logemail")
+                                        UserDefaults.standard.set(model.user?[0].userID, forKey: "userid")
                                         UserDefaults.standard.set(model.user?[0].membership, forKey: "membership")
                                         UserDefaults.standard.set(model.user?[0].category, forKey: "category")
-                                        UserDefaults.standard.set(model.user?[0].verified, forKey: "verified")
                                         UserDefaults.standard.set(model.user?[0].picture, forKey: "picture")
-                                        UserDefaults.standard.set(model.user?[0].joined_at, forKey: "joined_at")
+                                        UserDefaults.standard.set(model.user?[0].joinedAt, forKey: "joinedat")
                                         UserDefaults.standard.set(model.user?[0].phone, forKey: "logphone")
-                                        UserDefaults.standard.set(model.user?[0].key, forKey: "logkey")
                                         UserDefaults.standard.set(model.user?[0].gender, forKey: "gender")
                                         UserDefaults.standard.set(model.user?[0].occupation, forKey: "occupation")
 
@@ -154,7 +153,7 @@ class SignInVC: UIViewController{
                                     let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
                                     let action = UIAlertAction(title: "Ok", style: .default) { _ in
                                         let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
-                                        vc.signUpEmail = username
+                                        vc.signUpEmail = userEmail
                                         self?.present(vc, animated: false)
                                     }
                                     alert.addAction(action)

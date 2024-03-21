@@ -38,12 +38,11 @@ struct SignInModel : Codable {
 
 // MARK: - User
 struct User : Codable {
-    let key, name, userid, email: String?
-    let phone, membership, category, plan: String?
-    let parent: Int?
-    let role, subscribed, verified: String?
-    let picture: String?
-    let joined_at: String?
-    let occupation : String?
-    let gender : String?
+       let userID, firstName, lastName, email: String
+       let phone, gender, occupation, membership: String
+       let category, plan: String
+       let parent: Int
+       let role, subscribed: String
+       let picture: String
+       let joinedAt: String
 }

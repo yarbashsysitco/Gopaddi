@@ -7,7 +7,6 @@
 
 import Foundation
 struct OtpModel : Codable {
-    let code : String?
-    let message : String?
+    let code, message: String
 }
     

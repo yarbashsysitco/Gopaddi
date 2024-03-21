@@ -90,10 +90,11 @@ class ApiManager{
         task.resume()
     }
 
-    func callOtpTest(otp: String, key: String, completion: @escaping (Result<OtpModel, Error>) -> Void) {
+    func callOtpTest(otp: String,email: String,membership: String, completion: @escaping (Result<OtpModel, Error>) -> Void) {
         let param = [
-            "key": key,
-            "otp": otp
+            "otp": otp,
+            "email": email,
+            "membership": membership
         ]
         
         AF.request(verifyOtp_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header: headerSecond]).responseData { response in
@@ -148,13 +149,13 @@ class ApiManager{
             }
         }
     }
-    func signIn(username: String, password: String, token: String,completion: @escaping(Result<SignInModel, Error>) -> Void){
+    func signIn(useremail: String, password: String, token: String,completion: @escaping(Result<SignInModel, Error>) -> Void){
         guard let url =  URL(string: signIn_url)
         else {
             return     }
         let body: [String: Any] =
         [
-            "username": username,
+            "useremail": useremail,
             "password": password,
             "token": token
             

@@ -300,11 +300,12 @@ class SignUpViewController: UIViewController {
                 self.regModel = model
                 DispatchQueue.main.async {[weak self] in
                     if model.code == "202" {
+                        print("success")
                         let alert = UIAlertController(title: model.code, message:model.message ?? "Success!" , preferredStyle: .alert)
                             let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
                             vc.signUpEmail = emailField
                         vc.modalPresentationStyle = .fullScreen
-                        self?.navigationController?.pushViewController(vc, animated: true)
+                        self?.present(vc, animated: true)
                         } else if model.code == "303" {
                             let alert = UIAlertController(title: model.code, message:model.errors?[0].email ?? "Error !" , preferredStyle: .alert)
                         let alertButoon = UIAlertAction(title: "Ok", style: .default)
