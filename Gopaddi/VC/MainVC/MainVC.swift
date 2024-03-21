@@ -102,8 +102,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         tables.delegate = self
         tables.dataSource = self
         self.tables.register(UINib.init(nibName: "TextTableViewCell", bundle: .main), forCellReuseIdentifier: "TextTableViewCell")
-//        self.tables.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")  
-//        
+//        self.tables.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")
+//
         self.tables.register(UINib.init(nibName: "FeedImageTableViewCell", bundle: .main), forCellReuseIdentifier: "FeedImageTableViewCell")
         tables.estimatedRowHeight = 650
         tables.rowHeight = UITableView.automaticDimension
@@ -320,7 +320,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             promo = resultData?[indexPath.row].fe_promotion
             key = resultData?[indexPath.row].fe_id
 //            DispatchQueue.main.async {
-//               
+//
 //            }
             //            let postedImageStringUrl = self.resultData?[indexPath.row].fe_file ?? ""
             //            cell.postImage.kf.setImage(with: URL(string: "https://bird.decordtech.com/golive/../b2cdemo/uploads/feed/605461.jpg"))
@@ -377,7 +377,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             }
 
 //            cell.feedCreatedDate.text = resultData?[indexPath.row].fe_created_at
-//            
+//
 //            print( resultData?[indexPath.row].fe_created_at)
             
             cell.feedCaption.text = resultData?[indexPath.row].fe_caption
@@ -389,13 +389,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             if resultData?[indexPath.row].fe_liked == "1"{
 //                cell.likeImgView.tintColor = .systemRed
                 if let image = UIImage(named: "Heart0") {
-                         cell.likeImgView.image = image
-                     }
+                    cell.likeBtn.setImage(image, for: .normal)
+                       }
             }else{
 //                cell.likeImgView.tintColor = .systemGray3
                 if let image = UIImage(named: "Heart1") {
-                           cell.likeImgView.image = image
-                    
+                    cell.likeBtn.setImage(image, for: .normal)
                        }
             }
             
@@ -414,14 +413,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                         DispatchQueue.main.async {
                             if  model.result?[0].liked == "1"{
 //                                cell.likeImgView.tintColor = .systemRed
+                                
                                 if let image = UIImage(named: "Heart0") {
-                                         cell.likeImgView.image = image
-                                    
-                                     }
+                                    cell.likeBtn.setImage(image, for: .normal)
+                                       }
                             }else{
 //                                cell.likeImgView.tintColor = .systemGray3
                                 if let image = UIImage(named: "Heart1") {
-                                           cell.likeImgView.image = image
+                                    cell.likeBtn.setImage(image, for: .normal)
                                        }
                             }
                             cell.feedLikes.text = String((model.result?[0].likes) ?? 0)
@@ -431,6 +430,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                     }
                 }
             }
+            
+            let comment = "Olufunmi: Chasing sunsets and making memories that will last a lifetime. ☀️🌴✨." // Assuming `comments` is your array of comments
+               let boldName = "Olufunmi:"
+               cell.setFirstCommentWithBoldName(comment: comment, boldName: boldName)
             cell.actionBlock = {
                 let vc = UIStoryboard(name: "BookMarkMain", bundle: nil).instantiateViewController(withIdentifier: "BookMarkPopUp")as! BookMarkPopUp
                 self.present(vc, animated: true)
@@ -498,6 +501,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                     }
                 }
             }
+            
+            
             cell.comment = {
                 
                 self.callApi(key: (self.resultData?[indexPath.row].fe_id)!, promo: (self.resultData?[indexPath.row].fe_promotion)!, indexPathRow: indexPath.row)
@@ -532,7 +537,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         vc.userKey = userKey!
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
-    } 
+    }
     func DiaryFeedBtnClicked(){
         let vc = (UIStoryboard.init(name: "DiaryMain", bundle: Bundle.main).instantiateViewController(withIdentifier: "DiaryViewController") as? DiaryViewController)!
         vc.modalPresentationStyle = .fullScreen

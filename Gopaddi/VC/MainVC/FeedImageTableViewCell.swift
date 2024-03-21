@@ -63,7 +63,7 @@ class FeedImageTableViewCell: UITableViewCell {
         
         
         
-      
+        print("hi")
         makeClickActive(value: false)
         addGesture()
         viewdiaryBtn.layer.cornerRadius = 15
