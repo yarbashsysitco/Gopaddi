@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		840BA1B32B90A89900F0C3C3 /* SelectCalendarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BA1B22B90A89900F0C3C3 /* SelectCalendarPopUp.swift */; };
+		843E776A2BAB02F00013E5D5 /* FeedImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E77682BAB02F00013E5D5 /* FeedImageTableViewCell.swift */; };
+		843E776B2BAB02F00013E5D5 /* FeedImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843E77692BAB02F00013E5D5 /* FeedImageTableViewCell.xib */; };
 		844FD2722B8DAFEC0014E4B5 /* Fastis in Frameworks */ = {isa = PBXBuildFile; productRef = 844FD2712B8DAFEC0014E4B5 /* Fastis */; };
 		844FD31F2B8DB07B0014E4B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FD2752B8DB07B0014E4B5 /* LaunchScreen.storyboard */; };
 		844FD3202B8DB07B0014E4B5 /* LaunshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD2772B8DB07B0014E4B5 /* LaunshViewController.swift */; };
@@ -117,7 +119,6 @@
 		844FD39D2B8DB07B0014E4B5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3122B8DB07B0014E4B5 /* MenuTableViewCell.swift */; };
 		844FD39E2B8DB07B0014E4B5 /* MenuTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3132B8DB07B0014E4B5 /* MenuTabVC.swift */; };
 		844FD39F2B8DB07B0014E4B5 /* BookingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3142B8DB07B0014E4B5 /* BookingSelectionViewController.swift */; };
-		844FD3A02B8DB07B0014E4B5 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3162B8DB07B0014E4B5 /* ImageTableViewCell.swift */; };
 		844FD3A12B8DB07B0014E4B5 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */; };
 		844FD3A22B8DB07B0014E4B5 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */; };
 		844FD3A32B8DB07B0014E4B5 /* ReactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */; };
@@ -189,7 +190,6 @@
 		844FD4312B8DB10D0014E4B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FD4302B8DB10C0014E4B5 /* Assets.xcassets */; };
 		844FD4332B8DB12C0014E4B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FD4322B8DB12C0014E4B5 /* Main.storyboard */; };
 		84A935612B909488004C10BA /* ChooseAudiencePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A935602B909488004C10BA /* ChooseAudiencePopUpVC.swift */; };
-		84C2E4C02BA06309004CCDDF /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C2E4BF2BA06309004CCDDF /* ImageTableViewCell.xib */; };
 		84CAEDDC2B8F5D7A00C94286 /* ProfileInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEDDB2B8F5D7A00C94286 /* ProfileInfoVC.swift */; };
 		84E26A892B91B13000C9BCF4 /* DiaryMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E26A882B91B13000C9BCF4 /* DiaryMain.storyboard */; };
 		84E26A8C2B91B28200C9BCF4 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E26A8B2B91B28200C9BCF4 /* DiaryViewController.swift */; };
@@ -255,6 +255,8 @@
 		2813A594D8E9C40E5E152545 /* Pods_Gopaddi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gopaddi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		504F9EB7843E06AD72F86FDD /* Pods-Gopaddi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gopaddi.debug.xcconfig"; path = "Target Support Files/Pods-Gopaddi/Pods-Gopaddi.debug.xcconfig"; sourceTree = "<group>"; };
 		840BA1B22B90A89900F0C3C3 /* SelectCalendarPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCalendarPopUp.swift; sourceTree = "<group>"; };
+		843E77682BAB02F00013E5D5 /* FeedImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageTableViewCell.swift; sourceTree = "<group>"; };
+		843E77692BAB02F00013E5D5 /* FeedImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedImageTableViewCell.xib; sourceTree = "<group>"; };
 		844FD2592B8DAB350014E4B5 /* Gopaddi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gopaddi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FD26A2B8DAB360014E4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FD2762B8DB07B0014E4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -365,7 +367,6 @@
 		844FD3122B8DB07B0014E4B5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		844FD3132B8DB07B0014E4B5 /* MenuTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabVC.swift; sourceTree = "<group>"; };
 		844FD3142B8DB07B0014E4B5 /* BookingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingSelectionViewController.swift; sourceTree = "<group>"; };
-		844FD3162B8DB07B0014E4B5 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		844FD3192B8DB07B0014E4B5 /* ReactionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsVC.swift; sourceTree = "<group>"; };
@@ -438,7 +439,6 @@
 		844FD4322B8DB12C0014E4B5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		844FD4362B8DB1630014E4B5 /* Gopaddi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gopaddi.entitlements; sourceTree = "<group>"; };
 		84A935602B909488004C10BA /* ChooseAudiencePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAudiencePopUpVC.swift; sourceTree = "<group>"; };
-		84C2E4BF2BA06309004CCDDF /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageTableViewCell.xib; path = ../../../../../Downloads/ImageTableViewCell.xib; sourceTree = "<group>"; };
 		84CAEDDB2B8F5D7A00C94286 /* ProfileInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoVC.swift; sourceTree = "<group>"; };
 		84E26A882B91B13000C9BCF4 /* DiaryMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryMain.storyboard; sourceTree = "<group>"; };
 		84E26A8B2B91B28200C9BCF4 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
@@ -923,13 +923,13 @@
 			children = (
 				844FD31B2B8DB07B0014E4B5 /* MainVC.swift */,
 				A858C0EA2BA46C5100C8A391 /* SideMenuViewController.swift */,
-				844FD3162B8DB07B0014E4B5 /* ImageTableViewCell.swift */,
 				844FD3172B8DB07B0014E4B5 /* TextTableViewCell.swift */,
 				844FD3182B8DB07B0014E4B5 /* TextTableViewCell.xib */,
-				84C2E4BF2BA06309004CCDDF /* ImageTableViewCell.xib */,
 				A83D39892BA07775001BECDD /* Notification */,
 				A8C746BA2B9F29C8002BFFE9 /* BookMark */,
 				84E3568B2B95EE61007AC79F /* Reactions */,
+				843E77682BAB02F00013E5D5 /* FeedImageTableViewCell.swift */,
+				843E77692BAB02F00013E5D5 /* FeedImageTableViewCell.xib */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -1279,7 +1279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C2E4C02BA06309004CCDDF /* ImageTableViewCell.xib in Resources */,
 				84E356902B95EEEF007AC79F /* ReactionCountCell.xib in Resources */,
 				844FD40D2B8DB0BB0014E4B5 /* Lora-Regular.ttf in Resources */,
 				A86427F12B96E81D00C49CF9 /* ViewReactionCell.xib in Resources */,
@@ -1307,6 +1306,7 @@
 				A89E94C72B99964500ECD5FE /* prefixTableViewCell.xib in Resources */,
 				844FD41F2B8DB0E30014E4B5 /* CollectionViewCell.xib in Resources */,
 				A83D39862BA072CF001BECDD /* NotificationMain.storyboard in Resources */,
+				843E776B2BAB02F00013E5D5 /* FeedImageTableViewCell.xib in Resources */,
 				A863BACB2B8F376600F6F1D5 /* CommentReplyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1382,7 +1382,6 @@
 				844FD3692B8DB07B0014E4B5 /* FlightListInTableViewCell.swift in Sources */,
 				844FD3622B8DB07B0014E4B5 /* FlightItineraryTableViewCell.swift in Sources */,
 				844FD35C2B8DB07B0014E4B5 /* FlightFareBreakTableViewCell.swift in Sources */,
-				844FD3A02B8DB07B0014E4B5 /* ImageTableViewCell.swift in Sources */,
 				844FD3582B8DB07B0014E4B5 /* HotelsPopUpViewController.swift in Sources */,
 				844FD3F42B8DB0A90014E4B5 /* feedEditModel.swift in Sources */,
 				844FD3F82B8DB0A90014E4B5 /* HotelList.swift in Sources */,
@@ -1422,6 +1421,7 @@
 				84E26A8C2B91B28200C9BCF4 /* DiaryViewController.swift in Sources */,
 				844FD3662B8DB07B0014E4B5 /* FlightAmountTableViewCell.swift in Sources */,
 				844FD3542B8DB07B0014E4B5 /* HotelConfirmPreviewViewController.swift in Sources */,
+				843E776A2BAB02F00013E5D5 /* FeedImageTableViewCell.swift in Sources */,
 				A863BAC62B8F376600F6F1D5 /* CommentReplyViewController.swift in Sources */,
 				844FD3DB2B8DB0A90014E4B5 /* feedDeleteModel.swift in Sources */,
 				844FD3632B8DB07B0014E4B5 /* FlightDetAmountTableViewCell.swift in Sources */,

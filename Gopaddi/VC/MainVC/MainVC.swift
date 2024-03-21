@@ -92,6 +92,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImageView()
+        
+        "okkkkk"
         userKey = UserDefaults.standard.string(forKey: "logkey")
         callFeeds()
         print(userKey)
@@ -100,7 +102,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         tables.delegate = self
         tables.dataSource = self
         self.tables.register(UINib.init(nibName: "TextTableViewCell", bundle: .main), forCellReuseIdentifier: "TextTableViewCell")
-        self.tables.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")
+//        self.tables.register(UINib.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")  
+//        
+        self.tables.register(UINib.init(nibName: "FeedImageTableViewCell", bundle: .main), forCellReuseIdentifier: "FeedImageTableViewCell")
         tables.estimatedRowHeight = 650
         tables.rowHeight = UITableView.automaticDimension
         //        tables.reloadData()
@@ -273,7 +277,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell", for: indexPath) as! ImageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageTableViewCell", for: indexPath) as! FeedImageTableViewCell
+            
             cell.selectionStyle = .none
             
             if let resultData = resultData, indexPath.row < resultData.count {

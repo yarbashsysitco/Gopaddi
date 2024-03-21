@@ -26,6 +26,7 @@ let baseURL = live_base_url
 let newBaseURL = newlive_base_url
  
 let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
+//let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
  
  
  
