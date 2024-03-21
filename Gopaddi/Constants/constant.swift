@@ -29,7 +29,7 @@ let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userReg
 //let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
 let signIn_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userLogin"
 let verifyOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userVerification"
- 
+ print("ok")
 
 
 let country_url = "\(baseURL)countries"
