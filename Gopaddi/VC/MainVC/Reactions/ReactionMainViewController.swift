@@ -10,7 +10,7 @@ import UIKit
 class ReactionMainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
    
     var isselect = Int()
-    var emojies = ["all","emo1","emo2","emo3","emo4","emo5","emo6"]
+    var emojies = ["all","emosvg","Group2vg","Firesvg","Grhh","Thumbssvg","Airplansvg"]
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var collection: UICollectionView!
     override func viewDidLoad() {

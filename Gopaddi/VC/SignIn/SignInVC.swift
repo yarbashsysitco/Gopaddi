@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SignInVC: UIViewController{
     
@@ -31,14 +32,14 @@ class SignInVC: UIViewController{
     let personal = UserDefaults.standard.string(forKey: "personal")
     let MainTabBarController = UserDefaults.standard.string(forKey: "MainTabBarController")
     var keyid = String()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpErrorF()
         loginPassword.isSecureTextEntry = true
         loginEmail.setPadding(20)
         loginPassword.setPadding(20)
-
+        
         UserDefaults.standard.set(true, forKey: "AppOpen")
         loginPassword.delegate = self
         loginPassword.returnKeyType = .done
@@ -47,10 +48,10 @@ class SignInVC: UIViewController{
         imgView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapGesture))
         imgView.addGestureRecognizer(tapGesture)
-       
+        
     }
     @IBAction func didTapBackBtn(_ sender: Any) {
-       
+        
     }
     
     
@@ -72,143 +73,171 @@ class SignInVC: UIViewController{
         let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
-     
+        
     }
     @IBAction func signInBtn(_ sender: Any) {
-        
-        
-                
-                guard let userEmail = loginEmail.text else {return}
-                guard let password = loginPassword.text else {return}
-                let  token = "testoken"
-                validate()
-                if isValidUser , isValidPass {
-                    UserDefaults.standard.set(userEmail, forKey: "useremail")
-                    UserDefaults.standard.set(password, forKey: "password")
-                    UserDefaults.standard.set(token, forKey: "token")
-                    ApiManager.shared.signIn(useremail: userEmail, password: password, token: token) { result in
-                        switch result {
-                        case.success(let model):
-                            DispatchQueue.main.async { [weak self] in
-                                self?.registered = true
-                                self?.signInModel = model
+     
+        self.signInBtn.showLoading()
+        guard let userEmail = loginEmail.text else { return }
+        guard let password = loginPassword.text else { return }
+        let token = "testoken"
 
-                                if model.code == "200" {
-                                    //                            self?.keyid = (model.user?[0].key)!
-//                                    self?.keyid = (model.user?[0].key)!
-                                    //                                self?.keyid = key
-                                    self?.callSubscription()
-                                    //                            } else {
-//                                    //                                print("okkk")
-//                                    //                            }
-//                                    let alert = UIAlertController(title:"Success!", message: model.message.debugDescription, preferredStyle: .actionSheet)
-//
-//                                    let alertAction = UIAlertAction(title: "Ok", style: .default) { [self] _ in
-//
-//                                        //                                self?.callSubscription()
-                                        self?.utilFunc.saveLogging(true)
-                                    UserDefaults.standard.set(model.user?[0].firstName, forKey: "firstname")
-                                    UserDefaults.standard.set(model.user?[0].lastName, forKey: "lastname")
-                                     UserDefaults.standard.set(model.user?[0].email, forKey: "logemail")
-                                        UserDefaults.standard.set(model.user?[0].userID, forKey: "userid")
-                                        UserDefaults.standard.set(model.user?[0].membership, forKey: "membership")
-                                        UserDefaults.standard.set(model.user?[0].category, forKey: "category")
-                                        UserDefaults.standard.set(model.user?[0].picture, forKey: "picture")
-                                        UserDefaults.standard.set(model.user?[0].joinedAt, forKey: "joinedat")
-                                        UserDefaults.standard.set(model.user?[0].phone, forKey: "logphone")
-                                        UserDefaults.standard.set(model.user?[0].gender, forKey: "gender")
-                                        UserDefaults.standard.set(model.user?[0].occupation, forKey: "occupation")
-
-                                        
-                                        if let isPersonal = UserDefaults.standard.string(forKey: "personal"), isPersonal == "true" {
-                                            // Instantiate PersonalDetailsViewController
-                                            if let vc = self?.storyboard?.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as? PersonalDetailsViewController {
-                                                vc.user = self!.keyid // Set the user property of PersonalDetailsViewController
-                                                vc.modalPresentationStyle = .fullScreen
-                                                self?.present(vc, animated: true, completion: nil) // Present PersonalDetailsViewController
-                                            }
-                                        } else if let isInterest = UserDefaults.standard.string(forKey: "isInterest"), isInterest == "true" {
-                                            // If personal is not "true" but isInterest is "true"
-                                            // Instantiate InterestsViewController
-                                            if let vc = self?.storyboard?.instantiateViewController(withIdentifier: "InterestsViewController") as? InterestsViewController {
-                                                vc.modalPresentationStyle = .fullScreen
-                                                self?.present(vc, animated: true, completion: nil) // Present InterestsViewController
-                                            }
-                                        } else {
-                                            // If both personal and isInterest are not "true"
-                                            // Instantiate UITabBarController
-                                            if let vc = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
-                                                vc.modalPresentationStyle = .fullScreen
-                                                self?.present(vc, animated: true, completion: nil) // Present UITabBarController
-                                            }
-                                        }
-
-
-//                                    }
-//                                    alert.addAction(alertAction)
-//                                    self?.present(alert, animated: true)
-//                                    self?.signInBtn.backgroundColor = .systemGreen
-
-                                } else {
-                                    let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
-                                    let action = UIAlertAction(title: "Ok", style: .default) { _ in
-                                        let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
-                                        vc.signUpEmail = userEmail
-                                        self?.present(vc, animated: false)
-                                    }
-                                    alert.addAction(action)
-                                    self?.present(alert, animated: false)
-                                }
-                            }
-                        case.failure(let error):
-                            // self.signInButton.stopLoading()
-                            DispatchQueue.main.async {
-                                let alert = UIAlertController(title: "Error!", message: "Invalid Password", preferredStyle: .alert)
-                                let action = UIAlertAction(title: "Ok", style: .cancel)
-                                alert.addAction(action)
-                                self.present(alert, animated: false)
-                            }
-                        }
-                    }
-                }
-
-            }
-    func callSubscription(){
-        var logkey = keyid
-        let str = UIStoryboard(name: "Main", bundle: nil)
-        ApiManager.shared.subscription(userKey: logkey) { result in
+        validate()
+//        if isValidUser , isValidPass {
+        UserDefaults.standard.set(userEmail, forKey: "useremail")
+        UserDefaults.standard.set(password, forKey: "password")
+        UserDefaults.standard.set(token, forKey: "token")
+        ApiManager.shared.signIn(useremail: userEmail, password: password, token: token) { result in
             switch result {
-            case .success(let model):
-                DispatchQueue.main.async {
-                    
-                    
-                    //                    print(self.userSubscription?.interests as Any)
-                    self.userSubscription = model
-                    print("Personal: \(model.personal?[0].uname)")
-                    print("Interests: \(model.interests)")
-                    // Check if both personal and interests arrays are nil or empty
-                    if let personal = model.personal?[0].uname, !personal.isEmpty {
-                        print("setvalu")
-                        UserDefaults.standard.set("false", forKey: "personal")
-                    } else {
-                        print("Notvalu")
-                        UserDefaults.standard.set("true", forKey: "personal")
+            case.success(let model):
+                DispatchQueue.main.async { [weak self] in
+                    self?.registered = true
+                    self?.signInModel = model
+                    if model.code == "200" {
+                        self?.signInBtn.stopLoading()
+                        print("\(String(describing: model.data[0].userId))")
+                        self?.utilFunc.saveLogging(true)
+                        
+                        if let vc = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
+                            vc.modalPresentationStyle = .fullScreen
+                            UserDefaults.standard.set(model.data[0].firstName, forKey: "firstname")
+                            UserDefaults.standard.set(model.data[0].lastName, forKey: "lastname")
+                            UserDefaults.standard.set(model.data[0].email, forKey: "logemail")
+                            UserDefaults.standard.set(model.data[0].userId, forKey: "userid")
+                            UserDefaults.standard.set(model.data[0].membership, forKey: "membership")
+                            UserDefaults.standard.set(model.data[0].picture, forKey: "picture")
+                            UserDefaults.standard.set(model.data[0].phone, forKey: "logphone")
+                            UserDefaults.standard.set(model.data[0].gender, forKey: "gender")
+                            UserDefaults.standard.set(model.data[0].occupation, forKey: "occupation")
+                            
+                            self?.present(vc, animated: true, completion: nil)
+                        }
+                        
+                    } else if  model.code == "404"  {
+                        self?.showAlert(message: "Invalid username or password", duration: 2.0)
+                    } else if  model.code == "500"  {
+                        self?.showAlert(message: "The email field must contain a valid email address.", duration: 2.0)
+                    }else {
+                        let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Ok", style: .default) { _ in
+                            let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
+                            vc.signUpEmail = userEmail
+                            self?.present(vc, animated: false)
+                        }
+                        alert.addAction(action)
+                        self?.present(alert, animated: false)
                     }
-                    
-                    if let interestsArray = model.interests, let interests = interestsArray.first, !interests.isEmpty {
-                        print("setvalu")
-                        UserDefaults.standard.set("false", forKey: "isInterest")
-                    } else {
-                        print("Notvalu")
-                        UserDefaults.standard.set("true", forKey: "isInterest")
-                    }
-                    
                 }
-            case .failure(let error):
-                print("API Call Error: \(error.localizedDescription)")
+            case.failure(let error):
+                DispatchQueue.main.async {
+                    self.signInBtn.shake()
+                    self.signInBtn.stopLoading()
+                    self.showAlert(message: "Invalid username or password", duration: 2.0)
+
+                    //                        {
+//                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+//                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+//                    alert.addAction(alertAction)
+//                    if let viewController = UIApplication.shared.keyWindow?.rootViewController {
+//                        viewController.present(alert, animated: true)
+//                    }
+                    //                        }
+                    
+                    
+                    // self.showAlert(message: "Invalid credentials", duration: 2.0)
+                    
+                    //                        let alert = UIAlertController(title: "Error!", message: "Invalid Password", preferredStyle: .alert)
+                    //                        let action = UIAlertAction(title: "Ok", style: .cancel)
+                    //                        alert.addAction(action)
+                    //                        self.present(alert, animated: false)
+                }
             }
         }
+        
+        
+//        }
+        
+        
+        //           if loginEmail.text == "" || loginPassword.text == "" {
+        //               self.signInBtn.stopLoading()
+        //               let alert = UIAlertController(title: "Please enter credentials", message: "Please enter username and password to continue", preferredStyle: .alert)
+        //               alert.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
+        //               present(alert, animated: true, completion: nil)
+        //           } else {
+      
+        
+        //               UserDefaults.standard.set(userEmail, forKey: "useremail")
+        //               UserDefaults.standard.set(password, forKey: "password")
+        //               UserDefaults.standard.set(token, forKey: "token")
+        
+        //               ApiManager.shared.signIn(useremail: userEmail, password: password, token: token) { result in
+        //                   switch result {
+        //                   case .success(let model):
+        //                       DispatchQueue.main.async { [weak self] in
+        //                           self?.registered = true
+        //                           self?.signInModel = model
+        //                           if model.code == "200" {
+        //
+        //
+        //                               print("okokokookokok")
+        //                               self?.signInBtn.stopLoading()
+        //                               UserDefaults.standard.set(model.data[0].firstName, forKey: "firstname")
+        //                               print("\(String(describing: model.data[0].firstName))")
+        //
+        //
+        //                           } else {
+        //                               print("nothellloo")
+        //                           }
+        //                       }
+        //                   case .failure(_):
+        //                       DispatchQueue.main.async {
+        //                           self.signInBtn.stopLoading()
+        //                           let alert = UIAlertController(title: "Incorrect Credentials", message: "The Email-id field must contain a valid email address.", preferredStyle: .alert)
+        //                           let action = UIAlertAction(title: "Ok", style: .cancel)
+        //                           alert.addAction(action)
+        //                           self.present(alert, animated: false)
+        //                       }
+        //                   }
+        //               }
+        //           }
+        
     }
+    //    func callSubscription(){
+    //        var logkey = keyid
+    //        let str = UIStoryboard(name: "Main", bundle: nil)
+    //        ApiManager.shared.subscription(userKey: logkey) { result in
+    //            switch result {
+    //            case .success(let model):
+    //                DispatchQueue.main.async {
+    //
+    //
+    //                    //                    print(self.userSubscription?.interests as Any)
+    //                    self.userSubscription = model
+    //                    print("Personal: \(model.personal?[0].uname)")
+    //                    print("Interests: \(model.interests)")
+    //                    // Check if both personal and interests arrays are nil or empty
+    //                    if let personal = model.personal?[0].uname, !personal.isEmpty {
+    //                        print("setvalu")
+    //                        UserDefaults.standard.set("false", forKey: "personal")
+    //                    } else {
+    //                        print("Notvalu")
+    //                        UserDefaults.standard.set("true", forKey: "personal")
+    //                    }
+    //
+    //                    if let interestsArray = model.interests, let interests = interestsArray.first, !interests.isEmpty {
+    //                        print("setvalu")
+    //                        UserDefaults.standard.set("false", forKey: "isInterest")
+    //                    } else {
+    //                        print("Notvalu")
+    //                        UserDefaults.standard.set("true", forKey: "isInterest")
+    //                    }
+    //
+    //                }
+    //            case .failure(let error):
+    //                print("API Call Error: \(error.localizedDescription)")
+    //            }
+    //        }
+    //    }
     
     @IBAction func forgotBtnClicked(_ sender: Any) {
         let vc = UIStoryboard(name: "ForgotMain", bundle: nil).instantiateViewController(withIdentifier: "ForgotViewController")as! ForgotViewController
@@ -218,7 +247,7 @@ class SignInVC: UIViewController{
     }
     @IBAction func googleSignBtnClicked(_ sender: Any) {
         
-      
+        
     }
     
     func setUpErrorF(){
@@ -265,25 +294,6 @@ class SignInVC: UIViewController{
         }
     }
     
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        // Get the current text in the email and password fields
-//        guard let email = loginEmail.text, let password = loginPassword.text else {
-//            return true // Allow text change if unable to get email or password
-//        }
-//
-//        // Check if both email and password are not empty
-//        if !email.isEmpty && !password.isEmpty {
-//            signInBtn.isEnabled = true
-//            signInBtn.alpha = 1.0
-//            signInBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
-//        } else {
-//            signInBtn.isEnabled = false
-//            signInBtn.alpha = 0.5
-//            signInBtn.backgroundColor =  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1)
-//        }
-//
-//        return true // Allow text change
-//    }
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let email = loginEmail.text, let password = loginPassword.text else {
             // If unable to get email or password, do nothing
@@ -292,7 +302,7 @@ class SignInVC: UIViewController{
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
             return
         }
-
+        
         // Check if both email and password are not empty
         if !email.isEmpty && !password.isEmpty {
             signInBtn.isEnabled = true
@@ -304,17 +314,14 @@ class SignInVC: UIViewController{
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
     }
-
-    
     
 }
 extension SignInVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginEmail {
-            loginPassword.becomeFirstResponder() // Move to the password field
+            loginPassword.becomeFirstResponder()
         } else if textField == loginPassword {
-            textField.resignFirstResponder() // Hide the keyboard
-            //signIn() // Call your sign-in method here
+            textField.resignFirstResponder()
         }
         return true
     }

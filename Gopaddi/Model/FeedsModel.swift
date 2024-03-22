@@ -23,3 +23,25 @@ struct FeCreator : Codable{
     let us_id, us_name: String
     let us_picture: String
 }
+
+
+//// Define the structure for the JSON response
+//struct FeedResponse: Codable {
+//    let code: String
+//    let success: Bool
+//    let message: String
+//    let data: FeedData
+//}
+//
+//struct FeedData: Codable {
+//    let following: [Feed]?
+//    let notfollowing: [Feed]?
+//}
+//
+//struct Feed: Codable {
+//    let feedId: String
+//    let feedTitle: String
+//    let feedCaption: String
+//    let feedMessage: String
+//    let feedFile: URL // Assuming the file is always a URL
+//}

@@ -26,22 +26,31 @@ let baseURL = live_base_url
 let newBaseURL = newlive_base_url
  
 let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
-//let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userRegistration"
 let signIn_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userLogin"
 let verifyOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userVerification"
- print("ok")
+let resendOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/resend_otp"
+
 
 
 let country_url = "\(baseURL)countries"
 let forgotPassword_url = "\(baseURL)user/forgot_password"
 let userSubscription_url = "\(baseURL)subscription/purchase"
-let resendOtp_url = "\(baseURL)user/resend_otp"
+
+
+
+
+
 let personalDet_url = "\(baseURL)subscription/personal"
 let membership_url = "\(baseURL)memberships"
 let deleteAccount_url = "\(baseURL)user/delete_account"
 let interest_url = "\(baseURL)subscription/interests"
 let payment_url = "\(baseURL)subscription/payment"
+
+
 let feeds_url = "\(baseURL)feeds"
+//let feeds_url = "https://vgtechdemo.com/tokyodevbckend/index.php/apis/feeds"
+
+
 let feedsCreate_url = "\(baseURL)feeds/create"
 let feedShareLike_url = "\(baseURL)feeds/actions"
 let feedEdit_url = "\(baseURL)feeds/update"

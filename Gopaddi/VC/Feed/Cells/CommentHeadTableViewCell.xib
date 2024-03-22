@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,7 +85,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-M2-I6B">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart1" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-M2-I6B">
                         <rect key="frame" x="10" y="335" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="2CG-VQ-tzx"/>
@@ -100,7 +101,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="States" translatesAutoresizingMaskIntoConstraints="NO" id="F0d-aU-NIW">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChatTeard" translatesAutoresizingMaskIntoConstraints="NO" id="F0d-aU-NIW">
                         <rect key="frame" x="84.666666666666671" y="335" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="teT-ty-vxE"/>
@@ -116,7 +117,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Next" translatesAutoresizingMaskIntoConstraints="NO" id="o6A-C6-z4q">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareFatt" translatesAutoresizingMaskIntoConstraints="NO" id="o6A-C6-z4q">
                         <rect key="frame" x="149.33333333333334" y="335" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="eCJ-op-EIj"/>
@@ -132,7 +133,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 18" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-CE-WWh">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sv0" translatesAutoresizingMaskIntoConstraints="NO" id="gbE-CE-WWh">
                         <rect key="frame" x="216.66666666666666" y="335" width="25" height="25"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
                         <constraints>
@@ -204,15 +205,15 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ChatTeard" width="20" height="20"/>
         <image name="Dot2" width="23" height="23"/>
-        <image name="Like" width="22" height="20"/>
-        <image name="Next" width="20" height="20"/>
+        <image name="Heart1" width="18" height="15"/>
+        <image name="ShareFatt" width="20" height="20"/>
         <image name="SlideImg3" width="187.5" height="214"/>
-        <image name="States" width="20" height="20"/>
-        <image name="Vector 18" width="14" height="17"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="sv0" width="12" height="16"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

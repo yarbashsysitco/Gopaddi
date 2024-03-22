@@ -134,7 +134,7 @@ extension UIView {
         loading!.startAnimating()
         loading!.hidesWhenStopped = true
         loading?.tag = UIView.loadingViewTag
-        loading?.backgroundColor = .systemBlue
+//        loading?.backgroundColor = .systemBlue
         loading?.layer.cornerRadius = 10
         addSubview(loading!)
         
@@ -275,5 +275,38 @@ extension UITextField {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: points, height: self.frame.height))
         self.leftView = paddingView
         self.leftViewMode = .always
+    }
+}
+
+
+extension UIView {
+    func shake() {
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        
+        let fromPoint = CGPoint(x: center.x - 5, y: center.y)
+        let toPoint = CGPoint(x: center.x + 5, y: center.y)
+        shake.fromValue = NSValue(cgPoint: fromPoint)
+        shake.toValue = NSValue(cgPoint: toPoint)
+        
+        layer.add(shake, forKey: "position")
+        
+        // Vibrate the phone
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
+    }
+}
+
+
+extension UIViewController {
+    func showAlert(message: String, duration: Double = 3.0) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        present(alert, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
+        }
     }
 }

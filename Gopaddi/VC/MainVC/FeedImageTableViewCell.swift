@@ -38,6 +38,7 @@ class FeedImageTableViewCell: UITableViewCell {
     @IBOutlet weak var likeBtn: UIButton!
     @IBOutlet weak var viewdiaryBtn: UIView!
     
+    @IBOutlet weak var animastionHeart: UIImageView!
     @IBOutlet weak var emojiBtns: UIButton!
     var popUpButton: (() -> ())?
     var actionBlock: (() -> ())?
@@ -51,7 +52,7 @@ class FeedImageTableViewCell: UITableViewCell {
     @IBOutlet weak var feedComents2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        animastionHeart.isHidden = true
         if let customFont = UIFont(name: "Poppins-Regular.ttf", size: 25.0) {
             // Use customFont with your UI elements
             feedCaption.font = customFont
@@ -118,6 +119,7 @@ class FeedImageTableViewCell: UITableViewCell {
     @IBAction func likereactionshowbtn(_ sender: Any) {
         //likeAction?()
         likeButtonTapped()
+        likeanimastionHeart()
 
        // toggleLike()
     }
@@ -130,15 +132,19 @@ class FeedImageTableViewCell: UITableViewCell {
     @IBAction func likeBtn(_ sender: Any) {
         likeAction?()
         likeButtonTapped()
+        animastionHeart.isHidden = true
         
     }
     @objc func likeButtonTapped() {
+
           // Toggle like button state
           likeBtn.isSelected.toggle()
           
           // Perform animation
           UIView.animate(withDuration: 0.2, animations: {
               // Scale animation
+//              self.likeanimastionHeart()
+
               self.likeBtn.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
           }) { _ in
               UIView.animate(withDuration: 0.2) {
@@ -147,6 +153,26 @@ class FeedImageTableViewCell: UITableViewCell {
               }
           }
       }
+    
+    
+    @objc func likeanimastionHeart() {
+        // Perform animation
+        likeAction?()
+        UIView.animate(withDuration: 0.2, animations: {
+            // Make the heart visible and larger
+            self.animastionHeart.isHidden = false
+            self.animastionHeart.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }) { _ in
+            UIView.animate(withDuration: 0.2, animations: {
+                // Return the heart to its original size and hide it
+                self.animastionHeart.transform = .identity
+            }, completion: { _ in
+                // Hide the heart after the animation completes
+                self.animastionHeart.isHidden = true
+            })
+        }
+    }
+
     
     func setFirstCommentWithBoldName(comment: String, boldName: String) {
            // Create attributed string for the entire comment

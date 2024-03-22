@@ -42,7 +42,7 @@ class FeedsCommentViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print("hello")
         tableview.estimatedRowHeight = 300
     
         tableview.register(UINib.init(nibName: "CommentHeadTableViewCell", bundle: .main), forCellReuseIdentifier: "CommentHeadTableViewCell")

@@ -149,51 +149,92 @@ class ApiManager{
             }
         }
     }
-    func signIn(useremail: String, password: String, token: String,completion: @escaping(Result<SignInModel, Error>) -> Void){
-        guard let url =  URL(string: signIn_url)
-        else {
-            return     }
-        let body: [String: Any] =
-        [
-            "useremail": useremail,
+    
+    
+    func signIn(useremail: String, password: String, token: String, completion: @escaping (Result<SignInModel, Error>) -> Void) {
+        let parameters: [String: Any] = [
+            "email": useremail,
             "password": password,
             "token": token
-            
         ]
-        let finalBody = try? JSONSerialization.data(withJSONObject: body)
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = finalBody
-        request.allHTTPHeaderFields = [header:headerSecond]
-        URLSession.shared.dataTask(with: request){
-            (data , response, error)  in
-            guard let data = data, error == nil else {
-                completion(.failure(error?.localizedDescription as! Error))
-                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                let alertAction = UIAlertAction(title: "Ok", style: .cancel)
-                alert.addAction(alertAction)
-                let navVC = UINavigationController()
-                navVC.present(alert, animated: true)
-                return
-            }
-            guard let response = response else {
-                return
-            }
-            print(response)
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any] {
-                do {
-                    let response = try JSONDecoder().decode(SignInModel.self, from: data)
-                    print(response.user)
-                    completion(.success(response))
-                    
-                }catch {
-                    completion(.failure(error))
+        
+        AF.request(signIn_url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: [header: headerSecond]).response { response in
+            switch response.result {
+            case .success(let data):
+                if let data = data {
+                    do {
+                        let signInModel = try JSONDecoder().decode(SignInModel.self, from: data)
+                        print(signInModel.data)
+                        completion(.success(signInModel))
+                    } catch {
+                        completion(.failure(error))
+                    }
                 }
-                print(responseJSON)
+            case .failure(let error):
+                completion(.failure(error))
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+                    alert.addAction(alertAction)
+                    if let viewController = UIApplication.shared.keyWindow?.rootViewController {
+                        viewController.present(alert, animated: true)
+                    }
+                }
             }
-        }.resume()
+        }
     }
+
+    
+//    
+//    func signIn(useremail: String, password: String, token: String,completion: @escaping(Result<SignInModel, Error>) -> Void){
+//        guard let url =  URL(string: signIn_url)
+//        else {
+//            return     }
+//        let body: [String: Any] =
+//        [
+//            "email": useremail,
+//            "password": password,
+//            "token": token
+//            
+//        ]
+//        let finalBody = try? JSONSerialization.data(withJSONObject: body)
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.httpBody = finalBody
+//        request.allHTTPHeaderFields = [header:headerSecond]
+//        URLSession.shared.dataTask(with: request){
+//            (data , response, error)  in
+//            guard let data = data, error == nil else {
+//                completion(.failure(error?.localizedDescription as! Error))
+//                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+//                let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+//                alert.addAction(alertAction)
+//                let navVC = UINavigationController()
+//                navVC.present(alert, animated: true)
+//                return
+//            }
+//            guard let response = response else {
+//                return
+//            }
+//            print(response)
+//            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+//            if let responseJSON = responseJSON as? [String: Any] {
+//                do {
+//                    let response = try JSONDecoder().decode(SignInModel.self, from: data)
+//                    print(response.user)
+//                    completion(.success(response))
+//                    
+//                }catch {
+//                    completion(.failure(error))
+//                }
+//                print(responseJSON)
+//            }
+//        }.resume()
+//    }
+    
+    
+    
+    
     func memebership(completion : @escaping(Result<[ResultData], Error>) -> Void){
         guard let url = URL(string: membership_url) else {return}
         var urlRequest = URLRequest(url: url)

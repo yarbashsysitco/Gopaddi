@@ -94,7 +94,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         setupImageView()
         
         "okkkkk"
-        userKey = UserDefaults.standard.string(forKey: "logkey")
+        userKey = UserDefaults.standard.string(forKey: "userid")
         callFeeds()
         print(userKey)
        
@@ -161,7 +161,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         // Set the button's constraints (optional, adjust as needed)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -25).isActive = true
-        actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60).isActive = true
+        actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
     }
     
     @IBAction func notificationButton(_ sender: UIButton) {
@@ -270,13 +270,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.row == 5)
-        {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextTableViewCell", for: indexPath) as! TextTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        }
-        else {
+//        if (indexPath.row == 5)
+//        {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TextTableViewCell", for: indexPath) as! TextTableViewCell
+//            cell.selectionStyle = .none
+//            return cell
+//        }
+//        else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageTableViewCell", for: indexPath) as! FeedImageTableViewCell
             
             cell.selectionStyle = .none
@@ -382,9 +382,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             
             cell.feedCaption.text = resultData?[indexPath.row].fe_caption
             if resultData?[indexPath.row].fe_saved == "1"{
-                cell.saveImgView.tintColor = .systemYellow
+               // cell.saveImgView.tintColor = .systemYellow
+                if let image = UIImage(named: "sv1") {
+                    cell.saveImgView.image = image
+                }
+                
             }else{
-                cell.saveImgView.tintColor = .systemGray3
+                if let image = UIImage(named: "sv0") {
+                    cell.saveImgView.image = image
+                }
+                
+                //cell.saveImgView.tintColor = .systemGray3
             }
             if resultData?[indexPath.row].fe_liked == "1"{
 //                cell.likeImgView.tintColor = .systemRed
@@ -444,12 +452,25 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                 self.key = self.resultData?[indexPath.row].fe_id
                 self.apiManager.feedsLikeSave(userKey: self.userKey!, key: self.key!, promotion: self.promo!, action: "save" ){ result in
                     switch result {
+                        
+                        
                     case .success(let model) :
                         DispatchQueue.main.async {
                             if  model.result?[0].saved == "1"{
-                                cell.saveImgView.tintColor = .systemYellow
+                                
+                                if let image = UIImage(named: "sv1") {
+                                    cell.saveImgView.image = image
+                                }
+                                
+                               // cell.saveImgView.tintColor = .systemYellow
+                                
+                                
                             }else{
-                                cell.saveImgView.tintColor = .systemGray3
+                                if let image = UIImage(named: "sv0") {
+                                    cell.saveImgView.image = image
+                                }
+                                
+//                                cell.saveImgView.tintColor = .systemGray3
                             }
                             cell.feedSaves.text = String(model.result?[0].saves ?? 0)
                         }
@@ -519,7 +540,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                 self.setupLongPressGesture()
             }
             return cell
-        }
+//        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 5 {

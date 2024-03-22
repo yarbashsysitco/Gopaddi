@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Check UserDefaults values
         let finished = UserDefaults.standard.string(forKey: "finished")
-        let logKey = UserDefaults.standard.string(forKey: "logkey")
+        let logKey = UserDefaults.standard.string(forKey: "userid")
         let isInterest = UserDefaults.standard.string(forKey: "isInterest")
         let personal = UserDefaults.standard.string(forKey: "personal")
         let mainTabBarController = UserDefaults.standard.string(forKey: "MainTabBarController")
@@ -35,24 +35,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         } else {
             if loginTrue == "true" {
-                if personal == "true" {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        if let vc = storyboard.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as? PersonalDetailsViewController {
-                            vc.user = logKey!
-                            window.rootViewController = vc
-                    }
-                } else if isInterest == "true" {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    if let vc = storyboard.instantiateViewController(withIdentifier: "InterestsViewController") as? InterestsViewController {
-                        window.rootViewController = vc
-                    }
-                } else {
+//                if personal == "true" {
+//                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                        if let vc = storyboard.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as? PersonalDetailsViewController {
+//                            vc.user = logKey!
+//                            window.rootViewController = vc
+//                    }
+//                } else if isInterest == "true" {
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    if let vc = storyboard.instantiateViewController(withIdentifier: "InterestsViewController") as? InterestsViewController {
+//                        window.rootViewController = vc
+//                    }
+//                } else {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     if let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
                         vc.modalPresentationStyle = .fullScreen
                         window.rootViewController = vc
                     }
-                }
+//                }
             }else{
                 if finished == "true" {
                     navigateToSignInVC()
