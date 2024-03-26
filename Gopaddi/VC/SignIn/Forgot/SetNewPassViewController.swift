@@ -21,6 +21,7 @@ class SetNewPassViewController: UIViewController {
         super.viewDidLoad()
         passTF.setPadding(20)
         cPassTF.setPadding(20)
+        print("newwss")
 
     }
     @IBAction func didTapBackBtn(_ sender: UIButton) {
@@ -122,37 +123,24 @@ class SetNewPassViewController: UIViewController {
                     let status = model.status.trimmingCharacters(in: .whitespacesAndNewlines)
                     let code = model.code?.trimmingCharacters(in: .whitespacesAndNewlines)
                     if status == "200" {
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DoneViewController") as! DoneViewController
-                        vc.modalPresentationStyle = .fullScreen
-                        self.present(vc, animated: true)
-                    } else if code == "500" {
-                        // Handle specific error code
-                        if let errorMessage = model.errors?.first?.passconf {
-                            let alert = UIAlertController(title: "Error!", message: errorMessage, preferredStyle: .alert)
-                            let alertButton = UIAlertAction(title: "Ok", style: .cancel)
-                            alert.addAction(alertButton)
-                            self.present(alert, animated: true)
-                        } else {
-                            // Handle unexpected error response
-                            let alert = UIAlertController(title: "Error!", message: "Unknown error occurred.", preferredStyle: .alert)
-                            let alertButton = UIAlertAction(title: "Ok", style: .cancel)
-                            alert.addAction(alertButton)
-                            self.present(alert, animated: true)
+                        
+                        let alert = UIAlertController(title: "Message", message: model.alerts.debugDescription, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
+                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "DoneViewController") as! DoneViewController
+                            vc.modalPresentationStyle = .fullScreen
+                            self.present(vc, animated: true)
                         }
-                    } else {
-                        // Handle other status codes
-                        let alert = UIAlertController(title: "Error!", message: "Unknown error occurred.", preferredStyle: .alert)
-                        let alertButton = UIAlertAction(title: "Ok", style: .cancel)
-                        alert.addAction(alertButton)
+                        alert.addAction(action)
                         self.present(alert, animated: true)
+                   
+                    } else{
+                        let alert = UIAlertController(title: "Message", message: model.alerts.debugDescription, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
+                        }
                     }
                 case .failure(let error):
-                    print(error.localizedDescription)
-                    // Handle network or other errors
-                    let alert = UIAlertController(title: "Error!", message: "Network error occurred.", preferredStyle: .alert)
-                    let alertButton = UIAlertAction(title: "Ok", style: .cancel)
-                    alert.addAction(alertButton)
-                    self.present(alert, animated: true)
+                    // Handle failure
+                    print("Error: \(error.localizedDescription)")
                 }
             }
         }
