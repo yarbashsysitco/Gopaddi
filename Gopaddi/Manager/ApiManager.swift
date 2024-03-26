@@ -149,6 +149,53 @@ class ApiManager{
             }
         }
     }
+    func userTokenforgot(userToken: String, completion: @escaping (Result<UserTokenModel, Error>) -> Void) {
+        let param = [ "userToken": userToken]
+        AF.request(userTokenvarif_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(UserTokenModel.self, from: data)
+                    completion(.success(response))
+                    print("success")
+
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func userResetPass(password: String,passconf: String, userId: String, completion: @escaping (Result<ResetPasswordModel, Error>) -> Void) {
+        let param = [ "password": password,
+                      "passconf": passconf,
+                      "userId": userId
+                    ]
+        AF.request(userResetPass_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(ResetPasswordModel.self, from: data)
+                    completion(.success(response))
+                    print("success")
+
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+    
+    
+    
     
     
     func signIn(useremail: String, password: String, token: String, completion: @escaping (Result<SignInModel, Error>) -> Void) {

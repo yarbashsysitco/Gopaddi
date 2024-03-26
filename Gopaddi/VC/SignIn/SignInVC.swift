@@ -32,6 +32,7 @@ class SignInVC: UIViewController{
     let personal = UserDefaults.standard.string(forKey: "personal")
     let MainTabBarController = UserDefaults.standard.string(forKey: "MainTabBarController")
     var keyid = String()
+    var isValid = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,8 @@ class SignInVC: UIViewController{
         imgView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapGesture))
         imgView.addGestureRecognizer(tapGesture)
+        imgView.image = UIImage(named: "openeye")
+        loginPassword.isSecureTextEntry = false
         
     }
     @IBAction func didTapBackBtn(_ sender: Any) {
@@ -57,33 +60,39 @@ class SignInVC: UIViewController{
     
     @objc func didTapGesture(){
         if isClicked {
-            imgView.image = UIImage(systemName: "eye")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
-            
+            imgView.image = UIImage(named: "openeye")
             loginPassword.isSecureTextEntry = false
             isClicked = false
         }else{
-            imgView.image = UIImage(systemName: "eye.slash")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
-            
+            imgView.image = UIImage(named: "EyeClossvg")
             loginPassword.isSecureTextEntry = true
             isClicked = true
         }
-        imgView.image = imgView.image?.withRenderingMode(.alwaysTemplate)
     }
     @IBAction func signUpBtn(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+        vc?.modalPresentationStyle = .fullScreen
+        self.present(vc!, animated: true)
         
     }
     @IBAction func signInBtn(_ sender: Any) {
-     
+        
         self.signInBtn.showLoading()
+        guard let userEmail = loginEmail.text, !userEmail.isEmpty else {
+            self.signInBtn.stopLoading()
+            showAlert(message: "Please enter your email", duration: 2.0)
+            return
+        }
+        
+        guard let password = loginPassword.text, !password.isEmpty else {
+            self.signInBtn.stopLoading()
+            showAlert(message: "Please enter your password", duration: 2.0)
+            return
+        }
         guard let userEmail = loginEmail.text else { return }
         guard let password = loginPassword.text else { return }
         let token = "testoken"
-
-        validate()
-//        if isValidUser , isValidPass {
+        validateFields()//        if isValidUser , isValidPass {
         UserDefaults.standard.set(userEmail, forKey: "useremail")
         UserDefaults.standard.set(password, forKey: "password")
         UserDefaults.standard.set(token, forKey: "token")
@@ -97,7 +106,6 @@ class SignInVC: UIViewController{
                         self?.signInBtn.stopLoading()
                         print("\(String(describing: model.data[0].userId))")
                         self?.utilFunc.saveLogging(true)
-                        
                         if let vc = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
                             vc.modalPresentationStyle = .fullScreen
                             UserDefaults.standard.set(model.data[0].firstName, forKey: "firstname")
@@ -109,10 +117,8 @@ class SignInVC: UIViewController{
                             UserDefaults.standard.set(model.data[0].phone, forKey: "logphone")
                             UserDefaults.standard.set(model.data[0].gender, forKey: "gender")
                             UserDefaults.standard.set(model.data[0].occupation, forKey: "occupation")
-                            
                             self?.present(vc, animated: true, completion: nil)
                         }
-                        
                     } else if  model.code == "404"  {
                         self?.showAlert(message: "Invalid username or password", duration: 2.0)
                     } else if  model.code == "500"  {
@@ -133,73 +139,11 @@ class SignInVC: UIViewController{
                     self.signInBtn.shake()
                     self.signInBtn.stopLoading()
                     self.showAlert(message: "Invalid username or password", duration: 2.0)
-
-                    //                        {
-//                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-//                    let alertAction = UIAlertAction(title: "Ok", style: .cancel)
-//                    alert.addAction(alertAction)
-//                    if let viewController = UIApplication.shared.keyWindow?.rootViewController {
-//                        viewController.present(alert, animated: true)
-//                    }
-                    //                        }
-                    
-                    
-                    // self.showAlert(message: "Invalid credentials", duration: 2.0)
-                    
-                    //                        let alert = UIAlertController(title: "Error!", message: "Invalid Password", preferredStyle: .alert)
-                    //                        let action = UIAlertAction(title: "Ok", style: .cancel)
-                    //                        alert.addAction(action)
-                    //                        self.present(alert, animated: false)
                 }
             }
         }
         
         
-//        }
-        
-        
-        //           if loginEmail.text == "" || loginPassword.text == "" {
-        //               self.signInBtn.stopLoading()
-        //               let alert = UIAlertController(title: "Please enter credentials", message: "Please enter username and password to continue", preferredStyle: .alert)
-        //               alert.addAction(UIAlertAction(title:"OK", style: .cancel, handler: nil))
-        //               present(alert, animated: true, completion: nil)
-        //           } else {
-      
-        
-        //               UserDefaults.standard.set(userEmail, forKey: "useremail")
-        //               UserDefaults.standard.set(password, forKey: "password")
-        //               UserDefaults.standard.set(token, forKey: "token")
-        
-        //               ApiManager.shared.signIn(useremail: userEmail, password: password, token: token) { result in
-        //                   switch result {
-        //                   case .success(let model):
-        //                       DispatchQueue.main.async { [weak self] in
-        //                           self?.registered = true
-        //                           self?.signInModel = model
-        //                           if model.code == "200" {
-        //
-        //
-        //                               print("okokokookokok")
-        //                               self?.signInBtn.stopLoading()
-        //                               UserDefaults.standard.set(model.data[0].firstName, forKey: "firstname")
-        //                               print("\(String(describing: model.data[0].firstName))")
-        //
-        //
-        //                           } else {
-        //                               print("nothellloo")
-        //                           }
-        //                       }
-        //                   case .failure(_):
-        //                       DispatchQueue.main.async {
-        //                           self.signInBtn.stopLoading()
-        //                           let alert = UIAlertController(title: "Incorrect Credentials", message: "The Email-id field must contain a valid email address.", preferredStyle: .alert)
-        //                           let action = UIAlertAction(title: "Ok", style: .cancel)
-        //                           alert.addAction(action)
-        //                           self.present(alert, animated: false)
-        //                       }
-        //                   }
-        //               }
-        //           }
         
     }
     //    func callSubscription(){
@@ -254,47 +198,140 @@ class SignInVC: UIViewController{
         errorPassword.isHidden = true
         errorLogin.isHidden = true
     }
-    func validate(){
-        guard let username = loginEmail.text else {return}
+    func    validateFields(){
+        guard let userEmail = loginEmail.text else {return}
         guard let password = loginPassword.text else {return}
+        isValid = true
         
-        if username.isEmpty {
-            loginEmail.layer.borderColor = UIColor.red.cgColor
+        if userEmail.isEmpty {
             errorLogin.isHidden = false
-            errorLogin.text = "* Username is required"
-            isValidUser = false
+            loginEmail.layer.borderColor = UIColor.red.cgColor
+            errorLogin.text = "* Empty field"
+            isValid = false
+            signInBtn.alpha = 0.5
+            signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
-        else if !username.isValidEmail() {
-            loginEmail.layer.borderColor = UIColor.red.cgColor
+        else if !userEmail.isValidEmail() {
             errorLogin.isHidden = false
+            loginEmail.layer.borderColor = UIColor.red.cgColor
             errorLogin.text = "* Invalid Email"
-            isValidUser = false
+            isValid = false
+            signInBtn.alpha = 0.5
+            signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else{
-            loginEmail.layer.borderColor = UIColor.blue.cgColor
+            loginEmail.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
             errorLogin.isHidden = true
-            isValidUser = true
+            isValid = false
+            signInBtn.isEnabled = true
+            signInBtn.alpha = 1.0
+            signInBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
         }
+        
         if password.isEmpty {
-            loginPassword.layer.borderColor = UIColor.red.cgColor
             errorPassword.isHidden = false
-            errorPassword.text = "* Password is required"
-            isValidPass = false
-        }
-        else if password.count > 12{
             loginPassword.layer.borderColor = UIColor.red.cgColor
+            errorPassword.text = "* Empty field"
+            isValid = false
+            signInBtn.alpha = 0.5
+            signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }else if !password.isValidPassword() {
             errorPassword.isHidden = false
-            errorPassword.text = "* Password field cannot exceed 12 characters in length. "
-            isValidPass = false
-        }
-        else{
-            loginPassword.layer.borderColor = UIColor.blue.cgColor
+            loginPassword.layer.borderColor = UIColor.red.cgColor
+            errorPassword.text = "* Invalid Password"
+            isValid = false
+            signInBtn.alpha = 0.5
+            signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }else{
+            loginPassword.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+            //            conPassword.textColor = .systemGray
             errorPassword.isHidden = true
-            isValidPass = true
+            isValid = true
+            signInBtn.isEnabled = true
+            signInBtn.alpha = 1.0
+            signInBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
         }
+        
+    }
+    
+    
+    
+    
+    //    func validate(){
+    //        guard let username = loginEmail.text else {return}
+    //        guard let password = loginPassword.text else {return}
+    //
+    //        if username.isEmpty {
+    //            loginEmail.layer.borderColor = UIColor.red.cgColor
+    //            errorLogin.isHidden = false
+    //            errorLogin.text = "* Username is required"
+    //            isValidUser = false
+    //        }
+    //        else if !username.isValidEmail() {
+    //            loginEmail.layer.borderColor = UIColor.red.cgColor
+    //            errorLogin.isHidden = false
+    //            errorLogin.text = "* Invalid Email"
+    //            isValidUser = false
+    //        }
+    //        else{
+    //            loginEmail.layer.borderColor = UIColor.green.cgColor
+    //            errorLogin.isHidden = true
+    //            isValidUser = true
+    //        }
+    //        if password.isEmpty {
+    //            loginPassword.layer.borderColor = UIColor.red.cgColor
+    //            errorPassword.isHidden = false
+    //            errorPassword.text = "* Password is required"
+    //            isValidPass = false
+    //        }
+    //        else if password.count > 12{
+    //            loginPassword.layer.borderColor = UIColor.red.cgColor
+    //            errorPassword.isHidden = false
+    //            errorPassword.text = "* Password field cannot exceed 12 characters in length. "
+    //            isValidPass = false
+    //        }
+    //        else{
+    //            loginPassword.layer.borderColor = UIColor.green.cgColor
+    //            errorPassword.isHidden = true
+    //            isValidPass = true
+    //        }
+    //    }
+    @IBAction func backBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+        
+        
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        if textField == loginEmail {
+            // Check if email field is empty
+            if let email = textField.text, email.isEmpty {
+                textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for empty field
+            } else {
+                // Check if the entered email is valid
+                if let email = textField.text, !email.isValidEmail() {
+                    textField.layer.borderColor = UIColor.red.cgColor // Change border color to red for invalid email
+                } else {
+                    textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for valid email
+                }
+            }
+        } else if textField == loginPassword {
+            // Check if password field is empty
+            if let password = textField.text, password.isEmpty {
+                textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for empty field
+            } else {
+                // Check if password length exceeds 12 characters
+                if let password = textField.text, password.count > 12 {
+                    textField.layer.borderColor = UIColor.red.cgColor // Change border color to red for password exceeding 12 characters
+                } else {
+                    textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for valid password
+                }
+            }
+        }
+        
         guard let email = loginEmail.text, let password = loginPassword.text else {
             // If unable to get email or password, do nothing
             signInBtn.isEnabled = false
@@ -312,6 +349,44 @@ class SignInVC: UIViewController{
             signInBtn.isEnabled = false
             signInBtn.alpha = 0.5
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }
+    }
+    //    func textFieldDidChangeSelection(_ textField: UITextField) {
+    //
+    //    }
+    
+    
+    @IBAction func emails(_ sender: Any) {
+        if loginEmail.text?.isEmpty == true {
+            // If loginEmail is empty, set border color to gray
+            loginEmail.layer.borderColor = UIColor.gray.cgColor
+            signInBtn.isEnabled = false
+            
+        } else {
+            // If loginEmail has content, set border color to blue
+            loginEmail.layer.borderColor = UIColor.green.cgColor
+            errorLogin.isHidden = true
+            signInBtn.isEnabled = true
+            loginPassword.layer.borderColor = UIColor.gray.cgColor
+            
+        }
+        
+        
+    }
+    @IBAction func passworDidEdit(_ sender: Any) {
+        if loginPassword.text?.isEmpty == true {
+            // If loginEmail is empty, set border color to gray
+            loginPassword.layer.borderColor = UIColor.gray.cgColor
+            signInBtn.isEnabled = false
+        } else {
+            // If loginEmail has content, set border color to blue
+            loginPassword.layer.borderColor = UIColor.green.cgColor
+            errorPassword.isHidden = true
+            signInBtn.isEnabled = true
+            
+            loginEmail.layer.borderColor = UIColor.gray.cgColor
+            
+            
         }
     }
     

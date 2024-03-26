@@ -11,6 +11,8 @@ class ForgotEmailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("newwww")
 
         // Do any additional setup after loading the view.
     }

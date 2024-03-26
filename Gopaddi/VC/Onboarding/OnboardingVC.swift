@@ -87,7 +87,7 @@ class OnboardingVC: UIViewController, UICollectionViewDelegate, UICollectionView
         pagecontrol.currentPage = currentpage
     }
     @IBAction func createButton(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController")as! SignUpViewController
+        let vc = UIStoryboard(name: "OnboardingAccountMain", bundle: nil).instantiateViewController(withIdentifier: "GopaddiAccountsVC")as! GopaddiAccountsVC
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

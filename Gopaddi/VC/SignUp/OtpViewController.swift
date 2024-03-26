@@ -9,6 +9,8 @@ import UIKit
 
 class OtpViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var subBtn: UIButton!
+    @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var resendBtn: UIButton!
     @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var contentView: UIView!
@@ -23,6 +25,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
     var countDown = 60
     var otpModel: OtpModel?
     var timer: Timer?
+    var isClicked = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // configView()
@@ -41,6 +44,8 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
         thirdOtpTF.keyboardType = .numberPad
         fourthOtpTF.delegate = self
         fourthOtpTF.keyboardType = .numberPad
+        
+        eyeBtn.setImage(UIImage(named: "openeye"), for: .normal)
     }
     @IBAction func didTapBackBtn(_ sender: UIButton) {
         self.dismiss(animated: true)
@@ -62,6 +67,27 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
             timer?.invalidate()
         }
     }
+    
+    @IBAction func seePassBtnClick(_ sender: UIButton) {
+        if isClicked {
+            eyeBtn.setImage(UIImage(named: "openeye"), for: .normal)
+            firstOtpTF.isSecureTextEntry = false
+            secondOtpTF.isSecureTextEntry = false
+            thirdOtpTF.isSecureTextEntry = false
+            fourthOtpTF.isSecureTextEntry = false
+            isClicked = false
+            
+        } else {
+            eyeBtn.setImage(UIImage(named: "EyeClossvg"), for: .normal)
+            firstOtpTF.isSecureTextEntry = true
+            secondOtpTF.isSecureTextEntry = true
+            thirdOtpTF.isSecureTextEntry = true
+            fourthOtpTF.isSecureTextEntry = true
+            isClicked = true
+        }
+    }
+    
+
         @objc func textFieldDidChange(textField: UITextField){
               let text = textField.text
               if  text?.count == 1 {
@@ -130,6 +156,99 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                    self.view.endEditing(true)
                }
           }
+    @IBAction func otp1txt(_ sender: UITextField) {
+        guard let firstOtp = firstOtpTF.text
+        else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        if !firstOtp.isEmpty{
+            subBtn.isEnabled = false
+            subBtn.alpha = 1.0
+            firstOtpTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+        
+        } else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            firstOtpTF.layer.borderColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+
+        }
+    }
+    
+    @IBAction func otp2txt(_ sender: UITextField) {
+        guard let secondOtp = secondOtpTF.text
+        else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        if !secondOtp.isEmpty{
+            subBtn.isEnabled = false
+            subBtn.alpha = 1.0
+            secondOtpTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+        
+        } else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            secondOtpTF.layer.borderColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+
+        }
+    }
+    @IBAction func otp3txt(_ sender: UITextField) {
+        guard let thirdOtp = thirdOtpTF.text
+        else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        if !thirdOtp.isEmpty{
+            subBtn.isEnabled = false
+            subBtn.alpha = 1.0
+            thirdOtpTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+        
+        } else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            thirdOtpTF.layer.borderColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+
+        }
+    }
+    @IBAction func otp4txt(_ sender: UITextField) {
+        guard let fourthOtp = fourthOtpTF.text
+        else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        if !fourthOtp.isEmpty{
+            subBtn.isEnabled = true
+            subBtn.alpha = 1.0
+            subBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+            fourthOtpTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+        
+        } else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            fourthOtpTF.layer.borderColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+
+        }
+    }
+    
+    
+    
     @IBAction func resendBtnClicked(_ sender: Any) {
         ApiManager.shared.resendOTP(email: signUpEmail) { result in
             switch result {
@@ -159,7 +278,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                 if model.code == "200" {
                     let alertController = UIAlertController(title:"Success!", message: model.message, preferredStyle: .alert)
                     let button = UIAlertAction(title: "Ok", style: .default) { _ in
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
+                        let vc = UIStoryboard(name: "OnboardingAccountMain", bundle: nil).instantiateViewController(withIdentifier: "ContainersGopaddiVC")as! ContainersGopaddiVC
                         vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true)
                         //                                   vc.userNameTF.text = keyText

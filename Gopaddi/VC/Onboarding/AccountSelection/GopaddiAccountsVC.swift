@@ -65,7 +65,7 @@ class GopaddiAccountsVC: UIViewController, UITableViewDelegate, UITableViewDataS
 
     
     @IBAction func continueBtnClick(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "OnboardingAccountMain", bundle: nil).instantiateViewController(withIdentifier: "ContainersGopaddiVC")as! ContainersGopaddiVC
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController")as! SignUpViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

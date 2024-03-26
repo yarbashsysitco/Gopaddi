@@ -29,11 +29,19 @@ let register_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userReg
 let signIn_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userLogin"
 let verifyOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userVerification"
 let resendOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/resend_otp"
+let userTokenvarif_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/tokenVerification"
+let userResetPass_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/resetPassword"
 
 
 
 let country_url = "\(baseURL)countries"
-let forgotPassword_url = "\(baseURL)user/forgot_password"
+
+
+
+let forgotPassword_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/getToken"
+
+
+
 let userSubscription_url = "\(baseURL)subscription/purchase"
 
 

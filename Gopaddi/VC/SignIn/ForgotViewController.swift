@@ -24,6 +24,7 @@ class ForgotViewController: UIViewController {
         //setupUI()
         
         print("ok")
+        emailTF.setPadding(20)
         
     }
     
@@ -61,11 +62,13 @@ class ForgotViewController: UIViewController {
             emailTF.layer.borderColor = UIColor.red.cgColor
             warningLb.isHidden = false
             warningLb.text = "Please add your email address"
+            warningLb.textColor = UIColor.red
         } else if !isValidEmail(email: emailTF.text ?? "") {
             // Check if the entered email is valid
             emailTF.layer.borderColor = UIColor.red.cgColor
             warningLb.isHidden = false
-            warningLb.text = "Invalid email format"
+            warningLb.text = " *Invalid email format"
+            warningLb.textColor = UIColor.red
         } else {
             // Reset the border color and proceed with API call
             emailTF.layer.borderColor = UIColor.systemGray.cgColor
@@ -80,14 +83,28 @@ class ForgotViewController: UIViewController {
                 case .success(let model):
                     // Handle success
                     self.forgotModel = model
-                    let alert = UIAlertController(title: "Message", message: model.message.debugDescription, preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-                        // Dismiss the current view controller
-                        self.dismiss(animated: true, completion: nil)
+                    if model.code == "200" {
+                        
+                        let alert = UIAlertController(title: "Message", message: model.message.debugDescription, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
+                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ForgotOTPViewController") as! ForgotOTPViewController
+                            vc.modalPresentationStyle = .fullScreen
+                            vc.emailview = email
+                            self.present(vc, animated: true)
+                        }
+                        alert.addAction(action)
+                        self.present(alert, animated: true)
+                        print(model.message)
+                        
+                    }else{
+                        
+                        let alert = UIAlertController(title: "Message", message: model.message.debugDescription, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
+                          
+                        }
+                        
                     }
-                    alert.addAction(action)
-                    self.present(alert, animated: true)
-                    print(model.message)
+                  
                 case .failure(let error):
                     // Handle failure
                     print("Error: \(error.localizedDescription)")
@@ -106,4 +123,69 @@ class ForgotViewController: UIViewController {
     @IBAction func closeBtn(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
+    @IBAction func singInBtn(_ sender: Any) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")as! SignInVC
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+        
+    }
+    
+    @IBAction func subBtn(_ sender: Any) {
+        
+        
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let email = emailTF.text
+        else {
+            // If unable to get email or password, do nothing
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        // Check if both email and password are not empty
+        if !email.isEmpty{
+            subBtn.isEnabled = true
+            subBtn.alpha = 1.0
+            subBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+        } else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }
+    }
+    
+    @IBAction func emailEditingChange(_ sender: UITextField) {
+        warningLb.isHidden = true
+        guard let email = emailTF.text
+        else {
+            // If unable to get email or password, do nothing
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        // Check if both email and password are not empty
+        if !email.isEmpty{
+            subBtn.isEnabled = true
+            subBtn.alpha = 1.0
+            subBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+            emailTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+        
+        } else {
+            subBtn.isEnabled = false
+            subBtn.alpha = 0.5
+            subBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            emailTF.layer.borderColor =  #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+
+        }
+    }
+    
+    
+    
 }

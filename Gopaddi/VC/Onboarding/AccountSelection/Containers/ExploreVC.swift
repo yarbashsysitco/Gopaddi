@@ -34,7 +34,7 @@ class ExploreVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
 
     
     @IBAction func SubmitBtnTap(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController")as! SignUpViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInVC")as! SignInVC
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

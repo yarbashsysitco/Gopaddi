@@ -7,10 +7,13 @@
 
 import Foundation
 
-struct ResentPasswordModel: Codable {
+struct ResetPasswordModel: Codable {
     let success: Bool
     let status: String
-    let alerts: String?
-    let data: [Datum]?
-    let errors: [ErrorDetail]?
+    let alerts : String?
+    let code: String?
+    let errors: [passconfr]?
+}
+struct passconfr: Codable {
+    let passconf: String?
 }

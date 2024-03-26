@@ -10,10 +10,12 @@ struct Register : Codable {
     let success : Bool?
     let code : String?
     let message : String?
-    let userId: Int
+    let userId: Int?
     let verify : Bool?
     let errors : [errorss]?
 }
 struct errorss : Codable {
     let email: String?
+    let passconf: String?
+    let password: String?
 }

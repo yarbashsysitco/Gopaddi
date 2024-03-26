@@ -42,6 +42,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var hidePasswordicon1: UIImageView!
     
     @IBOutlet weak var hideCPasswordicon2: UIImageView!
+    
+    
+    @IBOutlet weak var prifixView: MyView!
+    
+    @IBOutlet weak var passwordView: MyView!
+    
+    @IBOutlet weak var cpasswordView: MyView!
+    
     var isClicked1 : Bool = true
     var isClicked2 : Bool = true
  
@@ -56,7 +64,9 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        signUpButton.isEnabled = false
+        signUpButton.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+
         ValidationViewHeight.constant = 0
         // prefixTF.delegate = self
         signUpButton.isEnabled = false
@@ -91,16 +101,19 @@ class SignUpViewController: UIViewController {
         hidePasswordicon1.addGestureRecognizer(tapGesture1)
         let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(didTapGesture2))
         hideCPasswordicon2.addGestureRecognizer(tapGesture2)
+        hidePasswordicon1.image = UIImage(named: "EyeClossvg")
+        hideCPasswordicon2.image = UIImage(named: "EyeClossvg")
+        conPassword.isSecureTextEntry = true
     }
     
     
     @objc func didTapGesture1(){
         if isClicked1 {
-            hidePasswordicon1.image = UIImage(systemName: "eye")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            hidePasswordicon1.image = UIImage(named: "openeye")
             passwordTF.isSecureTextEntry = false
             isClicked1 = false
         }else{
-            hidePasswordicon1.image = UIImage(systemName: "eye.slash")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            hidePasswordicon1.image = UIImage(named: "EyeClossvg")
             passwordTF.isSecureTextEntry = true
             isClicked1 = true
         }
@@ -109,16 +122,14 @@ class SignUpViewController: UIViewController {
     
     @objc func didTapGesture2(){
         if isClicked2 {
-            hideCPasswordicon2.image = UIImage(systemName: "eye")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
-            
+            hideCPasswordicon2.image = UIImage(named: "openeye")
             conPassword.isSecureTextEntry = false
             isClicked2 = false
         }else{
-            hideCPasswordicon2.image = UIImage(systemName: "eye.slash")?.withTintColor(.systemGray, renderingMode: .alwaysTemplate)
+            hideCPasswordicon2.image = UIImage(named: "EyeClossvg")
             conPassword.isSecureTextEntry = true
             isClicked2 = true
         }
-        hideCPasswordicon2.image = hideCPasswordicon2.image?.withRenderingMode(.alwaysTemplate)
     }
     
     
@@ -134,7 +145,7 @@ class SignUpViewController: UIViewController {
         errorLNAme.isHidden = true
         errorConPassword.isHidden = true
         // errorPhNo.isHidden = true
-        //        errorPrefix.isHidden = true
+                errorPrefix.isHidden = true
     }
     func    validateFields(){
         guard let nameField = self.nameTF.text else { return }
@@ -142,6 +153,7 @@ class SignUpViewController: UIViewController {
         guard let emailField = self.emailTF.text else { return }
         guard let passwordField = self.passwordTF.text else { return }
         guard let conPasswordField = self.conPassword.text else { return }
+        guard let PrefixField  = self.phNoTF.text else { return }
         isValid = false
         
         if nameField.isEmpty {
@@ -149,36 +161,47 @@ class SignUpViewController: UIViewController {
             nameTF.layer.borderColor = UIColor.red.cgColor
             errorName.text = "* Empty field"
             isValidNa = false
-        }
-        else if !nameField.isValid(name: nameField) {
-            errorName.isHidden = false
-            nameTF.layer.borderColor = UIColor.red.cgColor
-            errorName.text = "* Invalid Name"
-            isValidNa = false
-        }
-        else{
-            nameTF.layer.borderColor = UIColor.blue.cgColor
-            nameTF.textColor = .systemGray
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }else{
             errorName.isHidden = true
-            isValidNa = true
+            isValidE = true
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+
+        }
+        if PrefixField.isEmpty {
+            errorPrefix.isHidden = false
+            prifixView.layer.borderColor = UIColor.red.cgColor
+            errorPrefix.text = "* Empty field"
+            isValidNa = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }else{
+            errorPrefix.isHidden = true
+            isValidE = true
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+
+
         }
         if lastNameField.isEmpty {
             errorLNAme.isHidden = false
             lastNameTF.layer.borderColor = UIColor.red.cgColor
             errorLNAme.text = "* Empty field"
-            isValidLNa = false
-        }
-        else if !lastNameField.isValid(name: lastNameField) {
-            errorLNAme.isHidden = false
-            lastNameTF.layer.borderColor = UIColor.red.cgColor
-            errorLNAme.text = "* Invalid Name"
-            isValidLNa = false
-        }
-        else{
-            lastNameTF.layer.borderColor = UIColor.blue.cgColor
-            lastNameTF.textColor = .systemGray
+            isValidE = true
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }else{
             errorLNAme.isHidden = true
-            isValidLNa = true
+            isValidE = true
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+
+
         }
         
         if emailField.isEmpty {
@@ -192,62 +215,81 @@ class SignUpViewController: UIViewController {
             emailTF.layer.borderColor = UIColor.red.cgColor
             errorEmail.text = "* Invalid Email"
             isValidE = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else{
-            emailTF.layer.borderColor = UIColor.blue.cgColor
+            emailTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
             emailTF.textColor = .systemGray
             errorEmail.isHidden = true
             isValidE = true
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
         }
-        //        if !prefixTF.text!.isEmpty  {
-        //            prefixTF.layer.borderColor = UIColor.blue.cgColor
-        //        }
-        //
-        if !phNoTF.text!.isEmpty {
-            phNoTF.layer.borderColor = UIColor.blue.cgColor
-        }
-        if passwordField.isEmpty {
-            //            errorPassword.isHidden = false
-            //            passwordTF.layer.borderColor = UIColor.red.cgColor
-            //            errorPassword.text = "* Empty field"
-            isValidPa = false
-        }
-        else if !passwordField.isValidPassword(){
-            errorConPassword.isHidden = false
-            passwordTF.layer.borderColor = UIColor.red.cgColor
-            //            errorPassword.text = "* Invalid Password"
-            isValidPa = false
-        }
-        else{
-            passwordTF.layer.borderColor = UIColor.blue.cgColor
-            passwordTF.textColor = .systemGray
-            //            errorPassword.isHidden = true
-            isValidPa = true
-        }
+        
         if conPasswordField.isEmpty {
             errorConPassword.isHidden = false
-            conPassword.layer.borderColor = UIColor.red.cgColor
+            cpasswordView.layer.borderColor = UIColor.red.cgColor
             errorConPassword.text = "* Empty field"
             isValidCPa = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }else if !conPasswordField.isValidPassword() {
             errorConPassword.isHidden = false
             conPassword.layer.borderColor = UIColor.red.cgColor
             errorConPassword.text = "* Invalid Password"
             isValidCPa = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else if passwordField != conPasswordField{
             errorConPassword.isHidden = false
-            conPassword.layer.borderColor = UIColor.red.cgColor
+            cpasswordView.layer.borderColor = UIColor.red.cgColor
             errorConPassword.text = "* Password mismatch"
             isValidCPa = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else{
-            conPassword.layer.borderColor = UIColor.blue.cgColor
+            cpasswordView.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
             conPassword.textColor = .systemGray
             errorConPassword.isHidden = true
-            isValidCPa = true
+            isValidE = true
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+        }
+        
+        if passwordField.isEmpty {
+          errorPassword.isHidden = false
+          passwordView.layer.borderColor = UIColor.red.cgColor
+          errorPassword.text = "* Empty field"
+          isValidPa = false
+          signUpButton.alpha = 0.5
+          signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }
+        else if !passwordField.isValidPassword(){
+            errorConPassword.isHidden = false
+            passwordView.layer.borderColor = UIColor.red.cgColor
+            errorPassword.text = "* Invalid Password"
+            isValidPa = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }
+        else{
+            passwordTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+            passwordTF.textColor = .systemGray
+            errorPassword.isHidden = true
+            isValidE = true
+            signUpButton.isEnabled = true
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
         }
         print("isValidField\(isValid)")
+       // signUpButton.isEnabled = true
+        signUpButton.alpha = 1.0
     }
     @IBAction func checkButtonClicked(_ sender: Any) {
         validateFields()
@@ -262,6 +304,7 @@ class SignUpViewController: UIViewController {
                 self.signUpButton.alpha = 1
                 self.isBoxChecked = true
             }
+         
         }
         else {
             UIView.animate(withDuration: 0.7, delay: 0) {
@@ -273,6 +316,8 @@ class SignUpViewController: UIViewController {
                 self.signUpButton.alpha = 0.9
                 self.isBoxChecked = false
             }
+//            signUpButton.isEnabled = false
+           
         }
     }
     
@@ -301,18 +346,23 @@ class SignUpViewController: UIViewController {
                 DispatchQueue.main.async {[weak self] in
                     if model.code == "202" {
                         print("success")
-                        let alert = UIAlertController(title: model.code, message:model.message ?? "Success!" , preferredStyle: .alert)
+                        
+                        let alertController = UIAlertController(title:"Success!", message: model.message, preferredStyle: .alert)
+                        let button = UIAlertAction(title: "Ok", style: .default) { _ in
                             let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
                             vc.signUpEmail = emailField
                         vc.modalPresentationStyle = .fullScreen
                         self?.present(vc, animated: true)
-                        } else if model.code == "303" {
-                            let alert = UIAlertController(title: model.code, message:model.errors?[0].email ?? "Error !" , preferredStyle: .alert)
-                        let alertButoon = UIAlertAction(title: "Ok", style: .default)
-                        alert.addAction(alertButoon)
-                        self?.present(alert, animated: false)
-                    }
-                    else {
+                        }
+                        alertController.addAction(button)
+                        self?.present(alertController, animated: true)
+//                        
+//                        let alert = UIAlertController(title: model.code, message:model.message ?? "Success!" , preferredStyle: .alert)
+//                            let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
+//                            vc.signUpEmail = emailField
+//                        vc.modalPresentationStyle = .fullScreen
+//                        self?.present(vc, animated: true)
+                        } else {
                         let alertcontrollert = UIAlertController(title: "Error" , message: self?.regModel?.message ?? "Something went wrong!", preferredStyle: .alert)
                         let alertButoon = UIAlertAction(title: "Ok", style: .default)
                         alertcontrollert.addAction(alertButoon)
@@ -324,6 +374,34 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+//    { result in
+//        switch result {
+//        case.success(let model):
+//            self.regModel = model
+//            if model.code == "202" {
+//                let alertController = UIAlertController(title:"Success!", message: model.message, preferredStyle: .alert)
+//                let button = UIAlertAction(title: "Ok", style: .default) { _ in
+//                    let alert = UIAlertController(title: model.code, message:model.message ?? "Success!" , preferredStyle: .alert)
+//                        let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
+//                        vc.signUpEmail = emailField
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.present(vc, animated: true)
+//                }
+//                alertController.addAction(button)
+//                self.present(alertController, animated: true)
+//            }else {
+//                let alert = UIAlertController(title: "Error!", message: model.message, preferredStyle: .alert)
+//                let alertButton = UIAlertAction(title: "Ok", style: .cancel)
+//                alert.addAction(alertButton)
+//                self.present(alert, animated: false)
+//            }
+//        case.failure(let error):
+//            print(error.localizedDescription)
+//            print("error qaqa")
+//        }
+//    }
+    
+    
     @IBOutlet weak var backBtnClicked: UIView!
     @IBAction func privacyButtonClicked(_ sender: Any) {
         guard let urlString = URL(string: termsNCondition) else {return}
@@ -343,6 +421,25 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func CpasswDidChanged(_ sender: UITextField) {
         self.ValidationViewHeight.constant = 0
+        if conPassword.text?.isEmpty == true {
+                // If loginEmail is empty, set border color to gray
+            cpasswordView.layer.borderColor = UIColor.gray.cgColor
+            //signInBtn.isEnabled = false
+
+            } else {
+                errorConPassword.isHidden = true
+
+                // If loginEmail has content, set border color to blue
+                cpasswordView.layer.borderColor = UIColor.green.cgColor
+//                errorLogin.isHidden = true
+//                signInBtn.isEnabled = true
+                nameTF.layer.borderColor = UIColor.gray.cgColor
+                emailTF.layer.borderColor = UIColor.gray.cgColor
+                lastNameTF.layer.borderColor = UIColor.gray.cgColor
+                prifixView.layer.borderColor = UIColor.gray.cgColor
+                passwordView.layer.borderColor = UIColor.gray.cgColor
+
+            }
         
     }
     
@@ -395,9 +492,172 @@ class SignUpViewController: UIViewController {
                 self.ValidationViewHeight.constant = 0
             }
         }
+        
+        if passwordTF.text?.isEmpty == true {
+                // If loginEmail is empty, set border color to gray
+            passwordView.layer.borderColor = UIColor.gray.cgColor
+            //signInBtn.isEnabled = false
+
+            } else {
+                errorPassword.isHidden = true
+
+                // If loginEmail has content, set border color to blue
+                passwordView.layer.borderColor = UIColor.green.cgColor
+//                errorLogin.isHidden = true
+//                signInBtn.isEnabled = true
+                nameTF.layer.borderColor = UIColor.gray.cgColor
+                emailTF.layer.borderColor = UIColor.gray.cgColor
+                lastNameTF.layer.borderColor = UIColor.gray.cgColor
+                prifixView.layer.borderColor = UIColor.gray.cgColor
+                cpasswordView.layer.borderColor = UIColor.gray.cgColor
+
+            }
     }
     func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        if textField == nameTF {
+            // Check if email field is empty
+            if let email = textField.text, email.isEmpty {
+                textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for empty field
+            } else {
+                // Check if the entered email is valid
+                if let email = textField.text, !email.isValidEmail() {
+                    textField.layer.borderColor = UIColor.red.cgColor // Change border color to red for invalid email
+                } else {
+                    textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for valid email
+                }
+            }
+        } else if textField == emailTF {
+            // Check if password field is empty
+            if let password = textField.text, password.isEmpty {
+                textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for empty field
+            } else {
+                // Check if password length exceeds 12 characters
+                if let password = textField.text, password.count > 12 {
+                    textField.layer.borderColor = UIColor.red.cgColor // Change border color to red for password exceeding 12 characters
+                } else {
+                    textField.layer.borderColor = UIColor.blue.cgColor // Change border color to blue for valid password
+                }
+            }
+        }
+        
+        guard let email = nameTF.text, let password = emailTF.text else {
+            // If unable to get email or password, do nothing
+            signUpButton.isEnabled = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+            return
+        }
+        
+        // Check if both email and password are not empty
+        if !email.isEmpty && !password.isEmpty {
+            signUpButton.isEnabled = true
+            signUpButton.alpha = 1.0
+            signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
+        } else {
+            signUpButton.isEnabled = false
+            signUpButton.alpha = 0.5
+            signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+        }
     }
+    
+    @IBAction func fnameEdit(_ sender: Any) {
+        if nameTF.text?.isEmpty == true {
+                // If loginEmail is empty, set border color to gray
+            nameTF.layer.borderColor = UIColor.gray.cgColor
+            //signInBtn.isEnabled = false
+
+            } else {
+                
+                errorLNAme.isHidden = true
+
+                // If loginEmail has content, set border color to blue
+                nameTF.layer.borderColor = UIColor.green.cgColor
+                
+                lastNameTF.layer.borderColor = UIColor.gray.cgColor
+                prifixView.layer.borderColor = UIColor.gray.cgColor
+                emailTF.layer.borderColor = UIColor.gray.cgColor
+                passwordView.layer.borderColor = UIColor.gray.cgColor
+                cpasswordView.layer.borderColor = UIColor.gray.cgColor
+
+//                errorLogin.isHidden = true
+//                signInBtn.isEnabled = true
+
+            }
+        
+    }
+    @IBAction func lnameEdit(_ sender: Any) {
+        if lastNameTF.text?.isEmpty == true {
+                // If loginEmail is empty, set border color to gray
+            lastNameTF.layer.borderColor = UIColor.gray.cgColor
+            //signInBtn.isEnabled = false
+
+            } else {
+                errorName.isHidden = true
+
+                // If loginEmail has content, set border color to blue
+                lastNameTF.layer.borderColor = UIColor.green.cgColor
+//                errorLogin.isHidden = true
+//                signInBtn.isEnabled = true
+                nameTF.layer.borderColor = UIColor.gray.cgColor
+                prifixView.layer.borderColor = UIColor.gray.cgColor
+                emailTF.layer.borderColor = UIColor.gray.cgColor
+                passwordView.layer.borderColor = UIColor.gray.cgColor
+                cpasswordView.layer.borderColor = UIColor.gray.cgColor
+
+            }
+    }
+    @IBAction func emailEdit(_ sender: Any) {
+        if emailTF.text?.isEmpty == true {
+                // If loginEmail is empty, set border color to gray
+            emailTF.layer.borderColor = UIColor.gray.cgColor
+            //signInBtn.isEnabled = false
+
+            } else {
+                errorEmail.isHidden = true
+
+                // If loginEmail has content, set border color to blue
+                emailTF.layer.borderColor = UIColor.green.cgColor
+//                errorLogin.isHidden = true
+//                signInBtn.isEnabled = true
+                nameTF.layer.borderColor = UIColor.gray.cgColor
+                prifixView.layer.borderColor = UIColor.gray.cgColor
+                lastNameTF.layer.borderColor = UIColor.gray.cgColor
+                passwordView.layer.borderColor = UIColor.gray.cgColor
+                cpasswordView.layer.borderColor = UIColor.gray.cgColor
+
+
+            }
+        
+    }
+    @IBAction func prifixEdit(_ sender: Any) {
+        if phNoTF.text?.isEmpty == true {
+                // If loginEmail is empty, set border color to gray
+            prifixView.layer.borderColor = UIColor.gray.cgColor
+            //signInBtn.isEnabled = false
+
+            } else {
+                errorPrefix.isHidden = true
+
+                // If loginEmail has content, set border color to blue
+                prifixView.layer.borderColor = UIColor.green.cgColor
+//                errorLogin.isHidden = true
+//                signInBtn.isEnabled = true
+                nameTF.layer.borderColor = UIColor.gray.cgColor
+                emailTF.layer.borderColor = UIColor.gray.cgColor
+                lastNameTF.layer.borderColor = UIColor.gray.cgColor
+                passwordView.layer.borderColor = UIColor.gray.cgColor
+                cpasswordView.layer.borderColor = UIColor.gray.cgColor
+
+
+            }
+    }
+     @IBAction func passEdit(_ sender: Any) {
+    }  
+    @IBAction func cpassEdit(_ sender: Any) {
+    }
+    
+    
 }
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
