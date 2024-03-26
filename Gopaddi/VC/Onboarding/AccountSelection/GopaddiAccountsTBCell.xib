@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GopaddiAccountsTBCell" rowHeight="144" id="KGk-i7-Jjw" customClass="GopaddiAccountsTBCell" customModule="Gopaddi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBa-M1-O0w" customClass="MyView" customModule="Gopaddi" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="376" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="EGO-Fd-7rD">
+                                <rect key="frame" x="12" y="24" width="83" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="NZS-Ab-yUH"/>
+                                    <constraint firstAttribute="height" constant="72" id="cmt-zs-p91"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerR">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoPal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSK-5y-wWP">
+                                <rect key="frame" x="107.00000000000001" y="26" width="43.666666666666671" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your one-stop shop for unforgettable travel experience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKg-vo-ut3">
+                                <rect key="frame" x="107" y="51.333333333333343" width="225" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ogd-8u-vdu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.55133038759999997" green="0.57028448580000002" blue="0.60410994289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RadioButton" translatesAutoresizingMaskIntoConstraints="NO" id="Bv4-pF-4F7">
+                                <rect key="frame" x="344" y="50" width="20" height="20"/>
+                                <color key="tintColor" red="0.55133038759999997" green="0.57028448580000002" blue="0.60410994289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="53V-0L-l0l"/>
+                                    <constraint firstAttribute="width" constant="20" id="Dr2-Cl-4e3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bv4-pF-4F7" firstAttribute="centerY" secondItem="sBa-M1-O0w" secondAttribute="centerY" id="JbW-ZK-b7o"/>
+                            <constraint firstItem="hKg-vo-ut3" firstAttribute="top" secondItem="vSK-5y-wWP" secondAttribute="bottom" constant="6" id="Q6h-d2-wvd"/>
+                            <constraint firstAttribute="trailing" secondItem="Bv4-pF-4F7" secondAttribute="trailing" constant="12" id="RYx-y5-X3v"/>
+                            <constraint firstItem="EGO-Fd-7rD" firstAttribute="top" secondItem="sBa-M1-O0w" secondAttribute="top" constant="24" id="Th6-xM-0Lk"/>
+                            <constraint firstItem="vSK-5y-wWP" firstAttribute="leading" secondItem="EGO-Fd-7rD" secondAttribute="trailing" constant="12" id="XIH-G7-fwa"/>
+                            <constraint firstItem="EGO-Fd-7rD" firstAttribute="leading" secondItem="sBa-M1-O0w" secondAttribute="leading" constant="12" id="bGx-nW-WgW"/>
+                            <constraint firstItem="hKg-vo-ut3" firstAttribute="leading" secondItem="EGO-Fd-7rD" secondAttribute="trailing" constant="12" id="gcA-b3-U7Z"/>
+                            <constraint firstItem="vSK-5y-wWP" firstAttribute="top" secondItem="sBa-M1-O0w" secondAttribute="top" constant="26" id="u3y-4R-gUW"/>
+                            <constraint firstItem="Bv4-pF-4F7" firstAttribute="leading" secondItem="hKg-vo-ut3" secondAttribute="trailing" constant="12" id="xrg-9W-yM7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerR">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.81568627450980391" green="0.83529411764705885" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="sBa-M1-O0w" secondAttribute="trailing" constant="10" id="3ep-8L-lAI"/>
+                    <constraint firstAttribute="bottom" secondItem="sBa-M1-O0w" secondAttribute="bottom" constant="10" id="73g-qR-sIh"/>
+                    <constraint firstItem="sBa-M1-O0w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kcU-Yl-RSa"/>
+                    <constraint firstItem="sBa-M1-O0w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ub9-G4-LHn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="AccountView" destination="sBa-M1-O0w" id="khr-HM-ZcT"/>
+                <outlet property="accountDescription" destination="hKg-vo-ut3" id="myU-Lx-xtT"/>
+                <outlet property="accountImages" destination="EGO-Fd-7rD" id="snl-Xx-HMI"/>
+                <outlet property="accountName" destination="vSK-5y-wWP" id="f7f-Ie-dvQ"/>
+                <outlet property="radioBtnImage" destination="Bv4-pF-4F7" id="Ogb-BW-gya"/>
+            </connections>
+            <point key="canvasLocation" x="157.25190839694656" y="55.633802816901408"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="RadioButton" width="20" height="20"/>
+        <image name="home" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
