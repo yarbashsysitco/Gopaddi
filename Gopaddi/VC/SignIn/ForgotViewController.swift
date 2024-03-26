@@ -175,7 +175,7 @@ class ForgotViewController: UIViewController {
             subBtn.isEnabled = true
             subBtn.alpha = 1.0
             subBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
-            emailTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+            emailTF.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
         
         } else {
             subBtn.isEnabled = false

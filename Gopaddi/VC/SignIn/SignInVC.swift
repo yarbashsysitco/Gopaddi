@@ -220,7 +220,7 @@ class SignInVC: UIViewController{
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else{
-            loginEmail.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+            loginEmail.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
             errorLogin.isHidden = true
             isValid = false
             signInBtn.isEnabled = true
@@ -243,7 +243,7 @@ class SignInVC: UIViewController{
             signInBtn.alpha = 0.5
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }else{
-            loginPassword.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+            loginPassword.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
             //            conPassword.textColor = .systemGray
             errorPassword.isHidden = true
             isValid = true
@@ -364,7 +364,7 @@ class SignInVC: UIViewController{
             
         } else {
             // If loginEmail has content, set border color to blue
-            loginEmail.layer.borderColor = UIColor.green.cgColor
+            loginEmail.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
             errorLogin.isHidden = true
             signInBtn.isEnabled = true
             loginPassword.layer.borderColor = UIColor.gray.cgColor
@@ -380,7 +380,12 @@ class SignInVC: UIViewController{
             signInBtn.isEnabled = false
         } else {
             // If loginEmail has content, set border color to blue
-            loginPassword.layer.borderColor = UIColor.green.cgColor
+            loginPassword.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
+//            loginPassword.layer.shadowColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
+//            loginPassword.layer.shadowOffset = CGSize(width: 0, height: 2)
+//            loginPassword.layer.shadowOpacity = 0.9
+//            loginPassword.layer.shadowRadius = 2
+//            
             errorPassword.isHidden = true
             signInBtn.isEnabled = true
             
