@@ -363,7 +363,7 @@ class SignUpViewController: UIViewController {
 //                        vc.modalPresentationStyle = .fullScreen
 //                        self?.present(vc, animated: true)
                     } else if model.code == "303"{
-                        let alertController = UIAlertController(title:"Error", message: model.errors?[0].email, preferredStyle: .alert)
+                        let alertController = UIAlertController(title:"Error", message: model.errors?[0].email ?? model.errors?[0].phone, preferredStyle: .alert)
                         let button = UIAlertAction(title: "Ok", style: .default)
                         alertController.addAction(button)
                         self?.present(alertController, animated: true)

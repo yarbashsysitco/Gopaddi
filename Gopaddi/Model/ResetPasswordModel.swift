@@ -9,7 +9,7 @@ import Foundation
 
 struct ResetPasswordModel: Codable {
     let success: Bool
-    let status: String
+    let status: String?
     let alerts : String?
     let code: String?
     let errors: [passconfr]?

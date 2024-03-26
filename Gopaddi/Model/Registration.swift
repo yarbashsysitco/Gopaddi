@@ -18,4 +18,5 @@ struct errorss : Codable {
     let email: String?
     let passconf: String?
     let password: String?
+    let phone: String?
 }
