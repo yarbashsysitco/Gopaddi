@@ -219,7 +219,7 @@ class SignUpViewController: UIViewController {
             signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else{
-            emailTF.layer.borderColor =  #colorLiteral(red: 0.1607843137, green: 0.8901960784, blue: 0.431372549, alpha: 1)
+            emailTF.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
             emailTF.textColor = .systemGray
             errorEmail.isHidden = true
             isValidE = true
@@ -362,7 +362,13 @@ class SignUpViewController: UIViewController {
 //                            vc.signUpEmail = emailField
 //                        vc.modalPresentationStyle = .fullScreen
 //                        self?.present(vc, animated: true)
-                        } else {
+                    } else if model.code == "303"{
+                        let alertController = UIAlertController(title:"Error", message: model.errors?[0].email, preferredStyle: .alert)
+                        let button = UIAlertAction(title: "Ok", style: .default)
+                        alertController.addAction(button)
+                        self?.present(alertController, animated: true)
+                    }
+                    else {
                         let alertcontrollert = UIAlertController(title: "Error" , message: self?.regModel?.message ?? "Something went wrong!", preferredStyle: .alert)
                         let alertButoon = UIAlertAction(title: "Ok", style: .default)
                         alertcontrollert.addAction(alertButoon)
@@ -430,7 +436,7 @@ class SignUpViewController: UIViewController {
                 errorConPassword.isHidden = true
 
                 // If loginEmail has content, set border color to blue
-                cpasswordView.layer.borderColor = UIColor.green.cgColor
+                cpasswordView.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
 //                errorLogin.isHidden = true
 //                signInBtn.isEnabled = true
                 nameTF.layer.borderColor = UIColor.gray.cgColor
@@ -502,7 +508,7 @@ class SignUpViewController: UIViewController {
                 errorPassword.isHidden = true
 
                 // If loginEmail has content, set border color to blue
-                passwordView.layer.borderColor = UIColor.green.cgColor
+                passwordView.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
 //                errorLogin.isHidden = true
 //                signInBtn.isEnabled = true
                 nameTF.layer.borderColor = UIColor.gray.cgColor
