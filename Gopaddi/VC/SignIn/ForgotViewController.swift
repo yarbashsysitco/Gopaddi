@@ -22,7 +22,7 @@ class ForgotViewController: UIViewController {
         super.viewDidLoad()
         // Initial setup for UI elements
         //setupUI()
-        
+        subBtn.isEnabled = false
         print("ok")
         emailTF.setPadding(20)
         
@@ -56,14 +56,17 @@ class ForgotViewController: UIViewController {
     }
     
     @IBAction func NextBtn(_ sender: Any) {
+        subBtn.showLoading()
         // Check if the email text field is empty
         if let email = emailTF.text, email.isEmpty {
+            self.subBtn.stopLoading()
             // Update the UI when email is empty
             emailTF.layer.borderColor = UIColor.red.cgColor
             warningLb.isHidden = false
             warningLb.text = "Please add your email address"
             warningLb.textColor = UIColor.red
         } else if !isValidEmail(email: emailTF.text ?? "") {
+            self.subBtn.stopLoading()
             // Check if the entered email is valid
             emailTF.layer.borderColor = UIColor.red.cgColor
             warningLb.isHidden = false
@@ -84,7 +87,7 @@ class ForgotViewController: UIViewController {
                     // Handle success
                     self.forgotModel = model
                     if model.code == "200" {
-                        
+                        self.subBtn.stopLoading()
                         let alert = UIAlertController(title: "Message", message: model.message.debugDescription, preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ForgotOTPViewController") as! ForgotOTPViewController
@@ -96,17 +99,28 @@ class ForgotViewController: UIViewController {
                         self.present(alert, animated: true)
                         print(model.message)
                         
-                    }else{
+                    }else if  model.code == "404"{
+                        self.subBtn.stopLoading()
+                        self.emailTF.layer.borderColor = UIColor.red.cgColor
+                        let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
+                        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                         
-                        let alert = UIAlertController(title: "Message", message: model.message.debugDescription, preferredStyle: .alert)
+                        }
+                        alert.addAction(action)
+                        self.present(alert, animated: true)
+                        print(model.message)
+                        
+                    }else{
+                        self.subBtn.stopLoading()
+                        let alert = UIAlertController(title: "Error", message: model.message.debugDescription, preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                           
                         }
-                        
                     }
                   
                 case .failure(let error):
                     // Handle failure
+                    self.subBtn.stopLoading()
                     print("Error: \(error.localizedDescription)")
                     self.emailTF.placeholder = "Error: \(error.localizedDescription)"
                 }
@@ -175,7 +189,7 @@ class ForgotViewController: UIViewController {
             subBtn.isEnabled = true
             subBtn.alpha = 1.0
             subBtn.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
-            emailTF.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
+            emailTF.layer.borderColor  =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
         
         } else {
             subBtn.isEnabled = false

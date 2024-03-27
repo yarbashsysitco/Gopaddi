@@ -161,6 +161,8 @@ class SetNewPassViewController: UIViewController {
     
     
     @IBAction func subBtn(_ sender: Any) {
+        subBtn.showLoading()
+        
         guard let passTF = passTF.text, !passTF.isEmpty else {
             // Handle case where password text field is empty
             return
@@ -177,7 +179,8 @@ class SetNewPassViewController: UIViewController {
                     let status = model.status?.trimmingCharacters(in: .whitespacesAndNewlines)
                     let code = model.code?.trimmingCharacters(in: .whitespacesAndNewlines)
                     if status == "200" {
-                        
+                        self.subBtn.stopLoading()
+
                         let alert = UIAlertController(title: "Message", message: model.alerts.debugDescription, preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "DoneViewController") as! DoneViewController
@@ -188,12 +191,17 @@ class SetNewPassViewController: UIViewController {
                         self.present(alert, animated: true)
                    
                     } else if code == "500"{
+                        self.subBtn.stopLoading()
+                        self.passTF.layer.borderColor = UIColor.red.cgColor
+                        self.cPassTF.layer.borderColor = UIColor.red.cgColor
+
                         let alertController = UIAlertController(title:"Error", message: model.errors?[0].passconf, preferredStyle: .alert)
                         let button = UIAlertAction(title: "Ok", style: .default)
                         alertController.addAction(button)
                         self.present(alertController, animated: true)
                     }
                     else{
+                        self.subBtn.stopLoading()
                         let alert = UIAlertController(title: "Message", message: model.alerts.debugDescription, preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                         }

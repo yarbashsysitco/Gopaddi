@@ -313,8 +313,18 @@ class ForgotOTPViewController: UIViewController, UITextFieldDelegate {
                             self.present(alert, animated: true)
                             print(model.message)
                             
-                        }else{
-                            let alert = UIAlertController(title: "Message", message: model.message.debugDescription, preferredStyle: .alert)
+                        }else if  model.code == "400"{
+                            self.subBtn.stopLoading()
+                     
+                            let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
+                            let action = UIAlertAction(title: "OK", style: .cancel) { _ in
+                            }
+                            alert.addAction(action)
+                            self.present(alert, animated: true)
+                            print(model.message)
+                        } else{
+                           
+                            let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
                             let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                             }
                         }
@@ -328,6 +338,8 @@ class ForgotOTPViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func submitBtn(_ sender: Any) {
+        
+        subBtn.showLoading()
        // let keyText = signUpEmail
         let otpText = "\(self.firstOtpTF.text ?? "")\(self.secondOtpTF.text ?? "")\(self.thirdOtpTF.text ?? "")\(self.fourthOtpTF.text ?? "")\(self.fifthOtpTF.text ?? "")"
 //        UserDefaults.standard.set(keyText, forKey: "otpemail")
@@ -336,6 +348,7 @@ class ForgotOTPViewController: UIViewController, UITextFieldDelegate {
             switch result {
                 case .success(let model):
                 self.otpModel = model
+                self.subBtn.stopLoading()
 
                 print("print model:\(model)")
                 let code = model.code.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -356,6 +369,12 @@ class ForgotOTPViewController: UIViewController, UITextFieldDelegate {
                     self.present(alertController, animated: true)
                    
                 }else{
+                    self.subBtn.stopLoading()
+                    self.firstOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.secondOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.thirdOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.fourthOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.fifthOtpTF.layer.borderColor = UIColor.red.cgColor
                     let alert = UIAlertController(title: "Error!", message: model.message, preferredStyle: .alert)
                     let alertButton = UIAlertAction(title: "Ok", style: .cancel)
                     alert.addAction(alertButton)

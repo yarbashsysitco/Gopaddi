@@ -216,7 +216,6 @@
 		A83D398D2BA0784A001BECDD /* NotificationAllTBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83D398B2BA0784A001BECDD /* NotificationAllTBCell.xib */; };
 		A83D398F2BA08635001BECDD /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D398E2BA08635001BECDD /* NotificationViewController.swift */; };
 		A847D6F62B99BE510031EDA3 /* ForgotMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */; };
-		A847D6FA2B99CD060031EDA3 /* ForgotEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */; };
 		A847D6FC2B99CD170031EDA3 /* ForgotOTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */; };
 		A847D6FE2B99CD410031EDA3 /* SetNewPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FD2B99CD410031EDA3 /* SetNewPassViewController.swift */; };
 		A847D7002B99CD4D0031EDA3 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847D6FF2B99CD4D0031EDA3 /* DoneViewController.swift */; };
@@ -477,7 +476,6 @@
 		A83D398B2BA0784A001BECDD /* NotificationAllTBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationAllTBCell.xib; sourceTree = "<group>"; };
 		A83D398E2BA08635001BECDD /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		A847D6F52B99BE500031EDA3 /* ForgotMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotMain.storyboard; sourceTree = "<group>"; };
-		A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotEmailViewController.swift; sourceTree = "<group>"; };
 		A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotOTPViewController.swift; sourceTree = "<group>"; };
 		A847D6FD2B99CD410031EDA3 /* SetNewPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPassViewController.swift; sourceTree = "<group>"; };
 		A847D6FF2B99CD4D0031EDA3 /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
@@ -1187,7 +1185,6 @@
 		A847D6F82B99CC4C0031EDA3 /* Forgot */ = {
 			isa = PBXGroup;
 			children = (
-				A847D6F92B99CD060031EDA3 /* ForgotEmailViewController.swift */,
 				A847D6FB2B99CD170031EDA3 /* ForgotOTPViewController.swift */,
 				A847D6FD2B99CD410031EDA3 /* SetNewPassViewController.swift */,
 				A847D6FF2B99CD4D0031EDA3 /* DoneViewController.swift */,
@@ -1570,7 +1567,6 @@
 				844FD3722B8DB07B0014E4B5 /* FlightDetailsVC.swift in Sources */,
 				84CCA1A02BB1772E0040B3FA /* GopaddiAccountsVC.swift in Sources */,
 				844FD3312B8DB07B0014E4B5 /* ActivityBookHeadTableViewCell.swift in Sources */,
-				A847D6FA2B99CD060031EDA3 /* ForgotEmailViewController.swift in Sources */,
 				A8629C272B9EF7450026F280 /* OnboardingVC.swift in Sources */,
 				844FD42A2B8DB0F20014E4B5 /* GlobalConstants.swift in Sources */,
 				844FD3382B8DB07B0014E4B5 /* MemberCountViewController.swift in Sources */,
@@ -1783,7 +1779,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gopaddi/Gopaddi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 3RDVFJ9DJ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gopaddi/Info.plist;
@@ -1798,7 +1794,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.6;
+				MARKETING_VERSION = 0.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gopaddi.decodtech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1815,7 +1811,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gopaddi/Gopaddi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 3RDVFJ9DJ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gopaddi/Info.plist;
@@ -1830,7 +1826,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.6;
+				MARKETING_VERSION = 0.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gopaddi.decodtech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

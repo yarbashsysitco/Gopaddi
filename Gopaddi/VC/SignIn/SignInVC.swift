@@ -37,6 +37,7 @@ class SignInVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpErrorF()
+        signInBtn.isEnabled = false
         loginPassword.isSecureTextEntry = true
         loginEmail.setPadding(20)
         loginPassword.setPadding(20)
@@ -204,6 +205,7 @@ class SignInVC: UIViewController{
         isValid = true
         
         if userEmail.isEmpty {
+            self.signInBtn.stopLoading()
             errorLogin.isHidden = false
             loginEmail.layer.borderColor = UIColor.red.cgColor
             errorLogin.text = "* Empty field"
@@ -212,6 +214,7 @@ class SignInVC: UIViewController{
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else if !userEmail.isValidEmail() {
+            self.signInBtn.stopLoading()
             errorLogin.isHidden = false
             loginEmail.layer.borderColor = UIColor.red.cgColor
             errorLogin.text = "* Invalid Email"
@@ -229,6 +232,7 @@ class SignInVC: UIViewController{
         }
         
         if password.isEmpty {
+            self.signInBtn.stopLoading()
             errorPassword.isHidden = false
             loginPassword.layer.borderColor = UIColor.red.cgColor
             errorPassword.text = "* Empty field"
@@ -236,6 +240,7 @@ class SignInVC: UIViewController{
             signInBtn.alpha = 0.5
             signInBtn.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }else if !password.isValidPassword() {
+            self.signInBtn.stopLoading()
             errorPassword.isHidden = false
             loginPassword.layer.borderColor = UIColor.red.cgColor
             errorPassword.text = "* Invalid Password"
@@ -305,7 +310,8 @@ class SignInVC: UIViewController{
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        
+//        signInBtn.isEnabled = true
+
         if textField == loginEmail {
             // Check if email field is empty
             if let email = textField.text, email.isEmpty {
@@ -358,11 +364,14 @@ class SignInVC: UIViewController{
     
     @IBAction func emails(_ sender: Any) {
         if loginEmail.text?.isEmpty == true {
+            signInBtn.isEnabled = false
+
             // If loginEmail is empty, set border color to gray
             loginEmail.layer.borderColor = UIColor.gray.cgColor
             signInBtn.isEnabled = false
             
         } else {
+            signInBtn.isEnabled = true
             // If loginEmail has content, set border color to blue
             loginEmail.layer.borderColor =  #colorLiteral(red: 0.4823529412, green: 0.3803921569, blue: 1, alpha: 1)
             errorLogin.isHidden = true
@@ -385,7 +394,8 @@ class SignInVC: UIViewController{
 //            loginPassword.layer.shadowOffset = CGSize(width: 0, height: 2)
 //            loginPassword.layer.shadowOpacity = 0.9
 //            loginPassword.layer.shadowRadius = 2
-//            
+                        signInBtn.isEnabled = true
+
             errorPassword.isHidden = true
             signInBtn.isEnabled = true
             

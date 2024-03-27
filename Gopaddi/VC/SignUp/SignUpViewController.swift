@@ -73,16 +73,16 @@ class SignUpViewController: UIViewController {
         setFields()
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-        apiManager.memebership {  result in
-            switch result {
-            case .success(let model) :
-                DispatchQueue.main.sync {
-                    self.membershipData = model
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        apiManager.memebership {  result in
+//            switch result {
+//            case .success(let model) :
+//                DispatchQueue.main.sync {
+//                    self.membershipData = model
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
         phNoTF.delegate = self
         phNoTF.keyboardType = .numberPad
         nameTF.setPadding(20)
@@ -157,6 +157,7 @@ class SignUpViewController: UIViewController {
         isValid = false
         
         if nameField.isEmpty {
+            self.signUpButton.stopLoading()
             errorName.isHidden = false
             nameTF.layer.borderColor = UIColor.red.cgColor
             errorName.text = "* Empty field"
@@ -172,6 +173,7 @@ class SignUpViewController: UIViewController {
 
         }
         if PrefixField.isEmpty {
+            self.signUpButton.stopLoading()
             errorPrefix.isHidden = false
             prifixView.layer.borderColor = UIColor.red.cgColor
             errorPrefix.text = "* Empty field"
@@ -188,6 +190,7 @@ class SignUpViewController: UIViewController {
 
         }
         if lastNameField.isEmpty {
+            self.signUpButton.stopLoading()
             errorLNAme.isHidden = false
             lastNameTF.layer.borderColor = UIColor.red.cgColor
             errorLNAme.text = "* Empty field"
@@ -205,12 +208,14 @@ class SignUpViewController: UIViewController {
         }
         
         if emailField.isEmpty {
+            self.signUpButton.stopLoading()
             errorEmail.isHidden = false
             emailTF.layer.borderColor = UIColor.red.cgColor
             errorEmail.text = "* Empty field"
             isValidE = false
         }
         else if !emailField.isValidEmail() {
+            self.signUpButton.stopLoading()
             errorEmail.isHidden = false
             emailTF.layer.borderColor = UIColor.red.cgColor
             errorEmail.text = "* Invalid Email"
@@ -229,6 +234,7 @@ class SignUpViewController: UIViewController {
         }
         
         if conPasswordField.isEmpty {
+            self.signUpButton.stopLoading()
             errorConPassword.isHidden = false
             cpasswordView.layer.borderColor = UIColor.red.cgColor
             errorConPassword.text = "* Empty field"
@@ -236,6 +242,7 @@ class SignUpViewController: UIViewController {
             signUpButton.alpha = 0.5
             signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }else if !conPasswordField.isValidPassword() {
+            self.signUpButton.stopLoading()
             errorConPassword.isHidden = false
             conPassword.layer.borderColor = UIColor.red.cgColor
             errorConPassword.text = "* Invalid Password"
@@ -244,6 +251,7 @@ class SignUpViewController: UIViewController {
             signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else if passwordField != conPasswordField{
+            self.signUpButton.stopLoading()
             errorConPassword.isHidden = false
             cpasswordView.layer.borderColor = UIColor.red.cgColor
             errorConPassword.text = "* Password mismatch"
@@ -262,6 +270,7 @@ class SignUpViewController: UIViewController {
         }
         
         if passwordField.isEmpty {
+        self.signUpButton.stopLoading()
           errorPassword.isHidden = false
           passwordView.layer.borderColor = UIColor.red.cgColor
           errorPassword.text = "* Empty field"
@@ -270,6 +279,7 @@ class SignUpViewController: UIViewController {
           signUpButton.backgroundColor =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
         }
         else if !passwordField.isValidPassword(){
+            self.signUpButton.stopLoading()
             errorConPassword.isHidden = false
             passwordView.layer.borderColor = UIColor.red.cgColor
             errorPassword.text = "* Invalid Password"
@@ -292,7 +302,7 @@ class SignUpViewController: UIViewController {
         signUpButton.alpha = 1.0
     }
     @IBAction func checkButtonClicked(_ sender: Any) {
-        validateFields()
+     
         if (isBoxChecked == false)
         {
             UIView.animate(withDuration: 0.7, delay: 0, options: .curveLinear) {
@@ -303,6 +313,7 @@ class SignUpViewController: UIViewController {
                 self.signUpButton.isEnabled = true
                 self.signUpButton.alpha = 1
                 self.isBoxChecked = true
+                self.signUpButton.backgroundColor =  #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
             }
          
         }
@@ -315,6 +326,8 @@ class SignUpViewController: UIViewController {
                 self.signUpButton.isEnabled = false
                 self.signUpButton.alpha = 0.9
                 self.isBoxChecked = false
+                self.signUpButton.backgroundColor  =  #colorLiteral(red: 0.9058823529, green: 0.9411764706, blue: 1, alpha: 1)
+
             }
 //            signUpButton.isEnabled = false
            
@@ -330,6 +343,9 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
+        signUpButton.showLoading()
+        signUpButton.isEnabled = false
+        validateFields()
         guard let FirstnameField = self.nameTF.text else { return }
         guard let lastNameField = self.lastNameTF.text else { return }
         guard let emailField = self.emailTF.text else { return }
@@ -345,8 +361,10 @@ class SignUpViewController: UIViewController {
                 self.regModel = model
                 DispatchQueue.main.async {[weak self] in
                     if model.code == "202" {
-                        print("success")
                         
+                        print("success")
+                        self?.signUpButton.stopLoading()
+                        self?.signUpButton.isEnabled = true
                         let alertController = UIAlertController(title:"Success!", message: model.message, preferredStyle: .alert)
                         let button = UIAlertAction(title: "Ok", style: .default) { _ in
                             let vc  = self?.storyboard?.instantiateViewController(withIdentifier: "OtpViewController") as! OtpViewController
@@ -363,12 +381,17 @@ class SignUpViewController: UIViewController {
 //                        vc.modalPresentationStyle = .fullScreen
 //                        self?.present(vc, animated: true)
                     } else if model.code == "303"{
+                        self?.signUpButton.stopLoading()
+                        self?.signUpButton.isEnabled = true
+
                         let alertController = UIAlertController(title:"Error", message: model.errors?[0].email ?? model.errors?[0].phone, preferredStyle: .alert)
                         let button = UIAlertAction(title: "Ok", style: .default)
                         alertController.addAction(button)
                         self?.present(alertController, animated: true)
                     }
                     else {
+                        self?.signUpButton.isEnabled = true
+                        self?.signUpButton.stopLoading()
                         let alertcontrollert = UIAlertController(title: "Error" , message: self?.regModel?.message ?? "Something went wrong!", preferredStyle: .alert)
                         let alertButoon = UIAlertAction(title: "Ok", style: .default)
                         alertcontrollert.addAction(alertButoon)
@@ -377,6 +400,8 @@ class SignUpViewController: UIViewController {
                 }
             case.failure(let error):
                 print(error.localizedDescription)
+                self.signUpButton.isEnabled = true
+
             }
         }
     }

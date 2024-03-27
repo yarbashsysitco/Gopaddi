@@ -18,7 +18,7 @@ class OnboardingVC: UIViewController, UICollectionViewDelegate, UICollectionView
     var currentpage = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("neww")
         collection.delegate = self
         collection.dataSource = self
         collection.register(UINib.init(nibName: "OnboardingFirstCell", bundle: nil),forCellWithReuseIdentifier: "OnboardingFirstCell")

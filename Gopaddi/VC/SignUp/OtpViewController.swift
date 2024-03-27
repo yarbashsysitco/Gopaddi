@@ -250,9 +250,14 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func resendBtnClicked(_ sender: Any) {
+        subBtn.showLoading()
+        subBtn.isEnabled = false
+
         ApiManager.shared.resendOTP(email: signUpEmail) { result in
             switch result {
             case.success(let model):
+                self.subBtn.isEnabled = true
+                self.subBtn.stopLoading()
                 self.otpModel = model
                 let alercontroller = UIAlertController(title: "Success!", message: model.message, preferredStyle: .alert)
                 let action = UIAlertAction(title: "Ok", style: .cancel)
@@ -260,12 +265,16 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                 self.present(alercontroller, animated: true)
             case.failure(let error):
                 print(error.localizedDescription)
+                self.subBtn.isEnabled = false
             }
         }
     }
     
     
     @IBAction func submitBtn(_ sender: Any) {
+        subBtn.showLoading()
+        subBtn.isEnabled = false
+
         let keyText = signUpEmail
         let memberText = "gopal"
         let otpText = "\(self.firstOtpTF.text ?? "")\(self.secondOtpTF.text ?? "")\(self.thirdOtpTF.text ?? "")\(self.fourthOtpTF.text ?? "")"
@@ -276,6 +285,9 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
             case.success(let model):
                 self.otpModel = model
                 if model.code == "200" {
+                    self.subBtn.stopLoading()
+                    self.subBtn.isEnabled = true
+
                     let alertController = UIAlertController(title:"Success!", message: model.message, preferredStyle: .alert)
                     let button = UIAlertAction(title: "Ok", style: .default) { _ in
                         let vc = UIStoryboard(name: "OnboardingAccountMain", bundle: nil).instantiateViewController(withIdentifier: "ContainersGopaddiVC")as! ContainersGopaddiVC
@@ -286,14 +298,21 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                     alertController.addAction(button)
                     self.present(alertController, animated: true)
                 }else {
+                    self.subBtn.stopLoading()
                     let alert = UIAlertController(title: "Error!", message: model.message, preferredStyle: .alert)
                     let alertButton = UIAlertAction(title: "Ok", style: .cancel)
+                    self.firstOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.secondOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.thirdOtpTF.layer.borderColor = UIColor.red.cgColor
+                    self.fourthOtpTF.layer.borderColor = UIColor.red.cgColor
                     alert.addAction(alertButton)
                     self.present(alert, animated: false)
+                    self.subBtn.isEnabled = false
                 }
             case.failure(let error):
                 print(error.localizedDescription)
                 print("error qaqa")
+                self.subBtn.isEnabled = false
             }
             
             
