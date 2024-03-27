@@ -438,6 +438,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
                     }
                 }
             }
+        cell.seemores = { [weak self] in
+            // Update the number of lines for feedCaption to show all lines
+            cell.feedCaption.numberOfLines = 0
+            
+            // Reload the cell to reflect the updated content and height
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+//        cell.seemores
             
             let comment = "Olufunmi: Chasing sunsets and making memories that will last a lifetime. ☀️🌴✨." // Assuming `comments` is your array of comments
                let boldName = "Olufunmi:"

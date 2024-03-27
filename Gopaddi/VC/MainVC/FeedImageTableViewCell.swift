@@ -34,6 +34,7 @@ class FeedImageTableViewCell: UITableViewCell {
     @IBOutlet weak var feedViews: UILabel!
     var isLiked = false
 
+    @IBOutlet weak var seemoreBtn: UIButton!
     @IBOutlet weak var firstCommentView: UILabel!
     @IBOutlet weak var likeBtn: UIButton!
     @IBOutlet weak var viewdiaryBtn: UIView!
@@ -47,11 +48,13 @@ class FeedImageTableViewCell: UITableViewCell {
     var postComment : (() -> ())?
     var comment : (() -> ())?
     var emojiss : (() -> ())?
+    var seemores : (() -> ())?
     @IBOutlet weak var feedComments: UILabel!
     @IBOutlet weak var textViewHeightConstraints: NSLayoutConstraint!
     @IBOutlet weak var feedComents2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("hello")
         animastionHeart.isHidden = true
         if let customFont = UIFont(name: "Poppins-Regular.ttf", size: 25.0) {
             // Use customFont with your UI elements
@@ -60,7 +63,8 @@ class FeedImageTableViewCell: UITableViewCell {
             // Fallback to system font or any other font
         }
 
-        
+        feedCaption.numberOfLines = 2
+
         
         
         
@@ -193,6 +197,10 @@ class FeedImageTableViewCell: UITableViewCell {
            firstCommentView.attributedText = attributedString
        }
 
+    @IBAction func seemoreBts(_ sender: Any) {
+        
+        seemores?()
+    }
     
     
 //    @objc func likeButtonTapped() {
