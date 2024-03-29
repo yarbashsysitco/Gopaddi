@@ -31,6 +31,7 @@ let verifyOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/userVe
 let resendOtp_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/resend_otp"
 let userTokenvarif_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/tokenVerification"
 let userResetPass_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/resetPassword"
+let userEditProfile_url = "https://vgtechdemo.com/tokyodevbckend/index.php/user/editProfile"
 
 
 

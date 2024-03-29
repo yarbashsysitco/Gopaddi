@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 open class Cleaner {
     fileprivate let whitelist: Whitelist
 
@@ -84,6 +85,7 @@ open class Cleaner {
 
 }
 
+@available(iOS 9.0, *)
 extension Cleaner {
 	fileprivate final class CleaningVisitor: NodeVisitor {
 		var numDiscarded: Int = 0
@@ -137,8 +139,10 @@ extension Cleaner {
 	}
 }
 
+@available(iOS 9.0, *)
 extension Cleaner {
-	fileprivate struct ElementMeta {
+    @available(iOS 9.0, *)
+    fileprivate struct ElementMeta {
 		let el: Element
 		let numAttribsDiscarded: Int
 

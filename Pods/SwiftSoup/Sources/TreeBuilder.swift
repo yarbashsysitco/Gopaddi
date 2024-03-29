@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 public class TreeBuilder {
     public var reader: CharacterReader
     var tokeniser: Tokeniser

@@ -14,6 +14,7 @@ import Foundation
  * <p>Usage example: {@code Document xmlDoc = Jsoup.parse(html, baseUrl, Parser.xmlParser())}</p>
  *
  */
+@available(iOS 9.0, *)
 public class XmlTreeBuilder: TreeBuilder {
 
     public override init() {

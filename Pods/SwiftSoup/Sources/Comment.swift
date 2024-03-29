@@ -11,6 +11,7 @@ import Foundation
 /**
  A comment node.
  */
+@available(iOS 9.0, *)
 public class Comment: Node {
     private static let COMMENT_KEY: String = "comment"
 

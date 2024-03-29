@@ -11,6 +11,7 @@ import Foundation
 /**
  An XML Declaration.
   */
+@available(iOS 9.0, *)
 public class XmlDeclaration: Node {
     private let _name: String
     private let isProcessingInstruction: Bool // <! if true, <? if false, declaration (and last data char should be ?)

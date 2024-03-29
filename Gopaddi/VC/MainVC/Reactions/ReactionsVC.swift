@@ -20,20 +20,20 @@ class ReactionsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        ReactionTap()
+//        ReactionTap()
         
         print("ok")
     }
-    func ReactionTap(){
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TappingImage))
-        reactionImage.isUserInteractionEnabled = true
-        reactionImage.addGestureRecognizer(tapGesture)
-    }
-    @objc func TappingImage(){
-        let vc = UIStoryboard(name: "ReactionMain", bundle: nil).instantiateViewController(withIdentifier: "ReactionMainViewController")as! ReactionMainViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
-    }
+//    func ReactionTap(){
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TappingImage))
+//        reactionImage.isUserInteractionEnabled = true
+//        reactionImage.addGestureRecognizer(tapGesture)
+//    }
+//    @objc func TappingImage(){
+//        let vc = UIStoryboard(name: "ReactionMain", bundle: nil).instantiateViewController(withIdentifier: "ReactionMainViewController")as! ReactionMainViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
+//    }
     
     
     func setupUI() {

@@ -16,6 +16,7 @@ import Foundation
  * create a start tag for a node, and tail to create the end tag.
  * </p>
  */
+@available(iOS 9.0, *)
 public protocol NodeVisitor {
     /**
      * Callback for when a node is first visited.

@@ -13,11 +13,13 @@ import Foundation
  * Source: <a href="http://www.w3.org/TR/html5/named-character-references.html#named-character-references">W3C HTML
  * named character references</a>.
  */
+@available(iOS 9.0, *)
 public class Entities {
     private static let empty = -1
     private static let emptyName = ""
     private static let codepointRadix: Int = 36
 
+    @available(iOS 9.0, *)
     public class EscapeMode: Equatable {
 
         /** Restricted entities suitable for XHTML output: lt, gt, amp, and quot only. */
@@ -54,37 +56,46 @@ public class Entities {
         private static let codeDelims: [UnicodeScalar]  = [",", ";"]
         
         init(string: String, size: Int, id: Int) {
-            
             value = id
-            let reader: CharacterReader = CharacterReader(string)
             
-            entitiesByName.reserveCapacity(size)
-            while !reader.isEmpty() {
-                let name: String = reader.consumeTo("=")
-                reader.advance()
-                let cp1: Int = Int(reader.consumeToAny(EscapeMode.codeDelims), radix: codepointRadix) ?? 0
-                let codeDelim: UnicodeScalar = reader.current()
-                reader.advance()
-                let cp2: Int
-                if (codeDelim == ",") {
-                    cp2 = Int(reader.consumeTo(";"), radix: codepointRadix) ?? 0
-                    reader.advance()
-                } else {
-                    cp2 = empty
-                }
-                let _ = Int(reader.consumeTo("\n"), radix: codepointRadix) ?? 0
-                reader.advance()
-
-                entitiesByName.append(NamedCodepoint(scalar: UnicodeScalar(cp1)!, name: name))
-
-                if (cp2 != empty) {
-                    multipointsLock.lock()
-                    multipoints[name] = [UnicodeScalar(cp1)!, UnicodeScalar(cp2)!]
-                    multipointsLock.unlock()
-                }
+            var reader: CharacterReader? // Declare reader variable
+            
+            if #available(iOS 9.0, *) {
+                reader = CharacterReader(string)
+            } else {
+                // Fallback on earlier versions
             }
-            // Entities should start in name order, but better safe than sorry...
-            entitiesByName.sort() { a, b in a.name < b.name }
+            
+            // Check if reader is not nil before using it
+            if let reader = reader {
+                entitiesByName.reserveCapacity(size)
+                while !reader.isEmpty() {
+                    let name: String = reader.consumeTo("=")
+                    reader.advance()
+                    let cp1: Int = Int(reader.consumeToAny(EscapeMode.codeDelims), radix: codepointRadix) ?? 0
+                    let codeDelim: UnicodeScalar = reader.current()
+                    reader.advance()
+                    let cp2: Int
+                    if (codeDelim == ",") {
+                        cp2 = Int(reader.consumeTo(";"), radix: codepointRadix) ?? 0
+                        reader.advance()
+                    } else {
+                        cp2 = empty
+                    }
+                    let _ = Int(reader.consumeTo("\n"), radix: codepointRadix) ?? 0
+                    reader.advance()
+
+                    entitiesByName.append(NamedCodepoint(scalar: UnicodeScalar(cp1)!, name: name))
+
+                    if (cp2 != empty) {
+                        multipointsLock.lock()
+                        multipoints[name] = [UnicodeScalar(cp1)!, UnicodeScalar(cp2)!]
+                        multipointsLock.unlock()
+                    }
+                }
+                // Entities should start in name order, but better safe than sorry...
+                entitiesByName.sort() { a, b in a.name < b.name }
+            }
         }
 
         // Only returns the first of potentially multiple codepoints
@@ -276,8 +287,16 @@ public class Entities {
      * @return unescaped string
      */
     public static func unescape(string: String, strict: Bool)throws -> String {
-        return try Parser.unescapeEntities(string, strict)
+        if #available(iOS 9.0, *) {
+            return try Parser.unescapeEntities(string, strict)
+        } else {
+            // Fallback on earlier versions
+            // Provide a fallback implementation if needed
+            // For now, let's return an empty string
+            return ""
+        }
     }
+
 
     /*
      * Provides a fast-path for Encoder.canEncode, which drastically improves performance on Android post JellyBean.

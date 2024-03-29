@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 protocol TokeniserStateProtocol {
     func read(_ t: Tokeniser, _ r: CharacterReader)throws
 }
@@ -26,6 +27,7 @@ public class TokeniserStateVars {
     static let eof: UnicodeScalar = CharacterReader.EOF
 }
 
+@available(iOS 9.0, *)
 enum TokeniserState: TokeniserStateProtocol {
     case Data
     case CharacterReferenceInData

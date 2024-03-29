@@ -71,7 +71,7 @@ class SignInVC: UIViewController{
         }
     }
     @IBAction func signUpBtn(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+        let vc = UIStoryboard.init(name: "OnboardingAccountMain", bundle: Bundle.main).instantiateViewController(withIdentifier: "GopaddiAccountsVC") as? GopaddiAccountsVC
         vc?.modalPresentationStyle = .fullScreen
         self.present(vc!, animated: true)
         

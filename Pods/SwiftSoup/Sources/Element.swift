@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 open class Element: Node {
 	var _tag: Tag
 
@@ -409,7 +410,12 @@ open class Element: Node {
      */
     @discardableResult
     public func append(_ html: String)throws->Element {
-        let nodes: Array<Node> = try Parser.parseFragment(html, self, getBaseUri())
+        var nodes: [Node] = [] // Declare nodes here
+        if #available(iOS 9.0, *) {
+            nodes = try Parser.parseFragment(html, self, getBaseUri())
+        } else {
+            // Fallback on earlier versions
+        }
         try addChildren(nodes)
         return self
     }
@@ -422,10 +428,16 @@ open class Element: Node {
      */
     @discardableResult
     public func prepend(_ html: String)throws->Element {
-        let nodes: Array<Node> = try Parser.parseFragment(html, self, getBaseUri())
+        var nodes: [Node] = [] // Declare nodes here
+        if #available(iOS 9.0, *) {
+            nodes = try Parser.parseFragment(html, self, getBaseUri())
+        } else {
+            // Fallback on earlier versions
+        }
         try addChildren(0, nodes)
         return self
     }
+
 
     /**
      * Insert the specified HTML into the DOM before this element (as a preceding sibling).

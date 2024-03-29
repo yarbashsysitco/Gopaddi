@@ -11,6 +11,7 @@ import Foundation
 /**
  A data node, for contents of style, script tags etc, where contents should not show in text().
  */
+@available(iOS 9.0, *)
 open class DataNode: Node {
     private static let DATA_KEY: String  = "data"
 

@@ -179,10 +179,15 @@ open class Attributes: NSCopying {
      */
     open func html()throws -> String {
         let accum = StringBuilder()
-        try html(accum: accum, out: Document("").outputSettings()) // output settings a bit funky, but this html() seldom used
+        if #available(iOS 9.0, *) {
+            try html(accum: accum, out: Document("").outputSettings())
+        } else {
+            // Fallback on earlier versions
+        } // output settings a bit funky, but this html() seldom used
         return accum.toString()
     }
 
+    @available(iOS 9.0, *)
     public func html(accum: StringBuilder, out: OutputSettings ) throws {
         for attr in attributes {
             accum.append(" ")

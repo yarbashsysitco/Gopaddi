@@ -11,6 +11,7 @@ import Foundation
 /**
  A text node.
  */
+@available(iOS 9.0, *)
 open class TextNode: Node {
     /*
      TextNode is a node, and so by default comes with attributes and children. The attributes are seldom used, but use

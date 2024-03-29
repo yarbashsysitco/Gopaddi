@@ -19,6 +19,8 @@ target 'Gopaddi' do
   pod 'JJFloatingActionButton'
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftSoup'
+  pod 'SkeletonView'
+
 
 
 end

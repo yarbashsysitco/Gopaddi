@@ -12,6 +12,7 @@ import Foundation
  * Collects a list of elements that match the supplied criteria.
  *
  */
+@available(iOS 9.0, *)
 open class Collector {
 
     private init() {
@@ -31,6 +32,7 @@ open class Collector {
 
 }
 
+@available(iOS 9.0, *)
 private final class Accumulator: NodeVisitor {
     private let root: Element
     private let elements: Elements

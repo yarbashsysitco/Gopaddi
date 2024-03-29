@@ -68,9 +68,9 @@ class CommentHeadTableViewCell: UITableViewCell {
         }
         
         if saveImg == "1"{
-            SaveImg.image = UIImage(named: "BookmarkSimple")
+            SaveImg.image = UIImage(named: "sv1")
         }else{
-            SaveImg.image = UIImage(named: "Vector 18")
+            SaveImg.image = UIImage(named: "sv0")
         }
     }
 }

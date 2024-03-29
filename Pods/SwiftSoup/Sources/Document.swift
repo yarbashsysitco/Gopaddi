@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 open class Document: Element {
     public enum QuirksMode {
         case noQuirks, quirks, limitedQuirks
@@ -402,6 +403,7 @@ open class Document: Element {
 
 }
 
+@available(iOS 9.0, *)
 public class OutputSettings: NSCopying {
     /**
      * The output serialization syntax.

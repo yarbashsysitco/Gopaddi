@@ -191,6 +191,30 @@ class ApiManager{
             }
         }
     }
+    func userEditProfile(fname: String,lname: String, email: String, phone: String, userId: String, completion: @escaping (Result<EditProfileModel, Error>) -> Void) {
+        let param = [ "fname": fname,
+                      "lname": lname,
+                      "email": email,
+                      "phone": phone,
+                      "userId": userId
+                    ]
+        AF.request(userEditProfile_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(EditProfileModel.self, from: data)
+                    completion(.success(response))
+                    print("success")
+
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
     
     
     

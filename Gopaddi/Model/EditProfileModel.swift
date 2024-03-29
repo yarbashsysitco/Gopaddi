@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct EditProfileModel : Codable {
+    let code: String
+    let message: String
+    let user: [users]?
+}
+struct users : Codable {
+    let fName: String
+    let lName: String
+    let email: String
+    let phone: String
+}

@@ -12,6 +12,7 @@ import Foundation
 * Parses HTML into a {@link Document}. Generally best to use one of the  more convenient parse methods
 * in {@link SwiftSoup}.
 */
+@available(iOS 9.0, *)
 public class Parser {
 	private static let DEFAULT_MAX_ERRORS: Int = 0 // by default, error tracking is disabled.
 
@@ -24,7 +25,8 @@ public class Parser {
 	* Create a new Parser, using the specified TreeBuilder
 	* @param treeBuilder TreeBuilder to use to parse input into Documents.
 	*/
-	init(_ treeBuilder: TreeBuilder) {
+    @available(iOS 9.0, *)
+    init(_ treeBuilder: TreeBuilder) {
 		self._treeBuilder = treeBuilder
 		_settings = treeBuilder.defaultSettings()
 	}
@@ -48,6 +50,7 @@ public class Parser {
 	* @param treeBuilder current TreeBuilder
 	* @return this, for chaining
 	*/
+    @available(iOS 9.0, *)
     @discardableResult
 	public func setTreeBuilder(_ treeBuilder: TreeBuilder) -> Parser {
 		self._treeBuilder = treeBuilder
@@ -163,10 +166,17 @@ public class Parser {
 	* @param inAttribute if the string is to be escaped in strict mode (as attributes are)
 	* @return an unescaped string
 	*/
-	public static func unescapeEntities(_ string: String, _ inAttribute: Bool)throws->String {
-		let tokeniser: Tokeniser = Tokeniser(CharacterReader(string), ParseErrorList.noTracking())
-		return try tokeniser.unescapeEntities(inAttribute)
-	}
+    public static func unescapeEntities(_ string: String, _ inAttribute: Bool)throws->String {
+        let tokeniser: Tokeniser
+        if #available(iOS 9.0, *) {
+            tokeniser = Tokeniser(CharacterReader(string), ParseErrorList.noTracking())
+        } else {
+            // Handle earlier versions here, if needed
+            // For simplicity, let's assume earlier versions don't need HTML unescaping
+            throw NSError(domain: "Unsupported iOS Version", code: 1, userInfo: nil)
+        }
+        return try tokeniser.unescapeEntities(inAttribute)
+    }
 
 	/**
 	* @param bodyHtml HTML to parse

@@ -49,6 +49,7 @@ class FeedImageTableViewCell: UITableViewCell {
     var comment : (() -> ())?
     var emojiss : (() -> ())?
     var seemores : (() -> ())?
+    var emojiCountbtn : (() -> ())?
     @IBOutlet weak var feedComments: UILabel!
     @IBOutlet weak var textViewHeightConstraints: NSLayoutConstraint!
     @IBOutlet weak var feedComents2: UILabel!
@@ -71,7 +72,7 @@ class FeedImageTableViewCell: UITableViewCell {
         print("hi")
         makeClickActive(value: false)
         addGesture()
-        viewdiaryBtn.layer.cornerRadius = 15
+//        viewdiaryBtn.layer.cornerRadius = 15
         us_picture.layer.masksToBounds = false
         us_picture.layer.borderWidth = 2
         us_picture.layer.borderColor = UIColor.systemGray5.cgColor
@@ -119,6 +120,9 @@ class FeedImageTableViewCell: UITableViewCell {
 
     }
     
+    @IBAction func emojicountBtn(_ sender: UIButton) {
+        emojiCountbtn?()
+    }
     
     @IBAction func likereactionshowbtn(_ sender: Any) {
         //likeAction?()

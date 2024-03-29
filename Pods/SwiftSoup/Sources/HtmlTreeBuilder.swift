@@ -11,6 +11,7 @@ import Foundation
 /**
  * HTML Tree Builder; creates a DOM from Tokens.
  */
+@available(iOS 9.0, *)
 class HtmlTreeBuilder: TreeBuilder {
     
     private enum TagSets {

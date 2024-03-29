@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 open class Node: Equatable, Hashable {
     private static let abs = "abs:"
     fileprivate static let empty = ""
@@ -338,10 +339,17 @@ open class Node: Equatable, Hashable {
         try Validate.notNull(obj: parentNode)
 
         let context: Element? = parent() as? Element
+        var nodes: [Node] = [] // Declare nodes here
 
-        let nodes: Array<Node> = try Parser.parseFragment(html, context, getBaseUri())
+        if #available(iOS 9.0, *) {
+            nodes = try Parser.parseFragment(html, context, getBaseUri())
+        } else {
+            // Fallback on earlier versions
+        }
+
         try parentNode?.addChildren(index, nodes)
     }
+
 
     /**
      * Insert the specified HTML into the DOM after this node (i.e. as a following sibling).
@@ -370,6 +378,7 @@ open class Node: Equatable, Hashable {
         return self
     }
 
+    @available(iOS 9.0, *)
     open func addSiblingHtml(index: Int, _ html: String)throws {
         try Validate.notNull(obj: html)
         try Validate.notNull(obj: parentNode)
@@ -388,8 +397,14 @@ open class Node: Equatable, Hashable {
     open func wrap(_ html: String)throws->Node? {
         try Validate.notEmpty(string: html)
 
+        var wrapChildren: Array<Node> = [] // Declare wrapChildren here
+
         let context: Element? = parent() as? Element
-        var wrapChildren: Array<Node> = try Parser.parseFragment(html, context, getBaseUri())
+        if #available(iOS 9.0, *) {
+            wrapChildren = try Parser.parseFragment(html, context, getBaseUri())
+        } else {
+            // Fallback on earlier versions
+        }
         let wrapNode: Node? = wrapChildren.count > 0 ? wrapChildren[0] : nil
         if (wrapNode == nil || !(((wrapNode as? Element) != nil))) { // nothing to wrap with; noop
             return nil
@@ -398,12 +413,12 @@ open class Node: Equatable, Hashable {
         let wrap: Element = wrapNode as! Element
         let deepest: Element = getDeepChild(el: wrap)
         try parentNode?.replaceChild(self, wrap)
-		wrapChildren = wrapChildren.filter { $0 != wrap}
+        wrapChildren = wrapChildren.filter { $0 != wrap }
         try deepest.addChildren(self)
 
         // remainder (unbalanced wrap, like <div></div><p></p> -- The <p> is remainder
         if (wrapChildren.count > 0) {
-            for i in  0..<wrapChildren.count {
+            for i in 0..<wrapChildren.count {
                 let remainder: Node = wrapChildren[i]
                 try remainder.parentNode?.removeChild(remainder)
                 try wrap.appendChild(remainder)
@@ -734,6 +749,7 @@ open class Node: Equatable, Hashable {
 		return clone
 	}
 
+    @available(iOS 9.0, *)
     private class OuterHtmlVisitor: NodeVisitor {
         private var accum: StringBuilder
         private var out: OutputSettings
@@ -784,6 +800,7 @@ open class Node: Equatable, Hashable {
     }
 }
 
+@available(iOS 9.0, *)
 extension Node: CustomStringConvertible {
 	public var description: String {
 		do {
@@ -795,6 +812,7 @@ extension Node: CustomStringConvertible {
 	}
 }
 
+@available(iOS 9.0, *)
 extension Node: CustomDebugStringConvertible {
     private static let space = " "
 	public var debugDescription: String {

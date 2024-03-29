@@ -181,7 +181,7 @@ class SetNewPassViewController: UIViewController {
                     if status == "200" {
                         self.subBtn.stopLoading()
 
-                        let alert = UIAlertController(title: "Message", message: model.alerts.debugDescription, preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Message", message:"You have successfully reset your password.", preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "DoneViewController") as! DoneViewController
                             vc.modalPresentationStyle = .fullScreen

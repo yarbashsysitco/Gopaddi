@@ -11,6 +11,7 @@ import Foundation
 /**
  * Base combining (and, or) evaluator.
  */
+@available(iOS 9.0, *)
 public class CombiningEvaluator: Evaluator {
 
     public private(set) var evaluators: Array<Evaluator>
@@ -46,6 +47,7 @@ public class CombiningEvaluator: Evaluator {
         num = evaluators.count
     }
 
+    @available(iOS 9.0, *)
     public final class And: CombiningEvaluator {
         public override init(_ evaluators: [Evaluator]) {
             super.init(evaluators)

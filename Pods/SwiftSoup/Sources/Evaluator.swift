@@ -11,6 +11,7 @@ import Foundation
 /**
  * Evaluates that an element matches the selector.
  */
+@available(iOS 9.0, *)
 open class Evaluator {
     public init () {}
 

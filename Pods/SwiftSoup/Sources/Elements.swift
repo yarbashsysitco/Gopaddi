@@ -16,6 +16,7 @@ import Foundation
 
 //open typealias Elements = Array<Element>
 //typealias E = Element
+@available(iOS 9.0, *)
 open class Elements: NSCopying {
 	fileprivate var this: Array<Element> = Array<Element>()
 
@@ -587,6 +588,7 @@ open class Elements: NSCopying {
 /**
 * Elements extension Equatable.
 */
+@available(iOS 9.0, *)
 extension Elements: Equatable {
 	/// Returns a Boolean value indicating whether two values are equal.
 	///
@@ -604,6 +606,7 @@ extension Elements: Equatable {
 /**
 * Elements RandomAccessCollection
 */
+@available(iOS 9.0, *)
 extension Elements: RandomAccessCollection {
 	public subscript(position: Int) -> Element {
 		return this[position]
@@ -627,6 +630,7 @@ extension Elements: RandomAccessCollection {
 /**
 * Elements IteratorProtocol.
 */
+@available(iOS 9.0, *)
 public struct ElementsIterator: IteratorProtocol {
     /// Elements reference
     let elements: Elements
@@ -649,6 +653,7 @@ public struct ElementsIterator: IteratorProtocol {
 /**
 * Elements Extension Sequence.
 */
+@available(iOS 9.0, *)
 extension Elements: Sequence {
     /// Returns an iterator over the elements of this sequence.
     public func makeIterator() -> ElementsIterator {

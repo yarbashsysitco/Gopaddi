@@ -181,8 +181,8 @@ class CommentReplyTableViewCell: UITableViewCell {
             createdAt.widthAnchor.constraint(equalToConstant: 150),
             createdAt.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
 
-            emojiCountlabel.leadingAnchor.constraint(equalTo: createdAt.trailingAnchor, constant: 2),
-            emojiCountlabel.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),
+            emojiCountlabel.trailingAnchor.constraint(equalTo: emojiButton.leadingAnchor, constant: -1),
+            emojiCountlabel.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -20),
 
 //            noOfLikes.leadingAnchor.constraint(equalTo: Likes.trailingAnchor, constant: 0),
 //            noOfLikes.bottomAnchor.constraint(equalTo: contView.bottomAnchor, constant: -15),

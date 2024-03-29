@@ -9,6 +9,7 @@
 import Foundation
 
 protocol HtmlTreeBuilderStateProtocol {
+    @available(iOS 9.0, *)
     func process(_ t: Token, _ tb: HtmlTreeBuilder)throws->Bool
 }
 
@@ -66,6 +67,7 @@ enum HtmlTreeBuilderState: String, HtmlTreeBuilderStateProtocol {
         return self.hashValue == s.hashValue
     }
 
+    @available(iOS 9.0, *)
     func process(_ t: Token, _ tb: HtmlTreeBuilder)throws->Bool {
         switch self {
         case .Initial:
@@ -1529,6 +1531,7 @@ enum HtmlTreeBuilderState: String, HtmlTreeBuilderStateProtocol {
         return true
     }
 
+    @available(iOS 9.0, *)
     private static func handleRcData(_ startTag: Token.StartTag, _ tb: HtmlTreeBuilder)throws {
         try tb.insert(startTag)
         tb.tokeniser.transition(TokeniserState.Rcdata)
@@ -1536,6 +1539,7 @@ enum HtmlTreeBuilderState: String, HtmlTreeBuilderStateProtocol {
         tb.transition(.Text)
     }
 
+    @available(iOS 9.0, *)
     private static func handleRawtext(_ startTag: Token.StartTag, _ tb: HtmlTreeBuilder)throws {
         try tb.insert(startTag)
         tb.tokeniser.transition(TokeniserState.Rawtext)

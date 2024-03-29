@@ -70,10 +70,15 @@ open class Attribute {
      */
     public func html() -> String {
         let accum =  StringBuilder()
-		html(accum: accum, out: (Document("")).outputSettings())
+        if #available(iOS 9.0, *) {
+            html(accum: accum, out: (Document("")).outputSettings())
+        } else {
+            // Fallback on earlier versions
+        }
         return accum.toString()
     }
 
+    @available(iOS 9.0, *)
     public func html(accum: StringBuilder, out: OutputSettings ) {
         accum.append(key)
         if (!shouldCollapseAttribute(out: out)) {
@@ -97,10 +102,20 @@ open class Attribute {
      * @param encodedValue HTML attribute encoded value
      * @return attribute
      */
-    public static func createFromEncoded(unencodedKey: String, encodedValue: String) throws ->Attribute {
-        let value = try Entities.unescape(string: encodedValue, strict: true)
+    public static func createFromEncoded(unencodedKey: String, encodedValue: String) throws -> Attribute {
+        let value: String // Define value here
+
+        if #available(iOS 9.0, *) {
+            value = try Entities.unescape(string: encodedValue, strict: true)
+        } else {
+            // Fallback on earlier versions
+            value = encodedValue // Use the encoded value directly
+        }
+
+        // Use value here
         return try Attribute(key: unencodedKey, value: value)
     }
+
 
     public func isDataAttribute() -> Bool {
         return key.startsWith(Attributes.dataPrefix) && key.count > Attributes.dataPrefix.count
@@ -112,6 +127,7 @@ open class Attribute {
      * @param out Outputsettings
      * @return  Returns whether collapsible or not
      */
+    @available(iOS 9.0, *)
     public final func shouldCollapseAttribute(out: OutputSettings) -> Bool {
         return ("" == value  || value.equalsIgnoreCase(string: key))
             && out.syntax() == OutputSettings.Syntax.html

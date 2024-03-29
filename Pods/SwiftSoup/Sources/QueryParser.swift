@@ -11,6 +11,7 @@ import Foundation
 /**
  * Parses a CSS selector into an Evaluator tree.
  */
+@available(iOS 9.0, *)
 public class QueryParser {
     private static let combinators: [String]  = [",", ">", "+", "~", " "]
     private static let AttributeEvals: [String]  = ["=", "!=", "^=", "$=", "*=", "~="]

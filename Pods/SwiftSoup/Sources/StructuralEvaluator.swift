@@ -11,6 +11,7 @@ import Foundation
 /**
  * Base structural evaluator.
  */
+@available(iOS 9.0, *)
 public class StructuralEvaluator: Evaluator {
     let evaluator: Evaluator
 
@@ -18,12 +19,14 @@ public class StructuralEvaluator: Evaluator {
         self.evaluator = evaluator
     }
 
+    @available(iOS 9.0, *)
     public class Root: Evaluator {
         public override func matches(_ root: Element, _ element: Element) -> Bool {
             return root === element
         }
     }
 
+    @available(iOS 9.0, *)
     public class Has: StructuralEvaluator {
         public override init(_ evaluator: Evaluator) {
             super.init(evaluator)
@@ -48,6 +51,7 @@ public class StructuralEvaluator: Evaluator {
         }
     }
 
+    @available(iOS 9.0, *)
     public class Not: StructuralEvaluator {
         public override init(_ evaluator: Evaluator) {
             super.init(evaluator)
@@ -65,6 +69,7 @@ public class StructuralEvaluator: Evaluator {
         }
     }
 
+    @available(iOS 9.0, *)
     public class Parent: StructuralEvaluator {
         public override init(_ evaluator: Evaluator) {
             super.init(evaluator)
@@ -96,6 +101,7 @@ public class StructuralEvaluator: Evaluator {
         }
     }
 
+    @available(iOS 9.0, *)
     public class ImmediateParent: StructuralEvaluator {
         public override init(_ evaluator: Evaluator) {
             super.init(evaluator)
@@ -120,6 +126,7 @@ public class StructuralEvaluator: Evaluator {
         }
     }
 
+    @available(iOS 9.0, *)
     public class PreviousSibling: StructuralEvaluator {
         public override init(_ evaluator: Evaluator) {
             super.init(evaluator)
@@ -149,6 +156,7 @@ public class StructuralEvaluator: Evaluator {
         }
     }
 
+    @available(iOS 9.0, *)
     class ImmediatePreviousSibling: StructuralEvaluator {
         public override init(_ evaluator: Evaluator) {
             super.init(evaluator)

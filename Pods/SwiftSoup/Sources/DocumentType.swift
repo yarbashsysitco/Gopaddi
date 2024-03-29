@@ -11,6 +11,7 @@ import Foundation
 /**
  * A {@code <!DOCTYPE>} node.
  */
+@available(iOS 9.0, *)
 public class DocumentType: Node {
     static let PUBLIC_KEY: String = "PUBLIC"
     static let SYSTEM_KEY: String = "SYSTEM"

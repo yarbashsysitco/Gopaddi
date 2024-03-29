@@ -9,9 +9,11 @@ import UIKit
 import SDWebImage
 import Kingfisher
 import JJFloatingActionButton
+import SkeletonView
 
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITabBarControllerDelegate{
+
+class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource ,UITabBarControllerDelegate{
     
     @IBOutlet weak var hambLeading: NSLayoutConstraint!
     @IBOutlet weak var hamburgersView: UIView!
@@ -95,7 +97,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         
         "okkkkk"
         userKey = UserDefaults.standard.string(forKey: "userid")
-        callFeeds()
         print(userKey)
        
         profilePicSetUp()
@@ -116,8 +117,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
         self.view.clipsToBounds = true
         hambTap()
         print("ts")
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.callFeeds()
+
+//        }
         
 
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tables.reloadData()
+       
     }
     
 
@@ -243,21 +253,33 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
     }
     
     func callFeeds(){
-        tables.showLoading()
-        apiManager.feedsDetails(userKey: userKey!) { result in
-            switch result  {
-            case.success(let model):
-                DispatchQueue.main.async {
-                    self.resultData = model
+        tables.isSkeletonable = true
+        let lightGrayColor  = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        tables.showAnimatedSkeleton(usingColor: lightGrayColor, transition: .crossDissolve(0.25))
+        
+//        tables.showLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.apiManager.feedsDetails(userKey: self.userKey!) { result in
+                switch result  {
+                case.success(let model):
+                    DispatchQueue.main.async {
+                        self.resultData = model
+                        self.tables.reloadData()
+                        self.tables.hideSkeleton()
+                        self.tables.stopLoading()
+                    }
+                case.failure(let error):
                     self.tables.stopLoading()
-                    self.tables.reloadData()
+                    print(error.localizedDescription)
                 }
-            case.failure(let error):
-                self.tables.stopLoading()
-                print(error.localizedDescription)
             }
+
         }
     }
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "FeedImageTableViewCell"
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -315,7 +337,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
 
             
             
+        cell.emojiCountbtn = { [weak self] in
+            guard let self = self else { return }
             
+            let vc = UIStoryboard(name: "ReactionMain", bundle: nil).instantiateViewController(withIdentifier: "ReactionMainViewController")as! ReactionMainViewController
+             vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+
+            self.setupLongPressGesture()
+        }
             cell.makeClickActive(value: true)
             promo = resultData?[indexPath.row].fe_promotion
             key = resultData?[indexPath.row].fe_id
@@ -326,13 +356,57 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UITab
             //            cell.postImage.kf.setImage(with: URL(string: "https://bird.decordtech.com/golive/../b2cdemo/uploads/feed/605461.jpg"))
             caption = resultData?[indexPath.row].fe_caption
             cell.userName.text = resultData?[indexPath.row].fe_creator[0].us_name
+        
+        
             cell.feedCaption.text = resultData?[indexPath.row].fe_caption
+        
+        
             cell.feedShare.text = resultData?[indexPath.row].fe_shares
             cell.feedLikes.text = resultData?[indexPath.row].fe_likes
             cell.feedSaves.text = resultData?[indexPath.row].fe_saves
             cell.feedViews.text = resultData?[indexPath.row].fe_views
             cell.feedComments.text = resultData?[indexPath.row].fe_comments
-            cell.feedComents2.text = resultData?[indexPath.row].fe_comments
+        
+        if let fe_comments = resultData?[indexPath.row].fe_comments {
+            print(fe_comments)
+            cell.feedComents2.text = fe_comments
+            if fe_comments == "0" {
+            cell.feedComents2.text = ""
+            }else if fe_comments == "1"{
+                cell.feedComents2.text = "View 1 comment"
+            }else{
+               cell.feedComents2.text = "View all \(fe_comments) comments"
+            }
+        }
+        
+//            cell.feedComents2.text = resultData?[indexPath.row].fe_comments
+//        
+//        if let counts = resultData?[indexPath.row].fe_comments {
+//            
+////            if counts.count == 0 {
+////                                cell.feedComents2.isHidden = true
+////
+////            } else  if counts.count == 1 {
+////                cell.feedComents2.text = "View all \(counts.count) comments "
+////            }
+//            
+//            cell.feedComents2.text = "View all \(counts.count) comments "
+//            
+//        }
+//        
+//    if let comments = resultData?[indexPath.row].fe_comments {
+//            if comments.count == 0 {
+//                cell.feedComents2.text = "View"
+//
+//                cell.feedComents2.isHidden = true
+//            } else if comments.count == 1 { 
+//                cell.feedComents2.text = "View 1 comment"
+//            }else{
+//                cell.feedComents2.text = "View all \(comments.count) comments"
+//            }
+//    
+//        }
+        
             
             if let createdAtString = resultData?[indexPath.row].fe_created_at {
                 let dateFormatter = DateFormatter()
