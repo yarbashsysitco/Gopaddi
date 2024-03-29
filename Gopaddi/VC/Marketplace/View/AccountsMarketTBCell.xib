@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountsMarketTBCell" id="KGk-i7-Jjw" customClass="AccountsMarketTBCell" customModule="Gopaddi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="118"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-Zz-fdV">
+                        <rect key="frame" x="0.0" y="0.0" width="397" height="118"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActivitiesMarket" translatesAutoresizingMaskIntoConstraints="NO" id="AdV-HF-mfJ">
+                                <rect key="frame" x="16" y="36" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="GqJ-13-wpA"/>
+                                    <constraint firstAttribute="width" constant="46" id="bsV-DA-L1J"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHF-f2-1r9">
+                                <rect key="frame" x="72" y="36" width="68.666666666666686" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="X43-uj-oOr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Amazing Things To Do. Anytime, Anywhere." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyO-OS-Ui1">
+                                <rect key="frame" x="72" y="62" width="273.33333333333331" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TRr-zS-pr3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.39215686274509803" green="0.47450980392156861" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Siy-Xh-hwO">
+                                <rect key="frame" x="361" y="49" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="MUo-1U-McG"/>
+                                    <constraint firstAttribute="height" constant="20" id="shY-2i-qgC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ArrowRightMarket"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IyO-OS-Ui1" firstAttribute="leading" secondItem="pHF-f2-1r9" secondAttribute="leading" id="6rW-cc-a4C"/>
+                            <constraint firstItem="AdV-HF-mfJ" firstAttribute="leading" secondItem="TYw-Zz-fdV" secondAttribute="leading" constant="16" id="94p-mO-ZeZ"/>
+                            <constraint firstItem="Siy-Xh-hwO" firstAttribute="centerY" secondItem="TYw-Zz-fdV" secondAttribute="centerY" id="BQO-u5-tqg"/>
+                            <constraint firstItem="AdV-HF-mfJ" firstAttribute="centerY" secondItem="TYw-Zz-fdV" secondAttribute="centerY" id="daS-yK-VPT"/>
+                            <constraint firstItem="pHF-f2-1r9" firstAttribute="top" secondItem="AdV-HF-mfJ" secondAttribute="top" id="dpG-oF-Bqo"/>
+                            <constraint firstItem="pHF-f2-1r9" firstAttribute="leading" secondItem="AdV-HF-mfJ" secondAttribute="trailing" constant="10" id="fcX-06-35l"/>
+                            <constraint firstAttribute="trailing" secondItem="Siy-Xh-hwO" secondAttribute="trailing" constant="16" id="uy0-X9-Haj"/>
+                            <constraint firstItem="IyO-OS-Ui1" firstAttribute="top" secondItem="pHF-f2-1r9" secondAttribute="bottom" constant="2" id="vcj-XB-VgD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="TYw-Zz-fdV" secondAttribute="trailing" id="0NY-Va-zKj"/>
+                    <constraint firstItem="TYw-Zz-fdV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5uh-G1-fPY"/>
+                    <constraint firstAttribute="bottom" secondItem="TYw-Zz-fdV" secondAttribute="bottom" id="I6z-OU-49c"/>
+                    <constraint firstItem="TYw-Zz-fdV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="U0Z-98-hV5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accountImgs" destination="AdV-HF-mfJ" id="sl2-zf-LmC"/>
+                <outlet property="accountName" destination="pHF-f2-1r9" id="Due-07-Ge3"/>
+            </connections>
+            <point key="canvasLocation" x="119.84732824427481" y="38.732394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ActivitiesMarket" width="44" height="46"/>
+        <image name="ArrowRightMarket" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
