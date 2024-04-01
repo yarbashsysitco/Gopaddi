@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -388,7 +388,7 @@
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="ChalkboardTeacher" title="Study" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="StudyBlack" title="Study" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -481,7 +481,7 @@
                                                                 <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="Article" title="Visa" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="VisaBlack" title="Visa" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -533,7 +533,7 @@
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="Warehouse" title="Hotel" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="Hotel 2" title="Hotel" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -570,7 +570,7 @@
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="ChalkboardSimple" title="Training" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="TrainingBlack" title="Training" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -605,7 +605,7 @@
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="Chair" title="Seminar" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="SeminarBlack" title="Seminar" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -622,7 +622,7 @@
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="Vector (1)" title="Event" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="EventBlack" title="Event" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -642,7 +642,7 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="Vector (2) 1" title="Conference" imagePadding="8">
+                                                                <buttonConfiguration key="configuration" style="plain" image="conferenceBlack" title="Conference" imagePadding="8">
                                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                                 </buttonConfiguration>
                                                                 <userDefinedRuntimeAttributes>
@@ -839,6 +839,7 @@
                         <outlet property="LocationView" destination="31e-7S-1al" id="TeK-Nl-4Eq"/>
                         <outlet property="NameView" destination="k8X-oi-Hrz" id="abP-xt-N6R"/>
                         <outlet property="bioTF" destination="1N5-j2-vhv" id="wti-Ps-YKw"/>
+                        <outlet property="dobLbl" destination="kkd-dE-rj4" id="IZR-Z4-0Px"/>
                         <outlet property="lNameTF" destination="hVn-bE-K49" id="l4M-yL-HlI"/>
                         <outlet property="lastNameView" destination="QYo-bk-XDY" id="Vxd-bI-d00"/>
                         <outlet property="locationTF" destination="39Q-YB-Vao" id="Yjy-pk-fJy"/>
@@ -1173,26 +1174,26 @@
         <image name="Activities" width="13" height="12"/>
         <image name="ArrowLeft" width="20" height="20"/>
         <image name="ArrowRight" width="20" height="20"/>
-        <image name="Article" width="16" height="16"/>
         <image name="Cake" width="20" height="20"/>
-        <image name="Chair" width="17" height="16"/>
-        <image name="ChalkboardSimple" width="17" height="16"/>
-        <image name="ChalkboardTeacher" width="16" height="16"/>
         <image name="Ellipse 757" width="100" height="100"/>
+        <image name="EventBlack" width="13" height="14"/>
         <image name="GlobeSimple" width="20" height="20"/>
         <image name="HandHeart" width="20" height="20"/>
+        <image name="Hotel 2" width="17" height="16"/>
         <image name="House" width="17" height="16"/>
+        <image name="SeminarBlack" width="17" height="16"/>
+        <image name="StudyBlack" width="16" height="16"/>
         <image name="Swap" width="20" height="20"/>
+        <image name="TrainingBlack" width="17" height="16"/>
         <image name="User (1)" width="20" height="20"/>
         <image name="UserCirclePlus" width="20" height="20"/>
-        <image name="Vector (1)" width="13" height="14"/>
-        <image name="Vector (2) 1" width="13" height="13"/>
-        <image name="Warehouse" width="17" height="16"/>
+        <image name="VisaBlack" width="16" height="16"/>
         <image name="Wine" width="16" height="16"/>
         <image name="buttons (2)" width="40" height="40"/>
         <image name="buttons (3)" width="40" height="40"/>
         <image name="buttosvg" width="30" height="30"/>
         <image name="calend" width="20" height="22"/>
+        <image name="conferenceBlack" width="13" height="13"/>
         <image name="flight 1" width="16" height="11"/>
         <image name="immigration" width="16" height="16"/>
         <image name="pill" width="14" height="14"/>

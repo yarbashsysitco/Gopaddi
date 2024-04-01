@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SkeletonView
 
-class FeedImageTableViewCell: UITableViewCell {
+class FeedImageTableViewCell: UITableViewCell{
+   
+    
 
    
     @IBOutlet weak var shareImgView: UIImageView!
@@ -53,9 +56,32 @@ class FeedImageTableViewCell: UITableViewCell {
     @IBOutlet weak var feedComments: UILabel!
     @IBOutlet weak var textViewHeightConstraints: NSLayoutConstraint!
     @IBOutlet weak var feedComents2: UILabel!
+    var postImageData: [PostFile]?
+    
+    @IBOutlet weak var FeedImageCollectionCell: UICollectionView!
+    
+    @IBOutlet weak var imageCelllSize: NSLayoutConstraint!
+    
+    var postFile: [PostFile]?
+    let apiManager = ApiManager()
+
     override func awakeFromNib() {
         super.awakeFromNib()
         print("hello")
+        
+        FeedImageCollectionCell.delegate = self
+        FeedImageCollectionCell.dataSource = self
+
+               // Register collection view cell
+        FeedImageCollectionCell.register(UINib(nibName: "FeedImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FeedImageCollectionViewCell")
+        
+        // Set custom layout
+          let layout = FirstItemVisibleLayout()
+          layout.scrollDirection = .horizontal
+          FeedImageCollectionCell.collectionViewLayout = layout
+        
+//        self.FeedImageCollectionCell.register(UINib.init(nibName: "FeedImageCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FeedImageCollectionViewCell")
+//        
         animastionHeart.isHidden = true
         if let customFont = UIFont(name: "Poppins-Regular.ttf", size: 25.0) {
             // Use customFont with your UI elements
@@ -66,7 +92,15 @@ class FeedImageTableViewCell: UITableViewCell {
 
         feedCaption.numberOfLines = 2
 
-        
+        if let flowLayout = FeedImageCollectionCell.collectionViewLayout as? UICollectionViewFlowLayout {
+                   flowLayout.scrollDirection = .horizontal
+                   flowLayout.minimumLineSpacing = 0
+                   flowLayout.minimumInteritemSpacing = 0
+                   flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+               }
+
+               // Enable paging
+        FeedImageCollectionCell.isPagingEnabled = true
         
         
         print("hi")
@@ -82,7 +116,39 @@ class FeedImageTableViewCell: UITableViewCell {
 //        testView.text = "Add Comments"
         print("testView ")
         print("test")
+        //callFeeds2()
+        self.FeedImageCollectionCell.reloadData()
+
     }
+    
+//    func callFeeds2() {
+//           self.apiManager.getPostBody { result in
+//               switch result {
+//               case .success(let model):
+//                   DispatchQueue.main.async {
+//                       
+////                       self.imageCelllSize.constant = 1
+//                       // Extract files from the first post
+//                       self.postImageData = model.data?.first?.posts.compactMap { $0.files }.flatMap { $0 }
+//                       // Reload collection view data after fetching postFiles
+//                       print("POOO:\(self.postFile)")
+//                       self.FeedImageCollectionCell.reloadData()
+//                   }
+//               case .failure(let error):
+//                   print(error.localizedDescription)
+//               }
+//           }
+//       }
+    
+//    if let posts = self.postFile {
+//        for post in posts {
+//            print("User files: \(post.files)")
+//        }
+//    }
+   
+
+    
+    
     func makeClickActive(value : Bool){
         saveImgView.isUserInteractionEnabled = value
         commentImgView.isUserInteractionEnabled = value
@@ -254,4 +320,33 @@ extension FeedImageTableViewCell : UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         testView.text = ""
     }
+}
+
+extension FeedImageTableViewCell : UICollectionViewDelegate,SkeletonCollectionViewDataSource {
+ 
+    
+       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+           return postImageData?.count ?? 0
+       }
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeedImageCollectionViewCell", for: indexPath) as! FeedImageCollectionViewCell
+           
+           
+           if let postFile = postImageData?[indexPath.row] {
+               let imageUrl = URL(string: postFile.url)
+               cell.imageViews.sd_setImage(with: imageUrl, placeholderImage: nil, options: [], completed: { (image, error, cacheType, imageUrl) in
+                   if let error = error {
+                       print("Error loading image: \(error.localizedDescription)")
+                       // Handle the error, e.g., show a placeholder image or a default image
+                   }
+               })
+           }
+
+           return cell
+       }
+    
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
+        return "FeedImageCollectionViewCell"
+    }
+    
 }

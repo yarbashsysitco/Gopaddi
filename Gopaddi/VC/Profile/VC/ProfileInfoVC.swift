@@ -7,13 +7,20 @@
 
 import UIKit
 
-class ProfileInfoVC: UIViewController ,SendingData{
+class ProfileInfoVC: UIViewController ,SendingData,date{
+    func dates(date: String) {
+            dobLbl.text = date
+            dobLbl.textColor = .black
+            reloadInputViews()
+        
+    }
+    
     func SaveData(Title: String, Image: UIImage?) {
         whouseBtn.setTitle(Title, for: .normal)
         whouseBtn.setImage(Image, for: .normal)
     }
     
-
+    @IBOutlet weak var dobLbl: UITextField!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var whouseBtn: UIButton!
     @IBOutlet weak var BirthView: UIView!
@@ -27,7 +34,8 @@ class ProfileInfoVC: UIViewController ,SendingData{
     @IBOutlet weak var bioTF: UITextView!
     @IBOutlet weak var locationTF: UITextField!
     var EditProfil : EditProfileModel?
-    
+    var WhiteImages = ["Study 1","Pill 1","Immigration 1","Wine 1","Visa","Flights","Hotel 1","Activities 1","Training","Seminar","Event","Conference","HouseWhite"]
+    var BlackImages = ["StudyBlack","pill","immigration","Wine","VisaBlack","flight 1","Hotel 2","Activities","TrainingBlack","SeminarBlack","EventBlack","conferenceBlack","House"]
     var Btntitles = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +79,7 @@ class ProfileInfoVC: UIViewController ,SendingData{
             Buttons.layer.backgroundColor  =    #colorLiteral(red: 0, green: 0.46, blue: 0.89, alpha: 1)
             Buttons.layer.cornerRadius = 25
             Buttons.tintColor = UIColor.white
-            
+            Buttons.setImage(UIImage(named: WhiteImages[sender.tag]), for: .normal)
             
         }else{
             Buttons.isSelected = false
@@ -79,14 +87,14 @@ class ProfileInfoVC: UIViewController ,SendingData{
             Buttons.titleLabel?.textColor
             Buttons.layer.cornerRadius = 25
             Buttons.tintColor = UIColor.black
+            Buttons.setImage(UIImage(named: BlackImages[sender.tag]), for: .normal)
         }
         
     }
     
     @IBAction func birthdayBtn(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SelectCalendarPopUp") as? SelectCalendarPopUp
-        //vc?.modalPresentationStyle = .fullScreen
-        print("hello")
+        vc?.dateDeligate = self
         self.present(vc!, animated: true)
     }
     

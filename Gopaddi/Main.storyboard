@@ -26045,7 +26045,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or continue with email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7s-nc-ZAP">
-                                                <rect key="frame" x="113.33333333333333" y="262.33333333333331" width="144.33333333333343" height="18.333333333333314"/>
+                                                <rect key="frame" x="113.33333333333333" y="262.33333333333331" width="144.33333333333337" height="18.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.51206850780000002" green="0.51571962579999997" blue="0.52667297980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>

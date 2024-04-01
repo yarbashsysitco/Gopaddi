@@ -58,169 +58,6 @@ class ApiManager{
             }.resume()
         }
     
-    func fetchCountryData(completion: @escaping (Result<[CountryResult], Error>) -> Void) {
-        guard let url = URL(string: country_url) else { return }
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        urlRequest.allHTTPHeaderFields = ["Token": headerSecond]
-        
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            if let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
-                print(response.statusCode)
-            }
-            if let error = error {
-                print(error.localizedDescription)
-                completion(.failure(error))
-                return
-            }
-            guard let data = data else {
-                let error = NSError(domain: "YourDomain", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])
-                completion(.failure(error))
-                return
-            }
-            do {
-                let result = try JSONDecoder().decode(Countries.self, from: data)
-                completion(.success(result.result))
-                print(result)
-            } catch {
-                print(error.localizedDescription)
-                completion(.failure(error))
-            }
-        }
-        task.resume()
-    }
-
-    func callOtpTest(otp: String,email: String,membership: String, completion: @escaping (Result<OtpModel, Error>) -> Void) {
-        let param = [
-            "otp": otp,
-            "email": email,
-            "membership": membership
-        ]
-        
-        AF.request(verifyOtp_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header: headerSecond]).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let postBody = try JSONDecoder().decode(OtpModel.self, from: data)
-                    completion(.success(postBody))
-                } catch {
-                    print(error)
-                    completion(.failure(error))
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(error))
-            }
-        }
-    }
-    func resendOTP(email: String, completion: @escaping (Result<OtpModel, Error>) -> Void) {
-        let param = [ "email": email]
-        AF.request(resendOtp_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let response = try JSONDecoder().decode(OtpModel.self, from: data)
-                    completion(.success(response))
-                } catch {
-                    print(error)
-                    completion(.failure(error))
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(error))
-            }
-        }
-    }
-
-    func forgotPassword(email: String, completion: @escaping (Result<ForgotPassword, Error>) -> Void) {
-        let param = [ "email": email]
-        AF.request(forgotPassword_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let response = try JSONDecoder().decode(ForgotPassword.self, from: data)
-                    completion(.success(response))
-                } catch {
-                    print(error)
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(error))
-            }
-        }
-    }
-    func userTokenforgot(userToken: String, completion: @escaping (Result<UserTokenModel, Error>) -> Void) {
-        let param = [ "userToken": userToken]
-        AF.request(userTokenvarif_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let response = try JSONDecoder().decode(UserTokenModel.self, from: data)
-                    completion(.success(response))
-                    print("success")
-
-                } catch {
-                    print(error)
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(error))
-            }
-        }
-    }
-    
-    func userResetPass(password: String,passconf: String, userId: String, completion: @escaping (Result<ResetPasswordModel, Error>) -> Void) {
-        let param = [ "password": password,
-                      "passconf": passconf,
-                      "userId": userId
-                    ]
-        AF.request(userResetPass_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let response = try JSONDecoder().decode(ResetPasswordModel.self, from: data)
-                    completion(.success(response))
-                    print("success")
-
-                } catch {
-                    print(error)
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(error))
-            }
-        }
-    }
-    func userEditProfile(fname: String,lname: String, email: String, phone: String, userId: String, completion: @escaping (Result<EditProfileModel, Error>) -> Void) {
-        let param = [ "fname": fname,
-                      "lname": lname,
-                      "email": email,
-                      "phone": phone,
-                      "userId": userId
-                    ]
-        AF.request(userEditProfile_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let response = try JSONDecoder().decode(EditProfileModel.self, from: data)
-                    completion(.success(response))
-                    print("success")
-
-                } catch {
-                    print(error)
-                }
-            case .failure(let error):
-                print(error)
-                completion(.failure(error))
-            }
-        }
-    }
-    
-    
-    
-    
-    
-    
     
     func signIn(useremail: String, password: String, token: String, completion: @escaping (Result<SignInModel, Error>) -> Void) {
         let parameters: [String: Any] = [
@@ -256,6 +93,354 @@ class ApiManager{
     }
 
     
+    func getAPIWithoutBody(url: String, completion: @escaping (Result<[EmployeeProfile], Error>) -> Void) {
+        let headers: HTTPHeaders = [
+            "Token": "gopaddi@v1",
+            "Userid": "10"
+        ]
+        AF.request(url, method: .get, headers: headers)
+            .validate()
+            .responseDecodable(of: [EmployeeProfile].self) { response in
+                 switch response.result {
+                case .success(let feedResults):
+                    completion(.success(feedResults))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+        }
+    }
+    
+    
+    func getPostBody(completion: @escaping (Result<PostResponseModel, Error>) -> Void) {
+        guard let url = URL(string: getApiFeedsShow_url) else { return }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = ["Token": headerSecond]
+        urlRequest.allHTTPHeaderFields = ["Userid": "10"]
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            if let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
+                print(response.statusCode)
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else {
+                let error = NSError(domain: "YourDomain", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])
+                completion(.failure(error))
+                return
+            }
+            do {
+                let result = try JSONDecoder().decode(PostResponseModel.self, from: data)
+                completion(.success(result))
+                print(result)
+            } catch {
+                print(error.localizedDescription)
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+    
+    
+    
+    func feedsDetails(userKey: String, completion: @escaping (Result<[FeedResult], Error>) -> Void){
+        guard let url = URL(string: feeds_url) else {
+            // Handle the URL error here (e.g., by calling completion with a failure result)
+            return
+        }
+        
+        let body: [String: Any] = ["user": userKey]
+        
+        let finalBody = try? JSONSerialization.data(withJSONObject: body)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        request.allHTTPHeaderFields = ["Token": headerSecond]
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(error)) // Pass the error object to the completion
+                return
+            }
+            
+            guard let data = data else {
+                print("No data")
+                // Handle the lack of data error here (e.g., by calling completion with a failure result)
+                return
+            }
+            
+            print(response)
+            
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                do {
+                    let postBody = try JSONDecoder().decode(FeedsModel.self, from: data)
+                    completion(.success(postBody.result))
+                } catch let error {
+                    print(error.localizedDescription)
+                    // Handle the JSON decoding error here (e.g., by calling completion with a failure result)
+                }
+                print(responseJSON)
+            }
+        }.resume()
+    }
+
+    
+    
+    
+    
+    func callOtpTest(otp: String,email: String,membership: String, completion: @escaping (Result<OtpModel, Error>) -> Void) {
+        let param = [
+            "otp": otp,
+            "email": email,
+            "membership": membership
+        ]
+        
+        AF.request(verifyOtp_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header: headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let postBody = try JSONDecoder().decode(OtpModel.self, from: data)
+                    completion(.success(postBody))
+                } catch {
+                    print(error)
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+    func resendOTP(email: String, completion: @escaping (Result<OtpModel, Error>) -> Void) {
+        let param = [ "email": email]
+        AF.request(resendOtp_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(OtpModel.self, from: data)
+                    completion(.success(response))
+                } catch {
+                    print(error)
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    func forgotPassword(email: String, completion: @escaping (Result<ForgotPassword, Error>) -> Void) {
+        let param = [ "email": email]
+        AF.request(forgotPassword_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(ForgotPassword.self, from: data)
+                    completion(.success(response))
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func userTokenforgot(userToken: String, completion: @escaping (Result<UserTokenModel, Error>) -> Void) {
+        let param = [ "userToken": userToken]
+        AF.request(userTokenvarif_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(UserTokenModel.self, from: data)
+                    completion(.success(response))
+                    print("success")
+
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func userResetPass(password: String,passconf: String, userId: String, completion: @escaping (Result<ResetPasswordModel, Error>) -> Void) {
+           let param = [ "password": password,
+                         "passconf": passconf,
+                         "userId": userId
+                       ]
+           AF.request(userResetPass_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+               switch response.result {
+               case .success(let data):
+                   do {
+                       let response = try JSONDecoder().decode(ResetPasswordModel.self, from: data)
+                       completion(.success(response))
+                       print("success")
+
+                   } catch {
+                       print(error)
+                   }
+               case .failure(let error):
+                   print(error)
+                   completion(.failure(error))
+               }
+           }
+       }
+    
+    func userEditProfile(fname: String,lname: String, email: String, phone: String, userId: String, completion: @escaping (Result<EditProfileModel, Error>) -> Void) {
+        let param = [ "fname": fname,
+                      "lname": lname,
+                      "email": email,
+                      "phone": phone,
+                      "userId": userId
+                    ]
+        AF.request(userEditProfile_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(EditProfileModel.self, from: data)
+                    completion(.success(response))
+                    print("success")
+
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+    
+//    func uniqueemailCheck(email: String,fname: String,lname: String,media: String,membership: String,browser: String,platform: String,device: String,ip_address: String,location: String,picture: String, completion: @escaping(Swift.Result<AppleSiningModel, Error>)-> ()) {
+//        guard let url =  URL(string: appleSining_url)
+//        else {
+//            return     }
+//        let body: [String: Any] =
+//        [
+//            "email" : email,
+//            "fname" : fname,
+//            "lname" : lname,
+//            "media" : media,
+//            "membership" : membership,
+//            "browser" : browser,
+//            "platform" : platform,
+//            "device" : device,
+//            "ip_address" : ip_address,
+//            "location" : location,
+//            "picture" : picture
+//            
+//        ]
+//        let finalBody = try? JSONSerialization.data(withJSONObject: body)
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.httpBody = finalBody
+//        request.allHTTPHeaderFields = ["Token":"gopaddi@v1"]
+//        URLSession.shared.dataTask(with: request){
+//            (data , response, error)  in            guard let data = data, error == nil else {
+//                print(error?.localizedDescription ?? "No data")
+//                completion(.failure(error?.localizedDescription as! Error))
+//                return
+//            }
+//            guard let response = response else {
+//                return
+//            }
+//            print(response)
+//            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+//            if let responseJSON = responseJSON as? [String: Any] {
+//                do {
+//                    let postBody = try JSONDecoder().decode(AppleSiningModel.self, from: data)
+//                    completion(.success(postBody))
+//                }catch let error{
+//                    print(error.localizedDescription)
+//                }
+//                print(responseJSON)
+//            }
+//        }.resume()
+//    }
+//    
+    func uniqueemailCheck(email: String,fname: String,lname: String,media: String,membership: String,browser: String,platform: String,device: String,ip_address: String,location: String,picture: String, completion: @escaping (Result<AppleSiningModel, Error>) -> Void) {
+        let param = [  "email" : email,
+                       "fname" : fname,
+                       "lname" : lname,
+                       "media" : media,
+                       "membership" : membership,
+                       "browser" : browser,
+                       "platform" : platform,
+                       "device" : device,
+                       "ip_address" : ip_address,
+                       "location" : location,
+                       "picture" : picture ]
+        AF.request(appleSining_url, method: .post, parameters: param, encoding: JSONEncoding.default, headers: [header:headerSecond]).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(AppleSiningModel.self, from: data)
+                    completion(.success(response))
+                    print("success")
+
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    func fetchCountryData(completion: @escaping (Result<[CountryResult], Error>) -> Void) {
+        guard let url = URL(string: country_url) else { return }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = ["Token": headerSecond]
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            if let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
+                print(response.statusCode)
+            }
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else {
+                let error = NSError(domain: "YourDomain", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])
+                completion(.failure(error))
+                return
+            }
+            do {
+                let result = try JSONDecoder().decode(Countries.self, from: data)
+                completion(.success(result.result))
+                print(result)
+            } catch {
+                print(error.localizedDescription)
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+
 //    
 //    func signIn(useremail: String, password: String, token: String,completion: @escaping(Result<SignInModel, Error>) -> Void){
 //        guard let url =  URL(string: signIn_url)
@@ -464,50 +649,7 @@ class ApiManager{
             }
         }.resume()
     }
-    func feedsDetails(userKey: String, completion: @escaping (Result<[FeedResult], Error>) -> Void){
-        guard let url = URL(string: feeds_url) else {
-            // Handle the URL error here (e.g., by calling completion with a failure result)
-            return
-        }
-        
-        let body: [String: Any] = ["user": userKey]
-        
-        let finalBody = try? JSONSerialization.data(withJSONObject: body)
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = finalBody
-        request.allHTTPHeaderFields = ["Token": headerSecond]
-        
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                completion(.failure(error)) // Pass the error object to the completion
-                return
-            }
-            
-            guard let data = data else {
-                print("No data")
-                // Handle the lack of data error here (e.g., by calling completion with a failure result)
-                return
-            }
-            
-            print(response)
-            
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any] {
-                do {
-                    let postBody = try JSONDecoder().decode(FeedsModel.self, from: data)
-                    completion(.success(postBody.result))
-                } catch let error {
-                    print(error.localizedDescription)
-                    // Handle the JSON decoding error here (e.g., by calling completion with a failure result)
-                }
-                print(responseJSON)
-            }
-        }.resume()
-    }
-
+    
     
     func feedsPosts(userKey : String , caption : String , file : String ,completion: @escaping(Result<FeedsCreateModel, Error>) -> Void){
         guard let url =  URL(string: feedsCreate_url)
@@ -2042,6 +2184,10 @@ class ApiManager{
             print("JSON Serialization Error: \(error.localizedDescription)")
         }
     }
+    
+
+
+    
 
  
 }

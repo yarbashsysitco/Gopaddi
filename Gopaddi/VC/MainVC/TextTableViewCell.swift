@@ -13,7 +13,6 @@ class TextTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        print("hello")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

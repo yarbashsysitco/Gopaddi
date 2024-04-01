@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+       <key>NSCameraUsageDescription</key>
+       <string>Your app needs access to the camera to take photos and videos.</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Your images are Saved!</string>
     <key>ITSAppUsesNonExemptEncryption</key>
@@ -41,7 +43,15 @@
         <key>New item - 2</key>
         <string></string>
     </dict>
-    <key></key>
-    <string></string>
+    <key>ASAuthorizationAppleIDProvider</key>
+    <dict>
+        <key>ASAuthorizationScope</key>
+        <array>
+            <string>email</string>
+            <string>fullName</string>
+        </array>
+        <key>ASAuthorizationScope</key>
+        <string>public_profile</string>
+    </dict>
 </dict>
 </plist>

@@ -7,6 +7,8 @@
 
 import UIKit
 import Alamofire
+import AuthenticationServices
+
 
 class SignInVC: UIViewController{
     
@@ -33,9 +35,15 @@ class SignInVC: UIViewController{
     let MainTabBarController = UserDefaults.standard.string(forKey: "MainTabBarController")
     var keyid = String()
     var isValid = true
-    
+    var uniqeFName = String()
+    var uniqeLName = String()
+    var uniqeEmail = String()
+    var EmailCheck : AppleSiningModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("helloo")
         setUpErrorF()
         signInBtn.isEnabled = false
         loginPassword.isSecureTextEntry = true
@@ -74,6 +82,9 @@ class SignInVC: UIViewController{
         let vc = UIStoryboard.init(name: "OnboardingAccountMain", bundle: Bundle.main).instantiateViewController(withIdentifier: "GopaddiAccountsVC") as? GopaddiAccountsVC
         vc?.modalPresentationStyle = .fullScreen
         self.present(vc!, animated: true)
+//        let vc = UIStoryboard(name: "OnboardingAccountMain", bundle: nil).instantiateViewController(withIdentifier: "ContainersGopaddiVC")as! ContainersGopaddiVC
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
         
     }
     @IBAction func signInBtn(_ sender: Any) {
@@ -191,7 +202,23 @@ class SignInVC: UIViewController{
         
     }
     @IBAction func googleSignBtnClicked(_ sender: Any) {
-        
+        // Create an instance of ASAuthorizationAppleIDProvider
+          let appleIDProvider = ASAuthorizationAppleIDProvider()
+
+          // Create a new Apple ID authorization request
+          let request = appleIDProvider.createRequest()
+
+          // Specify the requested scopes
+          request.requestedScopes = [.fullName, .email]
+
+          // Create an instance of ASAuthorizationController with the authorization request
+          let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+
+          // Set the delegate for the authorization controller
+          authorizationController.delegate = self
+
+          // Present the authorization controller to initiate the sign in process
+          authorizationController.performRequests()
         
     }
     
@@ -306,6 +333,8 @@ class SignInVC: UIViewController{
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
         
+    
+        
         
     }
     
@@ -405,6 +434,75 @@ class SignInVC: UIViewController{
         }
     }
     
+    func emailCheking(){
+        if !uniqeEmail.isEmpty {
+//        self.loadingIndicator.startAnimating()
+            var pic = "https://vgtechdemo.com/tokyodevbckend/assets/images/placeholder/avatar.png%22"
+            ApiManager.shared.uniqueemailCheck(email: uniqeEmail, fname: uniqeFName, lname: uniqeLName, media: "apple", membership: "gopal", browser: "safari", platform: "iOS", device: "iPhone", ip_address: "192.122.56.10", location: "Kochi", picture: pic) { result in
+                switch result {
+                case.success(let model):
+                    DispatchQueue.main.async { [weak self] in
+                        self?.EmailCheck = model
+                        if model.code == "200"{
+                            
+                           print("appple")
+                            
+                            if let vc = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
+                                vc.modalPresentationStyle = .fullScreen
+                                UserDefaults.standard.set(model.data[0].user[0].Userid, forKey: "userid")
+                                self?.present(vc, animated: true, completion: nil)
+                            }
+                            
+//                            print( model.data[0].user[0].Userid)
+                         
+//                            self?.dismiss(animated: true)
+//                            self?.loadingIndicator.stopAnimating()
+//                            let str = UIStoryboard(name: "Main", bundle: nil)
+//                            let vc = str.instantiateViewController(identifier: "PreselectionVC")as! PreselectionVC
+//                            UserDefaults.standard.set(self?.uniqeEmail, forKey: "uniqeEmail")
+//                            UserDefaults.standard.set(self?.uniqeName, forKey: "uniqeName")
+//                            UserDefaults.standard.set(self?.socialLogin, forKey: "loginCode")
+//
+//                            self?.present(vc, animated: true)
+    //                        let alert = UIAlertController(title: "Error!", message: model.message.debugDescription, preferredStyle: .alert)
+    //                        let action = UIAlertAction(title: "Ok", style: .cancel)
+    //                        alert.addAction(action)
+    //                        self?.present(alert, animated: false)
+                        }else{
+//                            self?.loadingIndicator.stopAnimating()
+                            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "myTabBar") as! UITabBarController
+                            self?.utilFunc.saveLogging(true)
+                            self!.present(nextViewController, animated: true)
+                            print("susses")
+                        }
+                    }
+                case.failure(_):
+                    DispatchQueue.main.async {
+                    }
+                }
+            }
+        } else {
+            // If email is empty, show the alert
+            OkActionConfirmationAlert()
+        }
+    }
+    func OkActionConfirmationAlert() {
+        let alert = UIAlertController(title: "alert", message: "You have already signed in with your apple ID. Please go to your phone settings, signout your apple ID in gopaddi and re-signin. ", preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let OkAction = UIAlertAction(title: "Ok", style: .destructive) { _ in
+//            GlobalvibratePhone.vibratePhone()
+
+//            self.deleteAccounts()
+        }
+
+        alert.addAction(OkAction)
+
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 extension SignInVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -417,8 +515,41 @@ extension SignInVC: UITextFieldDelegate {
     }
 }
 
-extension SignInVC {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+extension SignInVC: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
     }
+}
+extension SignInVC: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            let userIdentifier = appleIDCredential.user
+            UserDefaults.standard.set(userIdentifier, forKey: "appleUserID")
+
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            // Use this information as needed
+                        print("User Identifier: \(userIdentifier)")
+                        print("User Identifier: \(fullName)")
+                        print("User Identifier: \(email)")
+            if let name = fullName {
+                let Fname = name.givenName
+                let Lname = name.familyName
+                self.uniqeFName = Fname ?? ""
+                self.uniqeLName = Lname ?? ""
+             }
+             if let userEmail = email {
+                 print("Email: \(userEmail)")
+                 self.uniqeEmail = userEmail
+             }
+            self.emailCheking()
+        }
+    }
+
+
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        // Handle sign-in error
+    }
+    
+    
 }

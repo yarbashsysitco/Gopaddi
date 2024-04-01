@@ -79,6 +79,51 @@
                   endingLineNumber = "309"
                   offsetFromSymbolStart = "376">
                </Location>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 76453f5823783f0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.SignUpViewController.CpasswDidChanged(__C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "471"
+                  endingLineNumber = "471"
+                  offsetFromSymbolStart = "2740">
+               </Location>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 3b08343289ecf6f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.SignUpViewController.CpasswDidChanged(__C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "471"
+                  endingLineNumber = "471"
+                  offsetFromSymbolStart = "2740">
+               </Location>
+               <Location
+                  uuid = "CC1087A1-FE19-4859-9918-72AA2EA7A729 - 30aa5272bb8a6607"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.SignUpViewController.CpasswDidChanged(__C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignUp/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "471"
+                  endingLineNumber = "471"
+                  offsetFromSymbolStart = "2740">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -92,8 +137,8 @@
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "445"
+            endingLineNumber = "445"
             landmarkName = "ApiManager"
             landmarkType = "3">
          </BreakpointContent>
@@ -108,8 +153,8 @@
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "456"
+            endingLineNumber = "456"
             landmarkName = "ApiManager"
             landmarkType = "3">
          </BreakpointContent>
@@ -124,42 +169,10 @@
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
+            startingLineNumber = "477"
+            endingLineNumber = "477"
             landmarkName = "ApiManager"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "5420556F-7D3E-4FB0-B487-B5FAE2436073 - 9c74627d9a4a2f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.memebership(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.ResultData&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "268"
-                  endingLineNumber = "268"
-                  offsetFromSymbolStart = "736">
-               </Location>
-               <Location
-                  uuid = "5420556F-7D3E-4FB0-B487-B5FAE2436073 - 9c74627d9a4a2f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.memebership(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.ResultData&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "268"
-                  endingLineNumber = "268"
-                  offsetFromSymbolStart = "760">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -172,217 +185,10 @@
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "ApiManager"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "E722FEB0-B546-472F-9D30-6BF08EE38835 - 9c74627d9a4a216"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.memebership(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.ResultData&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "271"
-                  endingLineNumber = "271"
-                  offsetFromSymbolStart = "1044">
-               </Location>
-               <Location
-                  uuid = "E722FEB0-B546-472F-9D30-6BF08EE38835 - 9c74627d9a4a216"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.memebership(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.ResultData&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "271"
-                  endingLineNumber = "271"
-                  offsetFromSymbolStart = "1088">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF2C8A42-4DE3-4013-88AF-D4472A0852A7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "signIn(useremail:password:token:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EF2C8A42-4DE3-4013-88AF-D4472A0852A7 - 9ecc8e28859c6dcb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.signIn(useremail: Swift.String, password: Swift.String, token: Swift.String, completion: (Swift.Result&lt;Gopaddi.SignInModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "201"
-                  endingLineNumber = "201"
-                  offsetFromSymbolStart = "332">
-               </Location>
-               <Location
-                  uuid = "EF2C8A42-4DE3-4013-88AF-D4472A0852A7 - 9ecc8e28859c6dcb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.signIn(useremail: Swift.String, password: Swift.String, token: Swift.String, completion: (Swift.Result&lt;Gopaddi.SignInModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "201"
-                  endingLineNumber = "201"
-                  offsetFromSymbolStart = "352">
-               </Location>
-               <Location
-                  uuid = "EF2C8A42-4DE3-4013-88AF-D4472A0852A7 - 29352fd1b614ade1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Gopaddi.ApiManager.signIn(useremail: Swift.String, password: Swift.String, token: Swift.String, completion: (Swift.Result&lt;Gopaddi.SignInModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "144">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C0CED69A-BFC0-4F56-966E-676C41A39964"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "resendOTP(email:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5CE9DA33-2E6E-4E47-A0AD-B27A7AB47A6C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "resendOTP(email:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5CE9DA33-2E6E-4E47-A0AD-B27A7AB47A6C - abb1dc380de44917"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.resendOTP(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.OtpModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "512">
-               </Location>
-               <Location
-                  uuid = "5CE9DA33-2E6E-4E47-A0AD-B27A7AB47A6C - abb1dc380de44917"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.resendOTP(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.OtpModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "123"
-                  endingLineNumber = "123"
-                  offsetFromSymbolStart = "472">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0483C94C-D02A-4BFA-AB27-DFB07D26DE48"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "resendOTP(email:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0483C94C-D02A-4BFA-AB27-DFB07D26DE48 - abb1dc380de456fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.resendOTP(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.OtpModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "684">
-               </Location>
-               <Location
-                  uuid = "0483C94C-D02A-4BFA-AB27-DFB07D26DE48 - abb1dc380de456fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.resendOTP(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.OtpModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "644">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -430,6 +236,51 @@
                   endingLineNumber = "136"
                   offsetFromSymbolStart = "84">
                </Location>
+               <Location
+                  uuid = "57B8D416-1800-4B06-A788-11E6D920C9F9 - fe69631d0ce6a63c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.OtpViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/VC/SignUp/OtpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "2492">
+               </Location>
+               <Location
+                  uuid = "57B8D416-1800-4B06-A788-11E6D920C9F9 - 3882d501da272ca3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.OtpViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/VC/SignUp/OtpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "2492">
+               </Location>
+               <Location
+                  uuid = "57B8D416-1800-4B06-A788-11E6D920C9F9 - 264eec50fec08c2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.OtpViewController.textFieldDidChange(textField: __C.UITextField) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignUp/OtpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "2492">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -468,76 +319,701 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4A6D6D72-A133-43F1-8E26-07CF0977D60B"
+            uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "userTokenforgot(userToken:completion:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getAPIWithoutBody(url:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4A6D6D72-A133-43F1-8E26-07CF0977D60B - e05d67d4bff6cff8"
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - 220e75d34ca2d9ca"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "154"
-                  endingLineNumber = "154"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "608">
+               </Location>
+               <Location
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - d9befddb8a038fca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - d9befddb8a038feb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - d1257726c1861986"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - d1257726c1861986"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - 27345137815a9afd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "D8A9E4EC-689D-47F8-9C9C-352DA01903B4 - 27345137815a9afd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E62AF879-F1D0-4285-A06A-E8BFB24B4325"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getAPIWithoutBody(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E62AF879-F1D0-4285-A06A-E8BFB24B4325 - 8c122ecad8a9e7ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.Post&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "E62AF879-F1D0-4285-A06A-E8BFB24B4325 - ef4b8e0949cc5bb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.PostData&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "E62AF879-F1D0-4285-A06A-E8BFB24B4325 - 220e75d34ca2d8f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Downloads/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "E62AF879-F1D0-4285-A06A-E8BFB24B4325 - 2a95ff2e07274e4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "E62AF879-F1D0-4285-A06A-E8BFB24B4325 - dc84d93f47fbcfc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.getAPIWithoutBody(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.EmployeeProfile&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27F01727-1638-4477-B809-EB3F7744216D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/SignIn/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
+            landmarkName = "emailCheking()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "228CE3D6-A728-4A3B-987A-F4752AE4385F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/SignIn/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "444"
+            endingLineNumber = "444"
+            landmarkName = "emailCheking()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "228CE3D6-A728-4A3B-987A-F4752AE4385F - 6c5ce21801644da3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; () in Gopaddi.SignInVC.emailCheking() -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignIn/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "228CE3D6-A728-4A3B-987A-F4752AE4385F - 80c535e1e9cf3b76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; () in Gopaddi.SignInVC.emailCheking() -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignIn/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "228CE3D6-A728-4A3B-987A-F4752AE4385F - 6c5ce21801644da3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; () in Gopaddi.SignInVC.emailCheking() -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignIn/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "228CE3D6-A728-4A3B-987A-F4752AE4385F - 6c5ce21801644c0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; () in Gopaddi.SignInVC.emailCheking() -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignIn/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "442"
+                  endingLineNumber = "442"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "228CE3D6-A728-4A3B-987A-F4752AE4385F - 80c535e1e9cf3adb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; () in Gopaddi.SignInVC.emailCheking() -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/SignIn/SignInVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "442"
+                  endingLineNumber = "442"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0558E6F-0E15-4347-BF75-B4FFF1D52401"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/SignIn/SignInVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "471"
+            endingLineNumber = "471"
+            landmarkName = "emailCheking()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F151A857-982B-4B2A-AD6B-3E51594EF35D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
+            landmarkName = "ApiManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "F151A857-982B-4B2A-AD6B-3E51594EF35D - 32a9a423a353e996"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "329"
+                  endingLineNumber = "329"
+                  offsetFromSymbolStart = "900">
+               </Location>
+               <Location
+                  uuid = "F151A857-982B-4B2A-AD6B-3E51594EF35D - 32a9a423a353e996"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "329"
+                  endingLineNumber = "329"
+                  offsetFromSymbolStart = "796">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9CACD99-CA69-455E-AB46-091765EC49DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "ApiManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B9CACD99-CA69-455E-AB46-091765EC49DF - 98637170c4ddd46b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.fetchCountryData(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.CountryResult&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "1332">
+               </Location>
+               <Location
+                  uuid = "B9CACD99-CA69-455E-AB46-091765EC49DF - 32a9a423a353ef38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  uuid = "B9CACD99-CA69-455E-AB46-091765EC49DF - 32a9a423a353ef38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "1868">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5794DE34-DAB6-45E5-A747-4EA4C6CBB2E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
+            landmarkName = "ApiManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5794DE34-DAB6-45E5-A747-4EA4C6CBB2E8 - 98637170c4ddd604"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.fetchCountryData(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.CountryResult&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "362"
+                  endingLineNumber = "362"
+                  offsetFromSymbolStart = "2108">
+               </Location>
+               <Location
+                  uuid = "5794DE34-DAB6-45E5-A747-4EA4C6CBB2E8 - 11e9a8f2f0bbd28a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "361"
+                  endingLineNumber = "361"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F668A79D-F511-4A6B-85D2-1F2E62A3ADD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
+            landmarkName = "ApiManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "F668A79D-F511-4A6B-85D2-1F2E62A3ADD3 - 98637170c4ddd5ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.fetchCountryData(completion: (Swift.Result&lt;Swift.Array&lt;Gopaddi.CountryResult&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "352"
+                  endingLineNumber = "352"
+                  offsetFromSymbolStart = "1676">
+               </Location>
+               <Location
+                  uuid = "F668A79D-F511-4A6B-85D2-1F2E62A3ADD3 - 32a9a423a353ee9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "352"
+                  endingLineNumber = "352"
+                  offsetFromSymbolStart = "2472">
+               </Location>
+               <Location
+                  uuid = "F668A79D-F511-4A6B-85D2-1F2E62A3ADD3 - 11e9a8f2f0bbd182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "353"
+                  endingLineNumber = "353"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "F668A79D-F511-4A6B-85D2-1F2E62A3ADD3 - 32a9a423a353ee9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "352"
+                  endingLineNumber = "352"
+                  offsetFromSymbolStart = "2576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC209637-3732-489B-A895-F83BEB791137"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "ApiManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "377964D2-0903-4672-A19B-3DEC7C2FC6C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
+            landmarkName = "ApiManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "174EE3C8-E696-44D2-9732-7361D659A414"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/Manager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
+            landmarkName = "uniqueemailCheck(email:fname:lname:media:membership:browser:platform:device:ip_address:location:picture:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "174EE3C8-E696-44D2-9732-7361D659A414 - 32a9a423a3541210"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "387"
+                  endingLineNumber = "387"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "174EE3C8-E696-44D2-9732-7361D659A414 - 2e4ffdd7009e52a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "174EE3C8-E696-44D2-9732-7361D659A414 - c4b88232e38f9169"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "387"
+                  endingLineNumber = "387"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "174EE3C8-E696-44D2-9732-7361D659A414 - d85edbc64045d21c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
                   offsetFromSymbolStart = "252">
                </Location>
                <Location
-                  uuid = "4A6D6D72-A133-43F1-8E26-07CF0977D60B - 2d47a2d66e392d4a"
+                  uuid = "174EE3C8-E696-44D2-9732-7361D659A414 - d85edbc64045d21c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "252">
-               </Location>
-               <Location
-                  uuid = "4A6D6D72-A133-43F1-8E26-07CF0977D60B - 2d47a2d66e392d4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "264">
-               </Location>
-               <Location
-                  uuid = "4A6D6D72-A133-43F1-8E26-07CF0977D60B - 2d47a2d66e392d4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
+                  startingLineNumber = "388"
+                  endingLineNumber = "388"
                   offsetFromSymbolStart = "292">
                </Location>
             </Locations>
@@ -546,249 +1022,46 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3E83A4F7-AFB4-4EE8-8069-7957E7D4FBB3"
+            uuid = "117E769F-C6E1-4BAE-8502-5E998DE25660"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "forgotPassword(email:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9A1DD26-1A5E-45D8-89E9-4EDD4113F800"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "userTokenforgot(userToken:completion:)"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
+            landmarkName = "uniqueemailCheck(email:fname:lname:media:membership:browser:platform:device:ip_address:location:picture:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E9A1DD26-1A5E-45D8-89E9-4EDD4113F800 - 2d47a2d66e392d4a"
+                  uuid = "117E769F-C6E1-4BAE-8502-5E998DE25660 - d85edbc64045d3bb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "252">
-               </Location>
-               <Location
-                  uuid = "E9A1DD26-1A5E-45D8-89E9-4EDD4113F800 - 2d47a2d66e392d4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "264">
-               </Location>
-               <Location
-                  uuid = "E9A1DD26-1A5E-45D8-89E9-4EDD4113F800 - 2d47a2d66e392d4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "292">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "userTokenforgot(userToken:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9 - 2d47a2d66e392b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "944">
-               </Location>
-               <Location
-                  uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9 - 2d47a2d66e392b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "1088">
-               </Location>
-               <Location
-                  uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9 - 2d47a2d66e392b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "996">
-               </Location>
-               <Location
-                  uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9 - 2d47a2d66e392b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "1028">
-               </Location>
-               <Location
-                  uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9 - 2d47a2d66e392b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "904">
-               </Location>
-               <Location
-                  uuid = "E3E25C67-4F9E-44BF-B885-ED697F4D4CC9 - 2d47a2d66e392b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
-                  offsetFromSymbolStart = "984">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FFE1F1E5-A981-4B55-9460-BE70748CC41B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "userTokenforgot(userToken:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "081DF2B8-AC9A-472B-9546-FB9B52FEFC08"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "userTokenforgot(userToken:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "081DF2B8-AC9A-472B-9546-FB9B52FEFC08 - 2d47a2d66e392aa7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
+                  startingLineNumber = "391"
+                  endingLineNumber = "391"
                   offsetFromSymbolStart = "384">
                </Location>
                <Location
-                  uuid = "081DF2B8-AC9A-472B-9546-FB9B52FEFC08 - 2d47a2d66e392aa7"
+                  uuid = "117E769F-C6E1-4BAE-8502-5E998DE25660 - d85edbc64045d3bb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.userTokenforgot(userToken: Swift.String, completion: (Swift.Result&lt;Gopaddi.UserTokenModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
+                  startingLineNumber = "391"
+                  endingLineNumber = "391"
                   offsetFromSymbolStart = "344">
                </Location>
             </Locations>
@@ -797,93 +1070,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6B85DB06-7E10-4FAD-917F-C3FA2A2BA0AC"
+            uuid = "5FCB8D3D-3665-4D48-A87F-0A1279971619"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gopaddi/Manager/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "forgotPassword(email:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "67C59349-219D-4A91-BB04-B15E1D12173C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "forgotPassword(email:completion:)"
+            startingLineNumber = "395"
+            endingLineNumber = "395"
+            landmarkName = "uniqueemailCheck(email:fname:lname:media:membership:browser:platform:device:ip_address:location:picture:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "67C59349-219D-4A91-BB04-B15E1D12173C - 6a595eb0f83b33c9"
+                  uuid = "5FCB8D3D-3665-4D48-A87F-0A1279971619 - d85edbc64045d337"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "344">
+                  startingLineNumber = "395"
+                  endingLineNumber = "395"
+                  offsetFromSymbolStart = "908">
                </Location>
                <Location
-                  uuid = "67C59349-219D-4A91-BB04-B15E1D12173C - 6a595eb0f83b33c9"
+                  uuid = "5FCB8D3D-3665-4D48-A87F-0A1279971619 - d85edbc64045d337"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.uniqueemailCheck(email: Swift.String, fname: Swift.String, lname: Swift.String, media: Swift.String, membership: Swift.String, browser: Swift.String, platform: Swift.String, device: Swift.String, ip_address: Swift.String, location: Swift.String, picture: Swift.String, completion: (Swift.Result&lt;Gopaddi.AppleSiningModel, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/Manager/ApiManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "380">
-               </Location>
-               <Location
-                  uuid = "67C59349-219D-4A91-BB04-B15E1D12173C - 6a595eb0f83b33c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "400">
-               </Location>
-               <Location
-                  uuid = "67C59349-219D-4A91-BB04-B15E1D12173C - 6a595eb0f83b33c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Gopaddi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "436">
+                  startingLineNumber = "395"
+                  endingLineNumber = "395"
+                  offsetFromSymbolStart = "868">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -891,47 +1118,77 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F1C2FD1-C9F2-47C7-94A1-C817EB60B230"
+            uuid = "0A3110EF-0F97-489E-B3B3-C334B36C079C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
+            filePath = "Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "forgotPassword(email:completion:)"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3F1C2FD1-C9F2-47C7-94A1-C817EB60B230 - 6a595eb0f83b30c1"
+                  uuid = "0A3110EF-0F97-489E-B3B3-C334B36C079C - a418ed3dbc9a286e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "912">
+                  startingLineNumber = "334"
+                  endingLineNumber = "334"
+                  offsetFromSymbolStart = "1100">
                </Location>
                <Location
-                  uuid = "3F1C2FD1-C9F2-47C7-94A1-C817EB60B230 - 6a595eb0f83b30c1"
+                  uuid = "0A3110EF-0F97-489E-B3B3-C334B36C079C - 3d5cbb273f1be742"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "968">
+                  startingLineNumber = "335"
+                  endingLineNumber = "335"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "0A3110EF-0F97-489E-B3B3-C334B36C079C - a418ed3dbc9a286e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "334"
+                  endingLineNumber = "334"
+                  offsetFromSymbolStart = "544">
+               </Location>
+               <Location
+                  uuid = "0A3110EF-0F97-489E-B3B3-C334B36C079C - a418ed3dbc9a2801"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "335"
+                  endingLineNumber = "335"
+                  offsetFromSymbolStart = "628">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -939,49 +1196,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "92763ADD-F016-4C4C-8DC1-57D06A82D58C"
+            uuid = "CC7B8FE7-4531-4430-AB60-A80A72DA29A7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gopaddi/Manager/ApiManager.swift"
+            filePath = "Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "forgotPassword(email:completion:)"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "92763ADD-F016-4C4C-8DC1-57D06A82D58C - 6a595eb0f83b3387"
+                  uuid = "CC7B8FE7-4531-4430-AB60-A80A72DA29A7 - a418ed3dbc9a29a4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "472">
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "1712">
                </Location>
                <Location
-                  uuid = "92763ADD-F016-4C4C-8DC1-57D06A82D58C - 6a595eb0f83b3387"
+                  uuid = "CC7B8FE7-4531-4430-AB60-A80A72DA29A7 - 3d5cbb273f1be6e7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Gopaddi.ApiManager.forgotPassword(email: Swift.String, completion: (Swift.Result&lt;Gopaddi.ForgotPassword, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
                   moduleName = "Gopaddi"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/Gopaddi%20New/Gopaddi/Manager/ApiManager.swift"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141"
-                  offsetFromSymbolStart = "416">
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  uuid = "CC7B8FE7-4531-4430-AB60-A80A72DA29A7 - 3d5cbb273f1be604"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Gopaddi.FeedImageTableViewCell.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "Gopaddi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/GP%2029%20copy/Gopaddi/Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "341"
+                  endingLineNumber = "341"
+                  offsetFromSymbolStart = "756">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECC222B7-FE4F-460B-83BA-D23DCC67ECFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBA56F7F-1EA5-4F0C-86F5-A6ABE4667C5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/MainVC/FeedImageTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00F3BA53-9EBC-4854-93EB-5592EFE51136"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gopaddi/VC/Onboarding/AccountSelection/Containers/CameraAccessVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

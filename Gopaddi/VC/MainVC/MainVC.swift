@@ -32,6 +32,7 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
     let apiManager = ApiManager()
     var response : CommonResponse?
     var resultData : [FeedResult]?
+    var postDatas : [Post]?
     var saveModel : FeedLSModel?
     var likeModel : FeedLSModel?
     var signedIn : Bool = false
@@ -39,7 +40,7 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
     var key : String?
     var caption : String?
     var parents : String?
-    var promo : String?
+    var promo : Bool?
     var picture : String?
     var LoginTrue:Bool = true
     let TrueLogin = UserDefaults.standard.set("true", forKey: "LoginTrue")
@@ -47,7 +48,9 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
     @IBOutlet weak var tables: UITableView!
     var poste = [String]()
     var task : URLSessionDataTask!
-    
+    let refreshControl = UIRefreshControl()
+   let  VCaption = ["Absolutely! Gratitude is indeed a transformative practice that goes beyond mere politeness. It's a mindset that can profoundly impact our well-being and outlook on life. When we consciously cultivate gratitude, we shift our focus from what we lack to what we have, fostering a sense of abundance and contentment. This shift in perspective not only enhances our mental and emotional health but also improves our relationships and overall quality of life. Practicing gratitude regularly reminds us to appreciate the small joys and blessings in our lives, leading to greater resilience and happiness.","It's beautiful to hear about your journey toward happiness and freedom, especially through self-reflection and guidance from a spiritual teacher. The path of inner growth often requires courage and perseverance, but the rewards are immeasurable. Gratitude, as you've discovered, is a powerful tool for unlocking inner peace and fulfillment. It reminds us to appreciate the present moment and the blessings that surround us, even amidst challenges.","Absolutely! Gratitude is indeed a transformative practice that goes beyond mere politeness. It's a mindset that can profoundly impact our well-being and outlook on life. When we consciously cultivate gratitude, we shift our focus from what we lack to what we have, fostering a sense of abundance and contentment. This shift in perspective not only enhances our mental and emotional health but also improves our relationships and overall quality of life. Practicing gratitude regularly reminds us to appreciate the small joys and blessings in our lives, leading to greater resilience and happiness.","It's beautiful to hear about your journey toward happiness and freedom, especially through self-reflection and guidance from a spiritual teacher. The path of inner growth often requires courage and perseverance, but the rewards are immeasurable. Gratitude, as you've discovered, is a powerful tool for unlocking inner peace and fulfillment. It reminds us to appreciate the present moment and the blessings that surround us, even amidst challenges.","Absolutely! Gratitude is indeed a transformative practice that goes beyond mere politeness. It's a mindset that can profoundly impact our well-being and outlook on life. When we consciously cultivate gratitude, we shift our focus from what we lack to what we have, fostering a sense of abundance and contentment. This shift in perspective not only enhances our mental and emotional health but also improves our relationships and overall quality of life. Practicing gratitude regularly reminds us to appreciate the small joys and blessings in our lives, leading to greater resilience and happiness.","It's beautiful to hear about your journey toward happiness and freedom, especially through self-reflection and guidance from a spiritual teacher. The path of inner growth often requires courage and perseverance, but the rewards are immeasurable. Gratitude, as you've discovered, is a powerful tool for unlocking inner peace and fulfillment. It reminds us to appreciate the present moment and the blessings that surround us, even amidst challenges.","Absolutely! Gratitude is indeed a transformative practice that goes beyond mere politeness. It's a mindset that can profoundly impact our well-being and outlook on life. When we consciously cultivate gratitude, we shift our focus from what we lack to what we have, fostering a sense of abundance and contentment. This shift in perspective not only enhances our mental and emotional health but also improves our relationships and overall quality of life. Practicing gratitude regularly reminds us to appreciate the small joys and blessings in our lives, leading to greater resilience and happiness.","It's beautiful to hear about your journey toward happiness and freedom, especially through self-reflection and guidance from a spiritual teacher. The path of inner growth often requires courage and perseverance, but the rewards are immeasurable. Gratitude, as you've discovered, is a powerful tool for unlocking inner peace and fulfillment. It reminds us to appreciate the present moment and the blessings that surround us, even amidst challenges.",]
+
     let iconsContainerView: UIView = {
         let containerView = UIView()
         containerView.backgroundColor = .white
@@ -93,8 +96,11 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tables.reloadData()
+
         setupImageView()
-        
+        tables.addSubview(refreshControl)
+           refreshControl.addTarget(self, action: #selector(callFeeds), for: .valueChanged)
         "okkkkk"
         userKey = UserDefaults.standard.string(forKey: "userid")
         print(userKey)
@@ -121,7 +127,7 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
             self.callFeeds()
 
 //        }
-        
+        callFeeds2()
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -252,13 +258,13 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
         profileImgView.sd_setImage(with:URL(string: picture ?? ""))
     }
     
-    func callFeeds(){
+    @objc func callFeeds(){
         tables.isSkeletonable = true
         let lightGrayColor  = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         tables.showAnimatedSkeleton(usingColor: lightGrayColor, transition: .crossDissolve(0.25))
         
 //        tables.showLoading()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.apiManager.feedsDetails(userKey: self.userKey!) { result in
                 switch result  {
                 case.success(let model):
@@ -267,6 +273,8 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
                         self.tables.reloadData()
                         self.tables.hideSkeleton()
                         self.tables.stopLoading()
+                        self.refreshControl.endRefreshing()
+
                     }
                 case.failure(let error):
                     self.tables.stopLoading()
@@ -274,8 +282,28 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
                 }
             }
 
+//        }
+    }
+    func callFeeds2() {
+        self.apiManager.getPostBody { result in
+            switch result {
+            case .success(let model):
+                DispatchQueue.main.async {
+                    self.postDatas = model.data?.first?.posts
+//                    print(model)
+                    print("resposeeeee")
+                    self.tables.reloadData()
+
+//                    self.tables.stopLoading()
+                    self.refreshControl.endRefreshing()
+                
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
+
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "FeedImageTableViewCell"
     }
@@ -284,90 +312,66 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultData?.count ?? 1
+        return postDatas?.count ?? 1
     }
     func compressImage(image: UIImage, compressionQuality: CGFloat) -> Data? {
         return image.jpegData(compressionQuality: compressionQuality)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        if (indexPath.row == 5)
-//        {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "TextTableViewCell", for: indexPath) as! TextTableViewCell
-//            cell.selectionStyle = .none
-//            return cell
-//        }
-//        else {
+
             let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageTableViewCell", for: indexPath) as! FeedImageTableViewCell
-            
+     
             cell.selectionStyle = .none
-            
-            if let resultData = resultData, indexPath.row < resultData.count {
-                let feCreators = resultData[indexPath.row].fe_creator
-
-                if !feCreators.isEmpty {
-                    let profileStringUrl = feCreators[0].us_picture ?? ""
-                    // Use profileStringUrl here
-                    print(profileStringUrl)
-                    let profileImageUrl = URL(string: profileStringUrl) ?? URL(fileURLWithPath: "")
-                    cell.us_picture.sd_setImage(with:profileImageUrl)
-
-
-                }
+        
+        
+        if let resultData = postDatas, indexPath.row < resultData.count {
+            let feCreators = resultData[indexPath.row].userinfo
+            if !feCreators.isEmpty {
+                let profileStringUrl = feCreators[0].picture ?? ""
+                // Use profileStringUrl here
+                print(profileStringUrl)
+                let profileImageUrl = URL(string: profileStringUrl) ?? URL(fileURLWithPath: "")
+                cell.us_picture.sd_setImage(with:profileImageUrl)
             }
-            
-            
-            let postedImageStringUrl = self.resultData?[indexPath.row].fe_file ?? ""
-            print(postedImageStringUrl)
-
-            if let imageUrl = URL(string: postedImageStringUrl) {
-                cell.postImage.sd_setImage(with: imageUrl, placeholderImage: nil, options: [], completed: { (image, error, cacheType, imageUrl) in
-                    if let error = error {
-                        print("Error loading image: \(error.localizedDescription)")
-                        // Handle the error, e.g., show a placeholder image or a default image
-                    }
-                })
-            } else {
-                // Handle the case where the URL is not valid
-                print("Invalid URL")
-                // You might want to show a placeholder image or a default image here as well
-            }
-
-
-            
-            
+        }
+        
+        if let usernames = postDatas?[indexPath.row].userinfo[0].firstName,let usernames2 = postDatas?[indexPath.row].userinfo[0].firstName  {
+            cell.userName.text = "\(usernames)  \(usernames2)"
+            print("usernames\(usernames)")
+       }
+        
+        if let files = postDatas?[indexPath.row].files, !files.isEmpty {
+            cell.postImageData = files
+        } else {
+            print("hleolllll")
+            let demoFile = PostFile(id: "demo_image", url: "https://images.unsplash.com/photo-1597429926308-ffc8cd6f55fd?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcxMTk1MDIyMQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1900")
+            cell.postImageData = [demoFile]
+        }
         cell.emojiCountbtn = { [weak self] in
             guard let self = self else { return }
             
             let vc = UIStoryboard(name: "ReactionMain", bundle: nil).instantiateViewController(withIdentifier: "ReactionMainViewController")as! ReactionMainViewController
              vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
-
             self.setupLongPressGesture()
         }
             cell.makeClickActive(value: true)
-            promo = resultData?[indexPath.row].fe_promotion
-            key = resultData?[indexPath.row].fe_id
-//            DispatchQueue.main.async {
-//
-//            }
-            //            let postedImageStringUrl = self.resultData?[indexPath.row].fe_file ?? ""
-            //            cell.postImage.kf.setImage(with: URL(string: "https://bird.decordtech.com/golive/../b2cdemo/uploads/feed/605461.jpg"))
-            caption = resultData?[indexPath.row].fe_caption
-            cell.userName.text = resultData?[indexPath.row].fe_creator[0].us_name
+        let promos = postDatas?[indexPath.row].promotion
+            promo = promos
+
+//        cell.feedCaption.text = postDatas?[indexPath.row].caption
+        cell.feedCaption.text = VCaption[indexPath.row]
         
         
-            cell.feedCaption.text = resultData?[indexPath.row].fe_caption
         
+        cell.feedShare.text = postDatas?[indexPath.row].sharesCount
+        cell.feedLikes.text = postDatas?[indexPath.row].likesCount
+        cell.feedSaves.text = postDatas?[indexPath.row].savesCount
+        cell.feedViews.text = postDatas?[indexPath.row].viewsCount
+        cell.feedComments.text = postDatas?[indexPath.row].commentsCount
         
-            cell.feedShare.text = resultData?[indexPath.row].fe_shares
-            cell.feedLikes.text = resultData?[indexPath.row].fe_likes
-            cell.feedSaves.text = resultData?[indexPath.row].fe_saves
-            cell.feedViews.text = resultData?[indexPath.row].fe_views
-            cell.feedComments.text = resultData?[indexPath.row].fe_comments
-        
-        if let fe_comments = resultData?[indexPath.row].fe_comments {
+        if let fe_comments = postDatas?[indexPath.row].commentsCount {
             print(fe_comments)
             cell.feedComents2.text = fe_comments
             if fe_comments == "0" {
@@ -379,36 +383,10 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
             }
         }
         
-//            cell.feedComents2.text = resultData?[indexPath.row].fe_comments
-//        
-//        if let counts = resultData?[indexPath.row].fe_comments {
-//            
-////            if counts.count == 0 {
-////                                cell.feedComents2.isHidden = true
-////
-////            } else  if counts.count == 1 {
-////                cell.feedComents2.text = "View all \(counts.count) comments "
-////            }
-//            
-//            cell.feedComents2.text = "View all \(counts.count) comments "
-//            
-//        }
-//        
-//    if let comments = resultData?[indexPath.row].fe_comments {
-//            if comments.count == 0 {
-//                cell.feedComents2.text = "View"
-//
-//                cell.feedComents2.isHidden = true
-//            } else if comments.count == 1 { 
-//                cell.feedComents2.text = "View 1 comment"
-//            }else{
-//                cell.feedComents2.text = "View all \(comments.count) comments"
-//            }
-//    
-//        }
         
+       // likedStatus
             
-            if let createdAtString = resultData?[indexPath.row].fe_created_at {
+            if let createdAtString = postDatas?[indexPath.row].createdAt{
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 if let createdAt = dateFormatter.date(from: createdAtString) {
@@ -449,13 +427,38 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
                 // Handle error if createdAtString is nil
                 cell.feedCreatedDate.text = "Unknown"
             }
-
-//            cell.feedCreatedDate.text = resultData?[indexPath.row].fe_created_at
+        
+        
+//            cell.feedComents2.text = resultData?[indexPath.row].fe_comments
 //
-//            print( resultData?[indexPath.row].fe_created_at)
+//        if let counts = resultData?[indexPath.row].fe_comments {
             
-            cell.feedCaption.text = resultData?[indexPath.row].fe_caption
-            if resultData?[indexPath.row].fe_saved == "1"{
+//            if counts.count == 0 {
+//                                cell.feedComents2.isHidden = true
+//
+//            } else  if counts.count == 1 {
+//                cell.feedComents2.text = "View all \(counts.count) comments "
+//            }
+//
+//            cell.feedComents2.text = "View all \(counts.count) comments "
+            
+        //}
+//
+//    if let comments = resultData?[indexPath.row].fe_comments {
+//            if comments.count == 0 {
+//                cell.feedComents2.text = "View"
+//
+//                cell.feedComents2.isHidden = true
+//            } else if comments.count == 1 {
+//                cell.feedComents2.text = "View 1 comment"
+//            }else{
+//                cell.feedComents2.text = "View all \(comments.count) comments"
+//            }
+//
+//        }
+        
+
+            if postDatas?[indexPath.row].savedStatus == true {
                // cell.saveImgView.tintColor = .systemYellow
                 if let image = UIImage(named: "sv1") {
                     cell.saveImgView.image = image
@@ -465,11 +468,10 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
                 if let image = UIImage(named: "sv0") {
                     cell.saveImgView.image = image
                 }
-                
-                //cell.saveImgView.tintColor = .systemGray3
             }
-            if resultData?[indexPath.row].fe_liked == "1"{
-//                cell.likeImgView.tintColor = .systemRed
+        
+            if postDatas?[indexPath.row].likedStatus == true {
+              cell.likeImgView.tintColor = .systemRed
                 if let image = UIImage(named: "Heart0") {
                     cell.likeBtn.setImage(image, for: .normal)
                        }
@@ -480,37 +482,41 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
                        }
             }
             
-            if resultData?[indexPath.row].fe_promotion == "0"{
+            if postDatas?[indexPath.row].promotion == true {
                 cell.fePromotion.isHidden = true
             }else {
                 cell.fePromotion.isHidden = false
             }
             cell.likeAction = {
+                
+                if let image = UIImage(named: "Heart0") {
+                                                   cell.likeBtn.setImage(image, for: .normal)
+                                                      }
                 print("Like Btn Clicked")
-                self.promo = self.resultData?[indexPath.row].fe_promotion
-                self.key = self.resultData?[indexPath.row].fe_id
-                self.apiManager.feedsLikeSave(userKey: self.userKey!, key: self.key!, promotion: self.promo!, action: "like" ){ result in
-                    switch result {
-                    case .success(let model) :
-                        DispatchQueue.main.async {
-                            if  model.result?[0].liked == "1"{
+//                self.promo = self.resultData?[indexPath.row].fe_promotion
+//                self.key = self.resultData?[indexPath.row].fe_id
+//                self.apiManager.feedsLikeSave(userKey: self.userKey!, key: self.key!, promotion: self.promo!, action: "like" ){ result in
+//                    switch result {
+//                    case .success(let model) :
+//                        DispatchQueue.main.async {
+//                            if  model.result?[0].liked == "1"{
 //                                cell.likeImgView.tintColor = .systemRed
                                 
-                                if let image = UIImage(named: "Heart0") {
-                                    cell.likeBtn.setImage(image, for: .normal)
-                                       }
-                            }else{
+//                                if let image = UIImage(named: "Heart0") {
+//                                    cell.likeBtn.setImage(image, for: .normal)
+//                                       }
+//                            }else{
 //                                cell.likeImgView.tintColor = .systemGray3
-                                if let image = UIImage(named: "Heart1") {
-                                    cell.likeBtn.setImage(image, for: .normal)
-                                       }
-                            }
-                            cell.feedLikes.text = String((model.result?[0].likes) ?? 0)
-                        }
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                }
+//                                if let image = UIImage(named: "Heart1") {
+//                                    cell.likeBtn.setImage(image, for: .normal)
+//                                       }
+//                            }
+//                            cell.feedLikes.text = String((model.result?[0].likes) ?? 0)
+//                        }
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//                }
             }
         cell.seemores = { [weak self] in
             // Update the number of lines for feedCaption to show all lines
@@ -520,7 +526,6 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
             tableView.beginUpdates()
             tableView.endUpdates()
         }
-//        cell.seemores
             
             let comment = "Olufunmi: Chasing sunsets and making memories that will last a lifetime. ☀️🌴✨." // Assuming `comments` is your array of comments
                let boldName = "Olufunmi:"
@@ -530,107 +535,114 @@ class MainVC: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource
                 self.present(vc, animated: true)
                 
                 
-                print("Saved Clicked")
-                self.promo = self.resultData?[indexPath.row].fe_promotion
-                self.key = self.resultData?[indexPath.row].fe_id
-                self.apiManager.feedsLikeSave(userKey: self.userKey!, key: self.key!, promotion: self.promo!, action: "save" ){ result in
-                    switch result {
-                        
-                        
-                    case .success(let model) :
-                        DispatchQueue.main.async {
-                            if  model.result?[0].saved == "1"{
-                                
-                                if let image = UIImage(named: "sv1") {
-                                    cell.saveImgView.image = image
-                                }
-                                
-                               // cell.saveImgView.tintColor = .systemYellow
-                                
-                                
-                            }else{
-                                if let image = UIImage(named: "sv0") {
-                                    cell.saveImgView.image = image
-                                }
-                                
-//                                cell.saveImgView.tintColor = .systemGray3
-                            }
-                            cell.feedSaves.text = String(model.result?[0].saves ?? 0)
-                        }
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                }
+//                
+//                print("Saved Clicked")
+//                self.promo = self.resultData?[indexPath.row].fe_promotion
+//                self.key = self.resultData?[indexPath.row].fe_id
+//                self.apiManager.feedsLikeSave(userKey: self.userKey!, key: self.key!, promotion: self.promo!, action: "save" ){ result in
+//                    switch result {
+//                        
+//                        
+//                    case .success(let model) :
+//                        DispatchQueue.main.async {
+//                            if  model.result?[0].saved == "1"{
+//                                
+//                                if let image = UIImage(named: "sv1") {
+//                                    cell.saveImgView.image = image
+//                                }
+//                                
+//                               // cell.saveImgView.tintColor = .systemYellow
+//                                
+//                                
+//                            }else{
+//                                if let image = UIImage(named: "sv0") {
+//                                    cell.saveImgView.image = image
+//                                }
+//                                
+////                                cell.saveImgView.tintColor = .systemGray3
+//                            }
+//                            cell.feedSaves.text = String(model.result?[0].saves ?? 0)
+//                        }
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//                }
             }
+        
+        cell.emojiss = { [weak self] in
+            guard let self = self else { return }
+
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReactionsVC") as! ReactionsVC
+            // vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+
+            self.setupLongPressGesture()
+        }
+
+        
+        
             cell.popUpButton = {
                 
                 print("PopUp Clicked")
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "FeedPopUpViewController") as? FeedPopUpViewController
                 
-                vc?.userKey = self.userKey!
-                vc?.key = (self.resultData?[indexPath.row].fe_id)!
-                vc?.caption = (self.resultData?[indexPath.row].fe_caption)!
-                vc?.creator = (self.resultData?[indexPath.row].fe_creator[0].us_name)!
-                vc?.imgUrl = (self.resultData?[indexPath.row].fe_file)!
-            
+//                vc?.userKey = self.userKey!
+//                vc?.key = (self.resultData?[indexPath.row].fe_id)!
+//                vc?.caption = (self.resultData?[indexPath.row].fe_caption)!
+//                vc?.creator = (self.resultData?[indexPath.row].fe_creator[0].us_name)!
+//                vc?.imgUrl = (self.resultData?[indexPath.row].fe_file)!
+//            
                 self.present(vc!, animated: true)
                 self.callFeeds()
                 tableView.reloadData()
             }
-            cell.shareAction = {
-                let appName = "Gopaddi"
-                let creator = self.resultData?[indexPath.row].fe_creator[0].us_name
-                let imageUrl = NSURL(string: (self.resultData?[indexPath.row].fe_file) ?? "")
-                let shareAll = [appName , creator! , imageUrl!]
-                let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = self.view
-                self.present(activityViewController, animated: true, completion: nil)
-            }
-            cell.postComment = {
-                guard let comment = cell.testView.text else { return }
-                self.promo = self.resultData?[indexPath.row].fe_promotion
-                self.key = self.resultData?[indexPath.row].fe_id
-                
-                self.apiManager.feedsComment(userKey: self.userKey!, key: self.key!, parent: "0", promotion: self.promo!, msg: comment){ result in
-                    switch result {
-                    case .success(let model) :
-                        DispatchQueue.main.async {
-                            self.response = model
-                            cell.testView.text = "Add Comments"
-                            self.callFeeds()
-                            tableView.reloadData()
-                        }
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-            
-            
-            cell.comment = {
-                
-                self.callApi(key: (self.resultData?[indexPath.row].fe_id)!, promo: (self.resultData?[indexPath.row].fe_promotion)!, indexPathRow: indexPath.row)
-                
-            }
-            
-            cell.emojiss = { [weak self] in
-                guard let self = self else { return }
-
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReactionsVC") as! ReactionsVC
-                // vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true)
-
-                self.setupLongPressGesture()
-            }
+//            cell.shareAction = {
+//                let appName = "Gopaddi"
+//                let creator = self.resultData?[indexPath.row].fe_creator[0].us_name
+//                let imageUrl = NSURL(string: (self.resultData?[indexPath.row].fe_file) ?? "")
+//                let shareAll = [appName , creator! , imageUrl!]
+//                let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+//                activityViewController.popoverPresentationController?.sourceView = self.view
+//                self.present(activityViewController, animated: true, completion: nil)
+//            }
+//            cell.postComment = {
+//                guard let comment = cell.testView.text else { return }
+//                self.promo = self.resultData?[indexPath.row].fe_promotion
+//                self.key = self.resultData?[indexPath.row].fe_id
+//                
+//                self.apiManager.feedsComment(userKey: self.userKey!, key: self.key!, parent: "0", promotion: self.promo!, msg: comment){ result in
+//                    switch result {
+//                    case .success(let model) :
+//                        DispatchQueue.main.async {
+//                            self.response = model
+//                            cell.testView.text = "Add Comments"
+//                            self.callFeeds()
+//                            tableView.reloadData()
+//                        }
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    }
+//                }
+//            }
+//            
+//            
+//            cell.comment = {
+//                
+//                self.callApi(key: (self.resultData?[indexPath.row].fe_id)!, promo: (self.resultData?[indexPath.row].fe_promotion)!, indexPathRow: indexPath.row)
+//                
+//            }
+//            
+//
+     
             return cell
 //        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 5 {
-            return 177    }
-        else {
+//        if indexPath.row == 5 {
+//            return 177    }
+//        else {
             return UITableView.automaticDimension
-        }
+//        }
     }
 //    @IBAction func createFeedBtnClicked(_ sender: Any) {
 //
